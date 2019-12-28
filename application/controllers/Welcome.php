@@ -24,13 +24,13 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->model("Users_model");
-		$tes = $this->Users_model->person();
-		echo json_encode($tes);
+		$this->load->view("default/tes");
 	}
 
 	public function mantap()
 	{
-		echo "mantap";
+		$this->load->model("Users_model");
+		$tes = $this->Users_model->person();
+		echo json_encode($tes);
 	}
 }
