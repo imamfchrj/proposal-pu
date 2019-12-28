@@ -28,4 +28,9 @@ class Welcome extends CI_Controller {
 		$tes = $this->Users_model->person();
 		echo json_encode($tes);
 	}
+
+	public function mantap()
+	{
+		echo "mantap";
+	}
 }
