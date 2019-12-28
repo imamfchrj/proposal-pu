@@ -1,12 +1,4 @@
-# proposal-pu
-Proposal PU
-
-
-## docker-create
-
-```
-cd docker-config
-```
+# docker-lamp
 
 Docker example with Apache, MySql 8.0, PhpMyAdmin and Php
 
