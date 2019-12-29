@@ -27,3 +27,10 @@ Run mysql client:
 - `docker-compose exec db mysql -u root -p` 
 
 Enjoy !
+
+
+## Troubleshoot
+if you have some problem about sesison you can change permission the path
+```
+docker exec -it docker-config_www_1 chmod 777 application/cache
+```
