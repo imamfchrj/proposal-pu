@@ -43,7 +43,7 @@
     <div class="signin-wrapper">
 
       <div class="signin-box">
-        <h2 class="slim-logo"><a href="index.html">Proposal PU<span>.</span></a></h2>
+        <h2 class="slim-logo"><a href="index.html"><?=APP_NAME?><span>.</span></a></h2>
         <h2 class="signin-title-primary">Welcome back!</h2>
         <h3 class="signin-title-secondary">Sign in to continue.</h3>
 

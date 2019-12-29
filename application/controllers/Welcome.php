@@ -32,4 +32,9 @@ class Welcome extends All_Controller {
 		$tes = $this->Users_model->person();
 		echo json_encode($tes);
 	}
+
+	public function tes() 
+	{
+		$this->view("default/form");
+	}
 }
