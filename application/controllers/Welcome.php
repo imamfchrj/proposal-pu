@@ -1,10 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends All_Controller {
     function __construct() {
 		parent::__construct();
-		$this->load->database('default');
     }
 
 	/**
@@ -32,5 +31,10 @@ class Welcome extends CI_Controller {
 		$this->load->model("Users_model");
 		$tes = $this->Users_model->person();
 		echo json_encode($tes);
+	}
+
+	public function tes() 
+	{
+		$this->view("default/form");
 	}
 }

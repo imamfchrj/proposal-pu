@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CodeIgniter
  *
@@ -53,8 +54,18 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
-
+	// define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+	switch($_SERVER["HTTP_HOST"]){
+		case "localhost":
+		   define('ENVIRONMENT', 'development');
+		break;
+		case "localhost:8001":
+		   define('ENVIRONMENT', 'development');
+		break;
+		default:
+		   define('ENVIRONMENT', 'production');
+		break;
+	}
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
