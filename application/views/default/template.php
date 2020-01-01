@@ -41,6 +41,8 @@
     <link href="<?=base_url("assets/")?>lib/spectrum/css/spectrum.css" rel="stylesheet">
     <link href="<?=base_url("assets/")?>lib/bootstrap-tagsinput/css/bootstrap-tagsinput.css" rel="stylesheet">
     <link href="<?=base_url("assets/")?>lib/select2/css/select2.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="<?=base_url("assets/")?>lib/SpinKit/css/spinkit.css">
     <!-- Slim CSS -->
     <link rel="stylesheet" href="<?=base_url("assets/")?>css/slim.css">
     <script>

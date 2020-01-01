@@ -12,4 +12,10 @@ class User extends All_Controller {
 		$this->view("user/list", $data);
 	}
 
+	public function insert()
+	{
+		$data["script"] = "user/insert_js";
+		$this->view("user/insert", $data);
+	}
+
 }
