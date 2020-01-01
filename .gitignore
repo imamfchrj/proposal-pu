@@ -16,3 +16,6 @@ application/logs/*
 !application/logs/.htaccess
 /vendor/
 /application/env.php
+
+# docker env
+docker-config/.env

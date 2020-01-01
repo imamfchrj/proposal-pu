@@ -56,3 +56,8 @@
 
       });
     </script>
+
+
+<?php
+ if($script) $this->load->view($script);
+?>

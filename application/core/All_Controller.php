@@ -32,7 +32,7 @@ class All_Controller extends CI_Controller
 		);
 	}
 
-	function view_default($header, $navbar, $ui, $footer, $js = false, $data = false, $title = false, $menu = false) {
+	function view_default($header, $navbar, $ui, $footer, $data = false, $title = false, $menu = false) {
 		$ui_data['data']= $data;
 		if (!$title) {
 			$ui_data["title"] = APP_NAME;
@@ -40,9 +40,7 @@ class All_Controller extends CI_Controller
 		if (!$menu) {
 			$ui_data["menu"] = "home";
 		}
-		if (!$js) {
-			$ui_data["js"] = "default/js";
-		}
+		$ui_data["js"] = "default/js";
 		$ui_data["ui"] = $ui;
 		$ui_data["header"] = $header;
 		$ui_data["footer"] = $footer;
