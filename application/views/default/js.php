@@ -10,6 +10,7 @@
     <script src="<?=base_url("assets/")?>lib/bootstrap-tagsinput/js/bootstrap-tagsinput.js"></script>
 
     <script src="<?=base_url("assets/")?>js/slim.js"></script>
+    <script src="<?=base_url("assets/")?>js/common.js"></script>
     <script>
       $(function(){
         'use strict'
