@@ -18,7 +18,7 @@ class Users_model extends CI_Model {
         $select_user = $this->select_user($user_type, $search, $limit, $offer, $order, $order_type);
         $count = $this->count_all_user(0);
         $data["recordsTotal"] = $count;
-        $data["recordsFiltered"] = count($select_user);
+        $data["recordsFiltered"] = $this->select_user_count($user_type, $search);
         $data["data"] = $select_user;
         return $data;
     }
@@ -62,6 +62,28 @@ class Users_model extends CI_Model {
         $this->db->order_by($this->column_order[$order], $order_type);
         $this->db->limit($limit, $offer);
         return $this->db->get($this->table)->result_array();
+    }
+
+    function select_user_count($user_type, $search) {
+        $this->db->select("
+                id, 
+                name, 
+                email,
+                hp,
+                status,
+                created_at,
+                updated_at
+                "
+            );
+        if($search) {
+            $this->db->or_group_start()
+                ->or_like("name", $search)
+                ->or_like("email", $search)
+                ->or_like("hp", $search)
+            ->group_end();
+        }
+        $this->db->where("user_type", $user_type);
+        return count($this->db->get($this->table)->result_array());
     }
 
 
