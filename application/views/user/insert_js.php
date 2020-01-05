@@ -40,7 +40,7 @@
               $('#insert_user').attr('disabled', false);
             })
             .fail(function(data){
-                data.responseJSON.error_messages !== 'undefined'){
+                if(data.responseJSON.error_messages !== 'undefined'){
                     alert_failed("Error!", data.responseJSON.error_messages);
                     return;
                 }
