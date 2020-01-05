@@ -14,8 +14,8 @@ class Users_model extends CI_Model {
         return $this->db->get('Person')->result();
     }
 
-    function user_list($search, $limit, $offer, $order, $order_type) {
-        $select_user = $this->select_user(0, $search, $limit, $offer, $order, $order_type);
+    function user_list($search, $limit, $offer, $order, $order_type, $user_type=0) {
+        $select_user = $this->select_user($user_type, $search, $limit, $offer, $order, $order_type);
         $count = $this->count_all_user(0);
         $data["recordsTotal"] = $count;
         $data["recordsFiltered"] = count($select_user);

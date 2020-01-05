@@ -184,7 +184,7 @@
             </a>
             <div class="sub-item">
               <ul>
-                <li class="active"><a href="#">List Usert</a></li>
+                <li class="active"><a href="#">List User</a></li>
                 <li><a href="#">List Admin</a></li>
               </ul>
             </div><!-- dropdown-menu -->
