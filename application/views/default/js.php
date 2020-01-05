@@ -75,6 +75,16 @@
         
         $('#alert_failed').modal('show');
       }
+
+
+      function alert_danger($title, $description, $link=""){
+        $('.title_danger').html($title);
+        $('.description_danger').html($description);
+        $('.link_danger').attr("href",$link);
+        
+        $('#alert_danger').modal('show');
+      }
+      
     </script>
 
 

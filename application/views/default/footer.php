@@ -40,3 +40,20 @@
         </div><!-- modal-content -->
       </div><!-- modal-dialog -->
     </div><!-- modal -->
+
+
+    <div id="alert_danger" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content tx-size-sm">
+          <div class="modal-body tx-center pd-y-20 pd-x-20">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <i class="icon icon ion-outlet tx-100 tx-warning lh-1 mg-t-20 d-inline-block"></i>
+            <h4 class="tx-warning mg-b-20 title_danger">Warning</h4>
+            <p class="mg-b-20 mg-x-20 description_danger"></p>
+            <a href="#" class="btn btn-warning pd-x-25 link_danger">Continue</a>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
