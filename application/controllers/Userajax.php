@@ -83,9 +83,9 @@ class Userajax extends All_Controller {
 	private function validation($user_type=0)
 	{
 		$this->post_only();
-		$this->load->model('Users_model');
+		
         $this->form_validation->set_rules('name', 'Name', 'xss_clean|htmlentities');
-        $this->form_validation->set_rules('id', 'Identiry', 'xss_clean|htmlentities');
+        $this->form_validation->set_rules('id', 'Identity', 'xss_clean|htmlentities');
         $this->form_validation->set_rules('email', 'Email', 'trim|valid_email|required|xss_clean|htmlentities');
         $this->form_validation->set_rules('hp', 'No HP', 'trim|xss_clean|htmlentities');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|htmlentities');
@@ -108,6 +108,23 @@ class Userajax extends All_Controller {
             );
             // if success will return all value
 			return $value;
+        }
+        $this->json_badrequest(validation_errors());
+        return false;
+	}
+
+
+	public function delete()
+	{
+		$this->post_only();
+		
+        $this->form_validation->set_rules('id', 'Identity', 'required|xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+			
+			$id=  $this->form_validation->set_value('id');
+			$this->Users_model->delete($id);
+			$this->json_success();
+			return;
         }
         $this->json_badrequest(validation_errors());
         return false;

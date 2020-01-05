@@ -23,6 +23,13 @@ class Users_model extends CI_Model {
         return $data;
     }
 
+    function get_user_by_id($id) {
+        $column = implode (", ", $this->column_order);
+        $this->db->select($column);
+        $this->db->where("id", $id);
+        return $this->db->get($this->table)->row();
+    }
+
     function select_user($user_type, $search, $limit, $offer, $order, $order_type) {
         $this->db->select("
                 id, 
@@ -79,5 +86,9 @@ class Users_model extends CI_Model {
         $this->db->where('id', $id);
         $data = $this->db->update($this->table, $data); 
 		return $data;
+    }
+
+    function delete($id) {
+        return $this->db->delete($this->table, array('id' => $id));
     }
 }

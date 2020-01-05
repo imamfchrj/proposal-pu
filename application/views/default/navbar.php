@@ -177,17 +177,27 @@
               </ul>
             </div><!-- dropdown-menu -->
           </li>
-          <li class="nav-item with-sub">
+          <li class="nav-item with-sub mega-dropdown">
             <a class="nav-link" href="#" data-toggle="dropdown">
               <i class="icon ion-ios-people"></i>
               <span>Manajemen User</span>
             </a>
             <div class="sub-item">
-              <ul>
-                <li class="active"><a href="#">List User</a></li>
-                <li><a href="#">List Admin</a></li>
-              </ul>
+              
+            <div class="row">
+                <div class="col-lg mg-t-30 mg-lg-t-0">
+                  <label class="section-label">Manajemen user</label>
+                  <ul>
+                    <li><a href="<?=base_url("user/list")?>">List User</a></li>
+                    <li><a href="<?=base_url("user/insert")?>">Tambah user</a></li>
+                  </ul>
+
+
+                </div><!-- col -->
+
+              </div><!-- row -->
             </div><!-- dropdown-menu -->
+            
           </li>
           <li class="nav-item with-sub">
             <a class="nav-link" href="#" data-toggle="dropdown">

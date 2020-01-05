@@ -2,6 +2,7 @@
     <?php
         $this->load->view("default/form_js");
         $this->load->view("user/check_user_js");
+        $link = $option["link"];
     ?>
 
     <script>
@@ -13,10 +14,11 @@
         
         $('#insert_user').attr('disabled', true);
         $.ajax({
-            url: ROOT+'userajax/insert',
+            url: ROOT+'userajax/<?=$link?>',
             dataType: 'json',
             type: 'post',
             data: {
+                id: $('#id').val(),
                 name: $('#name').val(),
                 email: $('#email').val(),
                 password: $('#password').val(),
@@ -30,15 +32,15 @@
                     alert(data.error_message);
                     return;
                 }
-                // alert("success");
+                
                 alert_success("Sukses!", "Berhasil menambahkan user baru", ROOT + "/user/list");
-                // window.location = ROOT+'user/list';
+                
             })
             .complete(function(){
               $('#insert_user').attr('disabled', false);
             })
             .fail(function(data){
-                if(data.responseJSON.error_messages){
+                data.responseJSON.error_messages !== 'undefined'){
                     alert_failed("Error!", data.responseJSON.error_messages);
                     return;
                 }
