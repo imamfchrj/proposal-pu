@@ -11,7 +11,59 @@ class All_Controller extends CI_Controller
 	function check_session() {
 		// this function for check session
 	}
-	
+
+	/**
+	 * start page ajax output
+	 */
+	function json_success($data = false) {
+		$data_output = array(
+			'is_error'=>false,
+		);
+		if($data) {
+			$data_output["data"] = $data;
+		}
+		$this->json($data_output);
+	}
+
+	function json($data_output) {
+		header('Content-Type: application/json');
+		echo (json_encode($data_output));
+		exit;
+	}
+
+	function json_badrequest($data = false) {
+		http_response_code(400);
+		$data_output = array(
+			'is_error'=>true,
+		);
+		if($data) {
+			$data_output["error_messages"] = $data;
+		}
+		$this->json($data_output);
+	}
+
+
+	function json_unauthorized($data = false) {
+		http_response_code(401);
+		$data_output = array(
+			'is_error'=>true,
+		);
+		if($data) {
+			$data_output["error_messages"] = $data;
+		}
+		$this->json($data_output);
+	}
+
+	function post_only() {
+		$data_post = $this->input->post();
+		if(count($data_post) == 0) {
+			$this->json_badrequest();
+		}
+	}
+
+	/**
+	 * end page ajax output
+	 */
 	
 
 

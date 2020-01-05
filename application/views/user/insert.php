@@ -55,7 +55,7 @@
                   <label class="form-control-label">Status: <span class="tx-danger">*</span></label>
                   <div id="status" class="parsley-checkbox wd-250 mg-b-0">
                     <label class="ckbox">
-                        <input type="checkbox" id="status" name="status" value="" data-parsley-mincheck="2" data-parsley-class-handler="#status" data-parsley-multiple="browser"><span>Aktif</span>
+                        <input type="checkbox" id="status" name="status" value="1" data-parsley-mincheck="2" data-parsley-class-handler="#status" data-parsley-multiple="browser"><span>Aktif</span>
                         <span id="e_status" class="tx-danger"></span>
                     </label>
                   </div>

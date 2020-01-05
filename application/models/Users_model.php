@@ -1,20 +1,21 @@
-<?php
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 class Users_model extends CI_Model {
 
     private $table = "tb_user";
     public $column_order = ["id", "name", "email", "hp", "status", "created_at", "updated_at"]; 
    
-    function __construct() {
+    public function __construct() {
         parent::__construct();
         $this->load->database('default');
     }
 
-    public function person() {
+    function person() {
         return $this->db->get('Person')->result();
     }
 
-    public function user_list($search, $limit, $offer, $order, $order_type) {
-        $select_user = $this->select_user(0, $search, $limit, $offer, $order, $order_type);
+    function user_list($search, $limit, $offer, $order, $order_type, $user_type=0) {
+        $select_user = $this->select_user($user_type, $search, $limit, $offer, $order, $order_type);
         $count = $this->count_all_user(0);
         $data["recordsTotal"] = $count;
         $data["recordsFiltered"] = count($select_user);
@@ -22,7 +23,7 @@ class Users_model extends CI_Model {
         return $data;
     }
 
-    public function select_user($user_type, $search, $limit, $offer, $order, $order_type) {
+    function select_user($user_type, $search, $limit, $offer, $order, $order_type) {
         $this->db->select("
                 id, 
                 name, 
@@ -58,9 +59,25 @@ class Users_model extends CI_Model {
 
 
 
-    public function count_all_user($user_type) {
+    function count_all_user($user_type) {
         $this->db->select("count(id) as count_id");
         $data = $this->db->get($this->table)->row();
         return $data->count_id;
+    }
+
+	function set($array){
+        $array["password"]=hashpass($array['password']);
+        $this->db->set($array);
+        $this->db->insert($this->table);
+		return $this->db->insert_id();
+    }
+
+
+	function update_value_by_id($value, $id){
+        $data = $value;
+        $data['password']=hashpass($data['password']);
+        $this->db->where('id', $id);
+        $data = $this->db->update($this->table, $data); 
+		return $data;
     }
 }
