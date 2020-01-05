@@ -30,7 +30,8 @@
                     alert(data.error_message);
                     return;
                 }
-                alert("success");
+                // alert("success");
+                alert_success("Sukses!", "Berhasil menambahkan user baru", ROOT + "/user/list");
                 // window.location = ROOT+'user/list';
             })
             .complete(function(){
@@ -38,10 +39,10 @@
             })
             .fail(function(data){
                 if(data.responseJSON.error_messages){
-                    alert(data.responseJSON.error_messages);
+                    alert_failed("Error!", data.responseJSON.error_messages);
                     return;
                 }
-                alert("Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
+                alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
             });
       }
     </script>
