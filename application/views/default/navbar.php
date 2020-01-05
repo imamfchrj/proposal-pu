@@ -9,6 +9,7 @@
             </a>
           </li>
           
+          
           <li class="nav-item with-sub mega-dropdown">
             <a class="nav-link" href="#">
               <i class="icon ion-ios-filing-outline"></i>
@@ -16,55 +17,140 @@
             </a>
             <div class="sub-item">
               <div class="row">
-                <div class="col-lg">
+                <div class="col-lg mg-t-30 mg-lg-t-0">
                   <label class="section-label">Air Minum</label>
-                  <div class="row">
-                    <div class="col">
-                      <ul>
-                        <li><a href="#">Evaluasi Infrastruktur Spam Durolis</a></li>
-                        <li><a href="#">Konfigurasi Parameter</a></li>
-                      </ul>
-                    </div><!-- col -->
-                  </div><!-- row -->
-                </div><!-- col -->
-                <div class="col-lg mg-t-30 mg-lg-t-0">
-                  <label class="section-label">Charts</label>
                   <ul>
-                    <li><a href="#">Morris Charts</a></li>
-                    <li><a href="#">Flot Charts</a></li>
-                    <li><a href="#">ChartJS</a></li>
-                    <li><a href="#">ECharts</a></li>
-                    <li><a href="#">Chartist</a></li>
-                    <li><a href="#">Rickshaw</a></li>
-                    <li><a href="#">Sparkline</a></li>
-                    <li><a href="#">Peity</a></li>
-                  </ul>
-                </div><!-- col -->
-                <div class="col-lg mg-t-30 mg-lg-t-0">
-                  <label class="section-label">Maps</label>
-                  <ul>
-                    <li><a href="#">Google Maps</a></li>
-                    <li><a href="#">Leaflet Maps</a></li>
-                    <li><a href="#">Vector Maps</a></li>
+                    <li><a href="#">Evaluasi Infrastruktur Spam Durolis</a></li>
+                    <li><a href="#">List Evaluasi Infrastruktur Spam Durolis</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
                   </ul>
 
-                  <label class="section-label mg-t-20">Tables</label>
+
+                  <label class="section-label mg-t-20">Air Limbah</label>
                   <ul>
-                    <li><a href="#">Basic Table</a></li>
-                    <li><a href="#">Data Table</a></li>
+                    <li><a href="#">Evaluasi Sistem Pengolahan Air Limbah Domestik</a></li>
+                    <li><a href="#">List Evaluasi Sistem Pengolahan Air Limbah Domestik</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
+                  </ul>
+
+
+                  <label class="section-label mg-t-20">Sampah</label>
+                  <ul>
+                    <li><a href="#">Evaluasi Sistem Persampahan</a></li>
+                    <li><a href="#">List Evaluasi Sistem Persampahan</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
                   </ul>
                 </div><!-- col -->
+
                 <div class="col-lg mg-t-30 mg-lg-t-0">
-                  <label class="section-label">Helper / Utilities</label>
+                  <label class="section-label">Drainase Lingkungan</label>
                   <ul>
-                    <li><a href="#">Background</a></li>
-                    <li><a href="#">Border</a></li>
-                    <li><a href="#">Height</a></li>
-                    <li><a href="#">Margin</a></li>
-                    <li><a href="#">Padding</a></li>
-                    <li><a href="#">Position</a></li>
-                    <li><a href="#">Typography</a></li>
-                    <li><a href="#">Width</a></li>
+                    <li><a href="#">Evaluasi Drainase Lingkungan</a></li>
+                    <li><a href="#">List Evaluasi Drainase Lingkungan</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
+                  </ul>
+
+
+                  <label class="section-label mg-t-20">Jalan Lingkungan</label>
+                  <ul>
+                    <li><a href="#">Evaluasi Jalan Lingkungan</a></li>
+                    <li><a href="#">List Evaluasi Jalan Lingkungan</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
+                  </ul>
+
+
+                  <label class="section-label mg-t-20">Harga Satuan Air Minum</label>
+                  <ul>
+                    <li><a href="#">Evaluasi Harga Satuan Air Minum</a></li>
+                    <li><a href="#">List Evaluasi Harga Satuan Air Minum</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
+                  </ul>
+                </div><!-- col -->
+              </div><!-- row -->
+            </div><!-- dropdown-menu -->
+            <div class="sub-item">
+              <div class="row">
+                <div class="col-lg mg-t-30 mg-lg-t-0">
+                  <label class="section-label">Air Minum</label>
+                  <ul>
+                    <li><a href="#">Evaluasi Infrastruktur Spam Durolis</a></li>
+                    <li><a href="#">List Evaluasi Infrastruktur Spam Durolis</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
+                  </ul>
+
+
+                  <label class="section-label mg-t-20">Air Limbah</label>
+                  <ul>
+                    <li><a href="#">Evaluasi Sistem Pengolahan Air Limbah Domestik</a></li>
+                    <li><a href="#">List Evaluasi Sistem Pengolahan Air Limbah Domestik</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
+                  </ul>
+
+
+                  <label class="section-label mg-t-20">Sampah</label>
+                  <ul>
+                    <li><a href="#">Evaluasi Sistem Persampahan</a></li>
+                    <li><a href="#">List Evaluasi Sistem Persampahan</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
+                  </ul>
+                </div><!-- col -->
+
+                <div class="col-lg mg-t-30 mg-lg-t-0">
+                  <label class="section-label">Drainase Lingkungan</label>
+                  <ul>
+                    <li><a href="#">Evaluasi Drainase Lingkungan</a></li>
+                    <li><a href="#">List Evaluasi Drainase Lingkungan</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
+                  </ul>
+
+
+                  <label class="section-label mg-t-20">Jalan Lingkungan</label>
+                  <ul>
+                    <li><a href="#">Evaluasi Jalan Lingkungan</a></li>
+                    <li><a href="#">List Evaluasi Jalan Lingkungan</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
+                  </ul>
+
+
+                  <label class="section-label mg-t-20">Harga Satuan Air Minum</label>
+                  <ul>
+                    <li><a href="#">Evaluasi Harga Satuan Air Minum</a></li>
+                    <li><a href="#">List Evaluasi Harga Satuan Air Minum</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
+                  </ul>
+                </div><!-- col -->
+
+
+                <div class="col-lg mg-t-30 mg-lg-t-0">
+                  <label class="section-label">Harga Satuan Air Limbah</label>
+                  <ul>
+                    <li><a href="#">Evaluasi Harga Satuan Air Limbah</a></li>
+                    <li><a href="#">List Evaluasi Harga Satuan Air Limbah</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
+                  </ul>
+
+
+                  <label class="section-label mg-t-20">Harga Satuan Sampah</label>
+                  <ul>
+                    <li><a href="#">Evaluasi Harga Satuan Sampah</a></li>
+                    <li><a href="#">List Evaluasi Harga Satuan Sampah</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
+                  </ul>
+
+
+                  <label class="section-label mg-t-20">Harga Satuan Drainase Lingkungan</label>
+                  <ul>
+                    <li><a href="#">Evaluasi Harga Satuan Drainase Lingkungan</a></li>
+                    <li><a href="#">List Evaluasi Harga Satuan Drainase Lingkungan</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
+                  </ul>
+
+
+                  <label class="section-label mg-t-20">Harga Satuan Jalan Lingkungan</label>
+                  <ul>
+                    <li><a href="#">Evaluasi Harga Satuan Jalan Lingkungan</a></li>
+                    <li><a href="#">List Evaluasi Harga Satuan Jalan Lingkungan</a></li>
+                    <li><a href="#">Konfigurasi Parameter</a></li>
                   </ul>
                 </div><!-- col -->
               </div><!-- row -->
@@ -77,14 +163,17 @@
             </a>
             <div class="sub-item">
               <ul>
-                <li class="active"><a href="#">Form Elements</a></li>
-                <li><a href="#">Form Layouts</a></li>
-                <li><a href="#">Form Validation</a></li>
-                <li><a href="#">Form Wizards</a></li>
-                <li><a href="#">WYSIWYG Editor</a></li>
-                <li><a href="#">Select2</a></li>
-                <li><a href="#">Range Slider</a></li>
-                <li><a href="#">Datepicker</a></li>
+                <li><a>Air Limbah</a></li>
+                <li><a>Sampah</a></li>
+                <li><a>Jalan Lingkungan</a></li>
+                <li><a>Harga Satuan Air Minum</a></li>
+                <li><a>Air Limbah</a></li>
+                <li><a>Sampah</a></li>
+                <li><a>Jalan Lingkungan</a></li>
+                <li><a>Harga Satuan Air Minum</a></li>
+                <li><a>Harga Satuan Sampah</a></li>
+                <li><a>Harga Satuan Drainase Lingkungan</a></li>
+                <li><a>Harga Satuan Jalan Lingkungan</a></li>
               </ul>
             </div><!-- dropdown-menu -->
           </li>
@@ -95,14 +184,8 @@
             </a>
             <div class="sub-item">
               <ul>
-                <li class="active"><a href="#">Form Elements</a></li>
-                <li><a href="#">Form Layouts</a></li>
-                <li><a href="#">Form Validation</a></li>
-                <li><a href="#">Form Wizards</a></li>
-                <li><a href="#">WYSIWYG Editor</a></li>
-                <li><a href="#">Select2</a></li>
-                <li><a href="#">Range Slider</a></li>
-                <li><a href="#">Datepicker</a></li>
+                <li class="active"><a href="#">List Usert</a></li>
+                <li><a href="#">List Admin</a></li>
               </ul>
             </div><!-- dropdown-menu -->
           </li>
@@ -113,14 +196,7 @@
             </a>
             <div class="sub-item">
               <ul>
-                <li class="active"><a href="#">Form Elements</a></li>
-                <li><a href="#">Form Layouts</a></li>
-                <li><a href="#">Form Validation</a></li>
-                <li><a href="#">Form Wizards</a></li>
-                <li><a href="#">WYSIWYG Editor</a></li>
-                <li><a href="#">Select2</a></li>
-                <li><a href="#">Range Slider</a></li>
-                <li><a href="#">Datepicker</a></li>
+                <li class="active"><a href="#">Tes</a></li>
               </ul>
             </div><!-- dropdown-menu -->
           </li>
