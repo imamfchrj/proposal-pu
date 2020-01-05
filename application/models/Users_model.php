@@ -66,7 +66,7 @@ class Users_model extends CI_Model {
     }
 
 	function set($array){
-        $array["password"]=hashpass($data['password']);
+        $array["password"]=hashpass($array['password']);
         $this->db->set($array);
         $this->db->insert($this->table);
 		return $this->db->insert_id();

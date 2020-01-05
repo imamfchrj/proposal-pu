@@ -10,8 +10,38 @@
         if(!$status) {
             return;
         }
-        alert("Success");
+        
         $('#insert_user').attr('disabled', true);
-        // $('#insert_user').attr('disabled', false);
+        $.ajax({
+            url: ROOT+'userajax/insert',
+            dataType: 'json',
+            type: 'post',
+            data: {
+                name: $('#name').val(),
+                email: $('#email').val(),
+                password: $('#password').val(),
+                c_password: $('#c_password').val(),
+                hp: $('#hp').val(),
+                status: $('#status:checked').val(),
+            }
+        })
+            .done(function(data) {
+                if(data.is_error){
+                    alert(data.error_message);
+                    return;
+                }
+                alert("success");
+                // window.location = ROOT+'user/list';
+            })
+            .complete(function(){
+              $('#insert_user').attr('disabled', false);
+            })
+            .fail(function(data){
+                if(data.responseJSON.error_messages){
+                    alert(data.responseJSON.error_messages);
+                    return;
+                }
+                alert("Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
+            });
       }
     </script>
