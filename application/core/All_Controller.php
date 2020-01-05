@@ -8,9 +8,6 @@ class All_Controller extends CI_Controller
 		parent::__construct();	
 	}
 	
-	function check_session() {
-		// this function for check session
-	}
 
 
     function _check_recaptcha()
@@ -119,5 +116,29 @@ class All_Controller extends CI_Controller
 	/**
 	 * end page is for views management
 	 */
+
+
+	function t_ceck_session() {
+		if($this->session->userdata("login_config") == hashpass($this->session->userdata("email").$this->session->userdata("user_id"))) {
+			return TRUE;
+		}
+		return FALSE;
+	}
+
+	function check_ajax() {
+		if($this->t_ceck_session()) {
+			return;
+		}
+		$this->json_unauthorized("Need login");
+		exit;
+	}
+
+	function check_session() {
+		if($this->t_ceck_session()) {
+			return;
+		}
+		header("Location: ". base_url("/login"), true, 301);
+		exit;
+	}
 }
 	

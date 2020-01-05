@@ -10,4 +10,10 @@ class Main extends All_Controller {
 	{
 		header("Location: ". base_url("/login"), true, 301);
 	}
+
+	// public function tes()
+	// {
+	// 	$this->check_ajax();
+	// 	echo "login";
+	// }
 }
