@@ -22,7 +22,7 @@
             $('#datatable1').DataTable( {
                 "processing": true,
                 "serverSide": true,
-                "ajax": "http://localhost:8001/userajax/list",
+                "ajax": ROOT + "/userajax/list",
                 "columns": [
                     { "data": "id" },
                     { "data": "name" },

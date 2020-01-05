@@ -26,3 +26,7 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+
+$config['salt'] = 'cobasaja';
+$config['with_love'] = 'wkwk';
