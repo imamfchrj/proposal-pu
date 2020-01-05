@@ -1,3 +1,8 @@
+<?php
+ if(!isset($title)) {
+   $title = "Pekerjaan Umum";
+ }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,30 +10,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+ 
     <!-- Twitter -->
-    <meta name="twitter:site" content="@themepixels">
-    <meta name="twitter:creator" content="@themepixels">
+    <meta name="twitter:site" content="@KemenPU">
+    <meta name="twitter:creator" content="@KemenPU">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Admin">
-    <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
-    <meta name="twitter:image" content="http://themepixels.me/slim/img/slim-social.png">
+    <meta name="twitter:title" content="Slim">
+    <meta name="twitter:description" content="Sigap membangun bangsa demi negeri.">
+    <meta name="twitter:image" content="https://www.pu.go.id/templates/frontend/img/logo.png">
 
     <!-- Facebook -->
-    <meta property="og:url" content="http://themepixels.me/slim">
-    <meta property="og:title" content="Admin">
-    <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta property="og:url" content="https://www.pu.go.id">
+    <meta property="og:title" content="Slim">
+    <meta property="og:description" content="Sigap membangun bangsa demi negeri.">
 
-    <meta property="og:image" content="http://themepixels.me/slim/img/slim-social.png">
-    <meta property="og:image:secure_url" content="http://themepixels.me/slim/img/slim-social.png">
+    <meta property="og:image" content="https://www.pu.go.id/templates/frontend/img/logo.png">
+    <meta property="og:image:secure_url" content="https://www.pu.go.id/templates/frontend/img/logo.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="600">
+    
+    <link rel="icon" href="https://www.pu.go.id/assets/images/content/Logo_PU_(RGB).jpg">
 
-    <!-- Meta -->
-    <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
-    <meta name="author" content="ThemePixels">
+    <meta name="description" content="Sigap membangun bangsa demi negeri.">
+    <meta name="author" content="redcloud-project">
 
-    <title>Admin Responsive Bootstrap 4 Admin Template</title>
+    <title><?=$title?></title>
 
     <!-- Vendor css -->
     <link href="<?=base_url()?>/assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
