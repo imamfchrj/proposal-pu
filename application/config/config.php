@@ -523,6 +523,9 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
+$config['recatpcha_site_key'] = "";
+$config['recatpcha_secret_key'] = "";
+
 
 require('./application/env.php');
 

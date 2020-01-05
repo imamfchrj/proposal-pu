@@ -8,18 +8,6 @@ class Main extends All_Controller {
 	
 	public function index()
 	{
-		$this->load->view("default/tes");
-	}
-
-	public function mantap()
-	{
-		$this->load->model("Users_model");
-		$tes = $this->Users_model->person();
-		echo json_encode($tes);
-	}
-
-	public function tes() 
-	{
-		$this->view("default/form");
+		header("Location: ". base_url("/login"), true, 301);
 	}
 }
