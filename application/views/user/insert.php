@@ -11,6 +11,7 @@
 
         <div class="section-wrapper">
           <label class="section-title">Form Insert User</label>
+            <a href="" class="btn btn-primary" data-toggle="modal" data-target="#modaldemo4">View Live Demo</a>
           <p class="mg-b-20 mg-sm-b-40">Berhati-hatilah untuk menambahkan user baru. Pastikan password yang digunakan tidak mudah untuk di tebak.</p>
 
           <div class="form-layout">
@@ -65,7 +66,7 @@
 
             <div class="form-layout-footer">
               <button class="btn btn-primary bd-0" id="insert_user" onclick="insert();">Simpan </button>
-              <button class="btn btn-secondary bd-0">Batalkan</button>
+              <button class="btn btn-secondary bd-0" onclick="window.location.href='<?=base_url('user/list')?>'">Batalkan</button>
             </div><!-- form-layout-footer -->
           </div><!-- form-layout -->
         </div>

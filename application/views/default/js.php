@@ -56,6 +56,25 @@
         });
 
       });
+
+      function alert_success($title, $description, $link=""){
+        $('.title_success').html($title);
+        $('.description_success').html($description);
+        $('.link_success').attr("href",$link);
+        if(!$link) {
+          $('.link_success').html("");
+        }
+        
+        $('#alert_success').modal('show');
+      }
+
+      function alert_failed($title, $description, $link=""){
+        $('.title_failed').html($title);
+        $('.description_failed').html($description);
+        $('.link_failed').html($link);
+        
+        $('#alert_failed').modal('show');
+      }
     </script>
 
 
