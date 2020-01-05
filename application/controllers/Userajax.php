@@ -19,9 +19,6 @@ class Userajax extends All_Controller {
 		$limit = $input["length"];
 		$order = $input["order"][0]["column"];
 		$order_type = $input["order"][0]["dir"];
-		if ($offer > 0) {
-			$offer = ($offer/$limit);
-		}
 		$data = $this->Users_model->user_list(
 			$search, 
 			$limit,  
