@@ -3,7 +3,9 @@
 
 $config['base_url'] = 'http://localhost:8001/';
 
-
+// testing/
+$config['recatpcha_site_key'] = 'lala_6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
+$config['recatpcha_secret_key'] = 'lala_6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
 
 $db['default'] = array(
 	'dsn'	=> '',
@@ -26,3 +28,7 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+
+$config['salt'] = 'cobasaja';
+$config['with_love'] = 'wkwk';

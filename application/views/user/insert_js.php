@@ -2,6 +2,7 @@
     <?php
         $this->load->view("default/form_js");
         $this->load->view("user/check_user_js");
+        $link = $option["link"];
     ?>
 
     <script>
@@ -10,8 +11,40 @@
         if(!$status) {
             return;
         }
-        alert("Success");
+        
         $('#insert_user').attr('disabled', true);
-        // $('#insert_user').attr('disabled', false);
+        $.ajax({
+            url: ROOT+'userajax/<?=$link?>',
+            dataType: 'json',
+            type: 'post',
+            data: {
+                id: $('#id').val(),
+                name: $('#name').val(),
+                email: $('#email').val(),
+                password: $('#password').val(),
+                c_password: $('#c_password').val(),
+                hp: $('#hp').val(),
+                status: $('#status:checked').val(),
+            }
+        })
+            .done(function(data) {
+                if(data.is_error){
+                    alert(data.error_message);
+                    return;
+                }
+                
+                alert_success("Sukses!", "Berhasil menambahkan user baru", ROOT + "/user/list");
+                
+            })
+            .complete(function(){
+              $('#insert_user').attr('disabled', false);
+            })
+            .fail(function(data){
+                if(data.responseJSON.error_messages !== 'undefined'){
+                    alert_failed("Error!", data.responseJSON.error_messages);
+                    return;
+                }
+                alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
+            });
       }
     </script>

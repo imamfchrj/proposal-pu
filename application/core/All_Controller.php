@@ -8,10 +8,76 @@ class All_Controller extends CI_Controller
 		parent::__construct();	
 	}
 	
-	function check_session() {
-		// this function for check session
+
+
+    function _check_recaptcha()
+	{
+		if(!$_POST['g-recaptcha-response']){
+			$this->form_validation->set_message('_check_recaptcha', "Silahkan gunakan capcha");
+            return FALSE;
+		}
+        $response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$this->config->item('recatpcha_secret_key')."&response=" . $_POST['g-recaptcha-response'] . "&remoteip=" . $_SERVER['REMOTE_ADDR']));
+
+		if ($response->success) {
+            return TRUE;
+        } else {
+			$this->form_validation->set_message('_check_recaptcha', "Captcha gagal");
+            return FALSE;
+        }
+    }
+
+	/**
+	 * start page ajax output
+	 */
+	function json_success($data = false) {
+		$data_output = array(
+			'is_error'=>false,
+		);
+		if($data) {
+			$data_output["data"] = $data;
+		}
+		$this->json($data_output);
 	}
-	
+
+	function json($data_output) {
+		header('Content-Type: application/json');
+		echo (json_encode($data_output));
+		exit;
+	}
+
+	function json_badrequest($data = false) {
+		http_response_code(400);
+		$data_output = array(
+			'is_error'=>true,
+		);
+		if($data) {
+			$data_output["error_messages"] = $data;
+		}
+		$this->json($data_output);
+	}
+
+
+	function json_unauthorized($data = false) {
+		http_response_code(401);
+		$data_output = array(
+			'is_error'=>true,
+		);
+		if($data) {
+			$data_output["error_messages"] = $data;
+		}
+		$this->json($data_output);
+	}
+
+	function post_only() {
+		$data_post = $this->input->post();
+		if(count($data_post) == 0) {
+			$this->json_badrequest();
+		}
+	}
+
+	/**
+	 * end page ajax output
+	 */
 	
 
 
@@ -50,5 +116,29 @@ class All_Controller extends CI_Controller
 	/**
 	 * end page is for views management
 	 */
+
+
+	function t_ceck_session() {
+		if($this->session->userdata("login_config") == hashpass($this->session->userdata("email").$this->session->userdata("user_id"))) {
+			return TRUE;
+		}
+		return FALSE;
+	}
+
+	function check_ajax() {
+		if($this->t_ceck_session()) {
+			return;
+		}
+		$this->json_unauthorized("Need login");
+		exit;
+	}
+
+	function check_session() {
+		if($this->t_ceck_session()) {
+			return;
+		}
+		header("Location: ". base_url("/login"), true, 301);
+		exit;
+	}
 }
 	
