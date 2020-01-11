@@ -73,9 +73,9 @@
                 <div class="col-lg mg-t-30 mg-lg-t-0">
                   <label class="section-label">Air Minum</label>
                   <ul>
-                    <li><a href="#">Evaluasi Infrastruktur Spam Durolis</a></li>
+                    <li><a href="<?=base_url('airminum/insert')?>">Evaluasi Infrastruktur Spam Durolis</a></li>
                     <li><a href="#">List Evaluasi Infrastruktur Spam Durolis</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="<?=base_url('airminum/insert')?>">Konfigurasi Parameter</a></li>
                   </ul>
 
 
