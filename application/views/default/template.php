@@ -36,13 +36,17 @@
     <link href="<?=base_url("assets/")?>lib/datatables/css/jquery.dataTables.css" rel="stylesheet">
     <link href="<?=base_url("assets/")?>lib/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="<?=base_url("assets/")?>lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?=base_url("assets/")?>lib/jquery.steps/css/jquery.steps.css">
     <link href="<?=base_url("assets/")?>lib/jquery-toggles/css/toggles-full.css" rel="stylesheet">
     <link href="<?=base_url("assets/")?>lib/jt.timepicker/css/jquery.timepicker.css" rel="stylesheet">
     <link href="<?=base_url("assets/")?>lib/spectrum/css/spectrum.css" rel="stylesheet">
     <link href="<?=base_url("assets/")?>lib/bootstrap-tagsinput/css/bootstrap-tagsinput.css" rel="stylesheet">
     <link href="<?=base_url("assets/")?>lib/select2/css/select2.min.css" rel="stylesheet">
     
+
     <link rel="stylesheet" href="<?=base_url("assets/")?>lib/SpinKit/css/spinkit.css">
+
+
     <!-- Slim CSS -->
     <link rel="stylesheet" href="<?=base_url("assets/")?>css/slim.css">
     <script>
