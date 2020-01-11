@@ -951,7 +951,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/dt</span>
-                                    <input id="tesid" type="text" class="form-control" name="tesid" placeholder="">
+                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -1105,7 +1105,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="tesid" type="text" class="form-control" name="tesid" placeholder="">
+                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -1378,7 +1378,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Unit</span>
-                                    <input id="tesid" type="text" class="form-control" name="tesid" placeholder="">
+                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -1506,7 +1506,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="text" class="form-control" name="tesid" placeholder="">
+                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -1661,7 +1661,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="text" class="form-control" name="tesid" placeholder="">
+                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -1909,7 +1909,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="text" class="form-control" name="tesid" placeholder="">
+                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -2252,7 +2252,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="text" class="form-control" name="tesid" placeholder="">
+                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -2376,7 +2376,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="text" class="form-control" name="tesid" placeholder="">
+                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -2561,7 +2561,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="text" class="form-control" name="tesid" placeholder="">
+                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -2655,7 +2655,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp/Lt/dt</span>
-                                    <input id="tesid" type="text" class="form-control" name="tesid" placeholder="">
+                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -2679,7 +2679,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp/SR</span>
-                                    <input id="tesid" type="text" class="form-control" name="tesid" placeholder="">
+                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
