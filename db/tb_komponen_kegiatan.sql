@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Jan 11, 2020 at 11:50 AM
+-- Generation Time: Jan 11, 2020 at 04:58 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.4.1
 
@@ -37,12 +37,18 @@ CREATE TABLE `tb_komponen_kegiatan` (
   `kegiatan` varchar(250) NOT NULL,
   `satuan` varchar(100) NOT NULL,
   `estimasi` decimal(30,0) NOT NULL,
-  `harga_satuan` decimal(30,0) NOT NULL,
-  `harga_satuan_lokal` decimal(30,0) NOT NULL,
+  `harga_satuan` decimal(30,0) NOT NULL DEFAULT '1',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `aktif` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `tb_komponen_kegiatan`
+--
+
+INSERT INTO `tb_komponen_kegiatan` (`id`, `key`, `sub_key`, `prov_id`, `komponen_spam`, `kegiatan`, `satuan`, `estimasi`, `harga_satuan`, `created_at`, `aktif`) VALUES
+(1, 'air_minum', 'unit_distribusi', 11, 'Unit Distribusi', 'Centrifugal pump Q=50 lt/dt, H=60 m', 'unit', '145800', '2916', '2020-01-11 16:45:24', 1);
 
 --
 -- Indexes for dumped tables
@@ -64,10 +70,9 @@ ALTER TABLE `tb_komponen_kegiatan` ADD FULLTEXT KEY `sub_key` (`sub_key`);
 -- AUTO_INCREMENT for table `tb_komponen_kegiatan`
 --
 ALTER TABLE `tb_komponen_kegiatan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
