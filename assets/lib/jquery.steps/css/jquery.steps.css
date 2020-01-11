@@ -92,7 +92,7 @@
 .wizard > .steps a:hover,
 .wizard > .steps a:active
 {
-    display: block;
+    /* display: block; */
     width: auto;
     margin: 0 0.5em 0.5em;
     padding: 1em 1em;
