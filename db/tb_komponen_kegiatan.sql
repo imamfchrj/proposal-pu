@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Jan 11, 2020 at 04:58 PM
+-- Generation Time: Jan 11, 2020 at 05:01 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.4.1
 
@@ -32,12 +32,11 @@ CREATE TABLE `tb_komponen_kegiatan` (
   `id` int(11) NOT NULL,
   `key` varchar(100) NOT NULL,
   `sub_key` varchar(100) NOT NULL,
-  `prov_id` int(11) NOT NULL,
   `komponen_spam` varchar(100) NOT NULL,
   `kegiatan` varchar(250) NOT NULL,
   `satuan` varchar(100) NOT NULL,
   `estimasi` decimal(30,0) NOT NULL,
-  `harga_satuan` decimal(30,0) NOT NULL DEFAULT '1',
+  `pembagi` decimal(30,0) NOT NULL DEFAULT '1',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `aktif` tinyint(4) NOT NULL
@@ -47,8 +46,8 @@ CREATE TABLE `tb_komponen_kegiatan` (
 -- Dumping data for table `tb_komponen_kegiatan`
 --
 
-INSERT INTO `tb_komponen_kegiatan` (`id`, `key`, `sub_key`, `prov_id`, `komponen_spam`, `kegiatan`, `satuan`, `estimasi`, `harga_satuan`, `created_at`, `aktif`) VALUES
-(1, 'air_minum', 'unit_distribusi', 11, 'Unit Distribusi', 'Centrifugal pump Q=50 lt/dt, H=60 m', 'unit', '145800', '2916', '2020-01-11 16:45:24', 1);
+INSERT INTO `tb_komponen_kegiatan` (`id`, `key`, `sub_key`, `komponen_spam`, `kegiatan`, `satuan`, `estimasi`, `pembagi`, `created_at`, `aktif`) VALUES
+(1, 'air_minum', 'unit_distribusi', 'Unit Distribusi', 'Centrifugal pump Q=50 lt/dt, H=60 m', 'unit', '145800', '2916', '2020-01-11 16:45:24', 1);
 
 --
 -- Indexes for dumped tables
