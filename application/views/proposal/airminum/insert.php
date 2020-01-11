@@ -41,7 +41,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">A</span>
+                                    <span class="number">1.2</span>
                                     <span class="title">Pelayanan</span>
                                 </a>
                             </li>
@@ -62,11 +62,11 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">1.2.1</th>
                         </tr>
 
                         <tr>
-                            <td class="w-25 p-3 align-middle">Jumlah Penduduk Administrasi</td>
+                            <td class="w-25 p-3 align-middle">Jumlah Penduduk Administrasi (Tahun proyeksi)</td>
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Jiwa</span>
@@ -170,7 +170,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">1.2.2</th>
                         </tr>
 
                         <tr>
@@ -378,7 +378,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">1.2.3</th>
                         </tr>
 
                         <tr>
@@ -469,7 +469,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">B</span>
+                                    <span class="number">1.3</span>
                                     <span class="title">Unit Air Baku</span>
                                 </a>
                             </li>
@@ -490,7 +490,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">1.3.1</th>
                         </tr>
 
                         <tr>
@@ -520,7 +520,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">1.3.2</th>
                         </tr>
 
                         <tr>
@@ -550,7 +550,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">1.3.3</th>
                         </tr>
 
                         <tr>
@@ -580,7 +580,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">4</th>
+                            <th colspan="5">1.3.4</th>
                         </tr>
 
                         <tr>
@@ -610,7 +610,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">5</th>
+                            <th colspan="5">1.3.5</th>
                         </tr>
 
                         <tr>
@@ -640,7 +640,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">6</th>
+                            <th colspan="5">1.3.6</th>
                         </tr>
 
                         <tr>
@@ -670,7 +670,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">7</th>
+                            <th colspan="5">1.3.7</th>
                         </tr>
 
                         <tr>
@@ -700,7 +700,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">8</th>
+                            <th colspan="5">1.3.8</th>
                         </tr>
 
                         <tr>
@@ -730,7 +730,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">9</th>
+                            <th colspan="5">1.3.9</th>
                         </tr>
 
                         <tr>
@@ -760,7 +760,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">10</th>
+                            <th colspan="5">1.3.10</th>
                         </tr>
 
                         <tr>
@@ -790,7 +790,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">11</th>
+                            <th colspan="5">1.3.11</th>
                         </tr>
 
                         <tr>
@@ -820,7 +820,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">12</th>
+                            <th colspan="5">1.3.12</th>
                         </tr>
 
                         <tr>
@@ -850,7 +850,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">13</th>
+                            <th colspan="5">1.3.13</th>
                         </tr>
 
                         <tr>
@@ -892,7 +892,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">C</span>
+                                    <span class="number">1.4</span>
                                     <span class="title">Unit Produksi</span>
                                 </a>
                             </li>
@@ -913,7 +913,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">1.4.1</th>
                         </tr>
 
                         <tr>
@@ -943,7 +943,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">1.4.2</th>
                         </tr>
 
                         <tr>
@@ -973,7 +973,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">1.4.3</th>
                         </tr>
 
                         <tr>
@@ -1004,7 +1004,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">4</th>
+                            <th colspan="5">1.4.4</th>
                         </tr>
 
                         <tr>
@@ -1046,7 +1046,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">D</span>
+                                    <span class="number">1.5</span>
                                     <span class="title">Unit Distribusi</span>
                                 </a>
                             </li>
@@ -1067,7 +1067,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">1.5.1</th>
                         </tr>
 
                         <tr>
@@ -1097,7 +1097,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">1.5.2</th>
                         </tr>
 
                         <tr>
@@ -1127,7 +1127,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">1.5.3</th>
                         </tr>
 
                         <tr>
@@ -1157,7 +1157,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">4</th>
+                            <th colspan="5">1.5.4</th>
                         </tr>
 
                         <tr>
@@ -1187,7 +1187,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">5</th>
+                            <th colspan="5">1.5.5</th>
                         </tr>
 
                         <tr>
@@ -1217,7 +1217,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">6</th>
+                            <th colspan="5">1.5.6</th>
                         </tr>
 
                         <tr>
@@ -1247,7 +1247,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">7</th>
+                            <th colspan="5">1.5.7</th>
                         </tr>
 
                         <tr>
@@ -1277,7 +1277,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">8</th>
+                            <th colspan="5">1.5.8</th>
                         </tr>
 
                         <tr>
@@ -1319,7 +1319,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">D</span>
+                                    <span class="number">1.6</span>
                                     <span class="title">Unit Pelayanan</span>
                                 </a>
                             </li>
@@ -1340,7 +1340,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">1.6.1</th>
                         </tr>
 
                         <tr>
@@ -1370,7 +1370,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">1.6.2</th>
                         </tr>
 
                         <tr>
@@ -1400,7 +1400,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">1.6.3</th>
                         </tr>
 
                         <tr>
@@ -1447,7 +1447,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">A</span>
+                                    <span class="number">2.1</span>
                                     <span class="title">Unit Air Baku</span>
                                 </a>
                             </li>
@@ -1468,7 +1468,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">2.1.1</th>
                         </tr>
 
                         <tr>
@@ -1498,7 +1498,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">2.1.2</th>
                         </tr>
 
                         <tr>
@@ -1528,7 +1528,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">2.1.3</th>
                         </tr>
 
                         <tr>
@@ -1559,7 +1559,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">4</th>
+                            <th colspan="5">2.1.4</th>
                         </tr>
 
                         <tr>
@@ -1602,7 +1602,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">B</span>
+                                    <span class="number">2.2</span>
                                     <span class="title">Unit Produksi</span>
                                 </a>
                             </li>
@@ -1623,7 +1623,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">2.2.1</th>
                         </tr>
 
                         <tr>
@@ -1653,7 +1653,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">2.2.2</th>
                         </tr>
 
                         <tr>
@@ -1683,7 +1683,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">2.2.3</th>
                         </tr>
 
                         <tr>
@@ -1714,7 +1714,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">4</th>
+                            <th colspan="5">2.2.4</th>
                         </tr>
 
                         <tr>
@@ -1745,7 +1745,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">5</th>
+                            <th colspan="5">2.2.5</th>
                         </tr>
 
                         <tr>
@@ -1776,7 +1776,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">6</th>
+                            <th colspan="5">2.2.6</th>
                         </tr>
 
                         <tr>
@@ -1807,7 +1807,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">7</th>
+                            <th colspan="5">2.2.7</th>
                         </tr>
 
                         <tr>
@@ -1850,7 +1850,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">C</span>
+                                    <span class="number">2.3</span>
                                     <span class="title">Unit Distribusi</span>
                                 </a>
                             </li>
@@ -1871,7 +1871,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">2.3.1</th>
                         </tr>
 
                         <tr>
@@ -1901,7 +1901,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">2.3.2</th>
                         </tr>
 
                         <tr>
@@ -1931,7 +1931,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">2.3.3</th>
                         </tr>
 
                         <tr>
@@ -1962,7 +1962,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">4</th>
+                            <th colspan="5">2.3.4</th>
                         </tr>
 
                         <tr>
@@ -1993,7 +1993,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">5</th>
+                            <th colspan="5">2.3.5</th>
                         </tr>
 
                         <tr>
@@ -2024,7 +2024,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">6</th>
+                            <th colspan="5">2.3.6</th>
                         </tr>
 
                         <tr>
@@ -2055,7 +2055,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">7</th>
+                            <th colspan="5">2.3.7</th>
                         </tr>
 
                         <tr>
@@ -2088,7 +2088,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">8</th>
+                            <th colspan="5">2.3.8</th>
                         </tr>
 
                         <tr>
@@ -2119,7 +2119,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">9</th>
+                            <th colspan="5">2.3.9</th>
                         </tr>
 
                         <tr>
@@ -2151,7 +2151,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">10</th>
+                            <th colspan="5">2.3.10</th>
                         </tr>
 
                         <tr>
@@ -2193,7 +2193,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">D</span>
+                                    <span class="number">2.4</span>
                                     <span class="title">Unit Pelayanan</span>
                                 </a>
                             </li>
@@ -2214,7 +2214,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">2.4.1</th>
                         </tr>
 
                         <tr>
@@ -2244,7 +2244,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">2.4.2</th>
                         </tr>
 
                         <tr>
@@ -2274,7 +2274,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">2.4.3</th>
                         </tr>
 
                         <tr>
@@ -2317,7 +2317,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">E</span>
+                                    <span class="number">2.5</span>
                                     <span class="title">Biaya Non Standar</span>
                                 </a>
                             </li>
@@ -2338,7 +2338,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">2.5.1</th>
                         </tr>
 
                         <tr>
@@ -2368,7 +2368,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">2.5.2</th>
                         </tr>
 
                         <tr>
@@ -2398,7 +2398,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">2.5.3</th>
                         </tr>
 
                         <tr>
@@ -2429,7 +2429,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">4</th>
+                            <th colspan="5">2.5.4</th>
                         </tr>
 
                         <tr>
@@ -2460,7 +2460,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">5</th>
+                            <th colspan="5">2.5.5</th>
                         </tr>
 
                         <tr>
@@ -2502,7 +2502,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">F</span>
+                                    <span class="number">2.6</span>
                                     <span class="title">Biaya lain-lain</span>
                                 </a>
                             </li>
@@ -2523,7 +2523,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">2.6.1</th>
                         </tr>
 
                         <tr>
@@ -2553,7 +2553,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">2.6.2</th>
                         </tr>
 
                         <tr>
@@ -2596,7 +2596,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">G</span>
+                                    <span class="number">2.7</span>
                                     <span class="title">Harga rata-rata</span>
                                 </a>
                             </li>
@@ -2617,7 +2617,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">2.7.1</th>
                         </tr>
 
                         <tr>
@@ -2647,7 +2647,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">2.7.2</th>
                         </tr>
 
                         <tr>
