@@ -34,14 +34,258 @@ $description_page = $option["description_page"];
             </div>
             <!-- slim-pageheader -->
 
+
             <!-- page 1 ketentuan teknis A pelayanan -->
-            <div class="section-wrapper" style="overflow-x:auto;">
+            <div class="section-wrapper mg-t-20" style="overflow-x:auto;">
                 <div id="wizard6" role="application" class="wizard wizard-style-2 clearfix">
                     <div class="steps clearfix">
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">A</span>
+                                    <span class="number">1.1</span>
+                                    <span class="title">Jenis SPAM</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="mg-b-20 mg-sm-b-40">
+                    <!--It can be filled with description-->
+                </p>
+                <table class="table table-reference mg-b-25">
+                    <thead>
+                        <th>Deskripsi</th>
+                        <th style="min-width: 250px;">Satuan dan Input</th>
+                        <th>Verifikasi</th>
+                        <th>Harga Satuan</th>
+                        <th>Indikator</th>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <th colspan="5">1.1.1</th>
+                        </tr>
+
+                        <tr>
+                            <td class="w-25 p-3 align-middle">Kapasitas terpasang</td>
+                            <td class="p-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Lt/det</span>
+                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                        </tr>
+
+
+
+                        <tr>
+                            <th colspan="5">1.1.2</th>
+                        </tr>
+
+                        <tr>
+                            <td class="w-25 p-3 align-middle">Kapasitas produksi</td>
+                            <td class="p-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Lt/det</span>
+                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                        </tr>
+
+
+
+                        <tr>
+                            <th colspan="5">1.1.3</th>
+                        </tr>
+
+                        <tr>
+                            <td class="w-25 p-3 align-middle">Idle capacityi</td>
+                            <td class="p-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Lt/det</span>
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                        </tr>
+
+
+
+                        <tr>
+                            <th colspan="5">1.1.4</th>
+                        </tr>
+
+                        <tr>
+                            <td class="w-25 p-3 align-middle" rowspan="2">NRW</td>
+                            <td class="p-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">%</span>
+                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="p-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Lt/det</span>
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <th colspan="5">1.1.5</th>
+                        </tr>
+
+                        <tr>
+                            <td class="w-25 p-3 align-middle">Sambungan Eksisting</td>
+                            <td class="p-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Unit</span>
+                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="5">1.1.6</th>
+                        </tr>
+
+                        <tr>
+                            <td class="w-25 p-3 align-middle">Penduduk terlayani</td>
+                            <td class="p-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Unit</span>
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- page 1 ketentuan teknis A pelayanan -->
+            <div class="section-wrapper mg-t-20" style="overflow-x:auto;">
+                <div id="wizard6" role="application" class="wizard wizard-style-2 clearfix">
+                    <div class="steps clearfix">
+                        <ul role="tablist">
+                            <li role="tab" class="first current" aria="false" aria-selected="true">
+                                <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
+                                    <span class="number">1.2</span>
                                     <span class="title">Pelayanan</span>
                                 </a>
                             </li>
@@ -62,11 +306,11 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">1.2.1</th>
                         </tr>
 
                         <tr>
-                            <td class="w-25 p-3 align-middle">Jumlah Penduduk Administrasi</td>
+                            <td class="w-25 p-3 align-middle">Jumlah Penduduk Administrasi (Tahun proyeksi)</td>
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Jiwa</span>
@@ -98,7 +342,6 @@ $description_page = $option["description_page"];
                                     <span class="input-group-addon">%</span>
                                     <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
-
                             </td>
                             <td>
                                 <ul class="parsley-errors-list filled" id="tesid">
@@ -122,7 +365,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Jiwa</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -170,7 +413,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">1.2.2</th>
                         </tr>
 
                         <tr>
@@ -178,7 +421,34 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Unit</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="w-25 p-3 align-middle">Tambahan Sambungan</td>
+                            <td class="p-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Unit</span>
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -226,11 +496,11 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <td class="w-25 p-3 align-middle">Konsumsi air domestik (Od)</td>
+                            <td class="w-25 p-3 align-middle">Konsumsi air domestik (Qd)</td>
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/det</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -252,7 +522,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <td class="w-25 p-3 align-middle" rowspan="2">Konsumsi air non domestik (Od)</td>
+                            <td class="w-25 p-3 align-middle" rowspan="2">Konsumsi air non domestik (Qd)</td>
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">%</span>
@@ -280,7 +550,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -306,7 +576,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -356,7 +626,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">%</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -378,7 +648,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">1.2.3</th>
                         </tr>
 
                         <tr>
@@ -386,7 +656,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Liter/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -412,7 +682,34 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Liter/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="tesid">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="w-25 p-3 align-middle">Tambahan Kapasitas Produksi</td>
+                            <td class="p-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Liter/dt</span>
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -438,7 +735,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Liter/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -469,7 +766,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">B</span>
+                                    <span class="number">1.3</span>
                                     <span class="title">Unit Air Baku</span>
                                 </a>
                             </li>
@@ -490,7 +787,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">1.3.1</th>
                         </tr>
 
                         <tr>
@@ -520,7 +817,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">1.3.2</th>
                         </tr>
 
                         <tr>
@@ -550,7 +847,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">1.3.3</th>
                         </tr>
 
                         <tr>
@@ -580,7 +877,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">4</th>
+                            <th colspan="5">1.3.4</th>
                         </tr>
 
                         <tr>
@@ -610,7 +907,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">5</th>
+                            <th colspan="5">1.3.5</th>
                         </tr>
 
                         <tr>
@@ -640,7 +937,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">6</th>
+                            <th colspan="5">1.3.6</th>
                         </tr>
 
                         <tr>
@@ -648,7 +945,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -670,7 +967,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">7</th>
+                            <th colspan="5">1.3.7</th>
                         </tr>
 
                         <tr>
@@ -700,7 +997,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">8</th>
+                            <th colspan="5">1.3.8</th>
                         </tr>
 
                         <tr>
@@ -708,7 +1005,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">M/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -730,7 +1027,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">9</th>
+                            <th colspan="5">1.3.9</th>
                         </tr>
 
                         <tr>
@@ -738,7 +1035,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -760,7 +1057,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">10</th>
+                            <th colspan="5">1.3.10</th>
                         </tr>
 
                         <tr>
@@ -768,7 +1065,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -790,7 +1087,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">11</th>
+                            <th colspan="5">1.3.11</th>
                         </tr>
 
                         <tr>
@@ -820,7 +1117,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">12</th>
+                            <th colspan="5">1.3.12</th>
                         </tr>
 
                         <tr>
@@ -828,7 +1125,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -850,7 +1147,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">13</th>
+                            <th colspan="5">1.3.13</th>
                         </tr>
 
                         <tr>
@@ -858,7 +1155,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Kw</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -892,7 +1189,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">C</span>
+                                    <span class="number">1.4</span>
                                     <span class="title">Unit Produksi</span>
                                 </a>
                             </li>
@@ -913,7 +1210,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">1.4.1</th>
                         </tr>
 
                         <tr>
@@ -943,7 +1240,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">1.4.2</th>
                         </tr>
 
                         <tr>
@@ -973,7 +1270,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">1.4.3</th>
                         </tr>
 
                         <tr>
@@ -1004,7 +1301,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">4</th>
+                            <th colspan="5">1.4.4</th>
                         </tr>
 
                         <tr>
@@ -1046,7 +1343,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">D</span>
+                                    <span class="number">1.5</span>
                                     <span class="title">Unit Distribusi</span>
                                 </a>
                             </li>
@@ -1067,7 +1364,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">1.5.1</th>
                         </tr>
 
                         <tr>
@@ -1097,7 +1394,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">1.5.2</th>
                         </tr>
 
                         <tr>
@@ -1127,7 +1424,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">1.5.3</th>
                         </tr>
 
                         <tr>
@@ -1157,7 +1454,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">4</th>
+                            <th colspan="5">1.5.4</th>
                         </tr>
 
                         <tr>
@@ -1165,7 +1462,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">M/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -1187,7 +1484,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">5</th>
+                            <th colspan="5">1.5.5</th>
                         </tr>
 
                         <tr>
@@ -1195,7 +1492,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -1217,7 +1514,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">6</th>
+                            <th colspan="5">1.5.6</th>
                         </tr>
 
                         <tr>
@@ -1247,7 +1544,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">7</th>
+                            <th colspan="5">1.5.7</th>
                         </tr>
 
                         <tr>
@@ -1277,7 +1574,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">8</th>
+                            <th colspan="5">1.5.8</th>
                         </tr>
 
                         <tr>
@@ -1319,7 +1616,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">D</span>
+                                    <span class="number">1.6</span>
                                     <span class="title">Unit Pelayanan</span>
                                 </a>
                             </li>
@@ -1340,7 +1637,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">1.6.1</th>
                         </tr>
 
                         <tr>
@@ -1370,7 +1667,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">1.6.2</th>
                         </tr>
 
                         <tr>
@@ -1378,7 +1675,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Unit</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -1400,7 +1697,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">1.6.3</th>
                         </tr>
 
                         <tr>
@@ -1408,7 +1705,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -1447,7 +1744,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">A</span>
+                                    <span class="number">2.1</span>
                                     <span class="title">Unit Air Baku</span>
                                 </a>
                             </li>
@@ -1468,7 +1765,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">2.1.1</th>
                         </tr>
 
                         <tr>
@@ -1498,7 +1795,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">2.1.2</th>
                         </tr>
 
                         <tr>
@@ -1528,7 +1825,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">2.1.3</th>
                         </tr>
 
                         <tr>
@@ -1559,7 +1856,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">4</th>
+                            <th colspan="5">2.1.4</th>
                         </tr>
 
                         <tr>
@@ -1602,7 +1899,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">B</span>
+                                    <span class="number">2.2</span>
                                     <span class="title">Unit Produksi</span>
                                 </a>
                             </li>
@@ -1623,7 +1920,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">2.2.1</th>
                         </tr>
 
                         <tr>
@@ -1653,7 +1950,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">2.2.2</th>
                         </tr>
 
                         <tr>
@@ -1683,7 +1980,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">2.2.3</th>
                         </tr>
 
                         <tr>
@@ -1714,7 +2011,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">4</th>
+                            <th colspan="5">2.2.4</th>
                         </tr>
 
                         <tr>
@@ -1745,7 +2042,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">5</th>
+                            <th colspan="5">2.2.5</th>
                         </tr>
 
                         <tr>
@@ -1776,7 +2073,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">6</th>
+                            <th colspan="5">2.2.6</th>
                         </tr>
 
                         <tr>
@@ -1807,7 +2104,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">7</th>
+                            <th colspan="5">2.2.7</th>
                         </tr>
 
                         <tr>
@@ -1850,7 +2147,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">C</span>
+                                    <span class="number">2.3</span>
                                     <span class="title">Unit Distribusi</span>
                                 </a>
                             </li>
@@ -1871,7 +2168,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">2.3.1</th>
                         </tr>
 
                         <tr>
@@ -1901,7 +2198,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">2.3.2</th>
                         </tr>
 
                         <tr>
@@ -1931,7 +2228,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">2.3.3</th>
                         </tr>
 
                         <tr>
@@ -1962,7 +2259,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">4</th>
+                            <th colspan="5">2.3.4</th>
                         </tr>
 
                         <tr>
@@ -1993,7 +2290,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">5</th>
+                            <th colspan="5">2.3.5</th>
                         </tr>
 
                         <tr>
@@ -2024,7 +2321,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">6</th>
+                            <th colspan="5">2.3.6</th>
                         </tr>
 
                         <tr>
@@ -2055,7 +2352,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">7</th>
+                            <th colspan="5">2.3.7</th>
                         </tr>
 
                         <tr>
@@ -2088,7 +2385,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">8</th>
+                            <th colspan="5">2.3.8</th>
                         </tr>
 
                         <tr>
@@ -2119,7 +2416,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">9</th>
+                            <th colspan="5">2.3.9</th>
                         </tr>
 
                         <tr>
@@ -2151,7 +2448,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">10</th>
+                            <th colspan="5">2.3.10</th>
                         </tr>
 
                         <tr>
@@ -2159,7 +2456,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -2193,7 +2490,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">D</span>
+                                    <span class="number">2.4</span>
                                     <span class="title">Unit Pelayanan</span>
                                 </a>
                             </li>
@@ -2214,7 +2511,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">2.4.1</th>
                         </tr>
 
                         <tr>
@@ -2244,7 +2541,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">2.4.2</th>
                         </tr>
 
                         <tr>
@@ -2274,7 +2571,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">2.4.3</th>
                         </tr>
 
                         <tr>
@@ -2317,7 +2614,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">E</span>
+                                    <span class="number">2.5</span>
                                     <span class="title">Biaya Non Standar</span>
                                 </a>
                             </li>
@@ -2338,7 +2635,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">2.5.1</th>
                         </tr>
 
                         <tr>
@@ -2346,7 +2643,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -2368,7 +2665,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">2.5.2</th>
                         </tr>
 
                         <tr>
@@ -2376,7 +2673,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -2398,7 +2695,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">3</th>
+                            <th colspan="5">2.5.3</th>
                         </tr>
 
                         <tr>
@@ -2406,7 +2703,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -2429,7 +2726,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">4</th>
+                            <th colspan="5">2.5.4</th>
                         </tr>
 
                         <tr>
@@ -2437,7 +2734,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -2460,7 +2757,7 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">5</th>
+                            <th colspan="5">2.5.5</th>
                         </tr>
 
                         <tr>
@@ -2502,7 +2799,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">F</span>
+                                    <span class="number">2.6</span>
                                     <span class="title">Biaya lain-lain</span>
                                 </a>
                             </li>
@@ -2523,7 +2820,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">2.6.1</th>
                         </tr>
 
                         <tr>
@@ -2553,7 +2850,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">2.6.2</th>
                         </tr>
 
                         <tr>
@@ -2596,7 +2893,7 @@ $description_page = $option["description_page"];
                         <ul role="tablist">
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
-                                    <span class="number">G</span>
+                                    <span class="number">2.7</span>
                                     <span class="title">Harga rata-rata</span>
                                 </a>
                             </li>
@@ -2617,7 +2914,7 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">1</th>
+                            <th colspan="5">2.7.1</th>
                         </tr>
 
                         <tr>
@@ -2625,7 +2922,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -2647,7 +2944,7 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2</th>
+                            <th colspan="5">2.7.2</th>
                         </tr>
 
                         <tr>
@@ -2655,7 +2952,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp/Lt/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -2679,7 +2976,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp/SR</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
