@@ -33,7 +33,41 @@ $description_page = $option["description_page"];
                 <h6 class="slim-pagetitle"><b>1.</b> Ketentuan Teknis Pengajuan Air Minum</h6>
             </div>
             <!-- slim-pageheader -->
+  <!-- page 1 ketentuan teknis A pelayanan -->
+  <div class="section-wrapper mg-t-20" style="overflow-x:auto;">
+                <div id="wizard6" role="application" class="wizard wizard-style-2 clearfix">
+                    <div class="steps clearfix">
+                        <ul role="tablist">
+                            <li role="tab" class="first current" aria="false" aria-selected="true">
+                                <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
+                                    <span class="number">A</span>
+                                    <span class="title">Provinsi</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="mg-b-20 mg-sm-b-40">
+                    <!--It can be filled with description-->
+                </p>
+                <table class="table table-reference mg-b-25">
+                    <tbody>
 
+                        <tr>
+                            <td class="p-3">
+                                <div class="input-group">
+                                    <select id="provinsi" class="form-control select2 provinsi" data-placeholder="Pilih Provinsi">
+                                        
+                                    </select>
+                                </div>
+
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
 
             <!-- page 1 ketentuan teknis A pelayanan -->
             <div class="section-wrapper mg-t-20" style="overflow-x:auto;">
@@ -71,7 +105,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/det</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="jenis_spam_1_1_1" type="number" value="0" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -103,7 +137,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/det</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="jenis_spam_1_1_2" value="0" type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -135,7 +169,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/det</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="jenis_spam_1_1_3" value="0"  type="number" class="form-control" name="tesid" placeholder="">
                                 </div>
 
                             </td>
@@ -3007,7 +3041,7 @@ $description_page = $option["description_page"];
                 </table>
                 <div class="form-layout">
                     <div class="form-layout-footer">
-                        <button class="btn btn-primary bd-0" id="insert_user" onclick="insert();">Simpan </button>
+                        <button class="btn btn-primary bd-0" onclick="submit();">Simpan </button>
                         <button class="btn btn-secondary bd-0" onclick="window.location.href='<?=base_url('user/list')?>'">Batalkan</button>
                     </div>
                     <!-- form-layout-footer -->

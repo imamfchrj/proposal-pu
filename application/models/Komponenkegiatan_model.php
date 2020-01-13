@@ -7,7 +7,7 @@ class Komponenkegiatan_model extends CI_Model {
 
     private $table = "tb_komponen_kegiatan";
     private $table_prov = "tb_provinsi";
-    public $column_order = [$this->$table ".id as id", "", "email", "hp", "status", "created_at", "updated_at"]; 
+    public $column_order = [$this->$table. ".id as id", "", "email", "hp", "status", "created_at", "updated_at"]; 
    
     public function __construct() {
         parent::__construct();

@@ -22,7 +22,7 @@
                   <ul>
                     <li><a href="#">Evaluasi Infrastruktur Spam Durolis</a></li>
                     <li><a href="#">List Evaluasi Infrastruktur Spam Durolis</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="#">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
 
 
@@ -30,7 +30,7 @@
                   <ul>
                     <li><a href="#">Evaluasi Sistem Pengolahan Air Limbah Domestik</a></li>
                     <li><a href="#">List Evaluasi Sistem Pengolahan Air Limbah Domestik</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="#">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
 
 
@@ -38,7 +38,7 @@
                   <ul>
                     <li><a href="#">Evaluasi Sistem Persampahan</a></li>
                     <li><a href="#">List Evaluasi Sistem Persampahan</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="#">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
                 </div><!-- col -->
 
@@ -47,7 +47,7 @@
                   <ul>
                     <li><a href="#">Evaluasi Drainase Lingkungan</a></li>
                     <li><a href="#">List Evaluasi Drainase Lingkungan</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="#">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
 
 
@@ -55,7 +55,7 @@
                   <ul>
                     <li><a href="#">Evaluasi Jalan Lingkungan</a></li>
                     <li><a href="#">List Evaluasi Jalan Lingkungan</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="#">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
 
 
@@ -63,7 +63,7 @@
                   <ul>
                     <li><a href="#">Evaluasi Harga Satuan Air Minum</a></li>
                     <li><a href="#">List Evaluasi Harga Satuan Air Minum</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="#">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
                 </div><!-- col -->
               </div><!-- row -->
@@ -75,7 +75,7 @@
                   <ul>
                     <li><a href="<?=base_url('airminum/insert')?>">Evaluasi Infrastruktur Spam Durolis</a></li>
                     <li><a href="#">List Evaluasi Infrastruktur Spam Durolis</a></li>
-                    <li><a href="<?=base_url('airminum/insert')?>">Konfigurasi Parameter</a></li>
+                    <li><a href="<?=base_url('airminum/insert')?>">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
 
 
@@ -83,7 +83,7 @@
                   <ul>
                     <li><a href="#">Evaluasi Sistem Pengolahan Air Limbah Domestik</a></li>
                     <li><a href="#">List Evaluasi Sistem Pengolahan Air Limbah Domestik</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="#">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
 
 
@@ -91,7 +91,7 @@
                   <ul>
                     <li><a href="#">Evaluasi Sistem Persampahan</a></li>
                     <li><a href="#">List Evaluasi Sistem Persampahan</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="#">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
                 </div><!-- col -->
 
@@ -100,7 +100,7 @@
                   <ul>
                     <li><a href="#">Evaluasi Drainase Lingkungan</a></li>
                     <li><a href="#">List Evaluasi Drainase Lingkungan</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="#">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
 
 
@@ -108,7 +108,7 @@
                   <ul>
                     <li><a href="#">Evaluasi Jalan Lingkungan</a></li>
                     <li><a href="#">List Evaluasi Jalan Lingkungan</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="#">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
 
 
@@ -116,7 +116,7 @@
                   <ul>
                     <li><a href="#">Evaluasi Harga Satuan Air Minum</a></li>
                     <li><a href="#">List Evaluasi Harga Satuan Air Minum</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="#">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
                 </div><!-- col -->
 
@@ -126,7 +126,7 @@
                   <ul>
                     <li><a href="#">Evaluasi Harga Satuan Air Limbah</a></li>
                     <li><a href="#">List Evaluasi Harga Satuan Air Limbah</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="#">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
 
 
@@ -134,7 +134,7 @@
                   <ul>
                     <li><a href="#">Evaluasi Harga Satuan Sampah</a></li>
                     <li><a href="#">List Evaluasi Harga Satuan Sampah</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="#">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
 
 
@@ -142,7 +142,7 @@
                   <ul>
                     <li><a href="#">Evaluasi Harga Satuan Drainase Lingkungan</a></li>
                     <li><a href="#">List Evaluasi Harga Satuan Drainase Lingkungan</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="#">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
 
 
@@ -150,7 +150,7 @@
                   <ul>
                     <li><a href="#">Evaluasi Harga Satuan Jalan Lingkungan</a></li>
                     <li><a href="#">List Evaluasi Harga Satuan Jalan Lingkungan</a></li>
-                    <li><a href="#">Konfigurasi Parameter</a></li>
+                    <li><a href="#">Konfigurasi Komponen Kegiatan</a></li>
                   </ul>
                 </div><!-- col -->
               </div><!-- row -->
