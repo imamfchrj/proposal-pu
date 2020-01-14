@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Komponenkegiatanajax extends All_Controller {
+class Userajax extends All_Controller {
     function __construct() {
 		parent::__construct();
-        $this->load->model("Komponenkegiatan_model");
+        $this->load->model("Users_model");
 	}
 	
 	public function list()
@@ -19,7 +19,7 @@ class Komponenkegiatanajax extends All_Controller {
 		$limit = $input["length"];
 		$order = $input["order"][0]["column"];
 		$order_type = $input["order"][0]["dir"];
-		$data = $this->Komponenkegiatan_model->user_list(
+		$data = $this->Users_model->user_list(
 			$search, 
 			$limit,  
 			$offer,
@@ -54,7 +54,7 @@ class Komponenkegiatanajax extends All_Controller {
 		$value = $this->validation($user_type=0);
 		if($value) {
 			unset($value["id"]);
-			$data=$this->Komponenkegiatan_model->set($value);
+			$data=$this->Users_model->set($value);
 			$this->json_success();
 		} else {
 			$this->json_badrequest();
@@ -69,7 +69,7 @@ class Komponenkegiatanajax extends All_Controller {
 		if($value) {
 			$id = $value["id"];
 			unset($value["id"]);
-			$data=$this->Komponenkegiatan_model->update_value_by_id($value, $id);
+			$data=$this->Users_model->update_value_by_id($value, $id);
 			$this->json_success();
 		} else {
 			$this->json_badrequest();
@@ -119,7 +119,7 @@ class Komponenkegiatanajax extends All_Controller {
         if ($this->form_validation->run()) {
 			
 			$id=  $this->form_validation->set_value('id');
-			$this->Komponenkegiatan_model->delete($id);
+			$this->Users_model->delete($id);
 			$this->json_success();
 			return;
         }

@@ -98,8 +98,8 @@ define('DEFAULT_PAGE_USER','user/list');
  * Constant for air minum
  */
 
-define('PROPOSAL_AIR_MINUM', "Evaluasi Infrastruktur SPAM")
-define('KEY_AIR_MINUM', "air_minum")
-define('SUBKEY_AIR_MINUM_DISTRIBUSI', "unit_distribusi")
-define('SUBKEY_AIR_MINUM_PELAYANAN', "unit_pelayanan")
-define('SUBKEY_AIR_MINUM_BANGUNAN', "bangunan_penunjang")
+define('PROPOSAL_AIR_MINUM', "Evaluasi Infrastruktur SPAM");
+define('KEY_AIR_MINUM', "air_minum");
+define('SUBKEY_AIR_MINUM_DISTRIBUSI', "unit_distribusi");
+define('SUBKEY_AIR_MINUM_PELAYANAN', "unit_pelayanan");
+define('SUBKEY_AIR_MINUM_BANGUNAN', "bangunan_penunjang");
