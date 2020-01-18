@@ -58,6 +58,25 @@
             });
         });
 
+        function jenis_spam() {
+            $val_jenis_spam = $("#jenis_spam").val();
+            if($val_jenis_spam == "Eksisting") {
+                $("#container_jenis_spam_1").show();
+                return;
+            }
+            clear_jenis_spam();
+            $("#container_jenis_spam_1").hide();
+        }
+        function clear_jenis_spam() {
+            $("#jenis_spam_1_1_1").val("");
+            $("#jenis_spam_1_1_2").val("");
+            $("#jenis_spam_1_1_3").val("");
+            $("#jenis_spam_1_1_4A").val("");
+            $("#jenis_spam_1_1_4B").val("");
+            $("#jenis_spam_1_1_5").val("");
+            $("#jenis_spam_1_1_6").val("");
+        }
+
         function submit() {
             $('#insert_user').attr('disabled', true);
             $.ajax({

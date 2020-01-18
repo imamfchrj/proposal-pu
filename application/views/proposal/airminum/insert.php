@@ -21,6 +21,7 @@ $title_page = $option["title_page"];
 $description_page = $option["description_page"];
 
 ?>
+<a href="#div_simpan" style="position:fixed;bottom:20px;right:20px;"> Scroll kebawah</a>
     <div class="slim-mainpanel">
         <div class="container">
             <div class="slim-pageheader">
@@ -41,7 +42,7 @@ $description_page = $option["description_page"];
                             <li role="tab" class="first current" aria="false" aria-selected="true">
                                 <a id="wizard6-t-0" href="#wizard6-h-0" aria-controls="wizard6-p-0">
                                     <span class="number">A</span>
-                                    <span class="title">Provinsi</span>
+                                    <span class="title">Initial data</span>
                                 </a>
                             </li>
                         </ul>
@@ -53,11 +54,24 @@ $description_page = $option["description_page"];
                 <table class="table table-reference mg-b-25">
                     <tbody>
 
-                        <tr>
+                    <tr>
+                            <td class="w-25 p-3 align-middle">Provinsi</td>
                             <td class="p-3">
                                 <div class="input-group">
                                     <select id="provinsi" class="form-control select2 provinsi" data-placeholder="Pilih Provinsi">
                                         
+                                    </select>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-25 p-3 align-middle">Jenis SPAM</td>
+                            <td class="p-3">
+                                <div class="input-group">
+                                    <select id="jenis_spam" class="form-control select2 jenis_spam" data-placeholder="Jenis SPAM" onchange="jenis_spam();">
+                                        <option value="Eksisting">Eksisting</option>
+                                        <option value="Baru">Baru</option>
                                     </select>
                                 </div>
 
@@ -70,7 +84,7 @@ $description_page = $option["description_page"];
             </div>
 
             <!-- page 1 ketentuan teknis A pelayanan -->
-            <div class="section-wrapper mg-t-20" style="overflow-x:auto;">
+            <div class="section-wrapper mg-t-20" style="overflow-x:auto;" id="container_jenis_spam_1">
                 <div id="wizard6" role="application" class="wizard wizard-style-2 clearfix">
                     <div class="steps clearfix">
                         <ul role="tablist">
@@ -105,22 +119,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/det</span>
-                                    <input id="jenis_spam_1_1_1" type="number" value="0" class="form-control" name="tesid" placeholder="">
+                                    <input id="jenis_spam_1_1_1" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -137,22 +151,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/det</span>
-                                    <input id="jenis_spam_1_1_2" value="0" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="jenis_spam_1_1_2" value="0" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -169,22 +183,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/det</span>
-                                    <input disabled id="jenis_spam_1_1_3" value="0"  type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="jenis_spam_1_1_3" value="0"  type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -201,22 +215,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">%</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="jenis_spam_1_1_4A" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -227,22 +241,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/det</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="jenis_spam_1_1_4B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -258,22 +272,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Unit</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="jenis_spam_1_1_5" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -288,22 +302,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Unit</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="jenis_spam_1_1_6" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -348,22 +362,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Jiwa</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="pelayanan_1_2_1A" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -374,21 +388,21 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">%</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="pelayanan_1_2_1B" type="number" class="form-control"  placeholder="">
                                 </div>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -399,22 +413,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Jiwa</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="pelayanan_1_2_1C" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -425,22 +439,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Jiwa/KK</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="pelayanan_1_2_1D" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -455,22 +469,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Unit</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="pelayanan_1_2_2A" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -482,22 +496,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Unit</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="pelayanan_1_2_2B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -508,22 +522,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/Jiwa/Hari</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="pelayanan_1_2_2C" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -534,22 +548,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/det</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="pelayanan_1_2_2D" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -560,22 +574,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">%</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="pelayanan_1_2_2E" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -584,22 +598,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/dt</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="pelayanan_1_2_2F" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -610,22 +624,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/dt</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="pelayanan_1_2_2G" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -636,22 +650,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="pelayanan_1_2_2H" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -660,22 +674,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">%</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="pelayanan_1_2_2I" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -690,22 +704,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Liter/dt</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="pelayanan_1_2_3A" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -716,22 +730,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Liter/dt</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="pelayanan_1_2_3B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -743,22 +757,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Liter/dt</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="pelayanan_1_2_3C" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -769,22 +783,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Liter/dt</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="pelayanan_1_2_3D" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -829,22 +843,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Liter/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_1_3_1" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -859,22 +873,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Text</span>
-                                    <input id="tesid" type="text" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_1_3_2" type="text" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -889,22 +903,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">NTU</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_1_3_3" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
+                                    <li id="unit_air_baku_1_3_3_verifikasi" class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
-                                    <li class="tx-success"></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -919,22 +933,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_1_3_4" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -949,22 +963,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_1_3_5" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -979,22 +993,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="unit_air_baku_1_3_6" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1009,22 +1023,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">MM</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_1_3_7" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1039,22 +1053,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">M/dt</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="unit_air_baku_1_3_8" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
+                                    <li id="unit_air_baku_1_3_8_verifikasi" class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
-                                    <li class="tx-success"></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1069,22 +1083,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="unit_air_baku_1_3_9" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
+                                    <li id="unit_air_baku_1_3_9_verifikasi" class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
-                                    <li class="tx-success"></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1099,22 +1113,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_1_3_10_verifikasi" disabled id="unit_air_baku_1_3_10" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1129,22 +1143,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_1_3_11" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1159,22 +1173,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="unit_air_baku_1_3_12" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1189,22 +1203,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Kw</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="unit_air_baku_1_3_13" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1252,22 +1266,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_1_4_1" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
+                                    <li id="unit_produksi_1_4_1_verifikasi" class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
-                                    <li class="tx-success"></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1282,22 +1296,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_1_4_2" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
+                                    <li id="unit_produksi_1_4_2_verifikasi" class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
-                                    <li class="tx-success"></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1312,22 +1326,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_1_4_3" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1343,22 +1357,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Set</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_1_4_4" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1406,22 +1420,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">M3</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_1_5_1" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
+                                    <li id="unit_distribusi_1_5_1_verifikasi" class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
-                                    <li class="tx-success"></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1436,22 +1450,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_1_5_2" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1466,22 +1480,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">MM</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_1_5_3" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1496,22 +1510,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">M/dt</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="unit_distribusi_1_5_4" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
+                                    <li id="unit_distribusi_1_5_4_verifikasi" class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
-                                    <li class="tx-success"></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1526,22 +1540,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_1_5_5_verifikasi" disabled id="unit_distribusi_1_5_5" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1556,22 +1570,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_1_5_6" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
+                                    <li id="unit_distribusi_1_5_6_verifikasi" class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
-                                    <li class="tx-success"></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1586,22 +1600,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_1_5_7" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1616,22 +1630,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Kw</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_1_5_8" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1679,22 +1693,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_pelayanan_1_6_1" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1709,22 +1723,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Unit</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="unit_pelayanan_1_6_2" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1739,22 +1753,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="unit_pelayanan_1_6_3" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1807,26 +1821,26 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_2_1_1A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">l/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_2_1_1B" type="number" class="form-control"  placeholder="">
                                 </div>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1841,27 +1855,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_2_1_2A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">l/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_2_1_2B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1876,27 +1890,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_2_1_3A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_2_1_3B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1912,27 +1926,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_2_1_4A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup></span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_air_baku_2_1_4B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1981,27 +1995,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_2_2_1A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">l/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_2_2_1B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_1_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_1_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_1_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2016,27 +2030,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_2_2_2A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">l/dt</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_2_2_2B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_2_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_2_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_2_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2051,27 +2065,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_2_2_3A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">unit</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_2_2_3B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_3_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_3_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_3_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2087,27 +2101,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_2_2_4A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_2_2_4B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_4_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_4_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_4_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2123,27 +2137,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_2_2_5A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_2_2_5B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_5_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_5_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_5_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2159,27 +2173,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_2_2_6A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_2_2_6B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_6_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_6_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_6_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2195,27 +2209,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_2_2_7A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_produksi_2_2_7B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_7_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_7_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_produksi_2_2_7_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2264,27 +2278,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_2_3_1A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>3</sup> </span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_2_3_1B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_1_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_1_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_1_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2299,27 +2313,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_2_3_2A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">l/dt </span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_2_3_2B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_2_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_2_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_2_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2334,27 +2348,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_2_3_3A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_2_3_3B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_3_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_3_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_3_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2370,27 +2384,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_2_3_4A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_2_3_4B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_4_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_4_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_4_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2406,27 +2420,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_2_3_5A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_2_3_5B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_5_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_5_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_5_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2442,27 +2456,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_2_3_6A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_2_3_6B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_6_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_6_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_6_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2470,40 +2484,46 @@ $description_page = $option["description_page"];
 
 
                         <tr>
-                            <th colspan="5">2.3.7</th>
+                            <th colspan="5">2.3.7.1</th>
                         </tr>
 
                         <tr>
-                            <td class="w-25 p-3 align-middle">Pipa HDPE Ø 700 mm - 8555m</td>
+                            <td class="w-25 p-3 align-middle">
+
+                                <div class="input-group">
+                                    <select id="" class="form-control select2 pipa" data-placeholder="Pilih Provinsi">
+                                        <option>Pipa</option>
+                                    </select>
+                                </div>
+                            </td>
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_2_3_71A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_distribusi_2_3_71B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_71_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_71_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_71_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                         </tr>
-
 
 
 
@@ -2512,94 +2532,31 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <td class="w-25 p-3 align-middle">Pipa HDPE Ø 630 mm - 10913 m</td>
-                            <td class="p-3">
-                                <div class="input-group">
-                                    <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
-                                </div>
-                                <hr>
-                                <div class="input-group">
-                                    <span class="input-group-addon">m </span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
-                                </div>
-
-                            </td>
-                            <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
-                                    <li class="tx-success"></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
-                                    <li class="tx-success"></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
-                                    <li class="tx-success"></li>
-                                </ul>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <th colspan="5">2.3.9</th>
-                        </tr>
-
-                        <tr>
-                            <td class="w-25 p-3 align-middle">Pipa HDPE Ø 600 mm - 7800 m</td>
-                            <td class="p-3">
-                                <div class="input-group">
-                                    <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
-                                </div>
-
-                            </td>
-                            <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
-                                    <li class="tx-success"></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
-                                    <li class="tx-success"></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
-                                    <li class="tx-success"></li>
-                                </ul>
-                            </td>
-                        </tr>
-
-
-
-                        <tr>
-                            <th colspan="5">2.3.10</th>
-                        </tr>
-
-                        <tr>
                             <td class="w-25 p-3 align-middle">Pekerjaan HDD 1690 m</td>
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="unit_distribusi_2_3_8A" type="number" class="form-control"  placeholder="">
+                                </div>
+                                <hr>
+                                <div class="input-group">
+                                    <span class="input-group-addon">m</span>
+                                    <input id="unit_distribusi_2_3_8B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_8_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_8_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_8_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2647,22 +2604,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_pelayanan_2_4_1A" type="number" class="form-control"  placeholder="">
+                                </div>
+                                <hr>
+                                <div class="input-group">
+                                    <span class="input-group-addon">m</span>
+                                    <input id="unit_pelayanan_2_4_1B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_pelayanan_2_4_1_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_pelayanan_2_4_1_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_pelayanan_2_4_1_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2677,22 +2639,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_pelayanan_2_4_2A" type="number" class="form-control"  placeholder="">
+                                </div>
+                                <hr>
+                                <div class="input-group">
+                                    <span class="input-group-addon">m</span>
+                                    <input id="unit_pelayanan_2_4_2B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_pelayanan_2_4_2_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_pelayanan_2_4_2_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_pelayanan_2_4_2_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2707,22 +2674,27 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="unit_pelayanan_2_4_3A" type="number" class="form-control"  placeholder="">
+                                </div>
+                                <hr>
+                                <div class="input-group">
+                                    <span class="input-group-addon">m</span>
+                                    <input id="unit_pelayanan_2_4_3B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_pelayanan_2_4_3_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_pelayanan_2_4_3_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="unit_pelayanan_2_4_3_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2771,22 +2743,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="biaya_non_standar_2_5_1" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_non_standar_2_5_1_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_non_standar_2_5_1_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_non_standar_2_5_1_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2801,22 +2773,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="biaya_non_standar_2_5_2" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_non_standar_2_5_2_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_non_standar_2_5_2_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_non_standar_2_5_2_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2831,22 +2803,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="biaya_non_standar_2_5_3" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_non_standar_2_5_3_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_non_standar_2_5_3_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_non_standar_2_5_3_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2862,22 +2834,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="biaya_non_standar_2_5_4" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_non_standar_2_5_4_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_non_standar_2_5_4_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_non_standar_2_5_4_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2893,22 +2865,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="biaya_non_standar_2_5_5" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_non_standar_2_5_5_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_non_standar_2_5_5_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_non_standar_2_5_5_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2956,22 +2928,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="biaya_lain_lain_2_6_1" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_lain_lain_2_6_1_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_lain_lain_2_6_1_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_lain_lain_2_6_1_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -2982,26 +2954,56 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <td class="w-25 p-3 align-middle">Pajak</td>
+                            <td class="w-25 p-3 align-middle">Biaya lain-lain</td>
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input id="biaya_lain_lain_2_6_2" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_lain_lain_2_6_2_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_lain_lain_2_6_2_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="biaya_lain_lain_2_6_2_indikator">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="5">2.6.3</th>
+                        </tr>
+
+                        <tr>
+                            <td class="w-25 p-3 align-middle">Pajak</td>
+                            <td class="p-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Rp</span>
+                                    <input id="biaya_lain_lain_2_6_3" type="number" class="form-control"  placeholder="">
+                                </div>
+
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="biaya_lain_lain_2_6_3_verifikasi">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="biaya_lain_lain_2_6_3_harga_satuan">
+                                    <li class="tx-success"></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="parsley-errors-list filled" id="biaya_lain_lain_2_6_3_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -3050,22 +3052,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="total_investasi" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="total_investasi_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="total_investasi_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="total_investasi_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -3080,22 +3082,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp/Lt/dt</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="harga_rata_rata_A" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="harga_rata_rata_A_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="harga_rata_rata_A_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="harga_rata_rata_A_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -3104,22 +3106,22 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp/SR</span>
-                                    <input disabled id="tesid" type="number" class="form-control" name="tesid" placeholder="">
+                                    <input disabled id="harga_rata_rata_B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="harga_rata_rata_B_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="harga_rata_rata_B_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="tesid">
+                                <ul class="parsley-errors-list filled" id="harga_rata_rata_B_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -3131,11 +3133,12 @@ $description_page = $option["description_page"];
                 </table>
             </div>
 
-            <div class="section-wrapper mg-t-20" style="overflow-x:auto;">
+            <div class="section-wrapper mg-t-20" style="overflow-x:auto;" id="div_simpan">
                 </table>
                 <div class="form-layout">
                     <div class="form-layout-footer">
-                        <button class="btn btn-primary bd-0" onclick="submit();">Simpan </button>
+                        <button class="btn btn-primary bd-0" onclick="submit();">Hitung</button>
+                        <button class="btn btn-primary bd-0" onclick="submit();">Simpan</button>
                         <button class="btn btn-secondary bd-0" onclick="window.location.href='<?=base_url('user/list')?>'">Batalkan</button>
                     </div>
                     <!-- form-layout-footer -->
