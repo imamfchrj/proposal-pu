@@ -103,3 +103,4 @@ define('KEY_AIR_MINUM', "air_minum");
 define('SUBKEY_AIR_MINUM_DISTRIBUSI', "unit_distribusi");
 define('SUBKEY_AIR_MINUM_PELAYANAN', "unit_pelayanan");
 define('SUBKEY_AIR_MINUM_BANGUNAN', "bangunan_penunjang");
+define('PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71', 12);

@@ -123,6 +123,7 @@
 
         $( document ).ready(function() {
             get_ajax_jenis_sumber_air();
+            get_ajax_unit_distribusi();
         });
 
         function get_ajax_jenis_sumber_air() {
@@ -154,6 +155,39 @@
                 alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
             });
         }
+
+
+        function get_ajax_unit_distribusi() {
+            $.ajax({
+                url: ROOT+'/groupajax/komponen_kegiatan/air_minum/unit_distribusi',
+                dataType: 'json',
+                type: 'get',
+                data: {
+                }
+            })
+            .done(function(data) {
+                if(data.is_error){
+                    alert(data.error_message);
+                    return;
+                }
+                
+                data.data.forEach(function(value){
+                    $(".unit_distribusi").append('<option value="'+value.id+'">'+value.kegiatan+'</option>');
+                });
+                
+            })
+            .complete(function(){
+            })
+            .fail(function(data){
+                if(data.responseJSON.error_messages !== 'undefined'){
+                    alert_failed("Error!", data.responseJSON.error_messages);
+                    return;
+                }
+                alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
+            });
+        }
+
+        
     
     </script>
     <?php

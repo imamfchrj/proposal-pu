@@ -21,7 +21,14 @@ $title_page = $option["title_page"];
 $description_page = $option["description_page"];
 
 ?>
-<a href="#div_simpan" style="position:fixed;bottom:20px;right:20px;"> Scroll kebawah</a>
+<!-- <a href="#div_simpan" > Scroll kebawah</a> -->
+<div style="position:fixed;bottom:20px;right:20px;">
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <a href="" class="btn btn-info pd-x-25 active">Kalkulasi</a>
+        <a href="#div_simpan" class="btn btn-teal pd-x-25">Kebawah</a>
+        <!-- <a href="#div_simpan" class="btn btn-secondary pd-x-25">Right</#div_simpan> -->
+    </div>
+</div>
     <div class="slim-mainpanel">
         <div class="container">
             <div class="slim-pageheader">
@@ -2483,49 +2490,53 @@ $description_page = $option["description_page"];
                             </td>
                         </tr>
 
-
+                        <?php
+                            for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71; $index++) {
+                        ?>
                         <tr>
-                            <th colspan="5">2.3.7.1</th>
+                            <th colspan="5">2.3.7.<?=$index?></th>
                         </tr>
 
                         <tr>
                             <td class="w-25 p-3 align-middle">
 
                                 <div class="input-group">
-                                    <select id="" class="form-control select2 pipa" data-placeholder="Pilih Jenis">
-                                        
+                                    <select id="unit_distribusi_2_3_7<?=$index?>" class="form-control select2 unit_distribusi" data-placeholder="Pilih Jenis">
+                                        <option value="0"></option>
                                     </select>
                                 </div>
                             </td>
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_distribusi_2_3_71A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_7<?=$index?>A" type="number" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m</span>
-                                    <input id="unit_distribusi_2_3_71B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_7<?=$index?>B" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_71_verifikasi">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_7<?=$index?>_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_71_harga_satuan">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_7<?=$index?>_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_71_indikator">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_7<?=$index?>_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                         </tr>
-
+                        <?php
+                            }
+                        ?>
 
 
                         <tr>
