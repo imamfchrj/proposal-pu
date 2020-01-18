@@ -872,8 +872,9 @@ $description_page = $option["description_page"];
                             <td class="w-25 p-3 align-middle">Jenis Sumber</td>
                             <td class="p-3">
                                 <div class="input-group">
-                                    <span class="input-group-addon">Text</span>
-                                    <input id="unit_air_baku_1_3_2" type="text" class="form-control"  placeholder="">
+                                    <select id="unit_air_baku_1_3_2" class="form-control select2 pipa" data-placeholder="Pilih Jenis">
+                                        
+                                    </select>
                                 </div>
 
                             </td>
@@ -2491,8 +2492,8 @@ $description_page = $option["description_page"];
                             <td class="w-25 p-3 align-middle">
 
                                 <div class="input-group">
-                                    <select id="" class="form-control select2 pipa" data-placeholder="Pilih Provinsi">
-                                        <option>Pipa</option>
+                                    <select id="" class="form-control select2 pipa" data-placeholder="Pilih Jenis">
+                                        
                                     </select>
                                 </div>
                             </td>

@@ -21,7 +21,6 @@
                 
             })
             .complete(function(){
-              $('#insert_user').attr('disabled', false);
             })
             .fail(function(data){
                 if(data.responseJSON.error_messages !== 'undefined'){
@@ -34,7 +33,6 @@
 
         function add_provinsi(provinsi_list) {
             provinsi_list.forEach(function(provinsi){
-                console.log(provinsi);
                 $(".provinsi").append('<option value="'+provinsi.id+'">'+provinsi.nama+'</option>');
             });
         }

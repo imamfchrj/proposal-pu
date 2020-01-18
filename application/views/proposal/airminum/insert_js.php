@@ -57,6 +57,7 @@
                 submit();
             });
         });
+        
 
         function jenis_spam() {
             $val_jenis_spam = $("#jenis_spam").val();
@@ -118,6 +119,44 @@
     }
     </script>
     
+    <script>
+
+        $( document ).ready(function() {
+            get_ajax_jenis_sumber_air();
+        });
+
+        function get_ajax_jenis_sumber_air() {
+            $.ajax({
+                url: ROOT+'sumberairajax/list',
+                dataType: 'json',
+                type: 'get',
+                data: {
+                }
+            })
+            .done(function(data) {
+                if(data.is_error){
+                    alert(data.error_message);
+                    return;
+                }
+                
+                data.data.forEach(function(value){
+                    $("#unit_air_baku_1_3_2").append('<option value="'+value.name+'">'+value.name+'</option>');
+                });
+                
+            })
+            .complete(function(){
+            })
+            .fail(function(data){
+                if(data.responseJSON.error_messages !== 'undefined'){
+                    alert_failed("Error!", data.responseJSON.error_messages);
+                    return;
+                }
+                alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
+            });
+        }
+    
+    </script>
     <?php
     $this->load->view("default/provinsi_ajax");
     ?>
+    
