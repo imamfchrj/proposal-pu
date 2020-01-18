@@ -24,7 +24,7 @@ $description_page = $option["description_page"];
 <!-- <a href="#div_simpan" > Scroll kebawah</a> -->
 <div style="position:fixed;bottom:20px;right:20px;">
     <div class="btn-group" role="group" aria-label="Basic example">
-        <a href="" class="btn btn-info pd-x-25 active">Kalkulasi</a>
+        <a href="javascript:kalkulasi();" class="btn btn-info pd-x-25 active">Kalkulasi</a>
         <a href="#div_simpan" class="btn btn-teal pd-x-25">Kebawah</a>
         <!-- <a href="#div_simpan" class="btn btn-secondary pd-x-25">Right</#div_simpan> -->
     </div>

@@ -54,7 +54,7 @@
     <script>
         $( document ).ready(function() {
             $( "#submit" ).submit(function( event ) {
-                submit();
+                kalkulasi();
             });
         });
         
@@ -78,7 +78,7 @@
             $("#jenis_spam_1_1_6").val("");
         }
 
-        function submit() {
+        function kalkulasi() {
             $('#insert_user').attr('disabled', true);
             $.ajax({
                 url: ROOT+'airminumajax/cek',
