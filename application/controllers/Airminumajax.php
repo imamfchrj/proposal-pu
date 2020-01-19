@@ -185,9 +185,11 @@ class Airminumajax extends All_Controller {
             $data["unit_distribusi_2_3_5B"] = (float)$this->form_validation->set_value('unit_distribusi_2_3_5B');
             $data["unit_distribusi_2_3_6A"] = (float)$this->form_validation->set_value('unit_distribusi_2_3_6A');
             $data["unit_distribusi_2_3_6B"] = (float)$this->form_validation->set_value('unit_distribusi_2_3_6B');
-            $data["unit_distribusi_2_3_7"] = (float)$this->form_validation->set_value('unit_distribusi_2_3_7');
-            $data["unit_distribusi_2_3_7A"] = (float)$this->form_validation->set_value('unit_distribusi_2_3_7A');
-            $data["unit_distribusi_2_3_7B"] = (float)$this->form_validation->set_value('unit_distribusi_2_3_7B');
+            for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71; $index++) {
+            $data["unit_distribusi_2_3_7".$index] = (float)$this->form_validation->set_value("unit_distribusi_2_3_7".$index);
+            $data["unit_distribusi_2_3_7".$index."A"] = (float)$this->form_validation->set_value("unit_distribusi_2_3_7".$index."A");
+            $data["unit_distribusi_2_3_7".$index."B"] = (float)$this->form_validation->set_value("unit_distribusi_2_3_7".$index."B");
+            }
             $data["unit_distribusi_2_3_8A"] = (float)$this->form_validation->set_value('unit_distribusi_2_3_8A');
             $data["unit_distribusi_2_3_8B"] = (float)$this->form_validation->set_value('unit_distribusi_2_3_8B');
             

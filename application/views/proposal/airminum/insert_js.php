@@ -80,6 +80,15 @@
 
         function kalkulasi() {
             $('#insert_user').attr('disabled', true);
+            <?php
+                        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71; $index++) {
+                    ?>
+                    console.log(<?=$index?>,$("#unit_distribusi_2_3_7<?=$index?>").val());
+                    console.log(<?=$index?>,$("#unit_distribusi_2_3_7<?=$index?>A").val());
+                    console.log(<?=$index?>,$("#unit_distribusi_2_3_7<?=$index?>B").val());
+                    <?php
+                        }
+                    ?>
             $.ajax({
                 url: ROOT+'airminumajax/cek',
                 dataType: 'json',
