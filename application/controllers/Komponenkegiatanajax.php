@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Userajax extends All_Controller {
+class Komponenkegiatanajax extends All_Controller {
     function __construct() {
 		parent::__construct();
-        $this->load->model("Users_model");
+        $this->load->model("Komponenkegiatan_model");
 	}
 	
 	public function list()
@@ -19,7 +19,7 @@ class Userajax extends All_Controller {
 		$limit = $input["length"];
 		$order = $input["order"][0]["column"];
 		$order_type = $input["order"][0]["dir"];
-		$data = $this->Users_model->user_list(
+		$data = $this->Komponenkegiatan_model->komponen_list(
 			$search, 
 			$limit,  
 			$offer,
@@ -30,87 +30,6 @@ class Userajax extends All_Controller {
         $this->json($data);
 	}
 
-	// Ini digunakan untuk insert user biasa
-	public function insert() {
-		$this->insert_user(0);
-	}
-
-	// Ini digunakan untuk insert admin
-	public function insert_admin() {
-		$this->update_user(1);
-	}
-
-	// Ini digunakan untuk update user biasa
-	public function update() {
-		$this->update_user(0);
-	}
-
-	// Ini digunakan untuk update admin
-	public function update_admin() {
-		$this->update_user(1);
-	}
-
-	private function insert_user($user_type=0) {
-		$value = $this->validation($user_type=0);
-		if($value) {
-			unset($value["id"]);
-			$data=$this->Users_model->set($value);
-			$this->json_success();
-		} else {
-			$this->json_badrequest();
-		}
-	}
-
-	private function update_user($user_type=0) {
-		$value = $this->validation($user_type=0);
-		if(!$value["id"]) {
-			$this->json_badrequest("id not found");
-		}
-		if($value) {
-			$id = $value["id"];
-			unset($value["id"]);
-			$data=$this->Users_model->update_value_by_id($value, $id);
-			$this->json_success();
-		} else {
-			$this->json_badrequest();
-		}
-	}
-
-	// validation input from user
-	private function validation($user_type=0)
-	{
-		$this->post_only();
-		
-        $this->form_validation->set_rules('name', 'Name', 'xss_clean|htmlentities');
-        $this->form_validation->set_rules('id', 'Identity', 'xss_clean|htmlentities');
-        $this->form_validation->set_rules('email', 'Email', 'trim|valid_email|required|xss_clean|htmlentities');
-        $this->form_validation->set_rules('hp', 'No HP', 'trim|xss_clean|htmlentities');
-        $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|htmlentities');
-        $this->form_validation->set_rules('c_password', 'Confirmation Password', 'trim|required|xss_clean|htmlentities');
-        $this->form_validation->set_rules('status', 'Status', 'trim|integer|xss_clean|htmlentities');
-        if ($this->form_validation->run()) {
-			$password = $this->form_validation->set_value('password');
-			$c_password = $this->form_validation->set_value('c_password');
-			if($password != $c_password) {
-
-			}
-            $value=array(
-                'id' => $this->form_validation->set_value('id'),
-                'name' => $this->form_validation->set_value('name'),
-                'email' => $this->form_validation->set_value('email'),
-                'hp' => $this->form_validation->set_value('hp'),
-                'user_type' => $user_type,
-                'status' => $this->form_validation->set_value('status'),
-                'password' => $password
-            );
-            // if success will return all value
-			return $value;
-        }
-        $this->json_badrequest(validation_errors());
-        return false;
-	}
-
-
 	public function delete()
 	{
 		$this->post_only();
@@ -119,12 +38,73 @@ class Userajax extends All_Controller {
         if ($this->form_validation->run()) {
 			
 			$id=  $this->form_validation->set_value('id');
-			$this->Users_model->delete($id);
+			$this->Komponenkegiatan_model->delete($id);
 			$this->json_success();
 			return;
         }
         $this->json_badrequest(validation_errors());
         return false;
 	}
+
+    public function insert() {
+        $this->insert_komponenkegiatan();
+    }
+
+    private function insert_komponenkegiatan() {
+        $value = $this->validation_komponen();
+        if($value) {
+            unset($value["id"]);
+            $data=$this->Komponenkegiatan_model->set($value);
+            $this->json_success();
+        } else {
+            $this->json_badrequest();
+        }
+    }
+
+    public function update_komponen() {
+        $this->update_komponenkegiatan();
+    }
+
+    private function update_komponenkegiatan() {
+        $value = $this->validation_komponen();
+        if(!$value["id"]) {
+            $this->json_badrequest("id not found");
+        }
+        if($value) {
+            $id = $value["id"];
+            unset($value["id"]);
+            $data=$this->Komponenkegiatan_model->update_value_by_id($value, $id);
+            $this->json_success();
+        } else {
+            $this->json_badrequest();
+        }
+    }
+    // validation input from komponen
+    private function validation_komponen()
+    {
+        $this->post_only();
+
+        $this->form_validation->set_rules('id', 'Identity', 'xss_clean|htmlentities');
+        $this->form_validation->set_rules('sub_key', 'Komponen', 'xss_clean|htmlentities');
+        $this->form_validation->set_rules('kegiatan', 'Kegiatan', 'xss_clean|htmlentities');
+        $this->form_validation->set_rules('satuan', 'Satuan', 'xss_clean|htmlentities');
+        $this->form_validation->set_rules('estimasi', 'Estimasi', 'xss_clean|htmlentities');
+        $this->form_validation->set_rules('pembagi', 'Pembagi', 'xss_clean|htmlentities');
+        if ($this->form_validation->run()) {
+            $value=array(
+                'id' => $this->form_validation->set_value('id'),
+                'sub_key' => $this->form_validation->set_value('sub_key'),
+                'komponen_spam' => "Unit Distribusi",
+                'kegiatan' => $this->form_validation->set_value('kegiatan'),
+                'satuan' => $this->form_validation->set_value('satuan'),
+                'estimasi' => $this->form_validation->set_value('estimasi'),
+                'pembagi' => $this->form_validation->set_value('pembagi'),
+            );
+            // if success will return all value
+            return $value;
+        }
+        $this->json_badrequest(validation_errors());
+        return false;
+    }
 
 }
