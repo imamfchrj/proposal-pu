@@ -916,8 +916,8 @@ $description_page = $option["description_page"];
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled">
-                                    <li id="unit_air_baku_1_3_3_verifikasi" class="tx-success"></li>
+                                <ul id="unit_air_baku_1_3_3_verifikasi" class="parsley-errors-list filled">
+                                    <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
@@ -1066,8 +1066,8 @@ $description_page = $option["description_page"];
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled">
-                                    <li id="unit_air_baku_1_3_8_verifikasi" class="tx-success"></li>
+                                <ul class="parsley-errors-list filled" id="unit_air_baku_1_3_8_verifikasi">
+                                    <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
@@ -1096,8 +1096,8 @@ $description_page = $option["description_page"];
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled">
-                                    <li id="unit_air_baku_1_3_9_verifikasi" class="tx-success"></li>
+                                <ul class="parsley-errors-list filled" id="unit_air_baku_1_3_9_verifikasi">
+                                    <li  class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
@@ -1121,12 +1121,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="unit_air_baku_1_3_10_verifikasi" disabled id="unit_air_baku_1_3_10" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_1_3_10" disabled id="unit_air_baku_1_3_10" type="number" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled">
+                                <ul class="parsley-errors-list filled" id="unit_air_baku_1_3_10_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
@@ -1279,8 +1279,8 @@ $description_page = $option["description_page"];
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled">
-                                    <li id="unit_produksi_1_4_1_verifikasi" class="tx-success"></li>
+                                <ul id="unit_produksi_1_4_1_verifikasi" class="parsley-errors-list filled">
+                                    <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
@@ -1309,8 +1309,8 @@ $description_page = $option["description_page"];
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled">
-                                    <li id="unit_produksi_1_4_2_verifikasi" class="tx-success"></li>
+                                <ul id="unit_produksi_1_4_2_verifikasi" class="parsley-errors-list filled">
+                                    <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
@@ -1433,8 +1433,8 @@ $description_page = $option["description_page"];
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled">
-                                    <li id="unit_distribusi_1_5_1_verifikasi" class="tx-success"></li>
+                                <ul id="unit_distribusi_1_5_1_verifikasi" class="parsley-errors-list filled">
+                                    <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
@@ -1523,8 +1523,8 @@ $description_page = $option["description_page"];
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled">
-                                    <li id="unit_distribusi_1_5_4_verifikasi" class="tx-success"></li>
+                                <ul id="unit_distribusi_1_5_4_verifikasi" class="parsley-errors-list filled">
+                                    <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
@@ -1583,8 +1583,8 @@ $description_page = $option["description_page"];
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled">
-                                    <li id="unit_distribusi_1_5_6_verifikasi" class="tx-success"></li>
+                                <ul id="unit_distribusi_1_5_6_verifikasi" class="parsley-errors-list filled">
+                                    <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
