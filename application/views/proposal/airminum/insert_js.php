@@ -222,6 +222,18 @@
                     $("#provinsi").val(value);
                     continue;
                 }
+                if(key == "verifikasi") {
+                    set_verifikasi(value);
+                    continue;
+                }
+                if(key == "harga_satuan") {
+                    set_harga_satuan(value);
+                    continue;
+                }
+                if(key == "indikator") {
+                    set_indikator(value);
+                    continue;
+                }
                 $("#"+key).val(value);
             }
             // $("#prov_id").val($data["prov_id"]);
@@ -335,6 +347,19 @@
             // $("#biaya_lain_lain_2_6_1").val($data["biaya_lain_lain_2_6_1"]);
             // $("#biaya_lain_lain_2_6_2").val($data["biaya_lain_lain_2_6_2"]);
             // $("#biaya_lain_lain_2_6_3").val($data["biaya_lain_lain_2_6_3"]);
+        }
+
+        function set_verifikasi($data) {
+            for (const [key, value] of Object.entries($data)) {
+            }
+        }
+        function set_harga_satuan($data) {
+            for (const [key, value] of Object.entries($data)) {
+            }
+        }
+        function set_indikator($data) {
+            for (const [key, value] of Object.entries($data)) {
+            }
         }
     </script>
     

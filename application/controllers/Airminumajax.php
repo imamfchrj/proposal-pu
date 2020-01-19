@@ -288,11 +288,6 @@ class Airminumajax extends All_Controller {
         return $data_input;
     }
 
-    // private function pelayanan_1_2_2I($data_input) {
-    //     $data_input["pelayanan_1_2_2I"] =  $data_input["pelayanan_1_2_2G"] / (1 - to_percent($data_input["pelayanan_1_2_2H"])) * $data_input["pelayanan_1_2_2H"];
-    //     return $data_input;
-    // }
-
     private function pelayanan_1_2_3A($data_input) {
         $data_input["pelayanan_1_2_3A"] =  $data_input["pelayanan_1_2_2I"] + $data_input["pelayanan_1_2_2G"];
         return $data_input;
