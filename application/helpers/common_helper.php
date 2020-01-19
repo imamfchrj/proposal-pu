@@ -16,6 +16,10 @@ function get_from_sess($val){
     return "";
 }
 
+function to_percent($val) {
+    return (float)$val/100;
+}
+
 function is_have_access($menuname){
     $menu = get_from_sess("menu");
     if(!isset($menu[$menuname])) {

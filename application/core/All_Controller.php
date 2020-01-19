@@ -40,7 +40,7 @@ class All_Controller extends CI_Controller
 	}
 
 	function json($data_output) {
-		header('Content-Type: application/json');
+		// header('Content-Type: application/json');
 		echo (json_encode($data_output));
 		exit;
 	}
