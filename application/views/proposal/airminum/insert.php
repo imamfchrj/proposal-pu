@@ -25,7 +25,7 @@ $description_page = $option["description_page"];
 <div style="position:fixed;top:20px;right:20px;">
     <div class="btn-group" role="group" aria-label="Basic example">
         <a href="javascript:kalkulasi();" class="btn btn-info pd-x-25 active">Kalkulasi</a>
-        <a href="#div_simpan" class="btn btn-teal pd-x-25">Kebawah</a>
+        <a href="#div_simpan" class="btn btn-teal pd-x-25 kalulator">Kebawah</a>
         <!-- <a href="#div_simpan" class="btn btn-secondary pd-x-25">Right</#div_simpan> -->
     </div>
 </div>
@@ -3149,8 +3149,8 @@ $description_page = $option["description_page"];
                 </table>
                 <div class="form-layout">
                     <div class="form-layout-footer">
-                        <button class="btn btn-primary bd-0" onclick="submit();">Hitung</button>
-                        <button class="btn btn-primary bd-0" onclick="submit();">Simpan</button>
+                        <button class="btn btn-primary bd-0 kalulator" onclick="kalkulasi();">Hitung</button>
+                        <button disabled class="btn btn-primary bd-0" onclick="kalkulasi();">Simpan</button>
                         <button class="btn btn-secondary bd-0" onclick="window.location.href='<?=base_url('user/list')?>'">Batalkan</button>
                     </div>
                     <!-- form-layout-footer -->

@@ -71,7 +71,11 @@
       function alert_failed($title, $description, $link=""){
         $('.title_failed').html($title);
         $('.description_failed').html($description);
-        $('.link_failed').html($link);
+        // $('.link_failed').html($link);
+        $('.link_failed').attr("href",$link);
+        if(!$link) {
+          $('.link_success').html("");
+        }
         
         $('#alert_failed').modal('show');
       }

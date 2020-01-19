@@ -79,7 +79,7 @@
         }
 
         function kalkulasi() {
-            $('#insert_user').attr('disabled', true);
+            $('.kalulator').attr('disabled', true);
             $.ajax({
                 url: ROOT+'airminumajax/cek',
                 dataType: 'json',
@@ -190,7 +190,7 @@
                     
                 }
             })
-            .done(function(data) {
+            .done(function(data, textStatus, xhr) {
                 if(data.is_error){
                     alert(data.error_message);
                     return;
@@ -198,18 +198,15 @@
                 set_value_proposal(data.data);
             })
             .complete(function(){
-              $('#insert_user').attr('disabled', false);
+              $('.kalulator').attr('disabled', false);
             })
-            .fail(function(data){
-                if(data.responseJSON === 'undefined'){
-                    alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
-                }
-                if(data.responseJSON.error_messages !== 'undefined'){
+            .fail(function(data, textStatus, xhr){
+                try{
                     alert_failed("Error!", data.responseJSON.error_messages);
+                }catch(e){
+                    alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
                     return;
                 }
-                alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
-                
             });
         }
         

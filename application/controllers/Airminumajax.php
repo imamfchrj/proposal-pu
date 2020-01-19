@@ -245,6 +245,7 @@ class Airminumajax extends All_Controller {
 
     private function jenis_spam_1_1_4B($data_input) {
         $data_input["jenis_spam_1_1_4B"] = to_percent($data_input["jenis_spam_1_1_4A"]) *  $data_input["jenis_spam_1_1_2"];
+        $data_input["jenis_spam_1_1_4B"] = round_custom( $data_input["jenis_spam_1_1_4B"],2);
         return $data_input;
     }
 
@@ -270,6 +271,7 @@ class Airminumajax extends All_Controller {
 
     private function pelayanan_1_2_2D($data_input) {
         $data_input["pelayanan_1_2_2D"] =  $data_input["pelayanan_1_2_1C"] * $data_input["pelayanan_1_2_2C"] / 86400;
+        $data_input["pelayanan_1_2_2D"] = round_custom( $data_input["pelayanan_1_2_2D"],2);
         return $data_input;
     }
 

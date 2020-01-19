@@ -16,6 +16,28 @@ function get_from_sess($val){
     return "";
 }
 
+function round_custom($value, $precision=0){
+    return round($value,  $precision, PHP_ROUND_HALF_UP);
+}
+
+function ceil_custom($value, $precision=0){
+    $pre = 1;
+    for($i=1; $i<=$precision; $i++) {
+        $pre=$pre*10;
+    }
+    return ceil(($value * $pre)) / $pre;
+    // return ceil(round($value * $pre)) / $pre;
+}
+
+function floor_custom($value, $precision=0){
+    $pre = 1;
+    for($i=1; $i<=$precision; $i++) {
+        $pre=$pre*10;
+    }
+    return floor(($value * $pre)) / $pre;
+    // return floor(round($value * $pre)) / $pre;
+}
+
 function to_percent($val) {
     return (float)$val/100;
 }
