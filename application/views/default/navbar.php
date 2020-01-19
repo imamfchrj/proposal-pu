@@ -214,7 +214,7 @@
                 <li class="active"><a href="<?=base_url("provinsi/list")?>">List Provinsi</a></li>
                 <li class="active"><a href="<?=base_url("#provinsi/insert")?>">Tambah Provinsi</a></li>
                 <hr/>
-                <li class="active"><a href="<?=base_url("kabupaten/list")?>">List Kabupaten</a></li>
+                <li class="active"><a href="<?=base_url("#kabupaten/list")?>">List Kabupaten</a></li>
                 <li class="active"><a href="<?=base_url("#kabupaten/insert")?>">Tambah Kabupaten</a></li>
                 
               </ul>
