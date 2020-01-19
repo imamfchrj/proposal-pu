@@ -1006,7 +1006,7 @@ $description_page = $option["description_page"];
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled">
+                                <ul id="unit_air_baku_1_3_6_verifikasi" class="parsley-errors-list filled" >
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>

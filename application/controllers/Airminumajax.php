@@ -237,6 +237,14 @@ class Airminumajax extends All_Controller {
         $data_input = $this->pelayanan_1_2_3C($data_input);
         $data_input = $this->pelayanan_1_2_3D($data_input);
         $data_input = $this->unit_air_baku_1_3_1($data_input);
+        $data_input = $this->unit_air_baku_1_3_3($data_input);
+        $data_input = $this->unit_air_baku_1_3_6($data_input);
+        $data_input = $this->unit_air_baku_1_3_8($data_input);
+        $data_input = $this->unit_air_baku_1_3_9($data_input);
+        $data_input = $this->unit_air_baku_1_3_10($data_input);
+        $data_input = $this->unit_air_baku_1_3_12($data_input);
+        $data_input = $this->unit_air_baku_1_3_13($data_input);
+        
 
         return $data_input;
     }
@@ -320,12 +328,93 @@ class Airminumajax extends All_Controller {
             $text="Layak";
             $option=$this->success;
         }
-        // elseif {
-        //     $text="Layak";
-        //     $option=$this->success;
-        // }
         $data_input["verifikasi"]["unit_air_baku_1_3_1"]["text"] = $text;
         $data_input["verifikasi"]["unit_air_baku_1_3_1"]["option"] = $option;
+        return $data_input;
+    }
+
+    private function unit_air_baku_1_3_3($data_input) {
+        $text="Non Prasedimentasi";
+        $option=$this->danger;
+        if($data_input["unit_air_baku_1_3_3"] >= 600) {
+            $text="Prasedimentasi";
+            $option=$this->success;
+        }
+        $data_input["verifikasi"]["unit_air_baku_1_3_3"]["text"] = $text;
+        $data_input["verifikasi"]["unit_air_baku_1_3_3"]["option"] = $option;
+        return $data_input;
+    }
+
+    private function unit_air_baku_1_3_6($data_input) {
+        $data_input["unit_air_baku_1_3_6"] = $data_input["unit_air_baku_1_3_4"] - $data_input["unit_produksi_1_4_3"];
+        $data_input["unit_air_baku_1_3_6"] = abs($data_input["unit_air_baku_1_3_6"]);
+        $text="Pompa";
+        $option=$this->success;
+        if($data_input["unit_air_baku_1_3_6"] > 1) {
+            $text="Gravitasi";
+            $option=$this->success;
+        }
+        $data_input["verifikasi"]["unit_air_baku_1_3_6"]["text"] = $text;
+        $data_input["verifikasi"]["unit_air_baku_1_3_6"]["option"] = $option;
+        return $data_input;
+    }
+
+    private function unit_air_baku_1_3_8($data_input) {
+        $data_input["unit_air_baku_1_3_8"] = ($data_input["unit_air_baku_1_3_1"]/1000) / (0.25*3.14*(pow(($data_input["unit_air_baku_1_3_7"]/1000),2)));
+        $data_input["unit_air_baku_1_3_8"] = round_custom($data_input["unit_air_baku_1_3_8"], 2);
+        $text="Justifikasi";
+        $option=$this->danger;
+        if($data_input["unit_air_baku_1_3_8"] > 0.4 && $data_input["unit_air_baku_1_3_8"] < 2.5 ) {
+            $text="Layak";
+            $option=$this->success;
+        }
+        $data_input["verifikasi"]["unit_air_baku_1_3_8"]["text"] = $text;
+        $data_input["verifikasi"]["unit_air_baku_1_3_8"]["option"] = $option;
+        return $data_input;
+    }
+
+    private function unit_air_baku_1_3_9($data_input) {
+        $data_input["unit_air_baku_1_3_9"] = ((pow((
+            ($data_input["unit_air_baku_1_3_1"]/1000) 
+            / 
+            (0.2785*100*(
+                pow(($data_input["unit_air_baku_1_3_7"]/1000),2.63)))
+        ),1.85))*$data_input["unit_air_baku_1_3_5"])*1.05;
+        $data_input["unit_air_baku_1_3_9"] = round_custom($data_input["unit_air_baku_1_3_9"], 2);
+        $text="Justifikasi";
+        $option=$this->danger;
+        if(($data_input["unit_air_baku_1_3_9"] / $data_input["unit_air_baku_1_3_5"]*1000) < 10 ) {
+            $text="Layak";
+            $option=$this->success;
+        }
+        $data_input["verifikasi"]["unit_air_baku_1_3_9"]["text"] = $text;
+        $data_input["verifikasi"]["unit_air_baku_1_3_9"]["option"] = $option;
+        return $data_input;
+    }
+
+    private function unit_air_baku_1_3_10($data_input) {
+        $data_input["unit_air_baku_1_3_10"] =  $data_input["unit_air_baku_1_3_6"]+ $data_input["unit_air_baku_1_3_9"];
+        $data_input["unit_air_baku_1_3_10"] = round_custom($data_input["unit_air_baku_1_3_10"], 2);
+        $text="Pompa";
+        $option=$this->success;
+        if($data_input["unit_air_baku_1_3_10"] < 0) {
+            $text="Grativikasi";
+            $option=$this->success;
+        }
+        $data_input["verifikasi"]["unit_air_baku_1_3_10"]["text"] = $text;
+        $data_input["verifikasi"]["unit_air_baku_1_3_10"]["option"] = $option;
+        return $data_input;
+    }
+
+    private function unit_air_baku_1_3_12($data_input) {
+        $data_input["unit_air_baku_1_3_12"] =  $data_input["unit_air_baku_1_3_11"]+ $data_input["unit_air_baku_1_3_10"];
+        $data_input["unit_air_baku_1_3_12"] = round_custom($data_input["unit_air_baku_1_3_12"], 2);
+        return $data_input;
+    }
+
+    private function unit_air_baku_1_3_13($data_input) {
+        $data_input["unit_air_baku_1_3_13"] = (($data_input["unit_air_baku_1_3_1"]/1000)*$data_input["unit_air_baku_1_3_12"]*9.81)/(0.9*0.8);
+        $data_input["unit_air_baku_1_3_13"] = round_custom($data_input["unit_air_baku_1_3_13"], 2);
         return $data_input;
     }
 
