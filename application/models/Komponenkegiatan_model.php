@@ -7,17 +7,18 @@ class Komponenkegiatan_model extends CI_Model {
 
     private $table = "tb_komponen_kegiatan";
     private $table_prov = "tb_provinsi";
-    public $column_order = [$this->$table. ".id as id", "", "email", "hp", "status", "created_at", "updated_at"]; 
+    public $column_order = ["id", "sub_key", "komponen_spam", "kegiatan", "estimasi", "pembagi", "satuan", "created_at", "updated_at"];
    
     public function __construct() {
         parent::__construct();
         $this->load->database('default');
     }
-    function komponen_list($search, $limit, $offer, $order, $order_type, $komponen_type=0) {
-        $select_komponen = $this->select_komponen($komponen_type, $search, $limit, $offer, $order, $order_type);
+    function komponen_list($search, $limit, $offer, $order, $order_type) {
+        $select_komponen = $this->select_komponen($search, $limit, $offer, $order, $order_type);
+//        $this->db->last_query();exit;
         $count = $this->count_all_komponen(0);
         $data["recordsTotal"] = $count;
-        $data["recordsFiltered"] = $this->select_komponen_count($komponen_type, $search);
+        $data["recordsFiltered"] = $this->select_komponen_count($search);
         $data["data"] = $select_komponen;
         return $data;
     }
@@ -29,17 +30,15 @@ class Komponenkegiatan_model extends CI_Model {
         return $this->db->get($this->table)->row();
     }
 
-    function select_komponen($komponen_type, $search, $limit, $offer, $order, $order_type) {
+    function select_komponen($search, $limit, $offer, $order, $order_type) {
         $column = implode (", ", $this->column_order);
         $this->db->select($column);
         if($search) {
             $this->db->or_group_start()
-                ->or_like("name", $search)
-                ->or_like("email", $search)
-                ->or_like("hp", $search)
+                ->or_like("komponen_spam", $search)
+                ->or_like("kegiatan", $search)
             ->group_end();
         }
-        $this->db->where("komponen_type", $komponen_type);
         if(!$limit) {
             $limit = 10;
         }
@@ -55,17 +54,15 @@ class Komponenkegiatan_model extends CI_Model {
         return $this->db->get($this->table)->result_array();
     }
 
-    function select_komponen_count($komponen_type, $search) {
+    function select_komponen_count($search) {
         $column = implode (", ", $this->column_order);
         $this->db->select($column);
         if($search) {
             $this->db->or_group_start()
-                ->or_like("name", $search)
-                ->or_like("email", $search)
-                ->or_like("hp", $search)
+                ->or_like("komponen_spam", $search)
+                ->or_like("kegiatan", $search)
             ->group_end();
         }
-        $this->db->where("komponen_type", $komponen_type);
         return count($this->db->get($this->table)->result_array());
     }
 
@@ -78,7 +75,6 @@ class Komponenkegiatan_model extends CI_Model {
     }
 
 	function set($array){
-        $array["password"]=hashpass($array['password']);
         $this->db->set($array);
         $this->db->insert($this->table);
 		return $this->db->insert_id();
@@ -87,7 +83,6 @@ class Komponenkegiatan_model extends CI_Model {
 
 	function update_value_by_id($value, $id){
         $data = $value;
-        $data['password']=hashpass($data['password']);
         $this->db->where('id', $id);
         $data = $this->db->update($this->table, $data); 
 		return $data;

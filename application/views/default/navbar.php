@@ -180,7 +180,7 @@
           <li class="nav-item with-sub mega-dropdown">
             <a class="nav-link" href="#" data-toggle="dropdown">
               <i class="icon ion-ios-people"></i>
-              <span>Manajemen User</span>
+              <span>Man. User</span>
             </a>
             <div class="sub-item">
               
@@ -199,10 +199,32 @@
             </div><!-- dropdown-menu -->
             
           </li>
+            <li class="nav-item with-sub mega-dropdown">
+                <a class="nav-link" href="#" data-toggle="dropdown">
+                    <i class="icon ion-ios-people"></i>
+                    <span>Man. Komponen</span>
+                </a>
+                <div class="sub-item">
+
+                    <div class="row">
+                        <div class="col-lg mg-t-30 mg-lg-t-0">
+                            <label class="section-label">Manajemen Komponen Kegiatan</label>
+                            <ul>
+                                <li><a href="<?=base_url("komponenkegiatan/list")?>">List Komponen Kegiatan</a></li>
+                                <li><a href="<?=base_url("komponenkegiatan/insert")?>">Tambah Komponen Kegiatan</a></li>
+                            </ul>
+
+
+                        </div><!-- col -->
+
+                    </div><!-- row -->
+                </div><!-- dropdown-menu -->
+
+            </li>
           <li class="nav-item with-sub">
             <a class="nav-link" href="#" data-toggle="dropdown">
               <i class="icon ion-map"></i>
-              <span>Manajemen wilayah</span>
+              <span>Man. wilayah</span>
             </a>
             <div class="sub-item">
               <ul>
