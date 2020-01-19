@@ -2,6 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Airminumajax extends All_Controller {
+    private $danger = "text-danger";
+    private $success = "text-success";
     function __construct() {
 		parent::__construct();
         // $this->load->model("Komponenkegiatan_model");
@@ -234,6 +236,7 @@ class Airminumajax extends All_Controller {
         $data_input = $this->pelayanan_1_2_3B($data_input);
         $data_input = $this->pelayanan_1_2_3C($data_input);
         $data_input = $this->pelayanan_1_2_3D($data_input);
+        $data_input = $this->unit_air_baku_1_3_1($data_input);
 
         return $data_input;
     }
@@ -307,6 +310,22 @@ class Airminumajax extends All_Controller {
 
     private function pelayanan_1_2_3D($data_input) {
         $data_input["pelayanan_1_2_3D"] =  $data_input["pelayanan_1_2_3A"] * 1.75;
+        return $data_input;
+    }
+
+    private function unit_air_baku_1_3_1($data_input) {
+        $text="Justifikasi";
+        $option=$this->danger;
+        if(($data_input["unit_air_baku_1_3_1"] >= ($data_input["pelayanan_1_2_3C"]* to_percent(105))) && ($data_input["unit_air_baku_1_3_1"] <= ($data_input["pelayanan_1_2_3C"]* to_percent(110)))) {
+            $text="Layak";
+            $option=$this->success;
+        }
+        // elseif {
+        //     $text="Layak";
+        //     $option=$this->success;
+        // }
+        $data_input["verifikasi"]["unit_air_baku_1_3_1"]["text"] = $text;
+        $data_input["verifikasi"]["unit_air_baku_1_3_1"]["option"] = $option;
         return $data_input;
     }
 

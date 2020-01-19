@@ -348,15 +348,22 @@
 
         function set_verifikasi($data) {
             for (const [key, value] of Object.entries($data)) {
+                text_default(key, value['text'], value['option'], "verifikasi");
             }
         }
         function set_harga_satuan($data) {
             for (const [key, value] of Object.entries($data)) {
+                text_default(key, value['text'], value['option'], "harga_satuan");
             }
         }
         function set_indikator($data) {
             for (const [key, value] of Object.entries($data)) {
+                text_default(key, value['text'], value['option'], "indikator");
             }
+        }
+        function text_default($key, $text, $option, $default){
+            $default_text= '<li class="'+$option+'">'+$text+'</li>';
+            $("#"+$key+"_"+$default).html($default_text);
         }
     </script>
     
