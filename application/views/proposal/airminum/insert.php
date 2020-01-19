@@ -22,7 +22,7 @@ $description_page = $option["description_page"];
 
 ?>
 <!-- <a href="#div_simpan" > Scroll kebawah</a> -->
-<div style="position:fixed;bottom:20px;right:20px;">
+<div style="position:fixed;top:20px;right:20px;">
     <div class="btn-group" role="group" aria-label="Basic example">
         <a href="javascript:kalkulasi();" class="btn btn-info pd-x-25 active">Kalkulasi</a>
         <a href="#div_simpan" class="btn btn-teal pd-x-25">Kebawah</a>
@@ -158,7 +158,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/det</span>
-                                    <input id="jenis_spam_1_1_2" value="0" type="number" class="form-control"  placeholder="">
+                                    <input id="jenis_spam_1_1_2" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -190,7 +190,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/det</span>
-                                    <input disabled id="jenis_spam_1_1_3" value="0"  type="number" class="form-control"  placeholder="">
+                                    <input disabled id="jenis_spam_1_1_3" value="0"  type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -222,7 +222,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">%</span>
-                                    <input id="jenis_spam_1_1_4A" type="number" class="form-control"  placeholder="">
+                                    <input id="jenis_spam_1_1_4A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -248,7 +248,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/det</span>
-                                    <input disabled id="jenis_spam_1_1_4B" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="jenis_spam_1_1_4B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -279,7 +279,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Unit</span>
-                                    <input id="jenis_spam_1_1_5" type="number" class="form-control"  placeholder="">
+                                    <input id="jenis_spam_1_1_5" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -309,7 +309,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Unit</span>
-                                    <input disabled id="jenis_spam_1_1_6" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="jenis_spam_1_1_6" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -369,7 +369,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Jiwa</span>
-                                    <input id="pelayanan_1_2_1A" type="number" class="form-control"  placeholder="">
+                                    <input id="pelayanan_1_2_1A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -395,7 +395,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">%</span>
-                                    <input id="pelayanan_1_2_1B" type="number" class="form-control"  placeholder="">
+                                    <input id="pelayanan_1_2_1B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                             </td>
                             <td>
@@ -420,7 +420,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Jiwa</span>
-                                    <input disabled id="pelayanan_1_2_1C" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="pelayanan_1_2_1C" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -446,7 +446,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Jiwa/KK</span>
-                                    <input id="pelayanan_1_2_1D" type="number" class="form-control"  placeholder="">
+                                    <input id="pelayanan_1_2_1D" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -476,7 +476,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Unit</span>
-                                    <input disabled id="pelayanan_1_2_2A" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="pelayanan_1_2_2A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -503,7 +503,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Unit</span>
-                                    <input disabled id="pelayanan_1_2_2B" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="pelayanan_1_2_2B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -529,7 +529,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/Jiwa/Hari</span>
-                                    <input id="pelayanan_1_2_2C" type="number" class="form-control"  placeholder="">
+                                    <input id="pelayanan_1_2_2C" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -555,7 +555,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/det</span>
-                                    <input disabled id="pelayanan_1_2_2D" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="pelayanan_1_2_2D" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -581,7 +581,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">%</span>
-                                    <input id="pelayanan_1_2_2E" type="number" class="form-control"  placeholder="">
+                                    <input id="pelayanan_1_2_2E" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -605,7 +605,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/dt</span>
-                                    <input disabled id="pelayanan_1_2_2F" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="pelayanan_1_2_2F" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -631,7 +631,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/dt</span>
-                                    <input disabled id="pelayanan_1_2_2G" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="pelayanan_1_2_2G" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -657,7 +657,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/dt</span>
-                                    <input id="pelayanan_1_2_2H" type="number" class="form-control"  placeholder="">
+                                    <input id="pelayanan_1_2_2H" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -681,7 +681,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">%</span>
-                                    <input disabled id="pelayanan_1_2_2I" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="pelayanan_1_2_2I" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -711,7 +711,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Liter/dt</span>
-                                    <input disabled id="pelayanan_1_2_3A" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="pelayanan_1_2_3A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -737,7 +737,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Liter/dt</span>
-                                    <input disabled id="pelayanan_1_2_3B" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="pelayanan_1_2_3B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -764,7 +764,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Liter/dt</span>
-                                    <input disabled id="pelayanan_1_2_3C" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="pelayanan_1_2_3C" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -790,7 +790,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Liter/dt</span>
-                                    <input disabled id="pelayanan_1_2_3D" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="pelayanan_1_2_3D" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -850,7 +850,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Liter/dt</span>
-                                    <input id="unit_air_baku_1_3_1" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_1_3_1" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -911,7 +911,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">NTU</span>
-                                    <input id="unit_air_baku_1_3_3" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_1_3_3" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -941,7 +941,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="unit_air_baku_1_3_4" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_1_3_4" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -971,7 +971,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="unit_air_baku_1_3_5" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_1_3_5" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1001,7 +1001,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input disabled id="unit_air_baku_1_3_6" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="unit_air_baku_1_3_6" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1031,7 +1031,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">MM</span>
-                                    <input id="unit_air_baku_1_3_7" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_1_3_7" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1061,7 +1061,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">M/dt</span>
-                                    <input disabled id="unit_air_baku_1_3_8" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="unit_air_baku_1_3_8" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1091,7 +1091,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input disabled id="unit_air_baku_1_3_9" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="unit_air_baku_1_3_9" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1121,7 +1121,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="unit_air_baku_1_3_10" disabled id="unit_air_baku_1_3_10" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_1_3_10" disabled id="unit_air_baku_1_3_10" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1151,7 +1151,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="unit_air_baku_1_3_11" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_1_3_11" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1181,7 +1181,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input disabled id="unit_air_baku_1_3_12" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="unit_air_baku_1_3_12" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1211,7 +1211,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Kw</span>
-                                    <input disabled id="unit_air_baku_1_3_13" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="unit_air_baku_1_3_13" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1274,7 +1274,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/dt</span>
-                                    <input id="unit_produksi_1_4_1" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_1_4_1" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1304,7 +1304,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/dt</span>
-                                    <input id="unit_produksi_1_4_2" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_1_4_2" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1334,7 +1334,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="unit_produksi_1_4_3" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_1_4_3" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1365,7 +1365,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Set</span>
-                                    <input id="unit_produksi_1_4_4" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_1_4_4" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1428,7 +1428,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">M3</span>
-                                    <input id="unit_distribusi_1_5_1" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_1_5_1" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1458,7 +1458,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="unit_distribusi_1_5_2" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_1_5_2" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1488,7 +1488,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">MM</span>
-                                    <input id="unit_distribusi_1_5_3" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_1_5_3" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1518,7 +1518,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">M/dt</span>
-                                    <input disabled id="unit_distribusi_1_5_4" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="unit_distribusi_1_5_4" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1548,7 +1548,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="unit_distribusi_1_5_5_verifikasi" disabled id="unit_distribusi_1_5_5" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_1_5_5_verifikasi" disabled id="unit_distribusi_1_5_5" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1578,7 +1578,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Lt/dt</span>
-                                    <input id="unit_distribusi_1_5_6" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_1_5_6" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1608,7 +1608,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="unit_distribusi_1_5_7" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_1_5_7" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1638,7 +1638,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Kw</span>
-                                    <input id="unit_distribusi_1_5_8" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_1_5_8" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1701,7 +1701,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="unit_pelayanan_1_6_1" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_pelayanan_1_6_1" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1731,7 +1731,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Unit</span>
-                                    <input disabled id="unit_pelayanan_1_6_2" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="unit_pelayanan_1_6_2" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1761,7 +1761,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input disabled id="unit_pelayanan_1_6_3" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="unit_pelayanan_1_6_3" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1829,12 +1829,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_air_baku_2_1_1A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_2_1_1A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">l/dt</span>
-                                    <input id="unit_air_baku_2_1_1B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_2_1_1B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                             </td>
                             <td>
@@ -1863,12 +1863,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_air_baku_2_1_2A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_2_1_2A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">l/dt</span>
-                                    <input id="unit_air_baku_2_1_2B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_2_1_2B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1898,12 +1898,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_air_baku_2_1_3A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_2_1_3A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m</span>
-                                    <input id="unit_air_baku_2_1_3B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_2_1_3B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -1934,12 +1934,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_air_baku_2_1_4A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_2_1_4A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup></span>
-                                    <input id="unit_air_baku_2_1_4B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_air_baku_2_1_4B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2003,12 +2003,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_produksi_2_2_1A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_2_2_1A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">l/dt</span>
-                                    <input id="unit_produksi_2_2_1B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_2_2_1B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2038,12 +2038,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_produksi_2_2_2A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_2_2_2A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">l/dt</span>
-                                    <input id="unit_produksi_2_2_2B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_2_2_2B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2073,12 +2073,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_produksi_2_2_3A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_2_2_3A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">unit</span>
-                                    <input id="unit_produksi_2_2_3B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_2_2_3B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2109,12 +2109,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_produksi_2_2_4A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_2_2_4A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="unit_produksi_2_2_4B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_2_2_4B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2145,12 +2145,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_produksi_2_2_5A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_2_2_5A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="unit_produksi_2_2_5B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_2_2_5B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2181,12 +2181,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_produksi_2_2_6A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_2_2_6A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="unit_produksi_2_2_6B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_2_2_6B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2217,12 +2217,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_produksi_2_2_7A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_2_2_7A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="unit_produksi_2_2_7B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_produksi_2_2_7B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2286,12 +2286,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_distribusi_2_3_1A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_1A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>3</sup> </span>
-                                    <input id="unit_distribusi_2_3_1B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_1B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2321,12 +2321,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_distribusi_2_3_2A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_2A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">l/dt </span>
-                                    <input id="unit_distribusi_2_3_2B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_2B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2356,12 +2356,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_distribusi_2_3_3A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_3A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="unit_distribusi_2_3_3B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_3B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2392,12 +2392,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_distribusi_2_3_4A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_4A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="unit_distribusi_2_3_4B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_4B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2428,12 +2428,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_distribusi_2_3_5A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_5A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="unit_distribusi_2_3_5B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_5B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2464,12 +2464,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_distribusi_2_3_6A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_6A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m<sup>2</sup> </span>
-                                    <input id="unit_distribusi_2_3_6B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_6B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2509,12 +2509,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_distribusi_2_3_7<?=$index?>A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_7<?=$index?>A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m</span>
-                                    <input id="unit_distribusi_2_3_7<?=$index?>B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_7<?=$index?>B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2548,12 +2548,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="unit_distribusi_2_3_8A" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="unit_distribusi_2_3_8A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m</span>
-                                    <input id="unit_distribusi_2_3_8B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_8B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2616,12 +2616,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_pelayanan_2_4_1A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_pelayanan_2_4_1A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m</span>
-                                    <input id="unit_pelayanan_2_4_1B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_pelayanan_2_4_1B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2651,12 +2651,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_pelayanan_2_4_2A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_pelayanan_2_4_2A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m</span>
-                                    <input id="unit_pelayanan_2_4_2B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_pelayanan_2_4_2B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2686,12 +2686,12 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_pelayanan_2_4_3A" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_pelayanan_2_4_3A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m</span>
-                                    <input id="unit_pelayanan_2_4_3B" type="number" class="form-control"  placeholder="">
+                                    <input id="unit_pelayanan_2_4_3B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2755,7 +2755,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="biaya_non_standar_2_5_1" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="biaya_non_standar_2_5_1" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2785,7 +2785,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="biaya_non_standar_2_5_2" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="biaya_non_standar_2_5_2" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2815,7 +2815,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="biaya_non_standar_2_5_3" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="biaya_non_standar_2_5_3" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2846,7 +2846,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="biaya_non_standar_2_5_4" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="biaya_non_standar_2_5_4" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2877,7 +2877,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="biaya_non_standar_2_5_5" type="number" class="form-control"  placeholder="">
+                                    <input id="biaya_non_standar_2_5_5" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2940,7 +2940,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="biaya_lain_lain_2_6_1" type="number" class="form-control"  placeholder="">
+                                    <input id="biaya_lain_lain_2_6_1" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2970,7 +2970,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="biaya_lain_lain_2_6_2" type="number" class="form-control"  placeholder="">
+                                    <input id="biaya_lain_lain_2_6_2" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -3000,7 +3000,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="biaya_lain_lain_2_6_3" type="number" class="form-control"  placeholder="">
+                                    <input id="biaya_lain_lain_2_6_3" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -3064,7 +3064,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="total_investasi" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="total_investasi" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -3094,7 +3094,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp/Lt/dt</span>
-                                    <input disabled id="harga_rata_rata_A" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="harga_rata_rata_A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -3118,7 +3118,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp/SR</span>
-                                    <input disabled id="harga_rata_rata_B" type="number" class="form-control"  placeholder="">
+                                    <input disabled id="harga_rata_rata_B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>

@@ -69,13 +69,13 @@
             $("#container_jenis_spam_1").hide();
         }
         function clear_jenis_spam() {
-            $("#jenis_spam_1_1_1").val("");
-            $("#jenis_spam_1_1_2").val("");
-            $("#jenis_spam_1_1_3").val("");
-            $("#jenis_spam_1_1_4A").val("");
-            $("#jenis_spam_1_1_4B").val("");
-            $("#jenis_spam_1_1_5").val("");
-            $("#jenis_spam_1_1_6").val("");
+            $("#jenis_spam_1_1_1").val("0");
+            $("#jenis_spam_1_1_2").val("0");
+            $("#jenis_spam_1_1_3").val("0");
+            $("#jenis_spam_1_1_4A").val("0");
+            $("#jenis_spam_1_1_4B").val("0");
+            $("#jenis_spam_1_1_5").val("0");
+            $("#jenis_spam_1_1_6").val("0");
         }
 
         function kalkulasi() {

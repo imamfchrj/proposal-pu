@@ -220,13 +220,14 @@ class Airminumajax extends All_Controller {
 
 
     private function calculate($data_input) {
-        // Ketentuan teknis
         $data_input = $this->jenis_spam_1_1_3($data_input);
         $data_input = $this->jenis_spam_1_1_4B($data_input);
         $data_input = $this->pelayanan_1_2_1C($data_input);
         $data_input = $this->jenis_spam_1_1_6($data_input);
+        $data_input = $this->pelayanan_1_2_2A($data_input);
+        $data_input = $this->pelayanan_1_2_2B($data_input);
+        
 
-        // Pelayanan
 
         return $data_input;
     }
@@ -241,13 +242,23 @@ class Airminumajax extends All_Controller {
         return $data_input;
     }
 
+    private function jenis_spam_1_1_6($data_input) {
+        $data_input["jenis_spam_1_1_6"] = $data_input["jenis_spam_1_1_5"] *  $data_input["pelayanan_1_2_1C"];
+        return $data_input;
+    }
+
     private function pelayanan_1_2_1C($data_input) {
         $data_input["pelayanan_1_2_1C"] =  $data_input["pelayanan_1_2_1A"] * to_percent($data_input["pelayanan_1_2_1B"]);
         return $data_input;
     }
 
-    private function jenis_spam_1_1_6($data_input) {
-        $data_input["jenis_spam_1_1_6"] = $data_input["jenis_spam_1_1_5"] *  $data_input["pelayanan_1_2_1C"];
+    private function pelayanan_1_2_2A($data_input) {
+        $data_input["pelayanan_1_2_2A"] =  $data_input["pelayanan_1_2_1C"] / $data_input["pelayanan_1_2_1D"];
+        return $data_input;
+    }
+
+    private function pelayanan_1_2_2B($data_input) {
+        $data_input["pelayanan_1_2_2B"] =  $data_input["pelayanan_1_2_2A"] - $data_input["jenis_spam_1_1_5"];
         return $data_input;
     }
 
