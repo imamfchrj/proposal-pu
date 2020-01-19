@@ -7,6 +7,7 @@ class Komponenkegiatan_model extends CI_Model {
 
     private $table = "tb_komponen_kegiatan";
     private $table_prov = "tb_provinsi";
+  
     public $column_order = ["id", "sub_key", "komponen_spam", "kegiatan", "estimasi", "pembagi", "satuan", "created_at", "updated_at"];
    
     public function __construct() {
@@ -21,6 +22,18 @@ class Komponenkegiatan_model extends CI_Model {
         $data["recordsFiltered"] = $this->select_komponen_count($search);
         $data["data"] = $select_komponen;
         return $data;
+    }
+
+    function komponen_by_key($key, $sub_key, $year=false) {
+        $this->db->select("*");
+        if($year) {
+            $this->db->where("year",$year);
+        }
+        $this->db->where("key",$key);
+        $this->db->where("sub_key",$sub_key);
+        $this->db->where("aktif", 1);
+        $this->db->order_by("id", "desc");
+        return $this->db->get($this->table)->result();
     }
 
     function get_komponen_by_id($id) {

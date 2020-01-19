@@ -4,7 +4,6 @@
 
 <script>
       function conf_delete($id) {
-        conf_delete
         alert_danger("Menghapus!", "Apakah anda yakin akan menghapus ini", "javascript:_delete("+$id+");");
                 
       }
