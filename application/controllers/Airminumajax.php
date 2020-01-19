@@ -226,8 +226,14 @@ class Airminumajax extends All_Controller {
         $data_input = $this->jenis_spam_1_1_6($data_input);
         $data_input = $this->pelayanan_1_2_2A($data_input);
         $data_input = $this->pelayanan_1_2_2B($data_input);
-        
-
+        $data_input = $this->pelayanan_1_2_2D($data_input);
+        $data_input = $this->pelayanan_1_2_2F($data_input);
+        $data_input = $this->pelayanan_1_2_2G($data_input);
+        $data_input = $this->pelayanan_1_2_2I($data_input);
+        $data_input = $this->pelayanan_1_2_3A($data_input);
+        $data_input = $this->pelayanan_1_2_3B($data_input);
+        $data_input = $this->pelayanan_1_2_3C($data_input);
+        $data_input = $this->pelayanan_1_2_3D($data_input);
 
         return $data_input;
     }
@@ -243,7 +249,7 @@ class Airminumajax extends All_Controller {
     }
 
     private function jenis_spam_1_1_6($data_input) {
-        $data_input["jenis_spam_1_1_6"] = $data_input["jenis_spam_1_1_5"] *  $data_input["pelayanan_1_2_1C"];
+        $data_input["jenis_spam_1_1_6"] = $data_input["jenis_spam_1_1_5"] *  $data_input["pelayanan_1_2_1D"];
         return $data_input;
     }
 
@@ -262,4 +268,50 @@ class Airminumajax extends All_Controller {
         return $data_input;
     }
 
+    private function pelayanan_1_2_2D($data_input) {
+        $data_input["pelayanan_1_2_2D"] =  $data_input["pelayanan_1_2_1C"] * $data_input["pelayanan_1_2_2C"] / 86400;
+        return $data_input;
+    }
+
+    private function pelayanan_1_2_2F($data_input) {
+        $data_input["pelayanan_1_2_2F"] =  $data_input["pelayanan_1_2_2D"] * to_percent($data_input["pelayanan_1_2_2E"]);
+        return $data_input;
+    }
+
+    private function pelayanan_1_2_2G($data_input) {
+        $data_input["pelayanan_1_2_2G"] =  $data_input["pelayanan_1_2_2F"] + ($data_input["pelayanan_1_2_2D"]);
+        return $data_input;
+    }
+
+    private function pelayanan_1_2_2I($data_input) {
+        $data_input["pelayanan_1_2_2I"] =  $data_input["pelayanan_1_2_2G"] / (1 - to_percent($data_input["pelayanan_1_2_2H"])) * to_percent($data_input["pelayanan_1_2_2H"]);
+        return $data_input;
+    }
+
+    // private function pelayanan_1_2_2I($data_input) {
+    //     $data_input["pelayanan_1_2_2I"] =  $data_input["pelayanan_1_2_2G"] / (1 - to_percent($data_input["pelayanan_1_2_2H"])) * $data_input["pelayanan_1_2_2H"];
+    //     return $data_input;
+    // }
+
+    private function pelayanan_1_2_3A($data_input) {
+        $data_input["pelayanan_1_2_3A"] =  $data_input["pelayanan_1_2_2I"] + $data_input["pelayanan_1_2_2G"];
+        return $data_input;
+    }
+
+    private function pelayanan_1_2_3B($data_input) {
+        $data_input["pelayanan_1_2_3B"] =  1.2 * $data_input["pelayanan_1_2_3A"];
+        return $data_input;
+    }
+
+    private function pelayanan_1_2_3C($data_input) {
+        $data_input["pelayanan_1_2_3C"] =  $data_input["pelayanan_1_2_3B"] - $data_input["jenis_spam_1_1_3"];
+        return $data_input;
+    }
+
+    private function pelayanan_1_2_3D($data_input) {
+        $data_input["pelayanan_1_2_3D"] =  $data_input["pelayanan_1_2_3A"] * 1.75;
+        return $data_input;
+    }
+
+    
 }
