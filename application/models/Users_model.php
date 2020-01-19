@@ -23,13 +23,6 @@ class Users_model extends CI_Model {
         return $data;
     }
 
-    function get_user_by_id($id) {
-        $column = implode (", ", $this->column_order);
-        $this->db->select($column);
-        $this->db->where("id", $id);
-        return $this->db->get($this->table)->row();
-    }
-
     function select_user($user_type, $search, $limit, $offer, $order, $order_type) {
         $this->db->select("
                 id, 
@@ -92,6 +85,15 @@ class Users_model extends CI_Model {
         $this->db->select("count(id) as count_id");
         $data = $this->db->get($this->table)->row();
         return $data->count_id;
+    }
+
+
+
+    function get_user_by_id($id) {
+        $column = implode (", ", $this->column_order);
+        $this->db->select($column);
+        $this->db->where("id", $id);
+        return $this->db->get($this->table)->row();
     }
 
 	function set($array){
