@@ -75,6 +75,57 @@
 
     </div><!-- signin-wrapper -->
 
+    
+    <!-- MODAL ALERT MESSAGE -->
+    <div id="alert_success" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content tx-size-sm">
+          <div class="modal-body tx-center pd-y-20 pd-x-20">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <i class="icon ion-ios-checkmark-outline tx-100 tx-success lh-1 mg-t-20 d-inline-block"></i>
+            <h4 class="tx-success tx-semibold mg-b-20 title_success">Congratulations!</h4>
+            <p class="mg-b-20 mg-x-20 description_success"></p>
+            <button type="button" class="btn btn-success pd-x-25" data-dismiss="modal" aria-label="Close">Continue</button>
+            <a href="#" class="link_success">Lanjutkan</a>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div id="alert_failed" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content tx-size-sm">
+          <div class="modal-body tx-center pd-y-20 pd-x-20">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <i class="icon icon ion-ios-close-outline tx-100 tx-danger lh-1 mg-t-20 d-inline-block"></i>
+            <h4 class="tx-danger mg-b-20 title_failed">Error: Cannot process your request!</h4>
+            <p class="mg-b-20 mg-x-20 description_failed"></p>
+            <button type="button" class="btn btn-danger pd-x-25 link_failed" data-dismiss="modal" aria-label="Close">Continue</button>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+
+    <div id="alert_danger" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content tx-size-sm">
+          <div class="modal-body tx-center pd-y-20 pd-x-20">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <i class="icon icon ion-outlet tx-100 tx-warning lh-1 mg-t-20 d-inline-block"></i>
+            <h4 class="tx-warning mg-b-20 title_danger">Warning</h4>
+            <p class="mg-b-20 mg-x-20 description_danger"></p>
+            <a href="#" class="btn btn-warning pd-x-25 link_danger">Continue</a>
+          </div><!-- modal-body -->
+        </div><!-- modal-content -->
+      </div><!-- modal-dialog -->
+    </div><!-- modal -->
     <script src="<?=base_url()?>/assets/lib/jquery/js/jquery.js"></script>
     <script src="<?=base_url()?>/assets/lib/popper.js/js/popper.js"></script>
     <script src="<?=base_url()?>/assets/lib/bootstrap/js/bootstrap.js"></script>
@@ -90,6 +141,41 @@
       };
     </script>
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+
+<script>
+
+function alert_success($title, $description, $link=""){
+        $('.title_success').html($title);
+        $('.description_success').html($description);
+        $('.link_success').attr("href",$link);
+        if(!$link) {
+          $('.link_success').html("");
+        }
+        
+        $('#alert_success').modal('show');
+      }
+
+      function alert_failed($title, $description, $link=""){
+        $('.title_failed').html($title);
+        $('.description_failed').html($description);
+        // $('.link_failed').html($link);
+        $('.link_failed').attr("href",$link);
+        if(!$link) {
+          $('.link_success').html("");
+        }
+        
+        $('#alert_failed').modal('show');
+      }
+
+
+      function alert_danger($title, $description, $link=""){
+        $('.title_danger').html($title);
+        $('.description_danger').html($description);
+        $('.link_danger').attr("href",$link);
+        
+        $('#alert_danger').modal('show');
+      }
+</script>
 
 <script>
 $(function(){
@@ -133,7 +219,7 @@ var submit = function (response){
     })
     .done(function(data) {
         if(data.is_error==1){ 
-            alert_error(data.error_message);
+            alert_danger(data.error_message);
             grecaptcha.reset();
             return; 
         }
@@ -142,7 +228,7 @@ var submit = function (response){
     })
     .fail(function() {
         if(tmp){
-            alert_error( "Server tidak merespon. Mohon cek koneksi internet anda. (Lakukan refresh jika dibutuhkan)\n" );
+            alert_danger( "Server tidak merespon. Mohon cek koneksi internet anda. (Lakukan refresh jika dibutuhkan)\n" );
             grecaptcha.reset();
             tmp = false;
         }
