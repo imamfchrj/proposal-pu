@@ -3,7 +3,7 @@
 class Provinsi_model extends CI_Model {
 
     private $table = "tb_provinsi";
-    public $column_order = ["id", "nama", "id"]; 
+    public $column_order = ["prov_id", "nama", "prov_id"]; 
    
     public function __construct() {
         parent::__construct();
