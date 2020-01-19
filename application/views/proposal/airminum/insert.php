@@ -1548,13 +1548,13 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Meter</span>
-                                    <input id="unit_distribusi_1_5_5_verifikasi" disabled id="unit_distribusi_1_5_5" type="number" value="0" class="form-control"  placeholder="">
+                                    <input disabled id="unit_distribusi_1_5_5"  type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
                                 <ul class="parsley-errors-list filled">
-                                    <li class="tx-success"></li>
+                                    <li id="unit_distribusi_1_5_5_verifikasi" class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
@@ -1638,7 +1638,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Kw</span>
-                                    <input id="unit_distribusi_1_5_8" type="number" value="0" class="form-control"  placeholder="">
+                                    <input disable id="unit_distribusi_1_5_8" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>

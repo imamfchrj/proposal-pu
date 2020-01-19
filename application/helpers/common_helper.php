@@ -25,8 +25,8 @@ function ceil_custom($value, $precision=0){
     for($i=1; $i<=$precision; $i++) {
         $pre=$pre*10;
     }
-    return ceil(($value * $pre)) / $pre;
-    // return ceil(round($value * $pre)) / $pre;
+    // return ceil(($value * $pre)) / $pre;
+    return ceil(round($value * $pre)) / $pre;
 }
 
 function floor_custom($value, $precision=0){
@@ -34,8 +34,8 @@ function floor_custom($value, $precision=0){
     for($i=1; $i<=$precision; $i++) {
         $pre=$pre*10;
     }
-    return floor(($value * $pre)) / $pre;
-    // return floor(round($value * $pre)) / $pre;
+    // return floor(($value * $pre)) / $pre;
+    return floor(round($value * $pre)) / $pre;
 }
 
 function to_percent($val) {
