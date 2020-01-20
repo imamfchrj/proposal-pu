@@ -1638,7 +1638,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Kw</span>
-                                    <input disable id="unit_distribusi_1_5_8" type="number" value="0" class="form-control"  placeholder="">
+                                    <input disabled id="unit_distribusi_1_5_8" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>

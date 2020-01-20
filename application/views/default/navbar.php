@@ -76,7 +76,7 @@
                     <li><a href="<?=base_url('airminum/insert')?>">Evaluasi Infrastruktur Spam Durolis</a></li>
                     <li><a href="<?=base_url('airminum/list')?>">List Evaluasi Infrastruktur Spam Durolis</a></li>
                     <li><a href="<?=base_url('komponenkegiatan/list')?>">Konfigurasi Komponen Kegiatan</a></li>
-                    <li><a href="<?=base_url('komponenkegiatan/insert')?>">List Komponen Kegiatan</a></li>
+                    <li><a href="<?=base_url('komponenkegiatan/insert')?>">Tambah Komponen Kegiatan</a></li>
                   </ul>
 
 
