@@ -53,9 +53,9 @@
                 "serverSide": true,
                 "ajax": ROOT + "/provinsiajax/list_datatable",
                 "columns": [
-                    { "data": "id" },
+                    { "data": "prov_id" },
                     { "data": "nama" },
-                    { "data": "id",
+                    { "data": "prov_id",
                       "render": function(data, type, row, meta){
 
                           return '<a href="#'+data+'">Detail</a>';

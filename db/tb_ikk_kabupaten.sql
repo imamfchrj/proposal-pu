@@ -35,7 +35,7 @@ CREATE TABLE `tb_ikk_kabupaten` (
   `ikk_decimal` float DEFAULT NULL,
   `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
   `update_at` datetime DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_ikk_kabupaten`
