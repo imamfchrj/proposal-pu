@@ -2,6 +2,7 @@
 
 $id = "";
 $sub_key = "";
+$id_komponen = "";
 $kegiatan = "";
 $satuan = "";
 $estimasi = "";
@@ -11,6 +12,7 @@ $pembagi = "";
 if (isset($option["form_value"])) {
     $id = $option["form_value"]->id;
     $sub_key = $option["form_value"]->sub_key;
+    $id_komponen = $option["form_value"]->id_komponen;
     $kegiatan = $option["form_value"]->kegiatan;
     $satuan = $option["form_value"]->satuan;
     $estimasi = $option["form_value"]->estimasi;
@@ -42,8 +44,10 @@ $description_page = $option["description_page"];
                             <input class="form-control" type="hidden" id="id" name="id" value="<?= $id ?>"
                                    placeholder="Masukkan nama">
                             <label class="form-control-label">Komponen: <span class="tx-danger">*</span></label>
-                            <select name="sub_key" id="sub_key" class="form-control select2" data-placeholder="Choose one">
-                                <option value="unit_distribusi">Unit Distribusi</option>
+                            <select name="sub_key" id="sub_key" class="form-control select2 komponen_mst" data-placeholder="Pilih">
+                                <option value=<?php if ($id_komponen) {
+                                    echo $id_komponen;
+                                } ?>><?php if ($id_komponen) { ?><?= get_text_komponen_mst($id_komponen) ?><?php } ?></option>
                             </select>
                             <span id="e_sub_key" class="tx-danger"></span>
                         </div>

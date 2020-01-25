@@ -2,6 +2,7 @@
     <?php
         $this->load->view("default/form_js");
         $this->load->view("komponenkegiatan/check_komponen_js");
+        $this->load->view("default/komponen_mst_ajax");
         $link = $option["link"];
     ?>
 

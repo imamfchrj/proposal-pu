@@ -181,3 +181,18 @@ function is_menu_active($menu, $now){
     }
     // return "current active";
 }
+
+function get_text_komponen_mst($id=0){
+    $data=array(
+        0 => 'Pilih Jenis Komponen',
+        1 => 'Unit Air Baku',
+        2 => 'Unit Produksi',
+        3 => 'Unit Distribusi',
+        4 => 'Unit Pelayanan',
+        5 => 'Bangunan Penunjang',
+    );
+    if($id<0 || $id>5){
+        $id=0;
+    }
+    return $data[$id];
+}
