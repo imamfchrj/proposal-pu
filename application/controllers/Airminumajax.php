@@ -114,6 +114,10 @@ class Airminumajax extends All_Controller {
         $this->form_validation->set_rules('unit_pelayanan_2_4_3A', "unit_pelayanan_2_4_3A", 'numeric|trim|xss_clean');
         $this->form_validation->set_rules('unit_pelayanan_2_4_3B', "unit_pelayanan_2_4_3B", 'numeric|trim|xss_clean');
 
+        $this->form_validation->set_rules('biaya_non_standar_2_5_1', "biaya_non_standar_2_5_1", 'numeric|trim|xss_clean');
+        $this->form_validation->set_rules('biaya_non_standar_2_5_2', "biaya_non_standar_2_5_2", 'numeric|trim|xss_clean');
+        $this->form_validation->set_rules('biaya_non_standar_2_5_3', "biaya_non_standar_2_5_3", 'numeric|trim|xss_clean');
+        $this->form_validation->set_rules('biaya_non_standar_2_5_4', "biaya_non_standar_2_5_4", 'numeric|trim|xss_clean');
         $this->form_validation->set_rules('biaya_non_standar_2_5_5', "biaya_non_standar_2_5_5", 'numeric|trim|xss_clean');
 
         $this->form_validation->set_rules('biaya_lain_lain_2_6_1', "biaya_lain_lain_2_6_1", 'numeric|trim|xss_clean');
@@ -215,6 +219,10 @@ class Airminumajax extends All_Controller {
             $data["unit_pelayanan_2_4_3A"] = (float)$this->form_validation->set_value('unit_pelayanan_2_4_3A');
             $data["unit_pelayanan_2_4_3B"] = (float)$this->form_validation->set_value('unit_pelayanan_2_4_3B');
             
+            $data["biaya_non_standar_2_5_1"] = (float)$this->form_validation->set_value('biaya_non_standar_2_5_1');
+            $data["biaya_non_standar_2_5_2"] = (float)$this->form_validation->set_value('biaya_non_standar_2_5_2');
+            $data["biaya_non_standar_2_5_3"] = (float)$this->form_validation->set_value('biaya_non_standar_2_5_3');
+            $data["biaya_non_standar_2_5_4"] = (float)$this->form_validation->set_value('biaya_non_standar_2_5_4');
             $data["biaya_non_standar_2_5_5"] = (float)$this->form_validation->set_value('biaya_non_standar_2_5_5');
             
             $data["biaya_lain_lain_2_6_1"] = (float)$this->form_validation->set_value('biaya_lain_lain_2_6_1');
@@ -278,6 +286,14 @@ class Airminumajax extends All_Controller {
         
         $data_input = $this->unit_distribusi_2_3_7($data_input);
         $data_input = $this->unit_distribusi_2_3_8($data_input);
+        $data_input = $this->aggregator($data_input);
+        $data_input = $this->biaya_non_standar_2_5_1($data_input);
+        $data_input = $this->biaya_non_standar_2_5_2($data_input);
+        $data_input = $this->biaya_non_standar_2_5_3($data_input);
+        $data_input = $this->biaya_non_standar_2_5_4($data_input);
+        $data_input = $this->biaya_non_standar_2_5_5($data_input);
+        
+        
         
         
         
@@ -727,6 +743,99 @@ class Airminumajax extends All_Controller {
             }
             $data_input["verifikasi"]["unit_distribusi_2_3_7" . $index]["text"] = $text;
             $data_input["verifikasi"]["unit_distribusi_2_3_7" . $index]["option"] = $option;
+        }
+        return $data_input;
+    }
+
+    private function biaya_non_standar_2_5_1($data_input) {
+        return $this->non_standard($data_input, "biaya_non_standar_2_5_1", 10, 5);
+    }
+
+    private function biaya_non_standar_2_5_2($data_input) {
+        return $this->non_standard($data_input, "biaya_non_standar_2_5_2", 20, 10);
+    }
+
+    private function biaya_non_standar_2_5_3($data_input) {
+        return $this->non_standard($data_input, "biaya_non_standar_2_5_3", 5, 5);
+    }
+
+    private function biaya_non_standar_2_5_4($data_input) {
+        return $this->non_standard($data_input, "biaya_non_standar_2_5_4", 5, 2);
+    }
+
+    private function biaya_non_standar_2_5_5($data_input) {
+        return $this->non_standard($data_input, "biaya_non_standar_2_5_5", 5, 2);
+    }
+
+    private function non_standard($data_input, $key_input, $verifikasi_percent, $indikator_percent) {
+        if(!isset($data_input[$key_input])) {
+            return $data_input;
+        }
+        $data_input["harga_satuan"][$key_input]["text"] = $data_input[$key_input] / $data_input["total_investasi"]*100;
+        $data_input["harga_satuan"][$key_input]["option"] = $this->default;
+
+        $data_input["indikator"][$key_input]["text"] = $indikator_percent;
+        $data_input["indikator"][$key_input]["option"] = $this->default;
+        
+        $text="Justifikasi";
+        $option=$this->danger;
+        if($data_input[$key_input] <= ($data_input["total_investasi"] * to_percent($verifikasi_percent))) {
+            $text="Wajar";
+            $option=$this->success;
+        }
+        $data_input["verifikasi"][$key_input]["text"] = $text;
+        $data_input["verifikasi"][$key_input]["option"] = $option;
+        return $data_input;
+    }
+
+    private function aggregator($data_input) {
+        $key = array(
+            "unit_air_baku_2_1_1A",
+            "unit_air_baku_2_1_2A",
+            "unit_air_baku_2_1_3A",
+            "unit_air_baku_2_1_4A",
+            "unit_produksi_2_2_1A",
+            "unit_produksi_2_2_2A",
+            "unit_produksi_2_2_3A",
+            "unit_produksi_2_2_4A",
+            "unit_produksi_2_2_5A",
+            "unit_produksi_2_2_6A",
+            "unit_produksi_2_2_7A",
+            "unit_distribusi_2_3_1A",
+            "unit_distribusi_2_3_2A",
+            "unit_distribusi_2_3_3A",
+            "unit_distribusi_2_3_4A",
+            "unit_distribusi_2_3_5A",
+            "unit_distribusi_2_3_6A",
+            "unit_distribusi_2_3_8A",
+            "unit_pelayanan_2_4_1A",
+            "unit_pelayanan_2_4_2A",
+            "unit_pelayanan_2_4_3A",
+            "biaya_non_standar_2_5_1",
+            "biaya_non_standar_2_5_2",
+            "biaya_non_standar_2_5_3",
+            "biaya_non_standar_2_5_4",
+            "biaya_non_standar_2_5_5",
+            "biaya_lain_lain_2_6_1",
+            "biaya_lain_lain_2_6_2",
+            "biaya_lain_lain_2_6_3"
+        );
+        $sum = 0;
+        foreach($key as $value) {
+            if(array_key_exists($value, $data_input)) {
+                $sum += $data_input[$value];
+            }
+        }
+
+        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71; $index++) {
+            $sum += $data_input["unit_distribusi_2_3_7". $index . "A"];
+        }
+        $data_input["total_investasi"] = $sum;
+        if($data_input["unit_produksi_1_4_2"]) {
+            $data_input["harga_rata_rata_A"] = $sum / $data_input["unit_produksi_1_4_2"];
+        }
+        if($data_input["pelayanan_1_2_2A"]) {
+            $data_input["harga_rata_rata_B"] = $sum / $data_input["pelayanan_1_2_2A"];
         }
         return $data_input;
     }

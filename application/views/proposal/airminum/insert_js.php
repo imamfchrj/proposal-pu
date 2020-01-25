@@ -183,6 +183,10 @@
                     "unit_pelayanan_2_4_3B": $("#unit_pelayanan_2_4_3B").val(),
 
 
+                    "biaya_non_standar_2_5_1": $("#biaya_non_standar_2_5_1").val(),
+                    "biaya_non_standar_2_5_2": $("#biaya_non_standar_2_5_2").val(),
+                    "biaya_non_standar_2_5_3": $("#biaya_non_standar_2_5_3").val(),
+                    "biaya_non_standar_2_5_4": $("#biaya_non_standar_2_5_4").val(),
                     "biaya_non_standar_2_5_5": $("#biaya_non_standar_2_5_5").val(),
 
                     "biaya_lain_lain_2_6_1": $("#biaya_lain_lain_2_6_1").val(),
