@@ -105,18 +105,42 @@ class Komponenkegiatan_model extends CI_Model {
         return $this->db->delete($this->table, array('id' => $id));
     }
 
-    function get_fix_key($in_id = false, $year = false){
+    function get_fix_key($year = false){
         $this->db->select("fix_key, satuan, estimasi");
         if($year) {
             $this->db->where('year', $year);
         }
-        if($in_id) {
-            $this->db->where_in('id', $in_id);
-        }
         $this->db->where('fix_key != ""',);
         $this->db->where('aktif', 1);
         $result = $this->db->get($this->table)->result_array();
+        return $data;
+    }
+
+    function get_data_fix_and_in_id($in_id = false, $year = false) {
+        $result_fix_key = $this->get_fix_key($year);
+        $result_id_in = $this->get_id_in($in_id, $year);
         $data = array();
+        $data = $this->get_data($result_fix_key, $data);
+        $data = $this->get_data($result_id_in, $data);
+        return $data;
+    }
+
+    function get_id_in($in_id = false, $year = false){
+        if(!$in_id) {
+            return $data = array();
+        }
+        $this->db->select("fix_key, satuan, estimasi");
+        if($year) {
+            $this->db->where('year', $year);
+        }
+        $this->db->where_in('id', $in_id);
+        $this->db->where('aktif', 1);
+        $result = $this->db->get($this->table)->result_array();
+        $data = array();
+        return $data;
+    }
+
+    priavate function get_data($result, $data){
         foreach($result as $value){
             if($value["pembagi"]) {
                 continue;
@@ -130,4 +154,6 @@ class Komponenkegiatan_model extends CI_Model {
         }
         return $data;
     }
+
+
 }
