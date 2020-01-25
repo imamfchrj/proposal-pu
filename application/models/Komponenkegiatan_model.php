@@ -104,4 +104,30 @@ class Komponenkegiatan_model extends CI_Model {
     function delete($id) {
         return $this->db->delete($this->table, array('id' => $id));
     }
+
+    function get_fix_key($in_id = false, $year = false){
+        $this->db->select("fix_key, satuan, estimasi");
+        if($year) {
+            $this->db->where('year', $year);
+        }
+        if($in_id) {
+            $this->db->where_in('id', $in_id);
+        }
+        $this->db->where('fix_key != ""',);
+        $this->db->where('aktif', 1);
+        $result = $this->db->get($this->table)->result_array();
+        $data = array();
+        foreach($result as $value){
+            if($value["pembagi"]) {
+                continue;
+            }
+            $data[$value["fix_key"]]["harga_satuan"] = $value["estimasi"] / $value["pembagi"];
+            $data[$value["fix_key"]]["estimasi"] = $value["estimasi"];
+            $data[$value["fix_key"]]["pembagi"] = $value["pembagi"];
+            $data[$value["fix_key"]]["kegiatan"] = $value["kegiatan"];
+            $data[$value["fix_key"]]["satuan"] = $value["satuan"];
+            $data[$value["fix_key"]]["komponen_spam"] = $value["komponen_spam"];
+        }
+        return $data;
+    }
 }

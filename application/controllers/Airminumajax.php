@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Airminumajax extends All_Controller {
     private $danger = "text-danger";
     private $success = "text-success";
+    private $default = "text-dark";
     function __construct() {
 		parent::__construct();
         // $this->load->model("Komponenkegiatan_model");
@@ -253,6 +254,8 @@ class Airminumajax extends All_Controller {
         $data_input = $this->unit_distribusi_1_5_8($data_input);
         $data_input = $this->unit_pelayanan_1_6_2($data_input);
         $data_input = $this->unit_pelayanan_1_6_3($data_input);
+        $data_input = $this->unit_produksi_2_2_3($data_input);
+        // $data_input = $this->unit_produksi_2_2_3($data_input);
         
         
         
@@ -567,7 +570,21 @@ class Airminumajax extends All_Controller {
        return $data_input;
     }
 
-    // private function 
-
+    private function unit_produksi_2_2_3($data_input) {
+        if($data_input["unit_produksi_2_2_3B"] == 0) {
+            return $data_input;
+        }
+        $data_input["harga_satuan"]["unit_produksi_2_2_3"]["text"] = $data_input["unit_produksi_2_2_3A"] / $data_input["unit_produksi_2_2_3B"];
+        $data_input["harga_satuan"]["unit_produksi_2_2_3"]["option"] = $this->default;
+        // $text="Justifikasi";
+        // $option=$this->danger;
+        // if($data_input["unit_produksi_2_2_3A"] >= $data_input["pelayanan_1_2_3D"]) {
+        //     $text="Layak";
+        //     $option=$this->success;
+        // }
+        // $data_input["verifikasi"]["unit_produksi_2_2_3_verifikasi"]["text"] = $text;
+        // $data_input["verifikasi"]["unit_produksi_2_2_3_verifikasi"]["option"] = $option;
+        return $data_input;
+    }
     
 }
