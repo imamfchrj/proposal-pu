@@ -8,6 +8,7 @@ class Airminumajax extends All_Controller {
     function __construct() {
 		parent::__construct();
         $this->load->model("Komponenkegiatan_model");
+        $this->load->model("Provinsi_model");
     }
 
     private function get_data_komponen($in_id = false, $year = false) {
@@ -284,7 +285,8 @@ class Airminumajax extends All_Controller {
         for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71; $index++) {
             $in_id = $data_input["unit_distribusi_2_3_7".$index];
         }
-        $data_input["initial"] = $this->get_data_komponen($in_id);
+        $data_input["initial"]["ikk_provinsi"] = $this->Provinsi_model->get_ikk_provinsi($data_input["prov_id"]);
+        $data_input["initial"] = $this->get_data_komponen($data_input["initial"]["ikk_provinsi"], $in_id);
         return $data_input;
     }
 

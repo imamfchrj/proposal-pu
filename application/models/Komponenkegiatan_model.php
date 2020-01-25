@@ -132,20 +132,25 @@ class Komponenkegiatan_model extends CI_Model {
         return $result;
     }
 
-    private function get_data($result, $data){
+    private function get_data($ikk, $result, $data){
         foreach($result as $value){
             if(!$value["pembagi"]) {
                 continue;
             }
+            $harga_satuan_awal =  $value["estimasi"] / $value["pembagi"];
+            $harga_satuan =  $harga_satuan_awal * $ikk;
+
             if($value["fix_key"]){
-                $data[$value["fix_key"]]["harga_satuan"] = $value["estimasi"] / $value["pembagi"];
+                $data[$value["fix_key"]]["harga_satuan_awal"] = $harga_satuan_awal;
+                $data[$value["fix_key"]]["harga_satuan"] = $harga_satuan;
                 $data[$value["fix_key"]]["estimasi"] = $value["estimasi"];
                 $data[$value["fix_key"]]["pembagi"] = $value["pembagi"];
                 $data[$value["fix_key"]]["kegiatan"] = $value["kegiatan"];
                 $data[$value["fix_key"]]["satuan"] = $value["satuan"];
                 $data[$value["fix_key"]]["komponen_spam"] = $value["komponen_spam"];
             }
-            $data[$value["id"]]["harga_satuan"] = $value["estimasi"] / $value["pembagi"];
+            $data[$value["id"]]["harga_satuan_awal"] = $harga_satuan_awal;
+            $data[$value["id"]]["harga_satuan"] = $harga_satuan;
             $data[$value["id"]]["estimasi"] = $value["estimasi"];
             $data[$value["id"]]["pembagi"] = $value["pembagi"];
             $data[$value["id"]]["kegiatan"] = $value["kegiatan"];
@@ -155,12 +160,12 @@ class Komponenkegiatan_model extends CI_Model {
         return $data;
     }
 
-    function get_data_fix_and_in_id($in_id = false, $year = false) {
+    function get_data_fix_and_in_id($ikk, $in_id = false, $year = false) {
         $result_fix_key = $this->get_fix_key($year);
         $result_id_in = $this->get_id_in($in_id, $year);
         $data = array();
-        $data = $this->get_data($result_fix_key, $data);
-        $data = $this->get_data($result_id_in, $data);
+        $data = $this->get_data($ikk, $result_fix_key, $data);
+        $data = $this->get_data($ikk, $result_id_in, $data);
         return $data;
     }
 
