@@ -31,6 +31,15 @@ class Komponen_mst_model extends CI_Model {
 		return $data;
     }
 
+    function get_by_id($id){
+        $this->db->where('id', $id);
+        $query=$this->db->get($this->table);
+        if($query){
+            return $query->row();
+        }
+        return false;
+    }
+
     function delete($id) {
         return $this->db->delete($this->table, array('id' => $id));
     }
