@@ -598,14 +598,16 @@ class Airminumajax extends All_Controller {
         }
         $data_input["harga_satuan"]["unit_produksi_2_2_3"]["text"] = $data_input["unit_produksi_2_2_3A"] / $data_input["unit_produksi_2_2_3B"];
         $data_input["harga_satuan"]["unit_produksi_2_2_3"]["option"] = $this->default;
-        // $text="Justifikasi";
-        // $option=$this->danger;
-        // if($data_input["unit_produksi_2_2_3A"] >= $data_input["pelayanan_1_2_3D"]) {
-        //     $text="Layak";
-        //     $option=$this->success;
-        // }
-        // $data_input["verifikasi"]["unit_produksi_2_2_3_verifikasi"]["text"] = $text;
-        // $data_input["verifikasi"]["unit_produksi_2_2_3_verifikasi"]["option"] = $option;
+        $data_input["indikator"]["unit_produksi_2_2_3"]["text"] = $data_input["initial"]['scada']['harga_satuan'] + $data_input["initial"]['plc']['harga_satuan'];
+        $data_input["indikator"]["unit_produksi_2_2_3"]["option"] = $this->default;
+         $text="Justifikasi";
+        $option=$this->danger;
+        if($data_input["harga_satuan"]["unit_produksi_2_2_3"]["text"] <= $data_input["indikator"]["unit_produksi_2_2_3"]["text"]) {
+            $text="Wajar";
+            $option=$this->success;
+        }
+        $data_input["verifikasi"]["unit_produksi_2_2_3"]["text"] = $text;
+        $data_input["verifikasi"]["unit_produksi_2_2_3"]["option"] = $option;
         return $data_input;
     }
     

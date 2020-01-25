@@ -2278,11 +2278,15 @@ $description_page = $option["description_page"];
                     <tbody>
 
                         <tr>
-                            <th colspan="5">2.3.1</th>
+                            <th colspan="5">2.3.1 Reservoir</th>
                         </tr>
 
                         <tr>
-                            <td class="w-25 p-3 align-middle">Reservoir 1500 M3- 2 unit</td>
+                            <td class="w-25 p-3 align-middle">
+                                <select id="unit_distribusi_2_3_1" class="form-control select2 unit_produksi" data-placeholder="Pilih Jenis">
+                                    <option value="0"></option>
+                                </select>
+                            </td>
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
@@ -2313,11 +2317,15 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <tr>
-                            <th colspan="5">2.3.2</th>
+                            <th colspan="5">2.3.2 Pompa Centrifugal</th>
                         </tr>
 
                         <tr>
-                            <td class="w-25 p-3 align-middle">Pompa Centrifugal Q : ….. Lt/dt, H: …... m</td>
+                            <td class="w-25 p-3 align-middle">
+                                
+                                <select id="unit_distribusi_2_3_2" class="form-control select2 unit_distribusi" data-placeholder="Pilih Jenis">
+                                    <option value="0"></option>
+                                </select> 
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
