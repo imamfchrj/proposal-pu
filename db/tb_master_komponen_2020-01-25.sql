@@ -42,11 +42,11 @@ CREATE TABLE `tb_master_komponen` (
 --
 
 INSERT INTO `tb_master_komponen` (`id`, `key`, `sub_key`, `komponen_spam`, `created_at`, `updated_at`) VALUES
-(1, 'air minum', 'unit_air_baku', 'Unit Air Baku', '2020-01-19 16:44:40', '2020-01-19 16:44:40'),
-(2, 'air minum', 'unit_produksi', 'Unit Produksi', '2020-01-19 16:47:40', '2020-01-19 16:47:40'),
-(3, 'air minum', 'unit_distribusi', 'Unit Distribusi', '2020-01-19 16:47:40', '2020-01-19 16:47:40'),
-(4, 'air minum', 'unit_pelayanan', 'Unit Pelayanan', '2020-01-19 16:47:40', '2020-01-19 16:47:40'),
-(5, 'air minum', 'bangunan_penunjang', 'Bangunan Penunjang', '2020-01-19 16:47:40', '2020-01-19 16:47:40');
+(1, 'air_minum', 'unit_air_baku', 'Unit Air Baku', '2020-01-19 16:44:40', '2020-01-19 16:44:40'),
+(2, 'air_minum', 'unit_produksi', 'Unit Produksi', '2020-01-19 16:47:40', '2020-01-19 16:47:40'),
+(3, 'air_minum', 'unit_distribusi', 'Unit Distribusi', '2020-01-19 16:47:40', '2020-01-19 16:47:40'),
+(4, 'air_minum', 'unit_pelayanan', 'Unit Pelayanan', '2020-01-19 16:47:40', '2020-01-19 16:47:40'),
+(5, 'air_minum', 'bangunan_penunjang', 'Bangunan Penunjang', '2020-01-19 16:47:40', '2020-01-19 16:47:40');
 
 --
 -- Indexes for dumped tables

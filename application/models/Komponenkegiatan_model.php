@@ -114,7 +114,7 @@ class Komponenkegiatan_model extends CI_Model {
         $this->db->where('fix_key != ""',);
         $this->db->where('aktif', 1);
         $result = $this->db->get($this->table)->result_array();
-        return $data;
+        return $result;
     }
 
     function get_id_in($in_id = false, $year = false){
@@ -129,21 +129,28 @@ class Komponenkegiatan_model extends CI_Model {
         $this->db->where_in('id', $in_id);
         $this->db->where('aktif', 1);
         $result = $this->db->get($this->table)->result_array();
-        $data = array();
-        return $data;
+        return $result;
     }
 
-    priavate function get_data($result, $data){
+    private function get_data($result, $data){
         foreach($result as $value){
-            if($value["pembagi"]) {
+            if(!$value["pembagi"]) {
                 continue;
             }
-            $data[$value["fix_key"]]["harga_satuan"] = $value["estimasi"] / $value["pembagi"];
-            $data[$value["fix_key"]]["estimasi"] = $value["estimasi"];
-            $data[$value["fix_key"]]["pembagi"] = $value["pembagi"];
-            $data[$value["fix_key"]]["kegiatan"] = $value["kegiatan"];
-            $data[$value["fix_key"]]["satuan"] = $value["satuan"];
-            $data[$value["fix_key"]]["komponen_spam"] = $value["komponen_spam"];
+            if($value["fix_key"]){
+                $data[$value["fix_key"]]["harga_satuan"] = $value["estimasi"] / $value["pembagi"];
+                $data[$value["fix_key"]]["estimasi"] = $value["estimasi"];
+                $data[$value["fix_key"]]["pembagi"] = $value["pembagi"];
+                $data[$value["fix_key"]]["kegiatan"] = $value["kegiatan"];
+                $data[$value["fix_key"]]["satuan"] = $value["satuan"];
+                $data[$value["fix_key"]]["komponen_spam"] = $value["komponen_spam"];
+            }
+            $data[$value["id"]]["harga_satuan"] = $value["estimasi"] / $value["pembagi"];
+            $data[$value["id"]]["estimasi"] = $value["estimasi"];
+            $data[$value["id"]]["pembagi"] = $value["pembagi"];
+            $data[$value["id"]]["kegiatan"] = $value["kegiatan"];
+            $data[$value["id"]]["satuan"] = $value["satuan"];
+            $data[$value["id"]]["komponen_spam"] = $value["komponen_spam"];
         }
         return $data;
     }

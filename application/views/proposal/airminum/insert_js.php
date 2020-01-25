@@ -215,6 +215,9 @@
     <script>
         function set_value_proposal($data) {
             for (const [key, value] of Object.entries($data)) {
+                if(key == "initial") {
+                    continue;
+                }
                 if(key == "prov_id") {
                     $("#provinsi").val(value);
                     continue;

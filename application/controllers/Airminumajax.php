@@ -7,7 +7,16 @@ class Airminumajax extends All_Controller {
     private $default = "text-dark";
     function __construct() {
 		parent::__construct();
-        // $this->load->model("Komponenkegiatan_model");
+        $this->load->model("Komponenkegiatan_model");
+    }
+
+    private function get_data_komponen($in_id = false, $year = false) {
+        return $this->Komponenkegiatan_model->get_data_fix_and_in_id($in_id, $year);
+    }
+
+    public function tes($year = false) {
+        $get_id  = array(1, 2, 3);
+        echo json_encode($this->get_data_komponen($get_id, $year));
     }
     
     private function cek_input() {
@@ -223,6 +232,8 @@ class Airminumajax extends All_Controller {
 
 
     private function calculate($data_input) {
+        $data_input = $this->initial($data_input);
+
         $data_input = $this->jenis_spam_1_1_3($data_input);
         $data_input = $this->jenis_spam_1_1_4B($data_input);
         $data_input = $this->pelayanan_1_2_1C($data_input);
@@ -265,6 +276,15 @@ class Airminumajax extends All_Controller {
         $data_input = $this->set_rounding($data_input);
         
 
+        return $data_input;
+    }
+    
+    private function initial($data_input) {
+        $in_id = array();
+        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71; $index++) {
+            $in_id = $data_input["unit_distribusi_2_3_7".$index];
+        }
+        $data_input["initial"] = $this->get_data_komponen($in_id);
         return $data_input;
     }
 
