@@ -5,10 +5,10 @@ class Airminumajax extends All_Controller {
     private $danger = "text-danger";
     private $success = "text-success";
     private $default = "text-dark";
+    private $array_key = array("initial", "verifikasi", "indikator", "harga_satuan");
     function __construct() {
 		parent::__construct();
-        $this->load->model("Komponenkegiatan_model");
-        $this->load->model("Provinsi_model");
+        $this->load->model(array("Komponenkegiatan_model", "Provinsi_model", "proposal/Proposal_model", "proposal/Proposalquestioner_model"));
     }
 
     private function get_data_komponen($in_id = false, $year = false) {
@@ -240,11 +240,109 @@ class Airminumajax extends All_Controller {
         $data_input = $this->calculate($data_input);
         $this->json_success($data_input);
     }
-    
+
     public function insert() {
         $data_input = $this->cek_input();
         $data_input = $this->calculate($data_input);
+        
+
+        // insert the data
+        $this->db->trans_start();
+        // insert proposal
+        // get id 
+        $proposal_id = $this->Proposal_model->set(array(
+            "nama_proposal" => "Infrastruktur Spam Durolis",
+            "key_proposal" => "air_minum",
+            "prov_id" => $data_input["prov_id"],
+            "user_id" => 0,
+            "status" => 0,
+        ));
+        $this->try_insert($data_input, $proposal_id);
+        if($this->db->trans_status() === false) {
+            $this->db->trans_rollback();
+            return $this->json_internal_error("Hubungi admin");
+        }
+        $this->db->trans_complete();
         $this->json_success($data_input);
+    }
+
+    private function try_insert($data_input, $proposal_id) {
+        
+        foreach($data_input as $key => $value) {
+            if(in_array($key, $this->array_key)){
+                continue;
+            }
+
+            $this->insert_data($data_input, $proposal_id, $key, $value);
+        }
+        
+        // cek kondisi nil
+        $already_inserted = array();
+        foreach($data_input["indikator"] as $key => $value) {
+            if(isset($data_input[$key])) {
+                continue;
+            }
+            if(in_array($key, $already_inserted)) {
+                continue;
+            }
+            $already_inserted[] = $key;
+
+            $this->insert_data($data_input, $proposal_id, $key, $value);
+        }
+        foreach($data_input["harga_satuan"] as $key => $value) {
+            if(isset($data_input[$key])) {
+                continue;
+            }
+            if(in_array($key, $already_inserted)) {
+                continue;
+            }
+            $already_inserted[] = $key;
+
+            $this->insert_data($data_input, $proposal_id, $key, $value);
+        }
+        foreach($data_input["indikator"] as $key => $value) {
+            if(isset($data_input[$key])) {
+                continue;
+            }
+            if(in_array($key, $already_inserted)) {
+                continue;
+            }
+            $already_inserted[] = $key;
+
+            
+            $this->insert_data($data_input, $proposal_id, $key, $value);
+        }
+
+    }
+
+    private function insert_data($data_input, $proposal_id, $key, $value) {
+        $data = array(
+            "proposal_id" => $proposal_id,
+            "key_proposal" => "air_minum",
+            "key_question" => $key,
+        );
+        if(!is_array($value)) {
+            $data["value"] = $value;
+        }
+
+        if(isset($data_input["verifikasi"][$key]["text"])) {
+            $data["verifikasi"] = $data_input["verifikasi"][$key]["text"];
+            $data["option_verifikasi"] = $data_input["verifikasi"][$key]["option"];
+        }
+        if(isset($data_input["harga_satuan"][$key]["text"])) {
+            $data["harga_satuan"] = $data_input["harga_satuan"][$key]["text"];
+            $data["option_harga_satuan"] = $data_input["harga_satuan"][$key]["option"];
+        }
+        if(isset($data_input["indikator"][$key]["text"])) {
+            $data["indikator"] = $data_input["indikator"][$key]["text"];
+            $data["option_indikator"] = $data_input["indikator"][$key]["option"];
+        }
+        if(isset($data_input[$key])) {
+            if(isset($data_input["initial"][$data_input[$key]])) {
+                $data["id_group_komponen"] = $data_input[$key];
+            }
+        }
+        $this->Proposalquestioner_model->set($data);
     }
 
 

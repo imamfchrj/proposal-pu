@@ -68,6 +68,18 @@ class All_Controller extends CI_Controller
 		$this->json($data_output);
 	}
 
+
+	function json_internal_error($data = false) {
+		http_response_code(500);
+		$data_output = array(
+			'is_error'=>true,
+		);
+		if($data) {
+			$data_output["error_messages"] = $data;
+		}
+		$this->json($data_output);
+	}
+
 	function post_only() {
 		$data_post = $this->input->post();
 		if(count($data_post) == 0) {

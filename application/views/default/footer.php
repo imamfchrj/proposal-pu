@@ -18,8 +18,8 @@
             <i class="icon ion-ios-checkmark-outline tx-100 tx-success lh-1 mg-t-20 d-inline-block"></i>
             <h4 class="tx-success tx-semibold mg-b-20 title_success">Congratulations!</h4>
             <p class="mg-b-20 mg-x-20 description_success"></p>
-            <button type="button" class="btn btn-success pd-x-25" data-dismiss="modal" aria-label="Close">Continue</button>
-            <a href="#" class="link_success">Lanjutkan</a>
+            <a type="a" class="btn btn-success pd-x-25 link_success">Continue</a>
+            <!-- <a href="#" class="link_success">Lanjutkan</a> -->
           </div><!-- modal-body -->
         </div><!-- modal-content -->
       </div><!-- modal-dialog -->

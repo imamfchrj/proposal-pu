@@ -2763,7 +2763,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="biaya_non_standar_2_5_1" type="number" value="0" class="form-control"  placeholder="">
+                                    <input disabled id="biaya_non_standar_2_5_1" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2793,7 +2793,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="biaya_non_standar_2_5_2" type="number" value="0" class="form-control"  placeholder="">
+                                    <input disabled id="biaya_non_standar_2_5_2" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2823,7 +2823,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="biaya_non_standar_2_5_3" type="number" value="0" class="form-control"  placeholder="">
+                                    <input disabled id="biaya_non_standar_2_5_3" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2854,7 +2854,7 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="biaya_non_standar_2_5_4" type="number" value="0" class="form-control"  placeholder="">
+                                    <input disabled id="biaya_non_standar_2_5_4" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -3158,7 +3158,7 @@ $description_page = $option["description_page"];
                 <div class="form-layout">
                     <div class="form-layout-footer">
                         <button class="btn btn-primary bd-0 kalulator" onclick="kalkulasi();">Hitung</button>
-                        <button disabled class="btn btn-primary bd-0" onclick="kalkulasi();">Simpan</button>
+                        <button class="btn btn-primary bd-0" onclick="submit();">Simpan</button>
                         <button class="btn btn-secondary bd-0" onclick="window.location.href='<?=base_url('user/list')?>'">Batalkan</button>
                     </div>
                     <!-- form-layout-footer -->

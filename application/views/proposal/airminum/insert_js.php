@@ -8,55 +8,6 @@
 <link href="<?=base_url("assets")?>/lib/jquery.steps/css/jquery.steps.css" rel="stylesheet">
 
     <script>
-      function insert() {
-        $status = checkFormUser();
-        if(!$status) {
-            return;
-        }
-        
-        $('#insert_user').attr('disabled', true);
-        $.ajax({
-            url: ROOT+'airminumajax/<?=$link?>',
-            dataType: 'json',
-            type: 'post',
-            data: {
-                id: $('#id').val(),
-                name: $('#name').val(),
-                email: $('#email').val(),
-                password: $('#password').val(),
-                c_password: $('#c_password').val(),
-                hp: $('#hp').val(),
-                status: $('#status:checked').val(),
-            }
-        })
-            .done(function(data) {
-                if(data.is_error){
-                    alert(data.error_message);
-                    return;
-                }
-                
-                alert_success("Sukses!", "Berhasil menambahkan user baru", ROOT + "/user/list");
-                
-            })
-            .complete(function(){
-              $('#insert_user').attr('disabled', false);
-            })
-            .fail(function(data){
-                if(data.responseJSON.error_messages !== 'undefined'){
-                    alert_failed("Error!", data.responseJSON.error_messages);
-                    return;
-                }
-                alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
-            });
-      }
-    </script>
-
-    <script>
-        $( document ).ready(function() {
-            $( "#submit" ).submit(function( event ) {
-                kalkulasi();
-            });
-        });
         
 
         function jenis_spam() {
@@ -96,6 +47,36 @@
             })
             .complete(function(){
               $('.kalulator').attr('disabled', false);
+            })
+            .fail(function(data, textStatus, xhr){
+                try{
+                    alert_failed("Error!", data.responseJSON.error_messages);
+                }catch(e){
+                    alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
+                    return;
+                }
+            });
+        }
+
+        function submit() {
+            $('.insert').attr('disabled', true);
+            data_json = get_value();
+            $.ajax({
+                url: ROOT+'airminumajax/insert',
+                dataType: 'json',
+                type: 'post',
+                data: data_json
+            })
+            .done(function(data, textStatus, xhr) {
+                if(data.is_error){
+                    alert(data.error_message);
+                    return;
+                }
+                alert_success("Sukses!", "Berhasil menambahkan proposal baru", ROOT + "/airminum/list");
+                
+            })
+            .complete(function(){
+              $('.insert').attr('disabled', false);
             })
             .fail(function(data, textStatus, xhr){
                 try{
