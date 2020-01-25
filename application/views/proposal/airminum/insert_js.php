@@ -149,6 +149,7 @@
                     "unit_produksi_2_2_7B": $("#unit_produksi_2_2_7B").val(),
 
 
+                    "unit_distribusi_2_3_1": $("#unit_distribusi_2_3_1").val(),
                     "unit_distribusi_2_3_1A": $("#unit_distribusi_2_3_1A").val(),
                     "unit_distribusi_2_3_1B": $("#unit_distribusi_2_3_1B").val(),
                     "unit_distribusi_2_3_2A": $("#unit_distribusi_2_3_2A").val(),

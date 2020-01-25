@@ -86,6 +86,7 @@ class Airminumajax extends All_Controller {
         $this->form_validation->set_rules('unit_produksi_2_2_7A', "unit_produksi_2_2_7A", 'numeric|trim|xss_clean');
         $this->form_validation->set_rules('unit_produksi_2_2_7B', "unit_produksi_2_2_7B", 'numeric|trim|xss_clean');
 
+        $this->form_validation->set_rules('unit_distribusi_2_3_1', "unit_distribusi_2_3_1", 'numeric|trim|xss_clean');
         $this->form_validation->set_rules('unit_distribusi_2_3_1A', "unit_distribusi_2_3_1A", 'numeric|trim|xss_clean');
         $this->form_validation->set_rules('unit_distribusi_2_3_1B', "unit_distribusi_2_3_1B", 'numeric|trim|xss_clean');
         $this->form_validation->set_rules('unit_distribusi_2_3_2A', "unit_distribusi_2_3_2A", 'numeric|trim|xss_clean');
@@ -186,6 +187,7 @@ class Airminumajax extends All_Controller {
             $data["unit_produksi_2_2_7A"] = (float)$this->form_validation->set_value('unit_produksi_2_2_7A');
             $data["unit_produksi_2_2_7B"] = (float)$this->form_validation->set_value('unit_produksi_2_2_7B');
             
+            $data["unit_distribusi_2_3_1"] = (float)$this->form_validation->set_value('unit_distribusi_2_3_1');
             $data["unit_distribusi_2_3_1A"] = (float)$this->form_validation->set_value('unit_distribusi_2_3_1A');
             $data["unit_distribusi_2_3_1B"] = (float)$this->form_validation->set_value('unit_distribusi_2_3_1B');
             $data["unit_distribusi_2_3_2A"] = (float)$this->form_validation->set_value('unit_distribusi_2_3_2A');
@@ -266,8 +268,16 @@ class Airminumajax extends All_Controller {
         $data_input = $this->unit_distribusi_1_5_8($data_input);
         $data_input = $this->unit_pelayanan_1_6_2($data_input);
         $data_input = $this->unit_pelayanan_1_6_3($data_input);
+
         $data_input = $this->unit_produksi_2_2_3($data_input);
-        // $data_input = $this->unit_produksi_2_2_3($data_input);
+        $data_input = $this->unit_distribusi_2_3_1($data_input);
+        $data_input = $this->unit_distribusi_2_3_3($data_input);
+        $data_input = $this->unit_distribusi_2_3_4($data_input);
+        $data_input = $this->unit_distribusi_2_3_5($data_input);
+        $data_input = $this->unit_distribusi_2_3_6($data_input);
+        
+        $data_input = $this->unit_distribusi_2_3_7($data_input);
+        $data_input = $this->unit_distribusi_2_3_8($data_input);
         
         
         
@@ -283,8 +293,19 @@ class Airminumajax extends All_Controller {
     private function initial($data_input) {
         $in_id = array();
         for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71; $index++) {
-            $in_id = $data_input["unit_distribusi_2_3_7".$index];
+            if(!$data_input["unit_distribusi_2_3_7".$index]){
+                continue;
+            }
+            $in_id[] = $data_input["unit_distribusi_2_3_7".$index];
         }
+        $data_id = array("unit_distribusi_2_3_1");
+        foreach($data_id as $value) {
+            if(!$data_input[$value]){
+                continue;
+            }
+            $in_id[] = $data_input[$value];
+        }
+
         $data_input["initial"]["ikk_provinsi"] = $this->Provinsi_model->get_ikk_provinsi($data_input["prov_id"]);
         $data_input["initial"] = $this->get_data_komponen($data_input["initial"]["ikk_provinsi"], $in_id);
         return $data_input;
@@ -592,6 +613,10 @@ class Airminumajax extends All_Controller {
        return $data_input;
     }
 
+    /**
+     * Bab 2
+     */
+
     private function unit_produksi_2_2_3($data_input) {
         if($data_input["unit_produksi_2_2_3B"] == 0) {
             return $data_input;
@@ -608,6 +633,101 @@ class Airminumajax extends All_Controller {
         }
         $data_input["verifikasi"]["unit_produksi_2_2_3"]["text"] = $text;
         $data_input["verifikasi"]["unit_produksi_2_2_3"]["option"] = $option;
+        return $data_input;
+    }
+
+    private function unit_distribusi_2_3_1($data_input){
+        return $this->default_by_id($data_input, "unit_distribusi_2_3_1");
+    }
+
+    private function unit_distribusi_2_3_3($data_input){
+        return $this->default($data_input, "unit_distribusi_2_3_3", "pompa_genset");
+    }
+
+    private function unit_distribusi_2_3_4($data_input){
+        return $this->default($data_input, "unit_distribusi_2_3_4", "pompa_genset");
+    }
+
+    private function unit_distribusi_2_3_5($data_input){
+        return $this->default($data_input, "unit_distribusi_2_3_5", "workshop");
+    }
+
+    private function unit_distribusi_2_3_6($data_input){
+        return $this->default($data_input, "unit_distribusi_2_3_6", "rumah_jaga");
+    }
+
+    private function unit_distribusi_2_3_8($data_input){
+        return $this->default($data_input, "unit_distribusi_2_3_8", "hdd");
+    }
+
+    private function default($data_input, $key_input, $fix_key) {
+        if($data_input[$key_input."B"] == 0) {
+            return $data_input;
+        }
+        $data_input["harga_satuan"][$key_input]["text"] = $data_input[$key_input."A"] / $data_input[$key_input."B"];
+        $data_input["harga_satuan"][$key_input]["option"] = $this->default;
+        $data_input["indikator"][$key_input]["text"] = $data_input["initial"][$fix_key]['harga_satuan'];
+        $data_input["indikator"][$key_input]["option"] = $this->default;
+         $text="Justifikasi";
+        $option=$this->danger;
+        if($data_input["harga_satuan"][$key_input]["text"] <= $data_input["indikator"][$key_input]["text"]) {
+            $text="Wajar";
+            $option=$this->success;
+        }
+        $data_input["verifikasi"][$key_input]["text"] = $text;
+        $data_input["verifikasi"][$key_input]["option"] = $option;
+        return $data_input;
+    }
+
+
+    private function default_by_id($data_input, $key_input) {
+        $key_id = $data_input[$key_input];
+        if($key_id == 0) {
+            return $data_input;
+        }
+        if($data_input[$key_input."B"] == 0) {
+            return $data_input;
+        }
+        $data_input["harga_satuan"][$key_input]["text"] = $data_input[$key_input."A"] / $data_input[$key_input."B"];
+        $data_input["harga_satuan"][$key_input]["option"] = $this->default;
+        $data_input["indikator"][$key_input]["text"] = $data_input["initial"][$key_id]['harga_satuan'];
+        $data_input["indikator"][$key_input]["option"] = $this->default;
+         $text="Justifikasi";
+        $option=$this->danger;
+        if($data_input["harga_satuan"][$key_input]["text"] <= $data_input["indikator"][$key_input]["text"]) {
+            $text="Wajar";
+            $option=$this->success;
+        }
+        $data_input["verifikasi"][$key_input]["text"] = $text;
+        $data_input["verifikasi"][$key_input]["option"] = $option;
+        return $data_input;
+    }
+    
+
+    private function unit_distribusi_2_3_7($data_input) {
+        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71; $index++) {
+            if($data_input["unit_distribusi_2_3_7". $index . "B"] == 0) {
+                continue;
+            }
+            if(!$data_input["unit_distribusi_2_3_7". $index]) {
+                continue;
+            }
+            $id = $data_input["unit_distribusi_2_3_7". $index];
+            $data_input["harga_satuan"]["unit_distribusi_2_3_7" . $index]["text"] = $data_input["unit_distribusi_2_3_7". $index . "A"] / $data_input["unit_distribusi_2_3_7". $index . "B"];
+            $data_input["harga_satuan"]["unit_distribusi_2_3_7" . $index]["option"] = $this->default;
+            
+            $data_input["indikator"]["unit_distribusi_2_3_7" . $index]["text"] = $data_input["initial"][$id]['harga_satuan'];
+            $data_input["indikator"]["unit_distribusi_2_3_7" . $index]["option"] = $this->default;
+
+            $text="Justifikasi";
+            $option=$this->danger;
+            if($data_input["harga_satuan"]["unit_distribusi_2_3_7" . $index]["text"] <= $data_input["initial"][$id]['harga_satuan']) {
+                $text="Wajar";
+                $option=$this->success;
+            }
+            $data_input["verifikasi"]["unit_distribusi_2_3_7" . $index]["text"] = $text;
+            $data_input["verifikasi"]["unit_distribusi_2_3_7" . $index]["option"] = $option;
+        }
         return $data_input;
     }
     
