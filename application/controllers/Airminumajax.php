@@ -307,6 +307,10 @@ class Airminumajax extends All_Controller {
     }
 
     private function pelayanan_1_2_2A($data_input) {
+        if($data_input["pelayanan_1_2_1D"] == 0) {
+            $data_input["pelayanan_1_2_2A"] = 0;
+            return $data_input;
+        }
         $data_input["pelayanan_1_2_2A"] =  $data_input["pelayanan_1_2_1C"] / $data_input["pelayanan_1_2_1D"];
         return $data_input;
     }
@@ -396,6 +400,10 @@ class Airminumajax extends All_Controller {
     }
 
     private function unit_air_baku_1_3_8($data_input) {
+        if($data_input["unit_air_baku_1_3_7"] == 0){
+            $data_input["unit_air_baku_1_3_8"] = 0;
+            return $data_input;
+        }
         $data_input["unit_air_baku_1_3_8"] = ($data_input["unit_air_baku_1_3_1"]/1000) / (0.25*3.14*(pow(($data_input["unit_air_baku_1_3_7"]/1000),2)));
         $text="Justifikasi";
         $option=$this->danger;
@@ -409,6 +417,10 @@ class Airminumajax extends All_Controller {
     }
 
     private function unit_air_baku_1_3_9($data_input) {
+        if($data_input["unit_air_baku_1_3_5"] == 0) {
+            $data_input["unit_air_baku_1_3_9"] = 0;
+            return $data_input;
+        }
         $data_input["unit_air_baku_1_3_9"] = ((pow((
             ($data_input["unit_air_baku_1_3_1"]/1000) 
             / 
@@ -488,6 +500,10 @@ class Airminumajax extends All_Controller {
     }
 
     private function unit_distribusi_1_5_4($data_input) {
+        if($data_input["unit_distribusi_1_5_3"] == 0) {
+            $data_input["unit_distribusi_1_5_4"] = 0;
+            return $data_input;
+        }
         $data_input["unit_distribusi_1_5_4"] = ($data_input["pelayanan_1_2_3D"]/1000) / 
         (0.25*3.14*(
             pow(
@@ -507,6 +523,10 @@ class Airminumajax extends All_Controller {
     }
 
     private function unit_distribusi_1_5_5($data_input) {
+        if($data_input["unit_distribusi_1_5_3"]==0) {
+            $data_input["unit_distribusi_1_5_5"] = 0;
+            return $data_input;
+        }
         $data_input["unit_distribusi_1_5_5"] = ((pow((($data_input["unit_produksi_1_4_2"]/1000) / (0.2785*100*(pow(($data_input["unit_distribusi_1_5_3"]/100),2.63)))),1.85))*$data_input["unit_distribusi_1_5_1"])*1.05;
          
         $text="Justifikasi";
@@ -546,6 +566,8 @@ class Airminumajax extends All_Controller {
         $data_input["unit_pelayanan_1_6_3"] = $data_input["unit_pelayanan_1_6_2"]*6;
        return $data_input;
     }
+
+    // private function 
 
     
 }
