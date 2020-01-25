@@ -8,7 +8,7 @@ class Komponenkegiatan_model extends CI_Model {
     private $table = "tb_komponen_kegiatan";
     private $table_prov = "tb_provinsi";
   
-    public $column_order = ["id", "sub_key", "id_komponen" ,"komponen_spam", "kegiatan", "estimasi", "pembagi", "satuan", "created_at", "updated_at"];
+    public $column_order = ["id", "sub_key", "id_komponen" ,"komponen_spam", "kegiatan", "estimasi", "pembagi", "satuan", "created_at", "updated_at", "fix_key", "year"];
    
     public function __construct() {
         parent::__construct();
@@ -106,7 +106,8 @@ class Komponenkegiatan_model extends CI_Model {
     }
 
     function get_fix_key($year = false){
-        $this->db->select("fix_key, satuan, estimasi");
+        $column = implode (", ", $this->column_order);
+        $this->db->select($column);
         if($year) {
             $this->db->where('year', $year);
         }
@@ -116,20 +117,12 @@ class Komponenkegiatan_model extends CI_Model {
         return $data;
     }
 
-    function get_data_fix_and_in_id($in_id = false, $year = false) {
-        $result_fix_key = $this->get_fix_key($year);
-        $result_id_in = $this->get_id_in($in_id, $year);
-        $data = array();
-        $data = $this->get_data($result_fix_key, $data);
-        $data = $this->get_data($result_id_in, $data);
-        return $data;
-    }
-
     function get_id_in($in_id = false, $year = false){
         if(!$in_id) {
             return $data = array();
         }
-        $this->db->select("fix_key, satuan, estimasi");
+        $column = implode (", ", $this->column_order);
+        $this->db->select($column);
         if($year) {
             $this->db->where('year', $year);
         }
@@ -152,6 +145,15 @@ class Komponenkegiatan_model extends CI_Model {
             $data[$value["fix_key"]]["satuan"] = $value["satuan"];
             $data[$value["fix_key"]]["komponen_spam"] = $value["komponen_spam"];
         }
+        return $data;
+    }
+
+    function get_data_fix_and_in_id($in_id = false, $year = false) {
+        $result_fix_key = $this->get_fix_key($year);
+        $result_id_in = $this->get_id_in($in_id, $year);
+        $data = array();
+        $data = $this->get_data($result_fix_key, $data);
+        $data = $this->get_data($result_id_in, $data);
         return $data;
     }
 
