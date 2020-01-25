@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Komponenkegiatanajax extends All_Controller {
     function __construct() {
 		parent::__construct();
-        $this->load->model("Komponenkegiatan_model");
+        $this->load->model(array("Komponenkegiatan_model","Komponen_mst_model"));
 	}
 	
 	public function list()
@@ -90,11 +90,17 @@ class Komponenkegiatanajax extends All_Controller {
         $this->form_validation->set_rules('satuan', 'Satuan', 'xss_clean|htmlentities');
         $this->form_validation->set_rules('estimasi', 'Estimasi', 'xss_clean|htmlentities');
         $this->form_validation->set_rules('pembagi', 'Pembagi', 'xss_clean|htmlentities');
+
         if ($this->form_validation->run()) {
+
+            $mst_komponen = $this->Komponen_mst_model->get_by_id($this->form_validation->set_value('sub_key'));
+
             $value=array(
                 'id' => $this->form_validation->set_value('id'),
-                'sub_key' => $this->form_validation->set_value('sub_key'),
-                'komponen_spam' => "Unit Distribusi",
+                'key' => $mst_komponen->key,
+                'sub_key' => $mst_komponen->sub_key,
+                'id_komponen' => $this->form_validation->set_value('sub_key'),
+                'komponen_spam' => $mst_komponen->komponen_spam,
                 'kegiatan' => $this->form_validation->set_value('kegiatan'),
                 'satuan' => $this->form_validation->set_value('satuan'),
                 'estimasi' => $this->form_validation->set_value('estimasi'),
