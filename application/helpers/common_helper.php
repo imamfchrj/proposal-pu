@@ -39,6 +39,9 @@ function floor_custom($value, $precision=0){
 }
 
 function to_percent($val) {
+    if($val == 0){
+        return 0;
+    }
     return (float)$val/100;
 }
 
