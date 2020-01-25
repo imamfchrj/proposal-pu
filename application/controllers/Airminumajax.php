@@ -240,6 +240,12 @@ class Airminumajax extends All_Controller {
         $data_input = $this->calculate($data_input);
         $this->json_success($data_input);
     }
+    
+    public function insert() {
+        $data_input = $this->cek_input();
+        $data_input = $this->calculate($data_input);
+        $this->json_success($data_input);
+    }
 
 
     private function calculate($data_input) {
@@ -769,6 +775,9 @@ class Airminumajax extends All_Controller {
 
     private function non_standard($data_input, $key_input, $verifikasi_percent, $indikator_percent) {
         if(!isset($data_input[$key_input])) {
+            return $data_input;
+        }
+        if(!$data_input["total_investasi"]) {
             return $data_input;
         }
         $data_input["harga_satuan"][$key_input]["text"] = $data_input[$key_input] / $data_input["total_investasi"]*100;

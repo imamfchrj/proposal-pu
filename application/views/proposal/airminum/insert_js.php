@@ -80,11 +80,35 @@
 
         function kalkulasi() {
             $('.kalulator').attr('disabled', true);
+            data_json = get_value();
             $.ajax({
                 url: ROOT+'airminumajax/cek',
                 dataType: 'json',
                 type: 'post',
-                data: {
+                data: data_json
+            })
+            .done(function(data, textStatus, xhr) {
+                if(data.is_error){
+                    alert(data.error_message);
+                    return;
+                }
+                set_value_proposal(data.data);
+            })
+            .complete(function(){
+              $('.kalulator').attr('disabled', false);
+            })
+            .fail(function(data, textStatus, xhr){
+                try{
+                    alert_failed("Error!", data.responseJSON.error_messages);
+                }catch(e){
+                    alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
+                    return;
+                }
+            });
+        }
+
+        function get_value() {
+            return {
                     "prov_id": $(".provinsi").val(),
                     "jenis_spam": $("#jenis_spam").val(),
                     "jenis_spam_1_1_1": $("#jenis_spam_1_1_1").val(),
@@ -193,26 +217,7 @@
                     "biaya_lain_lain_2_6_2": $("#biaya_lain_lain_2_6_2").val(),
                     "biaya_lain_lain_2_6_3": $("#biaya_lain_lain_2_6_3").val(),
                     
-                }
-            })
-            .done(function(data, textStatus, xhr) {
-                if(data.is_error){
-                    alert(data.error_message);
-                    return;
-                }
-                set_value_proposal(data.data);
-            })
-            .complete(function(){
-              $('.kalulator').attr('disabled', false);
-            })
-            .fail(function(data, textStatus, xhr){
-                try{
-                    alert_failed("Error!", data.responseJSON.error_messages);
-                }catch(e){
-                    alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
-                    return;
-                }
-            });
+                };
         }
         
     </script>
