@@ -621,7 +621,7 @@ class Airminumajax extends All_Controller {
         if($data_input["unit_produksi_2_2_3B"] == 0) {
             return $data_input;
         }
-        $data_input["harga_satuan"]["unit_produksi_2_2_3"]["text"] = $data_input["unit_produksi_2_2_3A"] / $data_input["unit_produksi_2_2_3B"];
+        $data_input["harga_satuan"]["unit_produksi_2_2_3"]["text"] = $data_input["unit_produksi_2_2_3A"] / 1000 / $data_input["unit_produksi_2_2_3B"];
         $data_input["harga_satuan"]["unit_produksi_2_2_3"]["option"] = $this->default;
         $data_input["indikator"]["unit_produksi_2_2_3"]["text"] = $data_input["initial"]['scada']['harga_satuan'] + $data_input["initial"]['plc']['harga_satuan'];
         $data_input["indikator"]["unit_produksi_2_2_3"]["option"] = $this->default;
@@ -664,7 +664,7 @@ class Airminumajax extends All_Controller {
         if($data_input[$key_input."B"] == 0) {
             return $data_input;
         }
-        $data_input["harga_satuan"][$key_input]["text"] = $data_input[$key_input."A"] / $data_input[$key_input."B"];
+        $data_input["harga_satuan"][$key_input]["text"] = $data_input[$key_input."A"] / 1000 / $data_input[$key_input."B"];
         $data_input["harga_satuan"][$key_input]["option"] = $this->default;
         $data_input["indikator"][$key_input]["text"] = $data_input["initial"][$fix_key]['harga_satuan'];
         $data_input["indikator"][$key_input]["option"] = $this->default;
@@ -688,7 +688,7 @@ class Airminumajax extends All_Controller {
         if($data_input[$key_input."B"] == 0) {
             return $data_input;
         }
-        $data_input["harga_satuan"][$key_input]["text"] = $data_input[$key_input."A"] / $data_input[$key_input."B"];
+        $data_input["harga_satuan"][$key_input]["text"] = $data_input[$key_input."A"] / 1000 / $data_input[$key_input."B"];
         $data_input["harga_satuan"][$key_input]["option"] = $this->default;
         $data_input["indikator"][$key_input]["text"] = $data_input["initial"][$key_id]['harga_satuan'];
         $data_input["indikator"][$key_input]["option"] = $this->default;
@@ -713,7 +713,7 @@ class Airminumajax extends All_Controller {
                 continue;
             }
             $id = $data_input["unit_distribusi_2_3_7". $index];
-            $data_input["harga_satuan"]["unit_distribusi_2_3_7" . $index]["text"] = $data_input["unit_distribusi_2_3_7". $index . "A"] / $data_input["unit_distribusi_2_3_7". $index . "B"];
+            $data_input["harga_satuan"]["unit_distribusi_2_3_7" . $index]["text"] = $data_input["unit_distribusi_2_3_7". $index . "A"] / 1000 / $data_input["unit_distribusi_2_3_7". $index . "B"];
             $data_input["harga_satuan"]["unit_distribusi_2_3_7" . $index]["option"] = $this->default;
             
             $data_input["indikator"]["unit_distribusi_2_3_7" . $index]["text"] = $data_input["initial"][$id]['harga_satuan'];
