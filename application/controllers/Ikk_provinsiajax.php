@@ -85,9 +85,9 @@ class Ikk_provinsiajax extends All_Controller {
             $value=array(
                 'id' => $this->form_validation->set_value('id'),
                 'prov_id' => $this->form_validation->set_value('prov_id'),
-                'ikk_persen' => $this->form_validation->set_value('prov_name'),
-                'ikk_decimal' => $this->form_validation->set_value('prov_name'),
-                'tahun' => $this->form_validation->set_value('prov_name'),
+                'ikk_persen' => $this->form_validation->set_value('ikk_persen'),
+                'ikk_decimal' => $this->form_validation->set_value('ikk_decimal'),
+                'tahun' => $this->form_validation->set_value('tahun'),
             );
             // if success will return all value
             return $value;

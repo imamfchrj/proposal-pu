@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Ikk_provinsi extends All_Controller {
     function __construct() {
 		parent::__construct();
-        $this->load->model("Ikk_provinsi_model");
+        $this->load->model(array("Ikk_provinsi_model","Provinsi_model"));
 	}
 	
 	public function list()

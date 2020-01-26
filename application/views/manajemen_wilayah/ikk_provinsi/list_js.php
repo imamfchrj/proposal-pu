@@ -47,7 +47,7 @@
       }
       function _delete($id) {
           $.ajax({
-              url: ROOT+'provinsiajax/delete',
+              url: ROOT+'ikk_provinsiajax/delete',
               dataType: 'json',
               type: 'post',
               data: {
