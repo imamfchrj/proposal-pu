@@ -7,9 +7,9 @@
       $(function(){
         'use strict';
         $(document).ready(function() {
-            function getLinkProvinsi($id) {
+            function getLinkKabupaten($id) {
               var linkDelete = $id;
-              var linkUpdate = ROOT + "provinsi/update/" + $id;
+              var linkUpdate = ROOT + "kabupaten/update/" + $id;
               var html = "";
                     html=html + '<div class="col-lg-4 mg-t-20 mg-lg-t-0">';
                     html=html + '<div class="btn-group" role="group" aria-label="Basic example">';
@@ -20,17 +20,18 @@
               return html;
             }
 
-            $('#provinsi').DataTable( {
+            $('#kabupaten').DataTable( {
                 "processing": true,
                 "serverSide": true,
-                "ajax": ROOT + "/provinsiajax/list_datatable",
+                "ajax": ROOT + "/kabupatenajax/list_datatable",
                 "columns": [
                     { "data": "id" },
+                    { "data": "prov" },
+                    { "data": "kab_id" },
                     { "data": "nama" },
-                    { "data": "prov_id" },
                     { "data": "id",
                         "render": function(data, type, row, meta){
-                            return getLinkProvinsi(data);
+                            return getLinkKabupaten(data);
                         }
                     },
                 ]
@@ -45,7 +46,7 @@
       }
       function _delete($id) {
           $.ajax({
-              url: ROOT+'provinsiajax/delete',
+              url: ROOT+'kabupatenajax/delete',
               dataType: 'json',
               type: 'post',
               data: {

@@ -1,15 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Provinsiajax extends All_Controller {
+class Kabupatenajax extends All_Controller {
     function __construct() {
 		parent::__construct();
-        $this->load->model("Provinsi_model");
+        $this->load->model("Kabupaten_model");
 	}
 	
 	public function list()
 	{
-		$data = $this->Provinsi_model->select_provinsi();
+		$data = $this->Kabupaten_model->select_kabupaten();
         $this->json_success($data);
 	}
 
@@ -25,7 +25,7 @@ class Provinsiajax extends All_Controller {
 		$limit = $input["length"];
 		$order = $input["order"][0]["column"];
 		$order_type = $input["order"][0]["dir"];
-		$data = $this->Provinsi_model->prov_list(
+		$data = $this->Kabupaten_model->kab_list(
 			$search, 
 			$limit,  
 			$offer,
@@ -37,14 +37,14 @@ class Provinsiajax extends All_Controller {
 	}
 
     public function insert() {
-        $this->insert_provinsi();
+        $this->insert_kabupaten();
     }
 
-    private function insert_provinsi() {
-        $value = $this->validation_provinsi();
+    private function insert_kabupaten() {
+        $value = $this->validation_kabupaten();
         if($value) {
             unset($value["id"]);
-            $data=$this->Provinsi_model->set($value);
+            $data=$this->Kabupaten_model->set($value);
             $this->json_success();
         } else {
             $this->json_badrequest();
@@ -52,38 +52,40 @@ class Provinsiajax extends All_Controller {
     }
 
     public function update() {
-        $this->update_provinsi();
+        $this->update_kabupaten();
     }
 
-    private function update_provinsi() {
-        $value = $this->validation_provinsi();
+    private function update_kabupaten() {
+        $value = $this->validation_kabupaten();
         if(!$value["id"]) {
             $this->json_badrequest("id not found");
         }
         if($value) {
             $id = $value["id"];
             unset($value["id"]);
-            $data=$this->Provinsi_model->update_value_by_id($value, $id);
+            $data=$this->Kabupaten_model->update_value_by_id($value, $id);
             $this->json_success();
         } else {
             $this->json_badrequest();
         }
     }
-    // validation input from komponen
-    private function validation_provinsi()
+    // validation input from kabupaten
+    private function validation_kabupaten()
     {
         $this->post_only();
 
         $this->form_validation->set_rules('id', 'Identity', 'xss_clean|htmlentities');
-        $this->form_validation->set_rules('prov_id', 'Provinsi ID', 'xss_clean|htmlentities');
-        $this->form_validation->set_rules('prov_name', 'Provinsi Name', 'xss_clean|htmlentities');
+        $this->form_validation->set_rules('prov_id', 'Provinsi', 'xss_clean|htmlentities');
+        $this->form_validation->set_rules('kab_id', 'Kabupaten ID', 'xss_clean|htmlentities');
+        $this->form_validation->set_rules('nama', 'Kabupaten Name', 'xss_clean|htmlentities');
 
         if ($this->form_validation->run()) {
 
             $value=array(
                 'id' => $this->form_validation->set_value('id'),
                 'prov_id' => $this->form_validation->set_value('prov_id'),
-                'nama' => $this->form_validation->set_value('prov_name'),
+                'kab_id' => $this->form_validation->set_value('kab_id'),
+                'nama' => $this->form_validation->set_value('nama'),
             );
             // if success will return all value
             return $value;
@@ -100,7 +102,7 @@ class Provinsiajax extends All_Controller {
         if ($this->form_validation->run()) {
 
             $id=  $this->form_validation->set_value('id');
-            $this->Provinsi_model->delete($id);
+            $this->Kabupaten_model->delete($id);
             $this->json_success();
             return;
         }

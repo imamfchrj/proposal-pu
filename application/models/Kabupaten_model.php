@@ -1,16 +1,17 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Provinsi_model extends CI_Model {
+class Kabupaten_model extends CI_Model {
 
-    private $table = "tb_provinsi";
-    public $column_order = ["id", "nama", "prov_id"];
+    private $table = "tb_kabupaten";
+    private $table_provinsi = "tb_provinsi";
+    public $column_order = ["id", "prov_id", "kab_id", "nama"];
    
     public function __construct() {
         parent::__construct();
         $this->load->database('default');
     }
 
-    function select_provinsi() {
+    function select_kabupaten() {
         $this->db->select("*");
         $this->db->order_by("id", "asc");
         return $this->db->get($this->table)->result_array();
@@ -21,15 +22,6 @@ class Provinsi_model extends CI_Model {
         $this->db->set($array);
         $this->db->insert($this->table);
 		return $this->db->insert_id();
-    }
-
-    function get_all(){
-        $query=$this->db->get($this->table);
-        if($query){
-            return $query->result();
-        }
-//        echo $this->db->last_query();exit;
-        return false;
     }
 
     function get_by_id($id) {
@@ -50,24 +42,30 @@ class Provinsi_model extends CI_Model {
         return $this->db->delete($this->table, array('id' => $id));
     }
 
-    function prov_list($search, $limit, $offer, $order, $order_type) {
-        $select_prov = $this->select_prov( $search, $limit, $offer, $order, $order_type);
-        $count = $this->count_all_prov(0);
+    function kab_list($search, $limit, $offer, $order, $order_type) {
+        $select_kab = $this->select_kab( $search, $limit, $offer, $order, $order_type);
+        $count = $this->count_all_kab(0);
         $data["recordsTotal"] = $count;
-        $data["recordsFiltered"] = $this->select_prov_count( $search);
-        $data["data"] = $select_prov;
+        $data["recordsFiltered"] = $this->select_kab_count( $search);
+        $data["data"] = $select_kab;
         return $data;
     }
 
-    function select_prov( $search, $limit, $offer, $order, $order_type) {
-        $this->db->select("
-                *
-                "
+    function select_kab( $search, $limit, $offer, $order, $order_type) {
+        $this->db->select(
+                $this->table.".id,".
+                $this->table.".prov_id,".
+                $this->table.".kab_id,".
+                $this->table.".nama,".
+                $this->table_provinsi.".nama as prov,"
             );
+        $this->db->join($this->table_provinsi,$this->table_provinsi.".prov_id=".$this->table.".prov_id","left");
         if($search) {
             $this->db->or_group_start()
+                ->or_like("prov_id", $search)
                 ->or_like("nama", $search)
                 ->or_like("id", $search)
+                ->or_like("prov", $search)
             ->group_end();
         }
         if(!$limit) {
@@ -85,35 +83,34 @@ class Provinsi_model extends CI_Model {
         return $this->db->get($this->table)->result_array();
     }
 
-    function select_prov_count( $search) {
+    function select_kab_count( $search) {
         $this->db->select("
                 *
                 "
             );
         if($search) {
             $this->db->or_group_start()
-            ->or_like("nama", $search)
-            ->or_like("id", $search)
-            ->group_end();
+                ->or_like("prov_id", $search)
+                ->or_like("nama", $search)
+                ->or_like("id", $search)
+                ->group_end();
         }
         return count($this->db->get($this->table)->result_array());
     }
 
-
-
-    function count_all_prov($prov_type) {
+    function count_all_kab($kab_type) {
         $this->db->select("count(id) as count_id");
         $data = $this->db->get($this->table)->row();
         return $data->count_id;
     }
 
-    function get_ikk_provinsi($id) {
+    function get_ikk_kab($id) {
         if(!$id) {
             return 0;
         }
         $this->db->select("*");
-        $this->db->where("prov_id", $id);
-        $result = $this->db->get("tb_ikk_provinsi")->row();
+        $this->db->where("kab_id", $id);
+        $result = $this->db->get("tb_ikk_kabupaten")->row();
         if(!$result){
             return 0;
         }
