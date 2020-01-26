@@ -83,6 +83,7 @@ class Users_model extends CI_Model {
 
     function count_all_user($user_type) {
         $this->db->select("count(id) as count_id");
+        $this->db->where("user_type", $user_type);
         $data = $this->db->get($this->table)->row();
         return $data->count_id;
     }

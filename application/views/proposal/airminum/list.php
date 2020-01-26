@@ -27,16 +27,6 @@
                   <th class="">Action</th>
                 </tr>
               </thead>
-                <tr>
-                  <td>1</td>
-                  <td><span class="text-danger">Justifikasi</span></td>
-                  <td>Aceh</td>
-                  <td>Rifki</td>
-                  <td>Butuh Approval</td>
-                  <td>-</td>
-                  <td>2020-01-02 09:00:00</td>
-                  <th><a href="#">Detail</a></th>
-                </tr>
               <tbody>
               </tbody>
             </table>

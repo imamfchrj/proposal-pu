@@ -15,10 +15,27 @@ class Airminumajax extends All_Controller {
         return $this->Komponenkegiatan_model->get_data_fix_and_in_id($in_id, $year);
     }
 
-    public function tes($year = false) {
-        $get_id  = array(1, 2, 3);
-        echo json_encode($this->get_data_komponen($get_id, $year));
-    }
+	public function list()
+	{
+		$input = $this->input->get();
+		if(count($input) == 0) {
+			$this->json_badrequest();
+		}
+		$search = $input["search"]["value"];
+		$offer = $input["start"];
+		$limit = $input["length"];
+		$order = $input["order"][0]["column"];
+		$order_type = $input["order"][0]["dir"];
+		$data = $this->Proposal_model->proposal_list(
+			$search, 
+			$limit,  
+			$offer,
+			$order, 
+			$order_type
+		);
+		$data["draw"] = $input["draw"];
+        $this->json($data);
+	}
     
     private function cek_input() {
         $this->form_validation->set_rules('prov_id', "provinsi", 'numeric|trim|required|xss_clean');
