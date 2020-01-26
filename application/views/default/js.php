@@ -60,9 +60,10 @@
       function alert_success($title, $description, $link=""){
         $('.title_success').html($title);
         $('.description_success').html($description);
-        $('.link_success').attr("href",$link);
         if(!$link) {
           $('.link_success').html("");
+        }else {
+          $('.link_success').attr("href",$link);
         }
         
         $('#alert_success').modal('show');

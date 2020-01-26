@@ -39,7 +39,6 @@ class Airminum extends All_Controller {
 		$data["id_proposal"] = $id;
 		$this->view("proposal/airminum/insert", $data);
     }
-    
 
 	private function option_insert()
 	{

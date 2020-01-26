@@ -61,8 +61,10 @@
                     { "data": "status",
                       "render": function(data, type, row, meta){
                         
-                          if(data === 0){
-                              return "Approv";
+                          if(data == 1){
+                              return "Approved";
+                          }else if(data == 2){
+                            return "Ditolak";
                           }
 
                           return 'Butuh approval';

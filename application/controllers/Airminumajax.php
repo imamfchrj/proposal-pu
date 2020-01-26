@@ -15,6 +15,27 @@ class Airminumajax extends All_Controller {
         return $this->Komponenkegiatan_model->get_data_fix_and_in_id($in_id, $year);
     }
 
+    public function approv() {
+        $this->form_validation->set_rules('status', "Status", 'numeric|trim|required|xss_clean');
+        $this->form_validation->set_rules('id', "Proposal", 'numeric|trim|required|xss_clean');
+        if ($this->form_validation->run()) {
+            $id = $this->form_validation->set_value('id');
+            $status = $this->form_validation->set_value('status');
+            $result = $this->Proposal_model->update_value_by_id(array(
+                "status" => $status
+            ), $id);
+            if($result) {
+                if($status == 1) {
+                    $this->json_success("Proposal diterima");
+                }elseif($status == 2) {
+                    $this->json_success("Proposal ditolak");
+                }
+            }
+            return;
+        }
+        $this->json_badrequest(validation_errors());
+    }
+
 	public function list()
 	{
 		$input = $this->input->get();
