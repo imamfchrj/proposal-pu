@@ -37,20 +37,20 @@
 
         if($satuan == "") {
             status = false;
-            $("#satuan").show();
-            $("#satuan").html("Wajib diisi");
+            $("#e_satuan").show();
+            $("#e_satuan").html("Wajib diisi");
         }
         
         if($estimasi == "") {
             status = false;
-            $("#estimasi").show();
-            $("#estimasi").html("Wajib diisi");
+            $("#e_estimasi").show();
+            $("#e_estimasi").html("Wajib diisi");
         }
 
         if($pembagi == "") {
             status = false;
-            $("#pembagi").show();
-            $("#pembagi").html("Wajib diisi");
+            $("#e_pembagi").show();
+            $("#e_pembagi").html("Wajib diisi");
         }
         
         return status;
