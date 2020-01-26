@@ -13,6 +13,17 @@ class Airminum extends All_Controller {
 		$this->view("proposal/airminum/list", $data);
 	}
 
+
+	public function detail($id=0)
+	{
+		if(!$id) {
+			redirect('');
+			return;
+		}
+		$data["script"] = "proposal/airminum/detail_js";
+		$this->view("proposal/airminum/detail", $data);
+	}
+
 	public function insert()
 	{
 		$data["script"] = "proposal/airminum/insert_js";

@@ -267,13 +267,17 @@ class Airminumajax extends All_Controller {
         $this->db->trans_start();
         // insert proposal
         // get id 
-        $proposal_id = $this->Proposal_model->set(array(
+        $data_proposal = array(
             "nama_proposal" => "Infrastruktur Spam Durolis",
             "key_proposal" => "air_minum",
             "prov_id" => $data_input["prov_id"],
             "user_id" => 0,
             "status" => 0,
-        ));
+        );
+        if(isset($data_input["verifikasi"]["harga_rata_rata_A"]["text"])) {
+            $data_proposal["proposal_status"] = $data_input["verifikasi"]["harga_rata_rata_A"]["text"];
+        }
+        $proposal_id = $this->Proposal_model->set($data_proposal);
         $this->try_insert($data_input, $proposal_id);
         if($this->db->trans_status() === false) {
             $this->db->trans_rollback();
