@@ -26,14 +26,6 @@ class Proposal_model extends CI_Model {
         return $data;
     }
 
-    // backup
-    // $this->table . ".id as id," .
-    // $this->table . ".nama_proposal as nama_proposal," .
-    // $this->table . ".status as status," .
-    // $this->table . ".created_at as created_at," .
-    // $this->table_user_alias . ".name as user_name," .
-    // $this->table_approval_alias . ".name as approval_name," .
-    // $this->table_provinsi . ".nama as prov_name" 
     function get_list($search, $limit, $offer, $order, $order_type) {
         $column_list = array(
             $this->table . ".id as id" ,
@@ -94,6 +86,40 @@ class Proposal_model extends CI_Model {
         $this->db->order_by($column_order[$order], $order_type);
         $this->db->limit($limit, $offer);
         return $this->db->get($this->table)->result_array();
+    }
+
+
+    function get_by_id($proposal_id) {
+        $column_list = array(
+            $this->table . ".id as id" ,
+            $this->table . ".proposal_status as proposal_status" ,
+            $this->table_provinsi . ".nama as prov_name",
+            $this->table_user_alias . ".name as user_name" ,
+            $this->table . ".status as status" ,
+            $this->table_approval_alias . ".name as approval_name" ,
+            $this->table . ".created_at as created_at"
+        );
+        $column = implode (", ", $column_list);
+        $this->db->select( $column);
+        
+        $this->db->join(
+            $this->table_provinsi, 
+            $this->table. '.prov_id = '.$this->table_provinsi.'.prov_id',
+            'left'
+        );
+        $this->db->join(
+            $this->table_user, 
+            $this->table. '.user_id = '.$this->table_user_alias.'.id',
+            'left'
+        );
+        $this->db->join(
+            $this->table_approval, 
+            $this->table. '.user_approv = '.$this->table_approval_alias.'.id',
+            'left'
+        );
+        
+        $this->db->where($this->table . ".id", $proposal_id);
+        return $this->db->get($this->table)->row();
     }
 
     function get_list_count($search) {

@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Airminum extends All_Controller {
     function __construct() {
 		parent::__construct();
-        $this->load->model("Users_model");
+        $this->load->model(array("proposal/Proposal_model", "proposal/Proposalquestioner_model"));
 	}
 	
 	public function list()
@@ -20,7 +20,15 @@ class Airminum extends All_Controller {
 			redirect('');
 			return;
 		}
+		$proposal = $this->Proposal_model->get_by_id($id);
+		if(!$proposal){
+			redirect('airminum/list');
+			return;
+		}
+		$selected = $this->Proposalquestioner_model->get_proposal_id_selected($id);
 		$data["script"] = "proposal/airminum/detail_js";
+		$data["proposal_data"] = $proposal;
+		$data["selected_data"] = $selected;
 		$this->view("proposal/airminum/detail", $data);
 	}
 

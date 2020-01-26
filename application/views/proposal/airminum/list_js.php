@@ -37,8 +37,8 @@
         $(document).ready(function() {
             function getLinkUser($id) {
               var linkDelete = $id;
-              // var linkUpdate = ROOT + "user/update/" + $id;
-              var linkUpdate = "#";
+              var linkUpdate = ROOT + "airminum/detail/" + $id;
+              // var linkUpdate = "#";
               var html = "";
                     html=html + '<div class="col-lg-4 mg-t-20 mg-lg-t-0">';
                     html=html + '<div class="btn-group" role="group" aria-label="Basic example">';
