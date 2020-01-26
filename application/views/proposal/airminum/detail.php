@@ -110,7 +110,7 @@
                         <?php
                             // window.location='<?=base_url('airminum/edit/1')
                         ?>
-                        <button class="btn btn-info bd-0" onclick="';">Detail Selengkapnya</button>
+                        <button class="btn btn-info bd-0" onclick="window.location='<?=base_url('airminum/insert/'.$proposal_data->id)?>';">Detail Selengkapnya</button>
                         <button class="btn btn-success bd-0" onclick="window.location='';">Setujui</button>
                         <button class="btn btn-warning bd-0" onclick="window.location='';">Tolak</button>
                     </div>

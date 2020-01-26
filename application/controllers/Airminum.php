@@ -32,10 +32,11 @@ class Airminum extends All_Controller {
 		$this->view("proposal/airminum/detail", $data);
 	}
 
-	public function insert()
+	public function insert($id=0)
 	{
 		$data["script"] = "proposal/airminum/insert_js";
 		$data["option"] = $this->option_insert();
+		$data["id_proposal"] = $id;
 		$this->view("proposal/airminum/insert", $data);
     }
     

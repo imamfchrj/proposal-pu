@@ -258,6 +258,12 @@ class Airminumajax extends All_Controller {
         $this->json_success($data_input);
     }
 
+    function get_by_id($id_proposal) {
+		$data_input = $this->Proposalquestioner_model->get_proposal_id_selected($id_proposal);
+        $data_input = $this->initial($data_input);
+        $this->json_success($data_input);
+    }
+
     public function insert() {
         $data_input = $this->cek_input();
         $data_input = $this->calculate($data_input);
@@ -367,6 +373,7 @@ class Airminumajax extends All_Controller {
     }
 
 
+
     private function calculate($data_input) {
         $data_input = $this->initial($data_input);
 
@@ -417,13 +424,6 @@ class Airminumajax extends All_Controller {
         $data_input = $this->biaya_non_standar_2_5_3($data_input);
         $data_input = $this->biaya_non_standar_2_5_4($data_input);
         $data_input = $this->biaya_non_standar_2_5_5($data_input);
-        
-        
-        
-        
-        
-        
-        
         
         $data_input = $this->set_rounding($data_input);
         

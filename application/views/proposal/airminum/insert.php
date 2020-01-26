@@ -3166,7 +3166,12 @@ for ($index = 1;$index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71;$index++)
                 <div class="form-layout">
                     <div class="form-layout-footer">
                         <button class="btn btn-primary bd-0 kalulator" onclick="kalkulasi();">Hitung</button>
+                        <?php if(isset($id_proposal)) {?>
+                        <button class="btn btn-primary bd-0" onclick="update();">Update</button>
+                        <?php } else { ?>
                         <button class="btn btn-primary bd-0" onclick="submit();">Simpan</button>
+                        
+                        <?php } ?>
                         <button class="btn btn-secondary bd-0" onclick="window.location.href='<?=base_url('user/list') ?>'">Batalkan</button>
                     </div>
                     <!-- form-layout-footer -->

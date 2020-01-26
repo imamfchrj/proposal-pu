@@ -87,6 +87,68 @@
                 }
             });
         }
+        function update() {
+            $('.insert').attr('disabled', true);
+            data_json = get_value();
+            $.ajax({
+                url: ROOT+'airminumajax/update/<?=$id_proposal?>',
+                dataType: 'json',
+                type: 'post',
+                data: data_json
+            })
+            .done(function(data, textStatus, xhr) {
+                if(data.is_error){
+                    alert(data.error_message);
+                    return;
+                }
+                alert_success("Sukses!", "Berhasil menambahkan proposal baru", ROOT + "/airminum/list");
+                set_value_proposal(data.data);
+            })
+            .complete(function(){
+              $('.insert').attr('disabled', false);
+            })
+            .fail(function(data, textStatus, xhr){
+                try{
+                    alert_failed("Error!", data.responseJSON.error_messages);
+                }catch(e){
+                    alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
+                    return;
+                }
+            });
+        }
+
+        $( document ).ready(function() {
+            <?php if($id_proposal){ ?>
+                get_by_id("<?=$id_proposal?>");
+            <?php }?>
+        });
+        
+        function get_by_id($id) {
+            $('.kalulator').attr('disabled', true);
+            $.ajax({
+                url: ROOT+'airminumajax/get_by_id/' + $id,
+                dataType: 'json',
+                type: 'post',
+            })
+            .done(function(data, textStatus, xhr) {
+                if(data.is_error){
+                    alert(data.error_message);
+                    return;
+                }
+                set_value_proposal(data.data);
+            })
+            .complete(function(){
+              $('.kalulator').attr('disabled', false);
+            })
+            .fail(function(data, textStatus, xhr){
+                try{
+                    alert_failed("Error!", data.responseJSON.error_messages);
+                }catch(e){
+                    alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
+                    return;
+                }
+            });
+        }
 
         function get_value() {
             return {
@@ -226,6 +288,13 @@
                     continue;
                 }
                 $("#"+key).val(value);
+
+                var target = $( "#"+key );
+                if ( target.is( "select" ) ) {
+                    $("#"+key+' option[value="'+value+'"]').attr('selected','selected');
+                } else {
+                    $("#"+key).val(value);
+                }
             }
             // $("#prov_id").val($data["prov_id"]);
             // $("#jenis_spam").val($data["jenis_spam"]);
