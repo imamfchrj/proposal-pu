@@ -91,4 +91,17 @@ class Provinsi_model extends CI_Model {
         $data = $this->db->get($this->table)->row();
         return $data->count_id;
     }
+
+    function get_ikk_provinsi($id) {
+        if(!$id) {
+            return 0;
+        }
+        $this->db->select("*");
+        $this->db->where("prov_id", $id);
+        $result = $this->db->get("tb_ikk_provinsi")->row();
+        if(!$result){
+            return 0;
+        }
+        return $result->ikk_decimal;
+    }
 }

@@ -8,7 +8,7 @@ class Komponenkegiatan_model extends CI_Model {
     private $table = "tb_komponen_kegiatan";
     private $table_prov = "tb_provinsi";
   
-    public $column_order = ["id", "sub_key", "id_komponen" ,"komponen_spam", "kegiatan", "estimasi", "pembagi", "satuan", "created_at", "updated_at"];
+    public $column_order = ["id", "sub_key", "id_komponen" ,"komponen_spam", "kegiatan", "estimasi", "pembagi", "satuan", "created_at", "updated_at", "fix_key", "year"];
    
     public function __construct() {
         parent::__construct();
@@ -105,29 +105,69 @@ class Komponenkegiatan_model extends CI_Model {
         return $this->db->delete($this->table, array('id' => $id));
     }
 
-    function get_fix_key($in_id = false, $year = false){
-        $this->db->select("fix_key, satuan, estimasi");
+    function get_fix_key($year = false){
+        $column = implode (", ", $this->column_order);
+        $this->db->select($column);
         if($year) {
             $this->db->where('year', $year);
-        }
-        if($in_id) {
-            $this->db->where_in('id', $in_id);
         }
         $this->db->where('fix_key != ""',);
         $this->db->where('aktif', 1);
         $result = $this->db->get($this->table)->result_array();
-        $data = array();
+        return $result;
+    }
+
+    function get_id_in($in_id = false, $year = false){
+        if(!$in_id) {
+            return $data = array();
+        }
+        $column = implode (", ", $this->column_order);
+        $this->db->select($column);
+        if($year) {
+            $this->db->where('year', $year);
+        }
+        $this->db->where_in('id', $in_id);
+        $this->db->where('aktif', 1);
+        $result = $this->db->get($this->table)->result_array();
+        return $result;
+    }
+
+    private function get_data($ikk, $result, $data){
         foreach($result as $value){
-            if($value["pembagi"]) {
+            if(!$value["pembagi"]) {
                 continue;
             }
-            $data[$value["fix_key"]]["harga_satuan"] = $value["estimasi"] / $value["pembagi"];
-            $data[$value["fix_key"]]["estimasi"] = $value["estimasi"];
-            $data[$value["fix_key"]]["pembagi"] = $value["pembagi"];
-            $data[$value["fix_key"]]["kegiatan"] = $value["kegiatan"];
-            $data[$value["fix_key"]]["satuan"] = $value["satuan"];
-            $data[$value["fix_key"]]["komponen_spam"] = $value["komponen_spam"];
+            $harga_satuan_awal =  $value["estimasi"] / $value["pembagi"];
+            $harga_satuan =  $harga_satuan_awal * $ikk;
+
+            if($value["fix_key"]){
+                $data[$value["fix_key"]]["harga_satuan_awal"] = $harga_satuan_awal;
+                $data[$value["fix_key"]]["harga_satuan"] = $harga_satuan;
+                $data[$value["fix_key"]]["estimasi"] = $value["estimasi"];
+                $data[$value["fix_key"]]["pembagi"] = $value["pembagi"];
+                $data[$value["fix_key"]]["kegiatan"] = $value["kegiatan"];
+                $data[$value["fix_key"]]["satuan"] = $value["satuan"];
+                $data[$value["fix_key"]]["komponen_spam"] = $value["komponen_spam"];
+            }
+            $data[$value["id"]]["harga_satuan_awal"] = $harga_satuan_awal;
+            $data[$value["id"]]["harga_satuan"] = $harga_satuan;
+            $data[$value["id"]]["estimasi"] = $value["estimasi"];
+            $data[$value["id"]]["pembagi"] = $value["pembagi"];
+            $data[$value["id"]]["kegiatan"] = $value["kegiatan"];
+            $data[$value["id"]]["satuan"] = $value["satuan"];
+            $data[$value["id"]]["komponen_spam"] = $value["komponen_spam"];
         }
         return $data;
     }
+
+    function get_data_fix_and_in_id($ikk, $in_id = false, $year = false) {
+        $result_fix_key = $this->get_fix_key($year);
+        $result_id_in = $this->get_id_in($in_id, $year);
+        $data = array();
+        $data = $this->get_data($ikk, $result_fix_key, $data);
+        $data = $this->get_data($ikk, $result_id_in, $data);
+        return $data;
+    }
+
+
 }

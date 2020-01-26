@@ -33,7 +33,7 @@
 
         function add_provinsi(provinsi_list) {
             provinsi_list.forEach(function(provinsi){
-                $(".provinsi").append('<option value="'+provinsi.id+'">'+provinsi.nama+'</option>');
+                $(".provinsi").append('<option value="'+provinsi.prov_id+'">'+provinsi.nama+'</option>');
             });
         }
     </script>
