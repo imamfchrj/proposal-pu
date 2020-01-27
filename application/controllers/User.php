@@ -5,7 +5,7 @@ class User extends All_Controller {
     function __construct() {
 		parent::__construct();
         $this->load->model("Users_model");
-        // get_session();
+        get_session();
 	}
 	
 	public function list()
