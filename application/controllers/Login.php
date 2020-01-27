@@ -63,4 +63,9 @@ class Login extends All_Controller {
         $this->session->sess_destroy();
         redirect('login');
     }
+
+    public function tes() {
+        echo json_encode(is_admin());
+        exit;
+    }
 }

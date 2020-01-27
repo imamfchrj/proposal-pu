@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Ikk_kabupatenajax extends All_Controller {
     function __construct() {
 		parent::__construct();
+		get_admin_ajax();
         $this->load->model(array("Ikk_kabupaten_model","Kabupaten_model"));
 	}
 	

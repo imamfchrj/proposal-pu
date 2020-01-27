@@ -5,6 +5,7 @@ class Ikk_provinsiajax extends All_Controller {
     function __construct() {
 		parent::__construct();
         get_session_ajax();
+		get_admin_ajax();
         $this->load->model("Ikk_provinsi_model");
 	}
 	
