@@ -5,6 +5,7 @@ class Ikk_provinsi extends All_Controller {
     function __construct() {
 		parent::__construct();
         get_session();
+		get_admin();
         $this->load->model(array("Ikk_provinsi_model","Provinsi_model"));
 	}
 	

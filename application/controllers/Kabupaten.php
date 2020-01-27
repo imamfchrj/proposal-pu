@@ -5,6 +5,7 @@ class Kabupaten extends All_Controller {
     function __construct() {
 		parent::__construct();
         get_session();
+		get_admin_ajax();
         $this->load->model(array("Kabupaten_model","Provinsi_model"));
 	}
 	

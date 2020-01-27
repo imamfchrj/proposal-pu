@@ -8,6 +8,49 @@ function hashpass($pass){
     return strtoupper($hashed_value);
 }
 
+function is_user() {
+    return is_type_user(0);
+}
+
+function is_admin() {
+    return is_type_user(1);
+}
+
+function is_type_user($type_id) {
+
+    if(isset($_SESSION["user_type"])){
+        if($_SESSION["user_type"] == $type_id) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function get_admin(){
+    if(is_admin()){
+        return;
+    }
+    redirect('login/logout');
+    exit;
+}
+
+function get_admin_ajax(){
+    if(is_admin()){
+        return;
+    }
+    $data_output["error_messages"] = "User tidak eligible ke halaman ini!";
+    echo json_encode($data_output);
+    exit;
+}
+
+
+function get_username(){
+    if(isset($_SESSION["username"])){
+        return $_SESSION["username"];
+    }
+    return "user";
+}
+
 function get_session(){
     if(isset($_SESSION["login_config"])){
         if(hashpass($_SESSION["email"].$_SESSION["user_id"]) == $_SESSION["login_config"]) {

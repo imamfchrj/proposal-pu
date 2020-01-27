@@ -6,6 +6,7 @@ class Provinsi extends All_Controller {
 		parent::__construct();
         $this->load->model("Provinsi_model");
         get_session();
+		get_admin();
 	}
 	
 	public function list()

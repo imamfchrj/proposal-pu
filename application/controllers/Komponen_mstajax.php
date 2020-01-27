@@ -5,6 +5,7 @@ class Komponen_mstajax extends All_Controller {
     function __construct() {
 		parent::__construct();
         get_session_ajax();
+		get_admin_ajax();
         $this->load->model("Komponen_mst_model");
 	}
 	

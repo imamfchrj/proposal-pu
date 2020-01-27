@@ -74,12 +74,14 @@
                             <ul>
                                 <li><a href="<?= base_url('airminum/insert') ?>">Evaluasi Infrastruktur Spam Durolis</a>
                                 </li>
-                                <li><a href="<?= base_url('airminum/list') ?>">List Evaluasi Infrastruktur Spam
-                                        Durolis</a></li>
+                                <li><a href="<?= base_url('airminum/list') ?>">List Evaluasi Infrastruktur Spam Durolis</a></li>
+                                
+            <?php if(is_admin()) { ?>
                                 <li><a href="<?= base_url('komponenkegiatan/list') ?>">Konfigurasi Komponen Kegiatan</a>
                                 </li>
                                 <li><a href="<?= base_url('komponenkegiatan/insert') ?>">Tambah Komponen Kegiatan</a>
                                 </li>
+            <?php } ?>
                             </ul>
 
 
@@ -181,6 +183,7 @@
                     </ul>
                 </div><!-- dropdown-menu -->
             </li>
+            <?php if(is_admin()) { ?>
             <li class="nav-item with-sub mega-dropdown">
                 <a class="nav-link" href="#" data-toggle="dropdown">
                     <i class="icon ion-ios-people"></i>
@@ -252,6 +255,7 @@
 <!--                    </ul>-->
                 </div><!-- dropdown-menu -->
             </li>
+            <?php } ?>
         </ul>
     </div><!-- container -->
 </div><!-- slim-navbar -->

@@ -5,6 +5,7 @@ class Kabupatenajax extends All_Controller {
     function __construct() {
 		parent::__construct();
         get_session_ajax();
+		get_admin_ajax();
         $this->load->model("Kabupaten_model");
 	}
 	

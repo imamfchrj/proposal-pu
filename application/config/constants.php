@@ -91,7 +91,7 @@ define('CACHE_VERSION', '201907221');
 define('APP_NAME', 'Proposal PU');
 define('VENDOR', 'Redcloud Project');
 define('VENDOR_URL', 'http://redcloud-project.com/');
-define('DEFAULT_PAGE_USER','user/list');
+define('DEFAULT_PAGE_USER','airminum/insert');
 
 
 /**

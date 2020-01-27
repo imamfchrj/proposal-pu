@@ -4,7 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Userajax extends All_Controller {
     function __construct() {
 		parent::__construct();
-        get_session_ajax();
+		get_session_ajax();
+		get_admin_ajax();
         $this->load->model("Users_model");
 	}
 	

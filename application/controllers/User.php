@@ -6,6 +6,7 @@ class User extends All_Controller {
 		parent::__construct();
         $this->load->model("Users_model");
         get_session();
+		get_admin();
 	}
 	
 	public function list()
