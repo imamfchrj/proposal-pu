@@ -24,6 +24,25 @@ class Kabupaten_model extends CI_Model {
 		return $this->db->insert_id();
     }
 
+    function get_all(){
+        $query=$this->db->get($this->table);
+        if($query){
+            return $query->result();
+        }
+//        echo $this->db->last_query();exit;
+        return false;
+    }
+
+    function get_all_by_prov($prov_id){
+        $this->db->where("prov_id", $prov_id);
+        $query=$this->db->get($this->table);
+        if($query){
+            return $query->result();
+        }
+//        echo $this->db->last_query();exit;
+        return false;
+    }
+
     function get_by_id($id) {
         $column = implode (", ", $this->column_order);
         $this->db->select($column);
