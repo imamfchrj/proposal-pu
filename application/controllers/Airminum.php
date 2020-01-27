@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Airminum extends All_Controller {
     function __construct() {
 		parent::__construct();
+        get_session();
         $this->load->model(array("proposal/Proposal_model", "proposal/Proposalquestioner_model"));
 	}
 	

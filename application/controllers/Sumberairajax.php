@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Sumberairajax extends All_Controller {
     function __construct() {
 		parent::__construct();
+        get_session_ajax();
         $this->load->model("air_minum/Sumberair_model");
 	}
 	

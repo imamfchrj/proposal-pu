@@ -30,9 +30,11 @@
             .done(function(data) {
                 if(data.is_error){
                     alert(data.error_message);
+                    $('#insert_user').attr('disabled', false);
                     return;
                 }
                 
+              $('#insert_user').attr('disabled', false);
                 alert_success("Sukses!", "Berhasil menambahkan user baru", ROOT + "/user/list");
                 
             })
@@ -42,8 +44,10 @@
             .fail(function(data){
                 if(data.responseJSON.error_messages !== 'undefined'){
                     alert_failed("Error!", data.responseJSON.error_messages);
+              $('#insert_user').attr('disabled', false);
                     return;
                 }
+              $('#insert_user').attr('disabled', false);
                 alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
             });
       }

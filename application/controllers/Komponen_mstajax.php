@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Komponen_mstajax extends All_Controller {
     function __construct() {
 		parent::__construct();
+        get_session_ajax();
         $this->load->model("Komponen_mst_model");
 	}
 	

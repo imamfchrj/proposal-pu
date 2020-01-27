@@ -8,6 +8,7 @@ class Airminumajax extends All_Controller {
     private $array_key = array("initial", "verifikasi", "indikator", "harga_satuan");
     function __construct() {
 		parent::__construct();
+        get_session_ajax();
         $this->load->model(array("Komponenkegiatan_model", "Provinsi_model", "proposal/Proposal_model", "proposal/Proposalquestioner_model"));
     }
 

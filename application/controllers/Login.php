@@ -32,6 +32,7 @@ class Login extends All_Controller {
                         // 'photo'	=> $user->photo,
                         'username'	=> $user->username,
                         'email'		=> $user->email,
+                        'user_type'		=> $user->user_type,
                         'login_config' => hashpass($user->email.$user->id),
                         // "menu" => $menu
                     );
@@ -56,5 +57,10 @@ class Login extends All_Controller {
 			'error_message'=>  validation_errors()
         ));
         return;
+    }
+
+    public function logout() {
+        $this->session->sess_destroy();
+        redirect('login');
     }
 }

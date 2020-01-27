@@ -5,6 +5,7 @@ class Komponenkegiatan extends All_Controller {
     function __construct() {
 		parent::__construct();
         $this->load->model("Komponenkegiatan_model");
+        get_session();
 	}
 	
 	public function list()
