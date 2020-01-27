@@ -3,22 +3,23 @@
       <div class="container">
         <div class="slim-pageheader">
           <ol class="breadcrumb slim-breadcrumb">
-            <li class="breadcrumb-item"><a href="#">IKK Provinsi</a></li>
+            <li class="breadcrumb-item"><a href="#">IKK Kabupaten</a></li>
             <li class="breadcrumb-item active" aria-current="page">List</li>
           </ol>
-          <h6 class="slim-pagetitle">List IKK Provinsi</h6>
+          <h6 class="slim-pagetitle">List IKK Kabupaten</h6>
         </div><!-- slim-pageheader -->
 
         <div class="section-wrapper">
-          <label class="section-title">List IKK Provinsi</label>
+          <label class="section-title">List IKK Kabupaten</label>
           <p class="mg-b-20 mg-sm-b-40"></p>
 
           <div class="table-wrapper">
-            <table id="ikk_provinsi" class="table table-responsive display responsive nowrap ">
+            <table id="ikk_kabupaten" class="table table-responsive display responsive nowrap ">
               <thead>
                 <tr>
                   <th class="wd-5p">No</th>
                   <th class="wd-20p">Provinsi</th>
+                  <th class="wd-20p">Kabupaten</th>
                     <th class="wd-20p">IKK Persen</th>
                     <th class="wd-20p">IKK Decimal</th>
                     <th class="wd-10p">Tahun</th>

@@ -1,16 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Ikk_provinsiajax extends All_Controller {
+class Ikk_kabupatenajax extends All_Controller {
     function __construct() {
 		parent::__construct();
-        get_session_ajax();
-        $this->load->model("Ikk_provinsi_model");
+        $this->load->model(array("Ikk_kabupaten_model","Kabupaten_model"));
 	}
 	
 	public function list()
 	{
-		$data = $this->Ikk_provinsi_model->select_ikk_provinsi();
+		$data = $this->Ikk_kabupaten_model->select_ikk_kabupaten();
         $this->json_success($data);
 	}
 
@@ -26,7 +25,7 @@ class Ikk_provinsiajax extends All_Controller {
 		$limit = $input["length"];
 		$order = $input["order"][0]["column"];
 		$order_type = $input["order"][0]["dir"];
-		$data = $this->Ikk_provinsi_model->ikk_prov_list(
+		$data = $this->Ikk_kabupaten_model->ikk_kab_list(
 			$search, 
 			$limit,  
 			$offer,
@@ -38,14 +37,14 @@ class Ikk_provinsiajax extends All_Controller {
 	}
 
     public function insert() {
-        $this->insert_ikk_provinsi();
+        $this->insert_ikk_kabupaten();
     }
 
-    private function insert_ikk_provinsi() {
-        $value = $this->validation_ikk_provinsi();
+    private function insert_ikk_kabupaten() {
+        $value = $this->validation_ikk_kabupaten();
         if($value) {
             unset($value["id"]);
-            $data=$this->Ikk_provinsi_model->set($value);
+            $data=$this->Ikk_kabupaten_model->set($value);
             $this->json_success();
         } else {
             $this->json_badrequest();
@@ -53,30 +52,30 @@ class Ikk_provinsiajax extends All_Controller {
     }
 
     public function update() {
-        $this->update_ikk_provinsi();
+        $this->update_ikk_kabupaten();
     }
 
-    private function update_ikk_provinsi() {
-        $value = $this->validation_ikk_provinsi();
+    private function update_ikk_kabupaten() {
+        $value = $this->validation_ikk_kabupaten();
         if(!$value["id"]) {
             $this->json_badrequest("id not found");
         }
         if($value) {
             $id = $value["id"];
             unset($value["id"]);
-            $data=$this->Ikk_provinsi_model->update_value_by_id($value, $id);
+            $data=$this->Ikk_kabupaten_model->update_value_by_id($value, $id);
             $this->json_success();
         } else {
             $this->json_badrequest();
         }
     }
     // validation input from komponen
-    private function validation_ikk_provinsi()
+    private function validation_ikk_kabupaten()
     {
         $this->post_only();
 
         $this->form_validation->set_rules('id', 'Identity', 'xss_clean|htmlentities');
-        $this->form_validation->set_rules('prov_id', 'Provinsi ID', 'xss_clean|htmlentities');
+        $this->form_validation->set_rules('kab_id', 'kabupaten ID', 'xss_clean|htmlentities');
         $this->form_validation->set_rules('ikk_persen', 'IKK Persen', 'xss_clean|htmlentities');
         $this->form_validation->set_rules('ikk_decimal', 'IKK Decimal', 'xss_clean|htmlentities');
         $this->form_validation->set_rules('tahun', 'Tahun', 'xss_clean|htmlentities');
@@ -85,7 +84,7 @@ class Ikk_provinsiajax extends All_Controller {
 
             $value=array(
                 'id' => $this->form_validation->set_value('id'),
-                'prov_id' => $this->form_validation->set_value('prov_id'),
+                'kab_id' => $this->form_validation->set_value('kab_id'),
                 'ikk_persen' => $this->form_validation->set_value('ikk_persen'),
                 'ikk_decimal' => $this->form_validation->set_value('ikk_decimal'),
                 'tahun' => $this->form_validation->set_value('tahun'),
@@ -105,12 +104,21 @@ class Ikk_provinsiajax extends All_Controller {
         if ($this->form_validation->run()) {
 
             $id=  $this->form_validation->set_value('id');
-            $this->Ikk_provinsi_model->delete($id);
+            $this->Ikk_kabupaten_model->delete($id);
             $this->json_success();
             return;
         }
         $this->json_badrequest(validation_errors());
         return false;
+    }
+
+    function get_kab_by_prov()
+    {
+        $prov_id = $this->input->post('prov_id');
+        $result = $this->Kabupaten_model->get_all_by_prov($prov_id);
+        echo "<option value='0'> Pilih Kabupaten </option>";
+        foreach($result as $row)
+            echo "<option value='".$row->kab_id."'>".strtoupper($row->nama)."</option>";
     }
 
 }

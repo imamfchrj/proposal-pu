@@ -7,9 +7,9 @@
       $(function(){
         'use strict';
         $(document).ready(function() {
-            function getLinkIkk_provinsi($id) {
+            function getLinkIkk_kabupaten($id) {
               var linkDelete = $id;
-              var linkUpdate = ROOT + "ikk_provinsi/update/" + $id;
+              var linkUpdate = ROOT + "ikk_kabupaten/update/" + $id;
               var html = "";
                     html=html + '<div class="col-lg-4 mg-t-20 mg-lg-t-0">';
                     html=html + '<div class="btn-group" role="group" aria-label="Basic example">';
@@ -20,19 +20,20 @@
               return html;
             }
 
-            $('#ikk_provinsi').DataTable( {
+            $('#ikk_kabupaten').DataTable( {
                 "processing": true,
                 "serverSide": true,
-                "ajax": ROOT + "/ikk_provinsiajax/list_datatable",
+                "ajax": ROOT + "/ikk_kabupatenajax/list_datatable",
                 "columns": [
                     { "data": "id" },
                     { "data": "nama_prov" },
+                    { "data": "nama_kab" },
                     { "data": "ikk_persen" },
                     { "data": "ikk_decimal" },
                     { "data": "tahun" },
                     { "data": "id",
                         "render": function(data, type, row, meta){
-                            return getLinkIkk_provinsi(data);
+                            return getLinkIkk_kabupaten(data);
                         }
                     },
                 ]
@@ -47,7 +48,7 @@
       }
       function _delete($id) {
           $.ajax({
-              url: ROOT+'ikk_provinsiajax/delete',
+              url: ROOT+'ikk_kabupatenajax/delete',
               dataType: 'json',
               type: 'post',
               data: {
