@@ -1,21 +1,21 @@
 <?php
-
-$id="";
-$name="";
-$email="";
-$hp="";
-$password="";
-$c_password="";
-$status="";
+$id = "";
+$name = "";
+$email = "";
+$hp = "";
+$password = "";
+$c_password = "";
+$status = "";
 
 // this for update
-if( isset( $option["form_value"] ) ) { 
-  $id=$option["form_value"]->id;
-  $name=$option["form_value"]->name;
-  $email=$option["form_value"]->email;
-  $hp=$option["form_value"]->hp;
-  $status=$option["form_value"]->status;
-} 
+if (isset($option["form_value"]))
+{
+    $id = $option["form_value"]->id;
+    $name = $option["form_value"]->name;
+    $email = $option["form_value"]->email;
+    $hp = $option["form_value"]->hp;
+    $status = $option["form_value"]->status;
+}
 
 $title_page = $option["title_page"];
 $description_page = $option["description_page"];
@@ -2499,17 +2499,20 @@ $description_page = $option["description_page"];
                         </tr>
 
                         <?php
-                            for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71; $index++) {
-                        ?>
+for ($index = 1;$index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71;$index++)
+{
+?>
                         <tr>
-                            <th colspan="5">2.3.7.<?=$index?></th>
+                            <th colspan="5">2.3.7.<?=$index
+?></th>
                         </tr>
 
                         <tr>
                             <td class="w-25 p-3 align-middle">
 
                                 <div class="input-group">
-                                    <select id="unit_distribusi_2_3_7<?=$index?>" class="form-control select2 unit_distribusi" data-placeholder="Pilih Jenis">
+                                    <select id="unit_distribusi_2_3_7<?=$index
+?>" class="form-control select2 unit_distribusi" data-placeholder="Pilih Jenis">
                                         <option value="0"></option>
                                     </select>
                                 </div>
@@ -2517,34 +2520,39 @@ $description_page = $option["description_page"];
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input id="unit_distribusi_2_3_7<?=$index?>A" type="number" value="0" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_7<?=$index
+?>A" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
                                 <hr>
                                 <div class="input-group">
                                     <span class="input-group-addon">m</span>
-                                    <input id="unit_distribusi_2_3_7<?=$index?>B" type="number" value="0" class="form-control"  placeholder="">
+                                    <input id="unit_distribusi_2_3_7<?=$index
+?>B" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_7<?=$index?>_verifikasi">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_7<?=$index
+?>_verifikasi">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_7<?=$index?>_harga_satuan">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_7<?=$index
+?>_harga_satuan">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                             <td>
-                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_7<?=$index?>_indikator">
+                                <ul class="parsley-errors-list filled" id="unit_distribusi_2_3_7<?=$index
+?>_indikator">
                                     <li class="tx-success"></li>
                                 </ul>
                             </td>
                         </tr>
                         <?php
-                            }
-                        ?>
+}
+?>
 
 
                         <tr>
@@ -3158,8 +3166,13 @@ $description_page = $option["description_page"];
                 <div class="form-layout">
                     <div class="form-layout-footer">
                         <button class="btn btn-primary bd-0 kalulator" onclick="kalkulasi();">Hitung</button>
+                        <?php if(isset($id_proposal)) {?>
+                        <button class="btn btn-primary bd-0" onclick="update();">Update</button>
+                        <?php } else { ?>
                         <button class="btn btn-primary bd-0" onclick="submit();">Simpan</button>
-                        <button class="btn btn-secondary bd-0" onclick="window.location.href='<?=base_url('user/list')?>'">Batalkan</button>
+                        
+                        <?php } ?>
+                        <button class="btn btn-secondary bd-0" onclick="window.location.href='<?=base_url('user/list') ?>'">Batalkan</button>
                     </div>
                     <!-- form-layout-footer -->
                 </div>

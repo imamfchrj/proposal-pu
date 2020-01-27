@@ -8,6 +8,30 @@ function hashpass($pass){
     return strtoupper($hashed_value);
 }
 
+function get_session(){
+    if(isset($_SESSION["login_config"])){
+        if(hashpass($_SESSION["email"].$_SESSION["user_id"]) == $_SESSION["login_config"]) {
+            return;
+        }
+    }
+    redirect('login/logout');
+}
+
+function get_session_ajax(){
+    if(isset($_SESSION["login_config"])){
+        if(hashpass($_SESSION["email"].$_SESSION["user_id"]) == $_SESSION["login_config"]) {
+            return;
+        }
+    }
+    http_response_code(401);
+    $data_output = array(
+        'is_error'=>true,
+    );
+    $data_output["error_messages"] = "Sesi habis. User membutuhkan login kembali!";
+    echo json_encode($data_output);
+    exit;
+}
+
 
 function get_from_sess($val){
     if(isset($_SESSION[$val])) {

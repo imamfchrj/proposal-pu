@@ -8,6 +8,7 @@ class Airminumajax extends All_Controller {
     private $array_key = array("initial", "verifikasi", "indikator", "harga_satuan");
     function __construct() {
 		parent::__construct();
+        get_session_ajax();
         $this->load->model(array("Komponenkegiatan_model", "Provinsi_model", "proposal/Proposal_model", "proposal/Proposalquestioner_model"));
     }
 
@@ -15,10 +16,48 @@ class Airminumajax extends All_Controller {
         return $this->Komponenkegiatan_model->get_data_fix_and_in_id($in_id, $year);
     }
 
-    public function tes($year = false) {
-        $get_id  = array(1, 2, 3);
-        echo json_encode($this->get_data_komponen($get_id, $year));
+    public function approv() {
+        $this->form_validation->set_rules('status', "Status", 'numeric|trim|required|xss_clean');
+        $this->form_validation->set_rules('id', "Proposal", 'numeric|trim|required|xss_clean');
+        if ($this->form_validation->run()) {
+            $id = $this->form_validation->set_value('id');
+            $status = $this->form_validation->set_value('status');
+            $result = $this->Proposal_model->update_value_by_id(array(
+                "status" => $status
+            ), $id);
+            if($result) {
+                if($status == 1) {
+                    $this->json_success("Proposal diterima");
+                }elseif($status == 2) {
+                    $this->json_success("Proposal ditolak");
+                }
+            }
+            return;
+        }
+        $this->json_badrequest(validation_errors());
     }
+
+	public function list()
+	{
+		$input = $this->input->get();
+		if(count($input) == 0) {
+			$this->json_badrequest();
+		}
+		$search = $input["search"]["value"];
+		$offer = $input["start"];
+		$limit = $input["length"];
+		$order = $input["order"][0]["column"];
+		$order_type = $input["order"][0]["dir"];
+		$data = $this->Proposal_model->proposal_list(
+			$search, 
+			$limit,  
+			$offer,
+			$order, 
+			$order_type
+		);
+		$data["draw"] = $input["draw"];
+        $this->json($data);
+	}
     
     private function cek_input() {
         $this->form_validation->set_rules('prov_id', "provinsi", 'numeric|trim|required|xss_clean');
@@ -241,6 +280,12 @@ class Airminumajax extends All_Controller {
         $this->json_success($data_input);
     }
 
+    function get_by_id($id_proposal) {
+		$data_input = $this->Proposalquestioner_model->get_proposal_id_selected($id_proposal);
+        $data_input = $this->initial($data_input);
+        $this->json_success($data_input);
+    }
+
     public function insert() {
         $data_input = $this->cek_input();
         $data_input = $this->calculate($data_input);
@@ -250,13 +295,17 @@ class Airminumajax extends All_Controller {
         $this->db->trans_start();
         // insert proposal
         // get id 
-        $proposal_id = $this->Proposal_model->set(array(
+        $data_proposal = array(
             "nama_proposal" => "Infrastruktur Spam Durolis",
             "key_proposal" => "air_minum",
             "prov_id" => $data_input["prov_id"],
             "user_id" => 0,
             "status" => 0,
-        ));
+        );
+        if(isset($data_input["verifikasi"]["harga_rata_rata_A"]["text"])) {
+            $data_proposal["proposal_status"] = $data_input["verifikasi"]["harga_rata_rata_A"]["text"];
+        }
+        $proposal_id = $this->Proposal_model->set($data_proposal);
         $this->try_insert($data_input, $proposal_id);
         if($this->db->trans_status() === false) {
             $this->db->trans_rollback();
@@ -346,6 +395,7 @@ class Airminumajax extends All_Controller {
     }
 
 
+
     private function calculate($data_input) {
         $data_input = $this->initial($data_input);
 
@@ -396,13 +446,6 @@ class Airminumajax extends All_Controller {
         $data_input = $this->biaya_non_standar_2_5_3($data_input);
         $data_input = $this->biaya_non_standar_2_5_4($data_input);
         $data_input = $this->biaya_non_standar_2_5_5($data_input);
-        
-        
-        
-        
-        
-        
-        
         
         $data_input = $this->set_rounding($data_input);
         

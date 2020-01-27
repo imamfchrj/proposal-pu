@@ -35,44 +35,49 @@
       $(function(){
         'use strict';
         $(document).ready(function() {
-            // function getLinkUser($id) {
-            //   var linkDelete = $id;
-            //   var linkUpdate = ROOT + "user/update/" + $id;
-            //   var html = "";
-            //         html=html + '<div class="col-lg-4 mg-t-20 mg-lg-t-0">';
-            //         html=html + '<div class="btn-group" role="group" aria-label="Basic example">';
-            //         html=html + '<button type="button" class="btn btn-primary" onclick="window.location.href = \''+linkUpdate+'\';"><i class="fa fa-edit"></i></button>';
-            //         html=html + '<button type="button" class="btn btn-danger" onclick="conf_delete( \''+linkDelete+'\')"><i class="fa fa-trash"></i></button>';
-            //         html=html + '</div>';
-            //         html=html + '</div>';
-            //   return html;
-            // }
+            function getLinkUser($id) {
+              var linkDelete = $id;
+              var linkUpdate = ROOT + "airminum/detail/" + $id;
+              // var linkUpdate = "#";
+              var html = "";
+                    html=html + '<div class="col-lg-4 mg-t-20 mg-lg-t-0">';
+                    html=html + '<div class="btn-group" role="group" aria-label="Basic example">';
+                    html=html + '<button type="button" class="btn btn-primary" onclick="window.location.href = \''+linkUpdate+'\';"><i class="fa fa-edit"></i></button>';
+                    // html=html + '<button type="button" class="btn btn-danger" onclick="conf_delete( \''+linkDelete+'\')"><i class="fa fa-trash"></i></button>';
+                    html=html + '</div>';
+                    html=html + '</div>';
+              return html;
+            }
 
             $('#datatable1').DataTable( {
-                // "processing": true,
-                // "serverSide": true,
-                // "ajax": ROOT + "/userajax/list",
-                // "columns": [
-                //     { "data": "id" },
-                //     { "data": "name" },
-                //     { "data": "email" },
-                //     { "data": "hp" },
-                //     { "data": "status",
-                //       "render": function(data, type, row, meta){
+                "processing": true,
+                "serverSide": true,
+                "ajax": ROOT + "airminumajax/list",
+                "columns": [
+                    { "data": "id" },
+                    { "data": "proposal_status",},
+                    { "data": "prov_name" },
+                    { "data": "user_name" },
+                    { "data": "status",
+                      "render": function(data, type, row, meta){
                         
-                //           if(data === 1){
-                //               return "aktif";
-                //           }
+                          if(data == 1){
+                              return "Approved";
+                          }else if(data == 2){
+                            return "Ditolak";
+                          }
 
-                //           return '';
-                //       }
-                //    },
-                //     { "data": "id",
-                //       "render": function(data, type, row, meta){
-                //           return getLinkUser(data);
-                //       }
-                //    },
-                // ]
+                          return 'Butuh approval';
+                      }
+                   },
+                    { "data": "approval_name" },
+                    { "data": "created_at" },
+                    { "data": "id",
+                      "render": function(data, type, row, meta){
+                          return getLinkUser(data);
+                      }
+                   },
+                ]
             } );
         } );
 
