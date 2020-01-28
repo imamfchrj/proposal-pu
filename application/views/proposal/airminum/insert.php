@@ -2771,7 +2771,7 @@ for ($index = 1;$index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71;$index++)
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="biaya_non_standar_2_5_1" type="number" value="0" class="form-control"  placeholder="">
+                                    <input id="biaya_non_standar_2_5_1" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2801,7 +2801,7 @@ for ($index = 1;$index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71;$index++)
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="biaya_non_standar_2_5_2" type="number" value="0" class="form-control"  placeholder="">
+                                    <input id="biaya_non_standar_2_5_2" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2831,7 +2831,7 @@ for ($index = 1;$index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71;$index++)
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="biaya_non_standar_2_5_3" type="number" value="0" class="form-control"  placeholder="">
+                                    <input id="biaya_non_standar_2_5_3" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
@@ -2862,7 +2862,7 @@ for ($index = 1;$index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71;$index++)
                             <td class="p-3">
                                 <div class="input-group">
                                     <span class="input-group-addon">Rp</span>
-                                    <input disabled id="biaya_non_standar_2_5_4" type="number" value="0" class="form-control"  placeholder="">
+                                    <input id="biaya_non_standar_2_5_4" type="number" value="0" class="form-control"  placeholder="">
                                 </div>
 
                             </td>
