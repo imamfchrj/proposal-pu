@@ -121,6 +121,10 @@
             <?php if($id_proposal){ ?>
                 get_by_id("<?=$id_proposal?>");
             <?php }?>
+
+            $( ".form-control" ).mouseleave(function() {
+                kalkulasi();
+            });
         });
         
         function get_by_id($id) {

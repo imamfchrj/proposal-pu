@@ -52,7 +52,7 @@
                                         if($proposal_data->status == 1) {
                                             echo "Sudah di approv";
                                         }elseif($proposal_data->status == 2) {
-                                            echo "Ditolak";
+                                            echo "Direturn";
                                         }else {
                                             echo "Butuh approval";
                                         }
@@ -113,8 +113,10 @@
                             // window.location='<?=base_url('airminum/edit/1')
                         ?>
                         <button class="btn btn-info bd-0" onclick="window.location='<?=base_url('airminum/insert/'.$proposal_data->id)?>';">Detail Selengkapnya</button>
+                        <?php if(is_admin()) {?>
                         <button class="btn btn-success bd-0" onclick="approv(1);">Setujui</button>
-                        <button class="btn btn-warning bd-0" onclick="approv(2);">Tolak</button>
+                        <button class="btn btn-warning bd-0" onclick="approv(2);">Return</button>
+                        <?php } ?>
                     </div>
                     <!-- form-layout-footer -->
                 </div>

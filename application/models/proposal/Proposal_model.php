@@ -63,6 +63,9 @@ class Proposal_model extends CI_Model {
             $this->table. '.user_approv = '.$this->table_approval_alias.'.id',
             'left'
         );
+        if(is_user()) {
+            $this->db->where("user_id", get_user_id());
+        }
 
         if($search) {
             $this->db->or_group_start()
@@ -117,6 +120,10 @@ class Proposal_model extends CI_Model {
             $this->table. '.user_approv = '.$this->table_approval_alias.'.id',
             'left'
         );
+
+        if(is_user()) {
+            $this->db->where("user_id", get_user_id());
+        }
         
         $this->db->where($this->table . ".id", $proposal_id);
         return $this->db->get($this->table)->row();
@@ -144,6 +151,9 @@ class Proposal_model extends CI_Model {
             $this->table. '.user_approv = '.$this->table_approval_alias.'.id',
             'left'
         );
+        if(is_user()) {
+            $this->db->where("user_id", get_user_id());
+        }
 
         if($search) {
             $this->db->or_group_start()
@@ -159,6 +169,9 @@ class Proposal_model extends CI_Model {
 
     function count_all_proposal() {
         $this->db->select("count(id) as count_id");
+        if(is_user()) {
+            $this->db->where("user_id", get_user_id());
+        }
         $data = $this->db->get($this->table)->row();
         return $data->count_id;
     }

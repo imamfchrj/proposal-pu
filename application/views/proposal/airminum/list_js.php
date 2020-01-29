@@ -64,7 +64,7 @@
                           if(data == 1){
                               return "Approved";
                           }else if(data == 2){
-                            return "Ditolak";
+                            return "Direturn";
                           }
 
                           return 'Butuh approval';

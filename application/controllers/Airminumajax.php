@@ -29,7 +29,7 @@ class Airminumajax extends All_Controller {
                 if($status == 1) {
                     $this->json_success("Proposal diterima");
                 }elseif($status == 2) {
-                    $this->json_success("Proposal ditolak");
+                    $this->json_success("Proposal direturn");
                 }
             }
             return;
@@ -289,8 +289,6 @@ class Airminumajax extends All_Controller {
     public function insert() {
         $data_input = $this->cek_input();
         $data_input = $this->calculate($data_input);
-        
-
         // insert the data
         $this->db->trans_start();
         // insert proposal
@@ -299,7 +297,7 @@ class Airminumajax extends All_Controller {
             "nama_proposal" => "Infrastruktur Spam Durolis",
             "key_proposal" => "air_minum",
             "prov_id" => $data_input["prov_id"],
-            "user_id" => 0,
+            "user_id" => get_user_id(),
             "status" => 0,
         );
         if(isset($data_input["verifikasi"]["harga_rata_rata_A"]["text"])) {
@@ -313,6 +311,39 @@ class Airminumajax extends All_Controller {
         }
         $this->db->trans_complete();
         $this->json_success($data_input);
+    }
+
+    public function update($proposal_id) {
+        if(!$proposal_id) {
+            $this->json_badrequest("Mohon dilakukan refresh ulang");
+            return;
+        }
+        $data_input = $this->cek_input();
+        $data_input = $this->calculate($data_input);
+        // insert the data
+        $this->db->trans_start();
+        // insert proposal
+        // get id 
+        $data_proposal = array(
+            "nama_proposal" => "Infrastruktur Spam Durolis",
+            "key_proposal" => "air_minum",
+            "prov_id" => $data_input["prov_id"],
+            "user_id" => get_user_id(),
+            "status" => 0,
+        );
+        if(isset($data_input["verifikasi"]["harga_rata_rata_A"]["text"])) {
+            $data_proposal["proposal_status"] = $data_input["verifikasi"]["harga_rata_rata_A"]["text"];
+        }
+        $this->Proposal_model->update_value_by_id($data_proposal, $proposal_id);
+        $this->Proposalquestioner_model->delete_by_proposal_id($proposal_id);
+        $this->try_insert($data_input, $proposal_id);
+        if($this->db->trans_status() === false) {
+            $this->db->trans_rollback();
+            return $this->json_internal_error("Hubungi admin");
+        }
+        $this->db->trans_complete();
+        $this->json_success($data_input);
+
     }
 
     private function try_insert($data_input, $proposal_id) {
