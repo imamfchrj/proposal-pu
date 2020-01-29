@@ -31,6 +31,10 @@ class Proposalquestioner_model extends CI_Model {
         return $this->db->delete($this->table, array('id' => $id));
     }
 
+    function delete_by_proposal_id($id) {
+        return $this->db->delete($this->table, array('proposal_id' => $id));
+    }
+
     function get_proposal_id_selected($proposal_id) {
         $this->db->select("*");
         $this->db->where("proposal_id",$proposal_id);
