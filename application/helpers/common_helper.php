@@ -26,6 +26,10 @@ function is_type_user($type_id) {
     return false;
 }
 
+function get_user_id() {
+    return $_SESSION["user_id"];
+}
+
 function get_admin(){
     if(is_admin()){
         return;

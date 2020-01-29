@@ -29,7 +29,7 @@ class Airminumajax extends All_Controller {
                 if($status == 1) {
                     $this->json_success("Proposal diterima");
                 }elseif($status == 2) {
-                    $this->json_success("Proposal ditolak");
+                    $this->json_success("Proposal direturn");
                 }
             }
             return;
@@ -299,7 +299,7 @@ class Airminumajax extends All_Controller {
             "nama_proposal" => "Infrastruktur Spam Durolis",
             "key_proposal" => "air_minum",
             "prov_id" => $data_input["prov_id"],
-            "user_id" => 0,
+            "user_id" => get_user_id(),
             "status" => 0,
         );
         if(isset($data_input["verifikasi"]["harga_rata_rata_A"]["text"])) {
