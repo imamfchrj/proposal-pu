@@ -1,4 +1,4 @@
-*/config/development
+    */config/development
 */logs/log-*.php
 !*/logs/index.html
 */cache/*
@@ -21,3 +21,7 @@ application/logs/*
 
 # docker env
 docker-config/.env
+application/config/constants.php
+*.sql
+db/myDb (new 2020-01-18).sql
+*.DS_Store
