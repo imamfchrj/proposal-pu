@@ -442,8 +442,11 @@ class Airminumajax extends All_Controller {
         $data_input = $this->pelayanan_1_2_2I($data_input);
         $data_input = $this->pelayanan_1_2_3A($data_input);
         $data_input = $this->pelayanan_1_2_3B($data_input);
+        $data_input = $this->pelayanan_1_2_3B_2($data_input); // add imam
         $data_input = $this->pelayanan_1_2_3C($data_input);
+        $data_input = $this->pelayanan_1_2_3C_2($data_input); // add imam
         $data_input = $this->pelayanan_1_2_3D($data_input);
+        $data_input = $this->pelayanan_1_2_3D_2($data_input); // add imam
         $data_input = $this->unit_air_baku_1_3_1($data_input);
         $data_input = $this->unit_air_baku_1_3_3($data_input);
         $data_input = $this->unit_air_baku_1_3_6($data_input);
@@ -507,11 +510,18 @@ class Airminumajax extends All_Controller {
 
     private function set_rounding($data_input) {
         $data_input["jenis_spam_1_1_4B"] = round_custom( $data_input["jenis_spam_1_1_4B"],2);
+        $data_input["pelayanan_1_2_2A"] = round_custom( $data_input["pelayanan_1_2_2A"],2);
         $data_input["pelayanan_1_2_2D"] = round_custom( $data_input["pelayanan_1_2_2D"],2);
+        $data_input["pelayanan_1_2_2F"] = round_custom( $data_input["pelayanan_1_2_2F"],2);
+        $data_input["pelayanan_1_2_2G"] = round_custom( $data_input["pelayanan_1_2_2G"],2);
+        $data_input["pelayanan_1_2_2I"] = round_custom( $data_input["pelayanan_1_2_2I"],2);
         $data_input["pelayanan_1_2_3A"] = round($data_input["pelayanan_1_2_3A"], 2);
         $data_input["pelayanan_1_2_3B"] = round($data_input["pelayanan_1_2_3B"], 2);
+        $data_input["pelayanan_1_2_3B_2"] = round($data_input["pelayanan_1_2_3B_2"], 2); // add imam
         $data_input["pelayanan_1_2_3C"] = round($data_input["pelayanan_1_2_3C"], 2);
+        $data_input["pelayanan_1_2_3C_2"] = round($data_input["pelayanan_1_2_3C_2"], 2); // add imam
         $data_input["pelayanan_1_2_3D"] = round($data_input["pelayanan_1_2_3D"], 2);
+        $data_input["pelayanan_1_2_3D_2"] = round($data_input["pelayanan_1_2_3D_2"], 2); // add imam
         $data_input["unit_air_baku_1_3_8"] = round_custom($data_input["unit_air_baku_1_3_8"], 2);
         $data_input["unit_air_baku_1_3_9"] = round_custom($data_input["unit_air_baku_1_3_9"], 2);
         $data_input["unit_air_baku_1_3_10"] = round_custom($data_input["unit_air_baku_1_3_10"], 2);
@@ -521,6 +531,7 @@ class Airminumajax extends All_Controller {
         $data_input["unit_distribusi_1_5_4"] = round($data_input["unit_distribusi_1_5_4"],2);
         $data_input["unit_distribusi_1_5_5"] = round($data_input["unit_distribusi_1_5_5"],2);
         $data_input["unit_distribusi_1_5_8"] = round($data_input["unit_distribusi_1_5_8"],2);
+        $data_input["unit_pelayanan_1_6_2"] = round($data_input["unit_pelayanan_1_6_2"],2);
         $data_input["unit_pelayanan_1_6_3"] = round($data_input["unit_pelayanan_1_6_3"],2);
         return $data_input;
     }
@@ -587,7 +598,13 @@ class Airminumajax extends All_Controller {
     }
 
     private function pelayanan_1_2_3B($data_input) {
-        $data_input["pelayanan_1_2_3B"] =  1.2 * $data_input["pelayanan_1_2_3A"];
+        $data_input["pelayanan_1_2_3B"] =  1.1 * $data_input["pelayanan_1_2_3A"]; // mod imam 1.2 -> 1.1
+        return $data_input;
+    }
+
+    // add imam
+    private function pelayanan_1_2_3B_2($data_input) {
+        $data_input["pelayanan_1_2_3B_2"] =  1.5 * $data_input["pelayanan_1_2_3A"];
         return $data_input;
     }
 
@@ -596,15 +613,29 @@ class Airminumajax extends All_Controller {
         return $data_input;
     }
 
+    // add imam
+    private function pelayanan_1_2_3C_2($data_input) {
+        $data_input["pelayanan_1_2_3C_2"] =  $data_input["pelayanan_1_2_3B_2"] - $data_input["jenis_spam_1_1_3"];
+        return $data_input;
+    }
+
     private function pelayanan_1_2_3D($data_input) {
-        $data_input["pelayanan_1_2_3D"] =  $data_input["pelayanan_1_2_3A"] * 1.75;
+        $data_input["pelayanan_1_2_3D"] =  $data_input["pelayanan_1_2_3A"] * 1.5; // mod imam 1.75 -> 1.5
+        return $data_input;
+    }
+
+    // add imam
+    private function pelayanan_1_2_3D_2($data_input) {
+        $data_input["pelayanan_1_2_3D_2"] =  $data_input["pelayanan_1_2_3A"] * 2;
         return $data_input;
     }
 
     private function unit_air_baku_1_3_1($data_input) {
+        $data_input["indikator"]["unit_air_baku_1_3_1"]["text"] = round_custom($data_input["pelayanan_1_2_3C"] * to_percent(105),2)."  -  ".round_custom($data_input["pelayanan_1_2_3C_2"] * to_percent(105),2); // add imam
+        $data_input["indikator"]["unit_air_baku_1_3_1"]["option"] = $this->default; // add imam
         $text="Justifikasi";
         $option=$this->danger;
-        if(($data_input["unit_air_baku_1_3_1"] >= ($data_input["pelayanan_1_2_3C"]* to_percent(105))) && ($data_input["unit_air_baku_1_3_1"] <= ($data_input["pelayanan_1_2_3C"]* to_percent(110)))) {
+        if(($data_input["unit_air_baku_1_3_1"] >= ($data_input["pelayanan_1_2_3C"]* to_percent(105))) && ($data_input["unit_air_baku_1_3_1"] <= ($data_input["pelayanan_1_2_3C_2"]* to_percent(105)))) { // mod by imam
             $text="Layak";
             $option=$this->success;
         }
@@ -815,7 +846,7 @@ class Airminumajax extends All_Controller {
         if($data_input["unit_produksi_2_2_3B"] == 0) {
             return $data_input;
         }
-        $data_input["harga_satuan"]["unit_produksi_2_2_3"]["text"] = $data_input["unit_produksi_2_2_3A"] / 1000 / $data_input["unit_produksi_2_2_3B"];
+        $data_input["harga_satuan"]["unit_produksi_2_2_3"]["text"] = round_custom( $data_input["unit_produksi_2_2_3A"] / 1000 / $data_input["unit_produksi_2_2_3B"],2);
         $data_input["harga_satuan"]["unit_produksi_2_2_3"]["option"] = $this->default;
         $data_input["indikator"]["unit_produksi_2_2_3"]["text"] = $data_input["initial"]['scada']['harga_satuan'] + $data_input["initial"]['plc']['harga_satuan'];
         $data_input["indikator"]["unit_produksi_2_2_3"]["option"] = $this->default;
@@ -858,9 +889,9 @@ class Airminumajax extends All_Controller {
         if($data_input[$key_input."B"] == 0) {
             return $data_input;
         }
-        $data_input["harga_satuan"][$key_input]["text"] = $data_input[$key_input."A"] / 1000 / $data_input[$key_input."B"];
+        $data_input["harga_satuan"][$key_input]["text"] = round_custom($data_input[$key_input."A"] / 1000 / $data_input[$key_input."B"],2);
         $data_input["harga_satuan"][$key_input]["option"] = $this->default;
-        $data_input["indikator"][$key_input]["text"] = $data_input["initial"][$fix_key]['harga_satuan'];
+        $data_input["indikator"][$key_input]["text"] = round_custom($data_input["initial"][$fix_key]['harga_satuan'],2);
         $data_input["indikator"][$key_input]["option"] = $this->default;
          $text="Justifikasi";
         $option=$this->danger;
@@ -882,9 +913,9 @@ class Airminumajax extends All_Controller {
         if($data_input[$key_input."B"] == 0) {
             return $data_input;
         }
-        $data_input["harga_satuan"][$key_input]["text"] = $data_input[$key_input."A"] / 1000 / $data_input[$key_input."B"];
+        $data_input["harga_satuan"][$key_input]["text"] = round_custom($data_input[$key_input."A"] / 1000 / $data_input[$key_input."B"],2);
         $data_input["harga_satuan"][$key_input]["option"] = $this->default;
-        $data_input["indikator"][$key_input]["text"] = $data_input["initial"][$key_id]['harga_satuan'];
+        $data_input["indikator"][$key_input]["text"] = round_custom($data_input["initial"][$key_id]['harga_satuan'],2);
         $data_input["indikator"][$key_input]["option"] = $this->default;
          $text="Justifikasi";
         $option=$this->danger;
@@ -907,10 +938,10 @@ class Airminumajax extends All_Controller {
                 continue;
             }
             $id = $data_input["unit_distribusi_2_3_7". $index];
-            $data_input["harga_satuan"]["unit_distribusi_2_3_7" . $index]["text"] = $data_input["unit_distribusi_2_3_7". $index . "A"] / 1000 / $data_input["unit_distribusi_2_3_7". $index . "B"];
+            $data_input["harga_satuan"]["unit_distribusi_2_3_7" . $index]["text"] = round_custom($data_input["unit_distribusi_2_3_7". $index . "A"] / 1000 / $data_input["unit_distribusi_2_3_7". $index . "B"],2);
             $data_input["harga_satuan"]["unit_distribusi_2_3_7" . $index]["option"] = $this->default;
             
-            $data_input["indikator"]["unit_distribusi_2_3_7" . $index]["text"] = $data_input["initial"][$id]['harga_satuan'];
+            $data_input["indikator"]["unit_distribusi_2_3_7" . $index]["text"] = round_custom($data_input["initial"][$id]['harga_satuan'],2);
             $data_input["indikator"]["unit_distribusi_2_3_7" . $index]["option"] = $this->default;
 
             $text="Justifikasi";
@@ -952,10 +983,10 @@ class Airminumajax extends All_Controller {
         if(!$data_input["total_investasi"]) {
             return $data_input;
         }
-        $data_input["harga_satuan"][$key_input]["text"] = $data_input[$key_input] / $data_input["total_investasi"]*100;
+        $data_input["harga_satuan"][$key_input]["text"] = round_custom($data_input[$key_input] / $data_input["total_investasi"]*100,2);
         $data_input["harga_satuan"][$key_input]["option"] = $this->default;
 
-        $data_input["indikator"][$key_input]["text"] = $indikator_percent;
+        $data_input["indikator"][$key_input]["text"] = round_custom($indikator_percent,2);
         $data_input["indikator"][$key_input]["option"] = $this->default;
         
         $text="Justifikasi";
@@ -1013,7 +1044,7 @@ class Airminumajax extends All_Controller {
         }
         $data_input["total_investasi"] = $sum;
         if($data_input["unit_produksi_1_4_2"]) {
-            $data_input["harga_rata_rata_A"] = $sum / $data_input["unit_produksi_1_4_2"];
+            $data_input["harga_rata_rata_A"] = round_custom($sum / $data_input["unit_produksi_1_4_2"],2);
 
             $text="Justifikasi";
             $option=$this->danger;
@@ -1025,7 +1056,7 @@ class Airminumajax extends All_Controller {
             $data_input["verifikasi"]["harga_rata_rata_A"]["option"] = $option;
         }
         if($data_input["pelayanan_1_2_2A"]) {
-            $data_input["harga_rata_rata_B"] = $sum / $data_input["pelayanan_1_2_2A"];
+            $data_input["harga_rata_rata_B"] = round_custom($sum / $data_input["pelayanan_1_2_2A"],2);
             $text="Justifikasi";
             $option=$this->danger;
             if($data_input["harga_rata_rata_B"] <= 10000) {
@@ -1037,7 +1068,7 @@ class Airminumajax extends All_Controller {
             $data_input["indikator"]["harga_rata_rata_B"]["text"] = 8390;
             $data_input["indikator"]["harga_rata_rata_B"]["option"] = $this->default;
             if($data_input["pelayanan_1_2_2A"] > 0){
-                $data_input["harga_satuan"]["harga_rata_rata_B"]["text"] = $sum / 1000 / $data_input["pelayanan_1_2_2A"];
+                $data_input["harga_satuan"]["harga_rata_rata_B"]["text"] = round_custom($sum / 1000 / $data_input["pelayanan_1_2_2A"],2);
                 $data_input["harga_satuan"]["harga_rata_rata_B"]["option"] = $this->default;
             }
         }
