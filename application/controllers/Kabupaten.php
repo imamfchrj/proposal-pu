@@ -12,6 +12,7 @@ class Kabupaten extends All_Controller {
 	public function list()
 	{
 		$data["script"] = "manajemen_wilayah/kabupaten/list_js";
+        $data['menu']="ikk";
 		$this->view("manajemen_wilayah/kabupaten/list", $data);
 	}
 
@@ -20,6 +21,7 @@ class Kabupaten extends All_Controller {
         $data["script"] = "manajemen_wilayah/kabupaten/insert_js";
         $data["option"] = $this->option_insert();
         $data["prov_all"] = $this->Provinsi_model->get_all();
+        $data['menu']="ikk";
         $this->view("manajemen_wilayah/kabupaten/insert", $data);
     }
 
@@ -36,6 +38,7 @@ class Kabupaten extends All_Controller {
         $data["script"] = "manajemen_wilayah/kabupaten/insert_js";
         $data["option"] = $this->option_update($id);
         $data["prov_all"] = $this->Provinsi_model->get_all();
+        $data['menu']="ikk";
         $this->view("manajemen_wilayah/kabupaten/insert", $data);
     }
 

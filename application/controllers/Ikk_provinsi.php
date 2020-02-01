@@ -12,6 +12,7 @@ class Ikk_provinsi extends All_Controller {
 	public function list()
 	{
 		$data["script"] = "manajemen_wilayah/ikk_provinsi/list_js";
+        $data['menu']="ikk";
 		$this->view("manajemen_wilayah/ikk_provinsi/list", $data);
 	}
 
@@ -20,6 +21,7 @@ class Ikk_provinsi extends All_Controller {
         $data["script"] = "manajemen_wilayah/ikk_provinsi/insert_js";
         $data["option"] = $this->option_insert();
         $data["prov_all"] = $this->Provinsi_model->get_all();
+        $data['menu']="ikk";
         $this->view("manajemen_wilayah/ikk_provinsi/insert", $data);
     }
 
@@ -36,6 +38,7 @@ class Ikk_provinsi extends All_Controller {
         $data["script"] = "manajemen_wilayah/ikk_provinsi/insert_js";
         $data["option"] = $this->option_update($id);
         $data["prov_all"] = $this->Provinsi_model->get_all();
+        $data['menu']="ikk";
         $this->view("manajemen_wilayah/ikk_provinsi/insert", $data);
     }
 

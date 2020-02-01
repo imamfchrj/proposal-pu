@@ -11,6 +11,7 @@ class Airminum extends All_Controller {
 	public function list()
 	{
 		$data["script"] = "proposal/airminum/list_js";
+        $data['menu']="pengajuan";
 		$this->view("proposal/airminum/list", $data);
 	}
 
@@ -30,6 +31,7 @@ class Airminum extends All_Controller {
 		$data["script"] = "proposal/airminum/detail_js";
 		$data["proposal_data"] = $proposal;
 		$data["selected_data"] = $selected;
+        $data['menu']="pengajuan";
 		$this->view("proposal/airminum/detail", $data);
 	}
 
@@ -38,6 +40,7 @@ class Airminum extends All_Controller {
 		$data["script"] = "proposal/airminum/insert_js";
 		$data["option"] = $this->option_insert();
 		$data["id_proposal"] = $id;
+        $data['menu']="pengajuan";
 		$this->view("proposal/airminum/insert", $data);
     }
 

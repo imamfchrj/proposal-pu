@@ -11,6 +11,7 @@ class Ikk_kabupaten extends All_Controller {
 	public function list()
 	{
 		$data["script"] = "manajemen_wilayah/ikk_kabupaten/list_js";
+        $data['menu']="ikk";
 		$this->view("manajemen_wilayah/ikk_kabupaten/list", $data);
 	}
 
@@ -20,6 +21,7 @@ class Ikk_kabupaten extends All_Controller {
         $data["option"] = $this->option_insert();
         $data["prov_all"] = $this->Provinsi_model->get_all();
         $data["kab_all"] = $this->Kabupaten_model->get_all();
+        $data['menu']="ikk";
         $this->view("manajemen_wilayah/ikk_kabupaten/insert", $data);
     }
 

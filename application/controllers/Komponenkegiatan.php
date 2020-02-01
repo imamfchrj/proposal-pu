@@ -12,6 +12,7 @@ class Komponenkegiatan extends All_Controller {
 	public function list()
 	{
 		$data["script"] = "komponenkegiatan/list_js";
+        $data['menu']="pengajuan";
 		$this->view("komponenkegiatan/list",$data);
 	}
 
@@ -19,6 +20,7 @@ class Komponenkegiatan extends All_Controller {
     {
         $data["script"] = "komponenkegiatan/insert_js";
         $data["option"] = $this->option_insert();
+        $data['menu']="pengajuan";
         $this->view("komponenkegiatan/insert", $data);
     }
 
@@ -34,6 +36,7 @@ class Komponenkegiatan extends All_Controller {
     {
         $data["script"] = "komponenkegiatan/insert_js";
         $data["option"] = $this->option_update($id);
+        $data['menu']="pengajuan";
         $this->view("komponenkegiatan/insert", $data);
     }
 
