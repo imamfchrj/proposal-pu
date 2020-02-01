@@ -692,7 +692,7 @@ class Airminumajax extends All_Controller {
         if(!isset($data_input["unit_air_baku_1_3_7"])) {
             return $data_input;
         }
-        if($data_input["unit_air_baku_1_3_7"] <= 0) {
+        if($data_input["unit_air_baku_1_3_7"] == 0) {
             return $data_input;
         }
         if($data_input["unit_air_baku_1_3_5"] == 0) {
