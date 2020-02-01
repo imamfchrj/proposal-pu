@@ -20,13 +20,14 @@
             $("#container_jenis_spam_1").hide();
         }
         function clear_jenis_spam() {
-            $("#jenis_spam_1_1_1").val("0");
-            $("#jenis_spam_1_1_2").val("0");
-            $("#jenis_spam_1_1_3").val("0");
-            $("#jenis_spam_1_1_4A").val("0");
-            $("#jenis_spam_1_1_4B").val("0");
-            $("#jenis_spam_1_1_5").val("0");
-            $("#jenis_spam_1_1_6").val("0");
+            $set = "";
+            $("#jenis_spam_1_1_1").val($set);
+            $("#jenis_spam_1_1_2").val($set);
+            $("#jenis_spam_1_1_3").val($set);
+            $("#jenis_spam_1_1_4A").val($set);
+            $("#jenis_spam_1_1_4B").val($set);
+            $("#jenis_spam_1_1_5").val($set);
+            $("#jenis_spam_1_1_6").val($set);
         }
 
         function kalkulasi() {
@@ -290,15 +291,16 @@
                 if(key == "indikator") {
                     set_indikator(value);
                     continue;
+                } 
+                if(value != 0) {
+                    var target = $( "#"+key );
+                    if ( target.is( "select" ) ) {
+                        $("#"+key+' option[value="'+value+'"]').attr('selected','selected');
+                    } else {
+                        $("#"+key).val(value);
+                    }
                 }
-                $("#"+key).val(value);
 
-                var target = $( "#"+key );
-                if ( target.is( "select" ) ) {
-                    $("#"+key+' option[value="'+value+'"]').attr('selected','selected');
-                } else {
-                    $("#"+key).val(value);
-                }
             }
             // $("#prov_id").val($data["prov_id"]);
             // $("#jenis_spam").val($data["jenis_spam"]);
