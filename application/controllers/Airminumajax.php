@@ -688,6 +688,13 @@ class Airminumajax extends All_Controller {
     }
 
     private function unit_air_baku_1_3_9($data_input) {
+        $data_input["unit_air_baku_1_3_9"] = 0;
+        if(!isset($data_input["unit_air_baku_1_3_7"])) {
+            return $data_input;
+        }
+        if($data_input["unit_air_baku_1_3_7"] <= 0) {
+            return $data_input;
+        }
         if($data_input["unit_air_baku_1_3_5"] == 0) {
             $data_input["unit_air_baku_1_3_9"] = 0;
             return $data_input;
@@ -710,7 +717,7 @@ class Airminumajax extends All_Controller {
     }
 
     private function unit_air_baku_1_3_10($data_input) {
-        $data_input["unit_air_baku_1_3_10"] =  $data_input["unit_air_baku_1_3_6"]+ $data_input["unit_air_baku_1_3_9"];
+        $data_input["unit_air_baku_1_3_10"] =  $data_input["unit_air_baku_1_3_6"] + $data_input["unit_air_baku_1_3_9"];
         $text="Pompa";
         $option=$this->success;
         if($data_input["unit_air_baku_1_3_10"] < 0) {
