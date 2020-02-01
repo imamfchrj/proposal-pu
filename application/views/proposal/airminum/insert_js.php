@@ -12,7 +12,7 @@
 
         function jenis_spam() {
             $val_jenis_spam = $("#jenis_spam").val();
-            if($val_jenis_spam == "Eksisting") {
+            if(($val_jenis_spam == "perluasan") || ($val_jenis_spam == "peningkatan")) {
                 $("#container_jenis_spam_1").show();
                 return;
             }
@@ -418,6 +418,15 @@
         function set_verifikasi($data) {
             for (const [key, value] of Object.entries($data)) {
                 text_default(key, value['text'], value['option'], "verifikasi");
+                // add imam
+                if(key == "unit_air_baku_1_3_10_verifikasi") {
+                    hidden_1_3_10(value['text']);
+                }
+            }
+        }
+        function hidden_1_3_10(value) {
+            if (value == "Gravitasi") {
+                $(".hidden_1_3_10").hide();
             }
         }
         function set_harga_satuan($data) {

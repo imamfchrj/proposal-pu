@@ -458,6 +458,7 @@ class Airminumajax extends All_Controller {
         $data_input = $this->unit_produksi_1_4_1($data_input);
         $data_input = $this->unit_produksi_1_4_2($data_input);
         $data_input = $this->unit_distribusi_1_5_1($data_input);
+        $data_input = $this->unit_distribusi_1_5_2A($data_input);
         $data_input = $this->unit_distribusi_1_5_4($data_input);
         $data_input = $this->unit_distribusi_1_5_5($data_input);
         $data_input = $this->unit_distribusi_1_5_6($data_input);
@@ -528,6 +529,7 @@ class Airminumajax extends All_Controller {
         $data_input["unit_air_baku_1_3_12"] = round_custom($data_input["unit_air_baku_1_3_12"], 2);
         $data_input["unit_air_baku_1_3_13"] = round_custom($data_input["unit_air_baku_1_3_13"], 2);
         $data_input["unit_distribusi_1_5_1"] = round($data_input["unit_distribusi_1_5_1"],2);
+        $data_input["unit_distribusi_1_5_2A"] = round_custom($data_input["unit_distribusi_1_5_2A"],2);
         $data_input["unit_distribusi_1_5_4"] = round($data_input["unit_distribusi_1_5_4"],2);
         $data_input["unit_distribusi_1_5_5"] = round($data_input["unit_distribusi_1_5_5"],2);
         $data_input["unit_distribusi_1_5_8"] = round($data_input["unit_distribusi_1_5_8"],2);
@@ -658,10 +660,10 @@ class Airminumajax extends All_Controller {
 
     private function unit_air_baku_1_3_6($data_input) {
         $data_input["unit_air_baku_1_3_6"] = $data_input["unit_air_baku_1_3_4"] - $data_input["unit_produksi_1_4_3"];
-        $data_input["unit_air_baku_1_3_6"] = abs($data_input["unit_air_baku_1_3_6"]);
+//        $data_input["unit_air_baku_1_3_6"] = abs($data_input["unit_air_baku_1_3_6"]);
         $text="Pompa";
         $option=$this->success;
-        if($data_input["unit_air_baku_1_3_6"] > 1) {
+        if($data_input["unit_air_baku_1_3_6"] > 0) {
             $text="Gravitasi";
             $option=$this->success;
         }
@@ -717,11 +719,11 @@ class Airminumajax extends All_Controller {
     }
 
     private function unit_air_baku_1_3_10($data_input) {
-        $data_input["unit_air_baku_1_3_10"] =  $data_input["unit_air_baku_1_3_6"] + $data_input["unit_air_baku_1_3_9"];
+        $data_input["unit_air_baku_1_3_10"] =  $data_input["unit_air_baku_1_3_6"] - $data_input["unit_air_baku_1_3_9"];
         $text="Pompa";
         $option=$this->success;
-        if($data_input["unit_air_baku_1_3_10"] < 0) {
-            $text="Grativikasi";
+        if($data_input["unit_air_baku_1_3_10"] > 0) {
+            $text="Gravitasi";
             $option=$this->success;
         }
         $data_input["verifikasi"]["unit_air_baku_1_3_10"]["text"] = $text;
@@ -740,10 +742,12 @@ class Airminumajax extends All_Controller {
     }
 
     private function unit_produksi_1_4_1($data_input) {
+        $data_input["indikator"]["unit_produksi_1_4_1"]["text"] = round_custom($data_input["pelayanan_1_2_3C"],2)."  -  ".round_custom($data_input["pelayanan_1_2_3C_2"],2); // add imam
+        $data_input["indikator"]["unit_produksi_1_4_1"]["option"] = $this->default; // add imam
         $data_input["unit_produksi_1_4_1"] = ($data_input["unit_produksi_1_4_1"]);
         $text="Justifikasi";
         $option=$this->danger;
-        if($data_input["unit_produksi_1_4_1"] >= ceil($data_input["pelayanan_1_2_3C"]) ) {
+        if(($data_input["unit_produksi_1_4_1"] >= ($data_input["pelayanan_1_2_3C"])) && ($data_input["unit_produksi_1_4_1"] <= ($data_input["pelayanan_1_2_3C_2"]))) { // mod imam
             $text="Layak";
             $option=$this->success;
         }
@@ -753,10 +757,12 @@ class Airminumajax extends All_Controller {
     }
 
     private function unit_produksi_1_4_2($data_input) {
+        $data_input["indikator"]["unit_produksi_1_4_2"]["text"] = round_custom($data_input["pelayanan_1_2_3C"],2)."  -  ".round_custom($data_input["pelayanan_1_2_3C_2"],2); // add imam
+        $data_input["indikator"]["unit_produksi_1_4_2"]["option"] = $this->default; // add imam
         $data_input["unit_produksi_1_4_2"] = ($data_input["unit_produksi_1_4_2"]);
         $text="Justifikasi";
         $option=$this->danger;
-        if($data_input["unit_produksi_1_4_2"] == ceil($data_input["unit_produksi_1_4_1"]) ) {
+        if(($data_input["unit_produksi_1_4_2"] >= ($data_input["pelayanan_1_2_3C"])) && ($data_input["unit_produksi_1_4_2"] <= ($data_input["pelayanan_1_2_3C_2"]))) { // mod imam
             $text="Layak";
             $option=$this->success;
         }
@@ -774,6 +780,19 @@ class Airminumajax extends All_Controller {
         }
         $data_input["verifikasi"]["unit_distribusi_1_5_1"]["text"] = $text;
         $data_input["verifikasi"]["unit_distribusi_1_5_1"]["option"] = $option;
+        return $data_input;
+    }
+
+    private function unit_distribusi_1_5_2A($data_input) {
+        $data_input["unit_distribusi_1_5_2A"] = $data_input["unit_distribusi_1_5_2"] - $data_input["unit_pelayanan_1_6_1"] ;
+        $text="Pompa";
+        $option=$this->danger;
+        if($data_input["unit_distribusi_1_5_2A"] >= 0 ) {
+            $text="Gravitasi";
+            $option=$this->success;
+        }
+        $data_input["verifikasi"]["unit_distribusi_1_5_2A"]["text"] = $text;
+        $data_input["verifikasi"]["unit_distribusi_1_5_2A"]["option"] = $option;
         return $data_input;
     }
 
@@ -805,7 +824,14 @@ class Airminumajax extends All_Controller {
             $data_input["unit_distribusi_1_5_5"] = 0;
             return $data_input;
         }
-        $data_input["unit_distribusi_1_5_5"] = ((pow((($data_input["unit_produksi_1_4_2"]/1000) / (0.2785*100*(pow(($data_input["unit_distribusi_1_5_3"]/100),2.63)))),1.85))*$data_input["unit_distribusi_1_5_1"])*1.05;
+        $data_input["unit_distribusi_1_5_5"] =
+            ((pow((
+                    ($data_input["unit_produksi_1_4_2"]/1000)
+                    /
+                    (0.2785*100*(
+                        pow(($data_input["unit_distribusi_1_5_3"]/1000),2.63)))
+                ),1.85))*$data_input["unit_distribusi_1_5_1"])*1.05;
+//            ((pow((($data_input["unit_produksi_1_4_2"]/1000) / (0.2785*100*(pow(($data_input["unit_distribusi_1_5_3"]/100),2.63)))),1.85))*$data_input["unit_distribusi_1_5_1"])*1.05;
          
         $text="Justifikasi";
         $option=$this->danger;
