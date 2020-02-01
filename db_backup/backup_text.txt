@@ -1,0 +1,72 @@
+    $jenis_spam_1_1_1 = "Kapasitas terpasang";
+    $jenis_spam_1_1_2 = "Kapasitas produksi";
+    $jenis_spam_1_1_3 = "Idle capacity";
+    $jenis_spam_1_1_4A = "NRW";
+    $jenis_spam_1_1_5 = "Sambungan Eksisting";
+    $jenis_spam_1_1_6 = "Penduduk terlayani";
+
+    $unit_air_baku_1_3_1 = "Debit Air Baku (Qab = 1,1 x Qmax)";
+    $unit_air_baku_1_3_2 = "Jenis Sumber";
+    $unit_air_baku_1_3_3 = "Kekeruhan Maximum";
+    $unit_air_baku_1_3_4 = "Elevasi Sumber Air";
+    $unit_air_baku_1_3_5 = "Panjang pipa Transmisi";
+    $unit_air_baku_1_3_6 = "Beda Tinggi (▲H)";
+    $unit_air_baku_1_3_7 = "Diameter (D)";
+    $unit_air_baku_1_3_8 = "Kecepatan (V) :";
+    $unit_air_baku_1_3_9 = "Kehilangan Tekanan (hf)";
+    $unit_air_baku_1_3_10 = "Total Head (H=▲H+hf)";
+    $unit_air_baku_1_3_11 = "Sisa tekanan (RH)";
+    $unit_air_baku_1_3_12 = "Head Pompa (Hp=H+RH)";
+    $unit_air_baku_1_3_13 = "Daya Pompa (Pp)";
+
+    $unit_produksi_1_4_1 = "Prasedimentasi";
+    $unit_produksi_1_4_2 = "Instalasi Pengolahan Air (IPA)";
+    $unit_produksi_1_4_3 = "Elevasi IPA";
+    $unit_produksi_1_4_4 = "SCADA & PLC";
+
+    $unit_distribusi_1_5_1 = "Kapasitas Reservoir";
+    $unit_distribusi_1_5_2 = "Elevasi Reservoir";
+    $unit_distribusi_1_5_3 = "Diameter distribusi maksimum (D)";
+    $unit_distribusi_1_5_4 = "Kecepatan (V) :";
+    $unit_distribusi_1_5_5 = "Kehilangan Tekanan (hf)";
+    $unit_distribusi_1_5_6 = "Pompa Distribusi Centrifugal";
+    $unit_distribusi_1_5_7 = "Head Pompa";
+    $unit_distribusi_1_5_8 = "Daya Pompa (Pp)";
+
+    $unit_pelayanan_1_6_1 = "Elevasi Daerah pelayanan";
+    $unit_pelayanan_1_6_2 = "Jumlah Sambungan Pelanggan";
+    $unit_pelayanan_1_6_3 = "Pipa Retikulasi Ø 50 mm";
+
+    $unit_air_baku_2_1_1A = "Bangunan Intake";
+    $unit_air_baku_2_1_2A = "Pompa Intake";
+    $unit_air_baku_2_1_3A = "Pipa Transmisi";
+    $unit_air_baku_2_1_4A = "Rumah Pompa";
+
+    $unit_produksi_2_2_1A = "Prasedimentasi";
+    $unit_produksi_2_2_2A = "Instalasi Pengolahan Air (IPA)";
+    $unit_produksi_2_2_3A = "SCADA & PLC";
+    $unit_produksi_2_2_4A = "Rumah Pompa ……….. m2";
+    $unit_produksi_2_2_5A = "Ruang Dosing & Gudang ………. m2";
+    $unit_produksi_2_2_6A = "Kantor …….. m2";
+    $unit_produksi_2_2_7A = "Rumah Penjaga ……….. m2";
+
+    $unit_distribusi_2_3_1 = "Reservoir";
+    $unit_distribusi_2_3_2 = "Pompa Centrifugal";
+    $unit_distribusi_2_3_3 = "Rumah Pompa";
+    $unit_distribusi_2_3_4 = "Rumah Genset";
+    $unit_distribusi_2_3_5 = "Bangunan Workshop";
+    $unit_distribusi_2_3_6 = "Rumah Jaga";
+
+    $unit_pelayanan_2_4_1A = "Pipa Retikulasi HDPE Ø 75 mm -…..m";
+    $unit_pelayanan_2_4_2A = "Pipa Retikulasi HDPE Ø 50 mm - ……m";
+    $unit_pelayanan_2_4_3A = "Sambungan Rumah - …. unit";
+
+    $biaya_non_standar_2_5_1 = "Pekerjaan Interkoneksi";
+    $biaya_non_standar_2_5_2 = "Pekerjaan Mekanikal & Elektrikal";
+    $biaya_non_standar_2_5_3 = "Pekerjaan Landscap";
+    $biaya_non_standar_2_5_4 = "Pekerjaan Pemulihan site/galian";
+    $biaya_non_standar_2_5_5 = "Pekerjaan Lain-lain";
+
+    $biaya_lain_lain_2_6_1 = "Biaya Persiapan & Perizinan";
+    $biaya_lain_lain_2_6_2 = "Biaya lain-lain";
+    $biaya_lain_lain_2_6_3 = "Pajak";
