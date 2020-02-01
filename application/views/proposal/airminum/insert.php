@@ -743,12 +743,18 @@ $description_page = $option["description_page"];
                 </tr>
 
                 <tr>
-                    <td class="w-25 p-3 align-middle">Kapasitas Produksi (Qmax.= 1,2Qr)</td>
+                    <td class="w-25 p-3 align-middle">Kapasitas Produksi (Qmax.= 1,1 - 1,5Qr)</td>
                     <td class="p-3">
                         <div class="input-group">
                             <input disabled id="pelayanan_1_2_3B" type="number" value="0" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Liter/dt</span>
+
+                            <p class="align-content-center">&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</p>
+
+                            <input disabled id="pelayanan_1_2_3B_2" type="number" value="0" class="form-control"
+                                   placeholder="">
+                            <span class="input-group-addon">Liter/dt</span>
                         </div>
 
                     </td>
@@ -771,10 +777,16 @@ $description_page = $option["description_page"];
 
 
                 <tr>
-                    <td class="w-25 p-3 align-middle">Tambahan Kapasitas Produksi</td>
+                    <td class="w-25 p-3 align-middle">Tambahan Kapasitas Produksi (1,1 - 1,5)</td>
                     <td class="p-3">
                         <div class="input-group">
                             <input disabled id="pelayanan_1_2_3C" type="number" value="0" class="form-control"
+                                   placeholder="">
+                            <span class="input-group-addon">Liter/dt</span>
+
+                            <p class="align-content-center">&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</p>
+
+                            <input disabled id="pelayanan_1_2_3C_2" type="number" value="0" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Liter/dt</span>
                         </div>
@@ -798,10 +810,16 @@ $description_page = $option["description_page"];
                 </tr>
 
                 <tr>
-                    <td class="w-25 p-3 align-middle">Kebutuhan Puncak (Qp : 1,75Qr )</td>
+                    <td class="w-25 p-3 align-middle">Kebutuhan Puncak (Qp : 1,5 - 2 Qr )</td>
                     <td class="p-3">
                         <div class="input-group">
                             <input disabled id="pelayanan_1_2_3D" type="number" value="0" class="form-control"
+                                   placeholder="">
+                            <span class="input-group-addon">Liter/dt</span>
+
+                            <p class="align-content-center">&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</p>
+
+                            <input disabled id="pelayanan_1_2_3D_2" type="number" value="0" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Liter/dt</span>
                         </div>
@@ -873,7 +891,7 @@ $description_page = $option["description_page"];
                         </ul>
                     </td>
                     <td>
-                        <ul class="parsley-errors-list filled">
+                        <ul class="parsley-errors-list filled" id="unit_air_baku_1_3_1_indikator">
                             <li class="tx-success"></li>
                         </ul>
                     </td>

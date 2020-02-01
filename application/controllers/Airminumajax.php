@@ -442,8 +442,11 @@ class Airminumajax extends All_Controller {
         $data_input = $this->pelayanan_1_2_2I($data_input);
         $data_input = $this->pelayanan_1_2_3A($data_input);
         $data_input = $this->pelayanan_1_2_3B($data_input);
+        $data_input = $this->pelayanan_1_2_3B_2($data_input); // add imam
         $data_input = $this->pelayanan_1_2_3C($data_input);
+        $data_input = $this->pelayanan_1_2_3C_2($data_input); // add imam
         $data_input = $this->pelayanan_1_2_3D($data_input);
+        $data_input = $this->pelayanan_1_2_3D_2($data_input); // add imam
         $data_input = $this->unit_air_baku_1_3_1($data_input);
         $data_input = $this->unit_air_baku_1_3_3($data_input);
         $data_input = $this->unit_air_baku_1_3_6($data_input);
@@ -514,8 +517,11 @@ class Airminumajax extends All_Controller {
         $data_input["pelayanan_1_2_2I"] = round_custom( $data_input["pelayanan_1_2_2I"],2);
         $data_input["pelayanan_1_2_3A"] = round($data_input["pelayanan_1_2_3A"], 2);
         $data_input["pelayanan_1_2_3B"] = round($data_input["pelayanan_1_2_3B"], 2);
+        $data_input["pelayanan_1_2_3B_2"] = round($data_input["pelayanan_1_2_3B_2"], 2); // add imam
         $data_input["pelayanan_1_2_3C"] = round($data_input["pelayanan_1_2_3C"], 2);
+        $data_input["pelayanan_1_2_3C_2"] = round($data_input["pelayanan_1_2_3C_2"], 2); // add imam
         $data_input["pelayanan_1_2_3D"] = round($data_input["pelayanan_1_2_3D"], 2);
+        $data_input["pelayanan_1_2_3D_2"] = round($data_input["pelayanan_1_2_3D_2"], 2); // add imam
         $data_input["unit_air_baku_1_3_8"] = round_custom($data_input["unit_air_baku_1_3_8"], 2);
         $data_input["unit_air_baku_1_3_9"] = round_custom($data_input["unit_air_baku_1_3_9"], 2);
         $data_input["unit_air_baku_1_3_10"] = round_custom($data_input["unit_air_baku_1_3_10"], 2);
@@ -592,7 +598,13 @@ class Airminumajax extends All_Controller {
     }
 
     private function pelayanan_1_2_3B($data_input) {
-        $data_input["pelayanan_1_2_3B"] =  1.2 * $data_input["pelayanan_1_2_3A"];
+        $data_input["pelayanan_1_2_3B"] =  1.1 * $data_input["pelayanan_1_2_3A"]; // mod imam 1.2 -> 1.1
+        return $data_input;
+    }
+
+    // add imam
+    private function pelayanan_1_2_3B_2($data_input) {
+        $data_input["pelayanan_1_2_3B_2"] =  1.5 * $data_input["pelayanan_1_2_3A"];
         return $data_input;
     }
 
@@ -601,15 +613,29 @@ class Airminumajax extends All_Controller {
         return $data_input;
     }
 
+    // add imam
+    private function pelayanan_1_2_3C_2($data_input) {
+        $data_input["pelayanan_1_2_3C_2"] =  $data_input["pelayanan_1_2_3B_2"] - $data_input["jenis_spam_1_1_3"];
+        return $data_input;
+    }
+
     private function pelayanan_1_2_3D($data_input) {
-        $data_input["pelayanan_1_2_3D"] =  $data_input["pelayanan_1_2_3A"] * 1.75;
+        $data_input["pelayanan_1_2_3D"] =  $data_input["pelayanan_1_2_3A"] * 1.5; // mod imam 1.75 -> 1.5
+        return $data_input;
+    }
+
+    // add imam
+    private function pelayanan_1_2_3D_2($data_input) {
+        $data_input["pelayanan_1_2_3D_2"] =  $data_input["pelayanan_1_2_3A"] * 2;
         return $data_input;
     }
 
     private function unit_air_baku_1_3_1($data_input) {
+        $data_input["indikator"]["unit_air_baku_1_3_1"]["text"] = round_custom($data_input["pelayanan_1_2_3C"] * to_percent(105),2)."  -  ".round_custom($data_input["pelayanan_1_2_3C_2"] * to_percent(105),2); // add imam
+        $data_input["indikator"]["unit_air_baku_1_3_1"]["option"] = $this->default; // add imam
         $text="Justifikasi";
         $option=$this->danger;
-        if(($data_input["unit_air_baku_1_3_1"] >= ($data_input["pelayanan_1_2_3C"]* to_percent(105))) && ($data_input["unit_air_baku_1_3_1"] <= ($data_input["pelayanan_1_2_3C"]* to_percent(110)))) {
+        if(($data_input["unit_air_baku_1_3_1"] >= ($data_input["pelayanan_1_2_3C"]* to_percent(105))) && ($data_input["unit_air_baku_1_3_1"] <= ($data_input["pelayanan_1_2_3C_2"]* to_percent(105)))) { // mod by imam
             $text="Layak";
             $option=$this->success;
         }
