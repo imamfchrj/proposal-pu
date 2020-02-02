@@ -129,10 +129,6 @@
             .blur(function() {
                 kalkulasi();
             });
-            
-            // mouseleave(function() {
-            //     kalkulasi();
-            // });
         });
         
         function get_by_id($id) {
@@ -211,15 +207,6 @@
                     <?php
                         }
                     ?>
-                    // "unit_air_baku_2_1_1A": $("#unit_air_baku_2_1_1A").val(),
-                    // "unit_air_baku_2_1_1B": $("#unit_air_baku_2_1_1B").val(),
-                    // "unit_air_baku_2_1_2A": $("#unit_air_baku_2_1_2A").val(),
-                    // "unit_air_baku_2_1_2B": $("#unit_air_baku_2_1_2B").val(),
-                    // "unit_air_baku_2_1_3A": $("#unit_air_baku_2_1_3A").val(),
-                    // "unit_air_baku_2_1_3B": $("#unit_air_baku_2_1_3B").val(),
-                    // "unit_air_baku_2_1_4A": $("#unit_air_baku_2_1_4A").val(),
-                    // "unit_air_baku_2_1_4B": $("#unit_air_baku_2_1_4B").val(),
-
                     "unit_produksi_2_2_1A": $("#unit_produksi_2_2_1A").val(),
                     "unit_produksi_2_2_1B": $("#unit_produksi_2_2_1B").val(),
                     "unit_produksi_2_2_2A": $("#unit_produksi_2_2_2A").val(),
@@ -270,14 +257,7 @@
                     <?php
                         }
                     ?>
-                    // "unit_pelayanan_2_4_1A": $("#unit_pelayanan_2_4_1A").val(),
-                    // "unit_pelayanan_2_4_1B": $("#unit_pelayanan_2_4_1B").val(),
-                    // "unit_pelayanan_2_4_2A": $("#unit_pelayanan_2_4_2A").val(),
-                    // "unit_pelayanan_2_4_2B": $("#unit_pelayanan_2_4_2B").val(),
-                    // "unit_pelayanan_2_4_3A": $("#unit_pelayanan_2_4_3A").val(),
-                    // "unit_pelayanan_2_4_3B": $("#unit_pelayanan_2_4_3B").val(),
-
-
+                    
                     "biaya_non_standar_2_5_1": $("#biaya_non_standar_2_5_1").val(),
                     "biaya_non_standar_2_5_2": $("#biaya_non_standar_2_5_2").val(),
                     "biaya_non_standar_2_5_3": $("#biaya_non_standar_2_5_3").val(),
@@ -325,117 +305,6 @@
                 }
 
             }
-            // $("#prov_id").val($data["prov_id"]);
-            // $("#jenis_spam").val($data["jenis_spam"]);
-
-            // $("#jenis_spam_1_1_1").val($data["jenis_spam_1_1_1"]);
-            // $("#jenis_spam_1_1_2").val($data["jenis_spam_1_1_2"]);
-            // $("#jenis_spam_1_1_3").val($data["jenis_spam_1_1_3"]);
-            // $("#jenis_spam_1_1_4A").val($data["jenis_spam_1_1_4A"]);
-            // $("#jenis_spam_1_1_4B").val($data["jenis_spam_1_1_4B"]);
-            // $("#jenis_spam_1_1_5").val($data["jenis_spam_1_1_5"]);
-            // $("#jenis_spam_1_1_6").val($data["jenis_spam_1_1_6"]);
-
-            // $("#pelayanan_1_2_1A").val($data["pelayanan_1_2_1A"]);
-            // $("#pelayanan_1_2_1B").val($data["pelayanan_1_2_1B"]);;
-            // $("#pelayanan_1_2_1C").val($data["pelayanan_1_2_1C"]);
-            // $("#pelayanan_1_2_1D").val($data["pelayanan_1_2_1D"]);
-            // $("#pelayanan_1_2_2A").val($data["pelayanan_1_2_2A"]);
-            // $("#pelayanan_1_2_2B").val($data["pelayanan_1_2_2B"]);
-            // $("#pelayanan_1_2_2C").val($data["pelayanan_1_2_2C"]);
-            // $("#pelayanan_1_2_2D").val($data["pelayanan_1_2_2D"]);
-            // $("#pelayanan_1_2_2E").val($data["pelayanan_1_2_2E"]);
-            // $("#pelayanan_1_2_2F").val($data["pelayanan_1_2_2F"]);
-            // $("#pelayanan_1_2_2G").val($data["pelayanan_1_2_2G"]);
-            // $("#pelayanan_1_2_2H").val($data["pelayanan_1_2_2H"]);
-            // $("#pelayanan_1_2_2I").val($data["pelayanan_1_2_2I"]);
-            // $("#pelayanan_1_2_3A").val($data["pelayanan_1_2_3A"]);
-            // $("#pelayanan_1_2_3B").val($data["pelayanan_1_2_3B"]);
-            // $("#pelayanan_1_2_3C").val($data["pelayanan_1_2_3C"]);
-            // $("#pelayanan_1_2_3D").val($data["pelayanan_1_2_3D"]);
-
-            // $("#unit_air_baku_1_3_1").val($data["unit_air_baku_1_3_1"]);
-            // $("#unit_air_baku_1_3_2").val($data["unit_air_baku_1_3_2"]);
-            // $("#unit_air_baku_1_3_3").val($data["unit_air_baku_1_3_3"]);
-            // $("#unit_air_baku_1_3_4").val($data["unit_air_baku_1_3_4"]);
-            // $("#unit_air_baku_1_3_5").val($data["unit_air_baku_1_3_5"]);
-            // $("#unit_air_baku_1_3_6").val($data["unit_air_baku_1_3_6"]);
-            // $("#unit_air_baku_1_3_7").val($data["unit_air_baku_1_3_7"]);
-            // $("#unit_air_baku_1_3_8").val($data["unit_air_baku_1_3_8"]);
-            // $("#unit_air_baku_1_3_9").val($data["unit_air_baku_1_3_9"]);
-            // $("#unit_air_baku_1_3_10").val($data["unit_air_baku_1_3_10"]);
-            // $("#unit_air_baku_1_3_11").val($data["unit_air_baku_1_3_11"]);
-            // $("#unit_air_baku_1_3_12").val($data["unit_air_baku_1_3_12"]);
-            // $("#unit_air_baku_1_3_13").val($data["unit_air_baku_1_3_13"]);
-
-            // $("#unit_produksi_1_4_1").val($data["unit_produksi_1_4_1"]);
-            // $("#unit_produksi_1_4_2").val($data["unit_produksi_1_4_2"]);
-            // $("#unit_produksi_1_4_3").val($data["unit_produksi_1_4_3"]);
-            // $("#unit_produksi_1_4_4").val($data["unit_produksi_1_4_4"]);
-
-            // $("#unit_distribusi_1_5_1").val($data["unit_distribusi_1_5_1"]);
-            // $("#unit_distribusi_1_5_2").val($data["unit_distribusi_1_5_2"]);
-            // $("#unit_distribusi_1_5_3").val($data["unit_distribusi_1_5_3"]);
-            // $("#unit_distribusi_1_5_6").val($data["unit_distribusi_1_5_6"]);
-            // $("#unit_distribusiC1_5_7").val($data["unit_distrCbusi_1_5_7"]);
-            // $("#unit_distribusi_1_5_8").val($data["unit_distribusi_1_5_8"]);
-
-            // $("#unit_pelayanan_1_6_1").val($data["unit_pelayanan_1_6_1"]);
-
-            // $("#unit_air_baku_2_1_1A").val($data["unit_air_baku_2_1_1A"]);
-            // $("#unit_air_baku_2_1_1B").val($data["unit_air_baku_2_1_1B"]);
-            // $("#unit_air_baku_2_1_2A").val($data["unit_air_baku_2_1_2A"]);
-            // $("#unit_air_baku_2_1_2B").val($data["unit_air_baku_2_1_2B"]);
-            // $("#unit_air_baku_2_1_3A").val($data["unit_air_baku_2_1_3A"]);
-            // $("#unit_air_baku_2_1_3B").val($data["unit_air_baku_2_1_3B"]);
-            // $("#unit_air_baku_2_1_4A").val($data["unit_air_baku_2_1_4A"]);
-            // $("#unit_air_baku_2_1_4B").val($data["unit_air_baku_2_1_4B"]);
-
-            // $("#unit_produksi_2_2_1A").val($data["unit_produksi_2_2_1A"]);
-            // $("#unit_produksi_2_2_1B").val($data["unit_produksi_2_2_1B"]);
-            // $("#unit_produksi_2_2_2A").val($data["unit_produksi_2_2_2A"]);
-            // $("#unit_produksi_2_2_2B").val($data["unit_produksi_2_2_2B"]);
-            // $("#unit_produksi_2_2_3A").val($data["unit_produksi_2_2_3A"]);
-            // $("#unit_produksi_2_2_3B").val($data["unit_produksi_2_2_3B"]);
-            // $("#unit_produksi_2_2_4A").val($data["unit_produksi_2_2_4A"]);
-            // $("#unit_produksi_2_2_4B").val($data["unit_produksi_2_2_4B"]);
-            // $("#unit_produksi_2_2_5A").val($data["unit_produksi_2_2_5A"]);
-            // $("#unit_produksi_2_2_5B").val($data["unit_produksi_2_2_5B"]);
-            // $("#unit_produksi_2_2_6A").val($data["unit_produksi_2_2_6A"]);
-            // $("#unit_produksi_2_2_6B").val($data["unit_produksi_2_2_6B"]);
-            // $("#unit_produksi_2_2_7A").val($data["unit_produksi_2_2_7A"]);
-            // $("#unit_produksi_2_2_7B").val($data["unit_produksi_2_2_7B"]);
-            
-            // $("#unit_distribusi_2_3_1A").val($data["unit_distribusi_2_3_1A"]);
-            // $("#unit_distribusi_2_3_1B").val($data["unit_distribusi_2_3_1B"]);
-            // $("#unit_distribusi_2_3_2A").val($data["unit_distribusi_2_3_2A"]);
-            // $("#unit_distribusi_2_3_2B").val($data["unit_distribusi_2_3_2B"]);
-            // $("#unit_distribusi_2_3_3A").val($data["unit_distribusi_2_3_3A"]);
-            // $("#unit_distribusi_2_3_3B").val($data["unit_distribusi_2_3_3B"]);
-            // $("#unit_distribusi_2_3_4A").val($data["unit_distribusi_2_3_4A"]);
-            // $("#unit_distribusi_2_3_4B").val($data["unit_distribusi_2_3_4B"]);
-            // $("#unit_distribusi_2_3_5A").val($data["unit_distribusi_2_3_5A"]);
-            // $("#unit_distribusi_2_3_5B").val($data["unit_distribusi_2_3_5B"]);
-            // $("#unit_distribusi_2_3_6A").val($data["unit_distribusi_2_3_6A"]);
-            // $("#unit_distribusi_2_3_6B").val($data["unit_distribusi_2_3_6B"]);
-            // $("#unit_distribusi_2_3_7").val($data["unit_distribusi_2_3_7"]);
-            // $("#unit_distribusi_2_3_7").val($data["unit_distribusi_2_3_7"]);
-            // $("#unit_distribusi_2_3_7").val($data["unit_distribusi_2_3_7"]);
-            // $("#unit_distribusi_2_3_8A").val($data["unit_distribusi_2_3_8A"]);
-            // $("#unit_distribusi_2_3_8B").val($data["unit_distribusi_2_3_8B"]);
-
-            // $("#unit_pelayanan_2_4_1A").val($data["unit_pelayanan_2_4_1A"]);
-            // $("#unit_pelayanan_2_4_1B").val($data["unit_pelayanan_2_4_1B"]);
-            // $("#unit_pelayanan_2_4_2A").val($data["unit_pelayanan_2_4_2A"]);
-            // $("#unit_pelayanan_2_4_2B").val($data["unit_pelayanan_2_4_2B"]);
-            // $("#unit_pelayanan_2_4_3A").val($data["unit_pelayanan_2_4_3A"]);
-            // $("#unit_pelayanan_2_4_3B").val($data["unit_pelayanan_2_4_3B"]);
-
-            // $("#biaya_non_standar_2_5_5").val($data["biaya_non_standar_2_5_5"]);
-
-            // $("#biaya_lain_lain_2_6_1").val($data["biaya_lain_lain_2_6_1"]);
-            // $("#biaya_lain_lain_2_6_2").val($data["biaya_lain_lain_2_6_2"]);
-            // $("#biaya_lain_lain_2_6_3").val($data["biaya_lain_lain_2_6_3"]);
         }
 
         function set_verifikasi($data) {
