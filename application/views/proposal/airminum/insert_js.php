@@ -418,15 +418,7 @@
         function set_verifikasi($data) {
             for (const [key, value] of Object.entries($data)) {
                 text_default(key, value['text'], value['option'], "verifikasi");
-                // add imam
-                if(key == "unit_air_baku_1_3_10_verifikasi") {
-                    hidden_1_3_10(value['text']);
-                }
-            }
-        }
-        function hidden_1_3_10(value) {
-            if (value == "Gravitasi") {
-                $(".hidden_1_3_10").hide();
+                hidden_by_key(key, "unit_air_baku_1_3_10", value['text'], "Grativasi", ".hidden_1_3_10");
             }
         }
         function set_harga_satuan($data) {
@@ -442,6 +434,18 @@
         function text_default($key, $text, $option, $default){
             $default_text= '<li class="'+$option+'">'+$text+'</li>';
             $("#"+$key+"_"+$default).html($default_text);
+        }
+
+        function hidden_by_key($key, $is_must_key, $value, $is_must, $hidden_key) {
+            if($key != $is_must_key) {
+                return false;
+            }
+            $($hidden_key).show();
+            if($value != $is_must) {
+                return false;
+            }
+            $($hidden_key).hide();
+            return true;
         }
     </script>
     
