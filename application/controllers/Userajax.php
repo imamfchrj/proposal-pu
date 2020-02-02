@@ -34,7 +34,7 @@ class Userajax extends All_Controller {
 
 	// Ini digunakan untuk insert user biasa
 	public function insert() {
-		$this->insert_user(0);
+		$this->insert_user();
 	}
 
 	// Ini digunakan untuk insert admin
@@ -49,11 +49,11 @@ class Userajax extends All_Controller {
 
 	// Ini digunakan untuk update admin
 	public function update_admin() {
-		$this->update_user(1);
+		$this->update_user();
 	}
 
 	private function insert_user($user_type=0) {
-		$value = $this->validation($user_type=0);
+		$value = $this->validation($user_type);
 		if($value) {
 			unset($value["id"]);
 			$data=$this->Users_model->set($value);
@@ -90,6 +90,7 @@ class Userajax extends All_Controller {
         $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|htmlentities');
         $this->form_validation->set_rules('c_password', 'Confirmation Password', 'trim|required|xss_clean|htmlentities');
         $this->form_validation->set_rules('status', 'Status', 'trim|integer|xss_clean|htmlentities');
+        $this->form_validation->set_rules('user_type', 'Tipe User', 'trim|integer|xss_clean|htmlentities');
         if ($this->form_validation->run()) {
 			$password = $this->form_validation->set_value('password');
 			$c_password = $this->form_validation->set_value('c_password');
@@ -103,6 +104,7 @@ class Userajax extends All_Controller {
                 'hp' => $this->form_validation->set_value('hp'),
                 'user_type' => $user_type,
                 'status' => $this->form_validation->set_value('status'),
+                'user_type' => $this->form_validation->set_value('user_type'),
                 'password' => $password
             );
             // if success will return all value

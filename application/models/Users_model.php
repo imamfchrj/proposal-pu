@@ -3,7 +3,7 @@
 class Users_model extends CI_Model {
 
     private $table = "tb_user";
-    public $column_order = ["id", "name", "email", "hp", "status", "created_at", "updated_at"]; 
+    public $column_order = ["id", "name", "email", "hp", "status", "user_type", "created_at", "updated_at"]; 
    
     public function __construct() {
         parent::__construct();
@@ -30,6 +30,7 @@ class Users_model extends CI_Model {
                 email,
                 hp,
                 status,
+                user_type,
                 created_at,
                 updated_at
                 "
@@ -41,7 +42,7 @@ class Users_model extends CI_Model {
                 ->or_like("hp", $search)
             ->group_end();
         }
-        $this->db->where("user_type", $user_type);
+        // $this->db->where("user_type", $user_type);
         if(!$limit) {
             $limit = 10;
         }
@@ -64,6 +65,7 @@ class Users_model extends CI_Model {
                 email,
                 hp,
                 status,
+                user_type,
                 created_at,
                 updated_at
                 "
@@ -75,7 +77,7 @@ class Users_model extends CI_Model {
                 ->or_like("hp", $search)
             ->group_end();
         }
-        $this->db->where("user_type", $user_type);
+        // $this->db->where("user_type", $user_type);
         return count($this->db->get($this->table)->result_array());
     }
 
@@ -83,7 +85,7 @@ class Users_model extends CI_Model {
 
     function count_all_user($user_type) {
         $this->db->select("count(id) as count_id");
-        $this->db->where("user_type", $user_type);
+        // $this->db->where("user_type", $user_type);
         $data = $this->db->get($this->table)->row();
         return $data->count_id;
     }

@@ -22,6 +22,7 @@
                   <th class="wd-25p">Email</th>
                   <th class="wd-15p">No HP</th>
                   <th class="wd-15p">Status</th>
+                  <th class="wd-15p">User Tipe</th>
                   <th class="wd-25p">Action</th>
                 </tr>
               </thead>

@@ -7,6 +7,7 @@
         $("#e_password").hide();
         $("#e_c_password").hide();
         $("#e_status").hide();
+        $("#e_user_type").hide();
     });
 
     function checkFormUser() {
@@ -15,6 +16,7 @@
         $("#e_hp").hide();
         $("#e_password").hide();
         $("#e_c_password").hide();
+        $("#e_user_type").hide();
         var status = true;
         $name = $("#name").val();
         $email = $("#email").val();

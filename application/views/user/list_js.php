@@ -60,11 +60,21 @@
                     { "data": "status",
                       "render": function(data, type, row, meta){
                         
-                          if(data === 1){
+                          if(data == 1){
                               return "aktif";
                           }
 
                           return '';
+                      }
+                   },
+                    { "data": "user_type",
+                      "render": function(data, type, row, meta){
+                        
+                          if(data == 1){
+                              return "Admin";
+                          }
+
+                          return 'User';
                       }
                    },
                     { "data": "id",
