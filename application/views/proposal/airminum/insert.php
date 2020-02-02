@@ -78,9 +78,9 @@ $description_page = $option["description_page"];
                         <div class="input-group">
                             <select id="jenis_spam" class="form-control select2 jenis_spam"
                                     data-placeholder="Jenis SPAM" onchange="jenis_spam();">
-                                <option value="Eksisting">Perluasan</option>
-                                <option value="Eksisting">Peningkatan</option>
-                                <option value="Baru">Pembangunan Baru</option>
+                                <option value="perluasan">Perluasan</option>
+                                <option value="peningkatan">Peningkatan</option>
+                                <option value="pembangunan_baru">Pembangunan Baru</option>
                             </select>
                         </div>
 
@@ -448,8 +448,15 @@ $description_page = $option["description_page"];
                     <td class="w-25 p-3 align-middle">Rata-rata anggota Keluarga</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="pelayanan_1_2_1D" type="number" value="" class="form-control" placeholder="">
-                            <span class="input-group-addon">Jiwa/KK</span>
+<!--                            <input id="pelayanan_1_2_1D" type="number" value="" class="form-control" placeholder="">-->
+<!--                            <span class="input-group-addon">Jiwa/KK</span>-->
+                            <select id="pelayanan_1_2_1D" class="form-control select2 keluarga"
+                                    data-placeholder="" onchange="">
+                                <option value="0">Pilih</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
                         </div>
 
                     </td>
@@ -1152,7 +1159,7 @@ $description_page = $option["description_page"];
                 </tr>
 
                 <tr>
-                    <td class="w-25 p-3 align-middle">Total Head (H=▲H+hf)</td>
+                    <td class="w-25 p-3 align-middle">Total Head (H=-▲H-hf)</td>
                     <td class="p-3">
                         <div class="input-group">
                             <input id="unit_air_baku_1_3_10" disabled id="unit_air_baku_1_3_10" type="number" value=""
@@ -1186,9 +1193,19 @@ $description_page = $option["description_page"];
                     <td class="w-25 p-3 align-middle">Sisa tekanan (RH)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_air_baku_1_3_11" type="number" value="" class="form-control"
-                                   placeholder="">
-                            <span class="input-group-addon">Meter</span>
+<!--                            <input id="unit_air_baku_1_3_11" type="number" value="" class="form-control"-->
+<!--                                   placeholder="">-->
+<!--                            <span class="input-group-addon">Meter</span>-->
+                            <select id="unit_air_baku_1_3_11" class="form-control select2 tekanan"
+                                    data-placeholder="" onchange="">
+                                <option value="0">Pilih</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
                         </div>
 
                     </td>
@@ -1209,11 +1226,11 @@ $description_page = $option["description_page"];
 <!--                    </td>-->
                 </tr>
 
-                <tr>
+                <tr class = "hidden_1_3_10">
                     <th colspan="5">1.3.12</th>
                 </tr>
 
-                <tr>
+                <tr class = "hidden_1_3_10">
                     <td class="w-25 p-3 align-middle">Head Pompa (Hp=H+RH)</td>
                     <td class="p-3">
                         <div class="input-group">
@@ -1240,11 +1257,11 @@ $description_page = $option["description_page"];
 <!--                    </td>-->
                 </tr>
 
-                <tr>
+                <tr class="hidden_1_3_10">
                     <th colspan="5">1.3.13</th>
                 </tr>
 
-                <tr>
+                <tr class ="hidden_1_3_10">
                     <td class="w-25 p-3 align-middle">Daya Pompa (Pp)</td>
                     <td class="p-3">
                         <div class="input-group">
@@ -1322,7 +1339,7 @@ $description_page = $option["description_page"];
                         </ul>
                     </td>
                     <td>
-                        <ul class="parsley-errors-list filled">
+                        <ul class="parsley-errors-list filled" id="unit_produksi_1_4_1_indikator">
                             <li class="tx-success"></li>
                         </ul>
                     </td>
@@ -1517,6 +1534,37 @@ $description_page = $option["description_page"];
 <!--                            <li class="tx-success"></li>-->
 <!--                        </ul>-->
 <!--                    </td>-->
+                </tr>
+
+                <tr>
+                    <th colspan="5">1.5.2_A</th>
+                </tr>
+
+                <tr>
+                    <td class="w-25 p-3 align-middle">Beda Tinggi (▲H)</td>
+                    <td class="p-3">
+                        <div class="input-group">
+                            <input disabled id="unit_distribusi_1_5_2A" type="number" value="" class="form-control"
+                                   placeholder="">
+                            <span class="input-group-addon">Meter</span>
+                        </div>
+
+                    </td>
+                    <td>
+                        <ul id="unit_distribusi_1_5_2A_verifikasi" class="parsley-errors-list filled">
+                            <li class="tx-success"></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="parsley-errors-list filled">
+                            <li class="tx-success"></li>
+                        </ul>
+                    </td>
+                    <!--                    <td>-->
+                    <!--                        <ul class="parsley-errors-list filled">-->
+                    <!--                            <li class="tx-success"></li>-->
+                    <!--                        </ul>-->
+                    <!--                    </td>-->
                 </tr>
 
                 <tr>

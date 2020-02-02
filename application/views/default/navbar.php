@@ -9,7 +9,7 @@
             </li>
 
 
-            <li class="nav-item with-sub mega-dropdown">
+            <li class="nav-item with-sub mega-dropdown <?php if($menu=="pengajuan"){echo 'active';}?>">
                 <a class="nav-link" href="#">
                     <i class="icon ion-ios-filing-outline"></i>
                     <span>Pengajuan Proposal</span>
@@ -162,7 +162,7 @@
                     </div><!-- row -->
                 </div><!-- dropdown-menu -->
             </li>
-            <li class="nav-item with-sub active">
+            <li class="nav-item with-sub">
                 <a class="nav-link" href="#" data-toggle="dropdown">
                     <i class="icon ion-ios-gear-outline"></i>
                     <span>Approval</span>
@@ -184,7 +184,7 @@
                 </div><!-- dropdown-menu -->
             </li>
             <?php if(is_admin()) { ?>
-            <li class="nav-item with-sub mega-dropdown">
+            <li class="nav-item with-sub mega-dropdown <?php if($menu=="user"){echo 'active';}?>">
                 <a class="nav-link" href="#" data-toggle="dropdown">
                     <i class="icon ion-ios-people"></i>
                     <span>Man. User</span>
@@ -212,7 +212,7 @@
 
             </li>
 <!--            <li class="nav-item with-sub">-->
-            <li class="nav-item with-sub mega-dropdown">
+            <li class="nav-item with-sub mega-dropdown <?php if($menu=="ikk"){echo 'active';}?>">
                 <a class="nav-link" href="#" data-toggle="dropdown">
                     <i class="icon ion-map"></i>
                     <span>Man. wilayah</span>

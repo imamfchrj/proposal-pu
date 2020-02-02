@@ -12,6 +12,7 @@ class User extends All_Controller {
 	public function list()
 	{
 		$data["script"] = "user/list_js";
+        $data['menu']="user";
 		$this->view("user/list", $data);
 	}
 
@@ -19,6 +20,7 @@ class User extends All_Controller {
 	{
 		$data["script"] = "user/insert_js";
 		$data["option"] = $this->option_insert();
+        $data['menu']="user";
 		$this->view("user/insert", $data);
 	}
 
@@ -35,6 +37,7 @@ class User extends All_Controller {
 	{
 		$data["script"] = "user/insert_js";
 		$data["option"] = $this->option_update($id);
+        $data['menu']="user";
 		$this->view("user/insert", $data);
 	}
 
