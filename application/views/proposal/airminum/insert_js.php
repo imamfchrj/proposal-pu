@@ -246,13 +246,21 @@
                     "unit_distribusi_2_3_8A": $("#unit_distribusi_2_3_8A").val(),
                     "unit_distribusi_2_3_8B": $("#unit_distribusi_2_3_8B").val(),
 
-
-                    "unit_pelayanan_2_4_1A": $("#unit_pelayanan_2_4_1A").val(),
-                    "unit_pelayanan_2_4_1B": $("#unit_pelayanan_2_4_1B").val(),
-                    "unit_pelayanan_2_4_2A": $("#unit_pelayanan_2_4_2A").val(),
-                    "unit_pelayanan_2_4_2B": $("#unit_pelayanan_2_4_2B").val(),
-                    "unit_pelayanan_2_4_3A": $("#unit_pelayanan_2_4_3A").val(),
-                    "unit_pelayanan_2_4_3B": $("#unit_pelayanan_2_4_3B").val(),
+                    <?php
+                        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71; $index++) {
+                    ?>
+                    "unit_pelayanan_2_4_<?=$index?>": $("#unit_pelayanan_2_4_<?=$index?>").val(),
+                    "unit_pelayanan_2_4_<?=$index?>A": $("#unit_pelayanan_2_4_<?=$index?>A").val(),
+                    "unit_pelayanan_2_4_<?=$index?>B": $("#unit_pelayanan_2_4_<?=$index?>B").val(),
+                    <?php
+                        }
+                    ?>
+                    // "unit_pelayanan_2_4_1A": $("#unit_pelayanan_2_4_1A").val(),
+                    // "unit_pelayanan_2_4_1B": $("#unit_pelayanan_2_4_1B").val(),
+                    // "unit_pelayanan_2_4_2A": $("#unit_pelayanan_2_4_2A").val(),
+                    // "unit_pelayanan_2_4_2B": $("#unit_pelayanan_2_4_2B").val(),
+                    // "unit_pelayanan_2_4_3A": $("#unit_pelayanan_2_4_3A").val(),
+                    // "unit_pelayanan_2_4_3B": $("#unit_pelayanan_2_4_3B").val(),
 
 
                     "biaya_non_standar_2_5_1": $("#biaya_non_standar_2_5_1").val(),
@@ -500,6 +508,9 @@
         }
         function get_ajax_unit_produksi() {
             get_ajax_select("unit_produksi");
+        }
+        function get_ajax_unit_produksi() {
+            get_ajax_select("unit_pelayanan");
         }
 
         function get_ajax_select($var) {

@@ -2754,6 +2754,54 @@ $description_page = $option["description_page"];
                 </thead>
                 <tbody>
 
+                <?php
+                for ($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4; $index++) {
+                    ?>
+                <tr>
+                    <th colspan="5">2.4.<?=$index?></th>
+                </tr>
+
+                <tr>
+                    <td class="w-25 p-3 align-middle">
+                        <select id="unit_pelayanan_2_4_<?= $index?>" class="form-control select2 unit_pelayanan" data-placeholder="Pilih Jenis">
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <td class="p-3">
+                        <div class="input-group">
+                            <span class="input-group-addon">Rp</span>
+                            <input id="unit_pelayanan_2_4_<?=$index?>A" type="number" value="" class="form-control"
+                                   placeholder="">
+                        </div>
+                        <hr>
+                        <div class="input-group">
+                            <input id="unit_pelayanan_2_4_<?=$index?>B" type="number" value="" class="form-control"
+                                   placeholder="">
+                            <span class="input-group-addon">m</span>
+                        </div>
+
+                    </td>
+                    <td>
+                        <ul class="parsley-errors-list filled" id="unit_pelayanan_2_4_<?=$index?>_verifikasi">
+                            <li class="tx-success"></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="parsley-errors-list filled" id="unit_pelayanan_2_4_<?=$index?>_harga_satuan">
+                            <li class="tx-success"></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="parsley-errors-list filled" id="unit_pelayanan_2_4_<?=$index?>_indikator">
+                            <li class="tx-success"></li>
+                        </ul>
+                    </td>
+                </tr>
+                <?php } ?>
+
+                <?php if(false) {
+                    // hidden 2.4
+                    ?>
                 <tr>
                     <th colspan="5">2.4.1</th>
                 </tr>
@@ -2864,6 +2912,8 @@ $description_page = $option["description_page"];
                         </ul>
                     </td>
                 </tr>
+                <?php } ?>
+                
 
 
                 </tbody>

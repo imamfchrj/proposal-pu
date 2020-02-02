@@ -140,18 +140,23 @@ class Airminumajax extends All_Controller {
         $this->form_validation->set_rules('unit_distribusi_2_3_6B', "unit_distribusi_2_3_6B", 'numeric|trim|xss_clean');
         for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71; $index++) {
         $this->form_validation->set_rules('unit_distribusi_2_3_7'.$index, "unit_distribusi_2_3_7", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_distribusi_2_3_7'.$index.'A', "unit_distribusi_2_3_7A", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_distribusi_2_3_7'.$index.'B', "unit_distribusi_2_3_7B", 'numeric|trim|xss_clean');
+        $this->form_validation->set_rules('unit_distribusi_2_3_7'.$index.'A', "unit_distribusi_2_3_7'.$index.'A", 'numeric|trim|xss_clean');
+        $this->form_validation->set_rules('unit_distribusi_2_3_7'.$index.'B', "unit_distribusi_2_3_7'.$index.'B", 'numeric|trim|xss_clean');
         }
         $this->form_validation->set_rules('unit_distribusi_2_3_8A', "unit_distribusi_2_3_8A", 'numeric|trim|xss_clean');
         $this->form_validation->set_rules('unit_distribusi_2_3_8B', "unit_distribusi_2_3_8B", 'numeric|trim|xss_clean');
 
-        $this->form_validation->set_rules('unit_pelayanan_2_4_1A', "unit_pelayanan_2_4_1A", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_pelayanan_2_4_1B', "unit_pelayanan_2_4_1B", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_pelayanan_2_4_2A', "unit_pelayanan_2_4_2A", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_pelayanan_2_4_2B', "unit_pelayanan_2_4_2B", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_pelayanan_2_4_3A', "unit_pelayanan_2_4_3A", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_pelayanan_2_4_3B', "unit_pelayanan_2_4_3B", 'numeric|trim|xss_clean');
+        // $this->form_validation->set_rules('unit_pelayanan_2_4_1A', "unit_pelayanan_2_4_1A", 'numeric|trim|xss_clean');
+        // $this->form_validation->set_rules('unit_pelayanan_2_4_1B', "unit_pelayanan_2_4_1B", 'numeric|trim|xss_clean');
+        // $this->form_validation->set_rules('unit_pelayanan_2_4_2A', "unit_pelayanan_2_4_2A", 'numeric|trim|xss_clean');
+        // $this->form_validation->set_rules('unit_pelayanan_2_4_2B', "unit_pelayanan_2_4_2B", 'numeric|trim|xss_clean');
+        // $this->form_validation->set_rules('unit_pelayanan_2_4_3A', "unit_pelayanan_2_4_3A", 'numeric|trim|xss_clean');
+        // $this->form_validation->set_rules('unit_pelayanan_2_4_3B', "unit_pelayanan_2_4_3B", 'numeric|trim|xss_clean');
+        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4; $index++) {
+            $this->form_validation->set_rules('unit_pelayanan_2_4_'.$index, "unit_pelayanan_2_4_".$index, 'numeric|trim|xss_clean');
+            $this->form_validation->set_rules('unit_pelayanan_2_4_'.$index.'A', "unit_pelayanan_2_4_'.$index.'A", 'numeric|trim|xss_clean');
+            $this->form_validation->set_rules('unit_pelayanan_2_4_'.$index.'B', "unit_pelayanan_2_4_'.$index.'B", 'numeric|trim|xss_clean');
+        }
 
         $this->form_validation->set_rules('biaya_non_standar_2_5_1', "biaya_non_standar_2_5_1", 'numeric|trim|xss_clean');
         $this->form_validation->set_rules('biaya_non_standar_2_5_2', "biaya_non_standar_2_5_2", 'numeric|trim|xss_clean');
@@ -251,13 +256,18 @@ class Airminumajax extends All_Controller {
             $data["unit_distribusi_2_3_8A"] = (float)$this->form_validation->set_value('unit_distribusi_2_3_8A');
             $data["unit_distribusi_2_3_8B"] = (float)$this->form_validation->set_value('unit_distribusi_2_3_8B');
             
-            $data["unit_pelayanan_2_4_1A"] = (float)$this->form_validation->set_value('unit_pelayanan_2_4_1A');
-            $data["unit_pelayanan_2_4_1B"] = (float)$this->form_validation->set_value('unit_pelayanan_2_4_1B');
-            $data["unit_pelayanan_2_4_2A"] = (float)$this->form_validation->set_value('unit_pelayanan_2_4_2A');
-            $data["unit_pelayanan_2_4_2B"] = (float)$this->form_validation->set_value('unit_pelayanan_2_4_2B');
-            $data["unit_pelayanan_2_4_3A"] = (float)$this->form_validation->set_value('unit_pelayanan_2_4_3A');
-            $data["unit_pelayanan_2_4_3B"] = (float)$this->form_validation->set_value('unit_pelayanan_2_4_3B');
-            
+            // $data["unit_pelayanan_2_4_1A"] = (float)$this->form_validation->set_value('unit_pelayanan_2_4_1A');
+            // $data["unit_pelayanan_2_4_1B"] = (float)$this->form_validation->set_value('unit_pelayanan_2_4_1B');
+            // $data["unit_pelayanan_2_4_2A"] = (float)$this->form_validation->set_value('unit_pelayanan_2_4_2A');
+            // $data["unit_pelayanan_2_4_2B"] = (float)$this->form_validation->set_value('unit_pelayanan_2_4_2B');
+            // $data["unit_pelayanan_2_4_3A"] = (float)$this->form_validation->set_value('unit_pelayanan_2_4_3A');
+            // $data["unit_pelayanan_2_4_3B"] = (float)$this->form_validation->set_value('unit_pelayanan_2_4_3B');
+            for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4; $index++) {
+                $data["unit_pelayanan_2_4_".$index] = (float)$this->form_validation->set_value("unit_pelayanan_2_4_".$index);
+                $data["unit_pelayanan_2_4_".$index."A"] = (float)$this->form_validation->set_value("unit_pelayanan_2_4_".$index."A");
+                $data["unit_pelayanan_2_4_".$index."B"] = (float)$this->form_validation->set_value("unit_pelayanan_2_4_".$index."B");
+            }
+
             $data["biaya_non_standar_2_5_1"] = (float)$this->form_validation->set_value('biaya_non_standar_2_5_1');
             $data["biaya_non_standar_2_5_2"] = (float)$this->form_validation->set_value('biaya_non_standar_2_5_2');
             $data["biaya_non_standar_2_5_3"] = (float)$this->form_validation->set_value('biaya_non_standar_2_5_3');
@@ -475,6 +485,8 @@ class Airminumajax extends All_Controller {
         
         $data_input = $this->unit_distribusi_2_3_7($data_input);
         $data_input = $this->unit_distribusi_2_3_8($data_input);
+        $data_input = $this->unit_pelayanan_2_4($data_input);
+        
         $data_input = $this->aggregator($data_input);
         $data_input = $this->biaya_non_standar_2_5_1($data_input);
         $data_input = $this->biaya_non_standar_2_5_2($data_input);
@@ -495,6 +507,12 @@ class Airminumajax extends All_Controller {
                 continue;
             }
             $in_id[] = $data_input["unit_distribusi_2_3_7".$index];
+        }
+        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4; $index++) {
+            if(!$data_input["unit_pelayanan_2_4_".$index]){
+                continue;
+            }
+            $in_id[] = $data_input["unit_pelayanan_2_4_".$index];
         }
         $data_id = array("unit_distribusi_2_3_1");
         foreach($data_id as $value) {
@@ -989,6 +1007,34 @@ class Airminumajax extends All_Controller {
         return $data_input;
     }
 
+
+    private function unit_pelayanan_2_4($data_input) {
+        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4; $index++) {
+            if($data_input["unit_pelayanan_2_4_". $index . "B"] == 0) {
+                continue;
+            }
+            if(!$data_input["unit_pelayanan_2_4_". $index]) {
+                continue;
+            }
+            $id = $data_input["unit_pelayanan_2_4_". $index];
+            $data_input["harga_satuan"]["unit_pelayanan_2_4_" . $index]["text"] = round_custom($data_input["unit_pelayanan_2_4_". $index . "A"] / 1000 / $data_input["unit_pelayanan_2_4_". $index . "B"],2);
+            $data_input["harga_satuan"]["unit_pelayanan_2_4_" . $index]["option"] = $this->default;
+            
+            $data_input["indikator"]["unit_pelayanan_2_4_" . $index]["text"] = round_custom($data_input["initial"][$id]['harga_satuan'],2);
+            $data_input["indikator"]["unit_pelayanan_2_4_" . $index]["option"] = $this->default;
+
+            $text="Justifikasi";
+            $option=$this->danger;
+            if($data_input["harga_satuan"]["unit_pelayanan_2_4_" . $index]["text"] <= $data_input["initial"][$id]['harga_satuan']) {
+                $text="Wajar";
+                $option=$this->success;
+            }
+            $data_input["verifikasi"]["unit_pelayanan_2_4_" . $index]["text"] = $text;
+            $data_input["verifikasi"]["unit_pelayanan_2_4_" . $index]["option"] = $option;
+        }
+        return $data_input;
+    }
+
     private function biaya_non_standar_2_5_1($data_input) {
         return $this->non_standard($data_input, "biaya_non_standar_2_5_1", 10, 5);
     }
@@ -1053,9 +1099,9 @@ class Airminumajax extends All_Controller {
             "unit_distribusi_2_3_5A",
             "unit_distribusi_2_3_6A",
             "unit_distribusi_2_3_8A",
-            "unit_pelayanan_2_4_1A",
-            "unit_pelayanan_2_4_2A",
-            "unit_pelayanan_2_4_3A",
+            // "unit_pelayanan_2_4_1A",
+            // "unit_pelayanan_2_4_2A",
+            // "unit_pelayanan_2_4_3A",
             "biaya_non_standar_2_5_1",
             "biaya_non_standar_2_5_2",
             "biaya_non_standar_2_5_3",
@@ -1074,6 +1120,9 @@ class Airminumajax extends All_Controller {
 
         for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71; $index++) {
             $sum += $data_input["unit_distribusi_2_3_7". $index . "A"];
+        }
+        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4; $index++) {
+            $sum += $data_input["unit_pelayanan_2_4_". $index . "A"];
         }
         $data_input["total_investasi"] = $sum;
         if($data_input["unit_produksi_1_4_2"]) {
