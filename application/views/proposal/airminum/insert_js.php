@@ -352,10 +352,10 @@
 
         $( document ).ready(function() {
             get_ajax_jenis_sumber_air();
-            get_ajax_unit_distribusi();
-            get_ajax_unit_produksi();
-            get_ajax_unit_pelayanan();
-            get_ajax_unit_air_baku();
+            get_ajax_select("unit_distribusi");
+            get_ajax_select("unit_produksi");
+            get_ajax_select("unit_pelayanan");
+            get_ajax_select("unit_air_baku", 1);
         });
 
         function get_ajax_jenis_sumber_air() {
