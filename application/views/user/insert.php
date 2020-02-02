@@ -7,6 +7,7 @@ $hp="";
 $password="";
 $c_password="";
 $status="";
+$user_type=0;
 
 // this for update
 if( isset( $option["form_value"] ) ) { 
@@ -15,6 +16,7 @@ if( isset( $option["form_value"] ) ) {
   $email=$option["form_value"]->email;
   $hp=$option["form_value"]->hp;
   $status=$option["form_value"]->status;
+  $user_type=$option["form_value"]->user_type;
 } 
 
 $title_page = $option["title_page"];
@@ -81,6 +83,21 @@ $description_page = $option["description_page"];
                         <input type="checkbox" id="status" name="status" value="1" <?php if($status) echo "checked";?> data-parsley-mincheck="2" data-parsley-class-handler="#status" data-parsley-multiple="browser"><span>Aktif</span>
                         <span id="e_status" class="tx-danger"></span>
                     </label>
+                  </div>
+                </div>
+              </div><!-- col-4 -->
+              <div class="col-lg-4">
+                <div class="form-group mg-b-10-force">
+                  <label class="form-control-label">Tipe User: <span class="tx-danger">*</span></label>
+                  <div id="status" class="parsley-radio wd-250 mg-b-0">
+                  <label class="rdiobox">
+                    <input name="rdio" type="radio" value="1"  <?php if($user_type == 1) echo "checked=''";?>>
+                    <span>Admin</span>
+                  </label>
+                  <label class="rdiobox">
+                    <input name="rdio" type="radio" value="1"  <?php if($user_type == 0) echo "checked=''";?>>
+                    <span>User</span>
+                  </label>
                   </div>
                 </div>
               </div><!-- col-4 -->
