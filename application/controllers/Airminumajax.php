@@ -407,11 +407,11 @@ class Airminumajax extends All_Controller {
         $data_input = $this->unit_pelayanan_1_6_2($data_input);
         $data_input = $this->unit_pelayanan_1_6_3($data_input);
 
-        $data_input = $this->bab2_format("unit_air_baku_2_1", $data_input);
-        $data_input = $this->bab2_format("unit_produksi_2_2", $data_input);
-        $data_input = $this->bab2_format("unit_distribusi_2_3", $data_input);
+        $data_input = $this->bab2_format("unit_air_baku_2_1", $data_input, PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1);
+        $data_input = $this->bab2_format("unit_produksi_2_2", $data_input, PROPOSAL_AIR_MINUM_UNIT_PRODUKSI_2_2);
+        $data_input = $this->bab2_format("unit_distribusi_2_3", $data_input, PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3);
+        $data_input = $this->bab2_format("unit_pelayanan_2_4", $data_input, PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4);
         
-        $data_input = $this->unit_pelayanan_2_4($data_input);
         
         $data_input = $this->aggregator($data_input);
         $data_input = $this->biaya_non_standar_2_5_1($data_input);
@@ -832,10 +832,10 @@ class Airminumajax extends All_Controller {
      * Bab 2
      */
 
-    private function bab2_format($key,$data_input) {
+    private function bab2_format($key,$data_input, $count) {
         // PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1
 
-        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4; $index++) {
+        for($index = 1; $index <= $count; $index++) {
             if($data_input[$key . "_". $index . "B"] == 0) {
                 continue;
             }
@@ -1003,11 +1003,11 @@ class Airminumajax extends All_Controller {
     }
 
     private function biaya_non_standar_2_5_1($data_input) {
-        return $this->non_standard($data_input, "biaya_non_standar_2_5_1", 10, 5);
+        return $this->non_standard($data_input, "biaya_non_standar_2_5_1", 10, 10);
     }
 
     private function biaya_non_standar_2_5_2($data_input) {
-        return $this->non_standard($data_input, "biaya_non_standar_2_5_2", 20, 10);
+        return $this->non_standard($data_input, "biaya_non_standar_2_5_2", 20, 20);
     }
 
     private function biaya_non_standar_2_5_3($data_input) {
@@ -1015,11 +1015,11 @@ class Airminumajax extends All_Controller {
     }
 
     private function biaya_non_standar_2_5_4($data_input) {
-        return $this->non_standard($data_input, "biaya_non_standar_2_5_4", 5, 2);
+        return $this->non_standard($data_input, "biaya_non_standar_2_5_4", 5, 5);
     }
 
     private function biaya_non_standar_2_5_5($data_input) {
-        return $this->non_standard($data_input, "biaya_non_standar_2_5_5", 5, 2);
+        return $this->non_standard($data_input, "biaya_non_standar_2_5_5", 5, 5);
     }
 
     private function non_standard($data_input, $key_input, $verifikasi_percent, $indikator_percent) {
