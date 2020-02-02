@@ -123,9 +123,16 @@
                 get_by_id("<?=$id_proposal?>");
             <?php }?>
 
-            $( ".form-control" ).mouseleave(function() {
+            $( ".form-control" ).focusout(function() {
+                kalkulasi();
+            })
+            .blur(function() {
                 kalkulasi();
             });
+            
+            // mouseleave(function() {
+            //     kalkulasi();
+            // });
         });
         
         function get_by_id($id) {
@@ -195,15 +202,23 @@
                     "unit_distribusi_1_5_8": $("#unit_distribusi_1_5_8").val(),
 
                     "unit_pelayanan_1_6_1": $("#unit_pelayanan_1_6_1").val(),
-
-                    "unit_air_baku_2_1_1A": $("#unit_air_baku_2_1_1A").val(),
-                    "unit_air_baku_2_1_1B": $("#unit_air_baku_2_1_1B").val(),
-                    "unit_air_baku_2_1_2A": $("#unit_air_baku_2_1_2A").val(),
-                    "unit_air_baku_2_1_2B": $("#unit_air_baku_2_1_2B").val(),
-                    "unit_air_baku_2_1_3A": $("#unit_air_baku_2_1_3A").val(),
-                    "unit_air_baku_2_1_3B": $("#unit_air_baku_2_1_3B").val(),
-                    "unit_air_baku_2_1_4A": $("#unit_air_baku_2_1_4A").val(),
-                    "unit_air_baku_2_1_4B": $("#unit_air_baku_2_1_4B").val(),
+                    <?php
+                        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1; $index++) {
+                    ?>
+                    "unit_air_baku_2_1_<?=$index?>": $("#unit_air_baku_2_1_<?=$index?>").val(),
+                    "unit_air_baku_2_1_<?=$index?>A": $("#unit_air_baku_2_1_<?=$index?>A").val(),
+                    "unit_air_baku_2_1_<?=$index?>B": $("#unit_air_baku_2_1_<?=$index?>B").val(),
+                    <?php
+                        }
+                    ?>
+                    // "unit_air_baku_2_1_1A": $("#unit_air_baku_2_1_1A").val(),
+                    // "unit_air_baku_2_1_1B": $("#unit_air_baku_2_1_1B").val(),
+                    // "unit_air_baku_2_1_2A": $("#unit_air_baku_2_1_2A").val(),
+                    // "unit_air_baku_2_1_2B": $("#unit_air_baku_2_1_2B").val(),
+                    // "unit_air_baku_2_1_3A": $("#unit_air_baku_2_1_3A").val(),
+                    // "unit_air_baku_2_1_3B": $("#unit_air_baku_2_1_3B").val(),
+                    // "unit_air_baku_2_1_4A": $("#unit_air_baku_2_1_4A").val(),
+                    // "unit_air_baku_2_1_4B": $("#unit_air_baku_2_1_4B").val(),
 
                     "unit_produksi_2_2_1A": $("#unit_produksi_2_2_1A").val(),
                     "unit_produksi_2_2_1B": $("#unit_produksi_2_2_1B").val(),
@@ -470,6 +485,8 @@
             get_ajax_jenis_sumber_air();
             get_ajax_unit_distribusi();
             get_ajax_unit_produksi();
+            get_ajax_unit_pelayanan();
+            get_ajax_unit_air_baku();
         });
 
         function get_ajax_jenis_sumber_air() {
@@ -509,13 +526,16 @@
         function get_ajax_unit_produksi() {
             get_ajax_select("unit_produksi");
         }
-        function get_ajax_unit_produksi() {
+        function get_ajax_unit_pelayanan() {
             get_ajax_select("unit_pelayanan");
         }
+        function get_ajax_unit_air_baku() {
+            get_ajax_select("unit_air_baku", 1);
+        }
 
-        function get_ajax_select($var) {
+        function get_ajax_select($var, $url2=0) {
             $.ajax({
-                url: ROOT+'/groupajax/komponen_kegiatan/air_minum/' + $var,
+                url: ROOT+'/groupajax/komponen_kegiatan/air_minum/' + $var + "/" + $url2,
                 dataType: 'json',
                 type: 'get',
                 data: {
@@ -528,7 +548,7 @@
                 }
                 
                 data.data.forEach(function(value){
-                    $("." + $var).append('<option value="'+value.id+'">'+value.kegiatan+'</option>');
+                    $("." + $var).append('<option value="'+value.id+'">'+value.kegiatan+' ('+value.satuan+')</option>');
                 });
                 
             })

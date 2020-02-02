@@ -1915,7 +1915,55 @@ $description_page = $option["description_page"];
                 <th>Indikator</th>
                 </thead>
                 <tbody>
+                
+                <?php
+                for ($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1; $index++) {
+                    ?>
+                    <tr>
+                <tr>
+                    <th colspan="5">2.1.<?=$index?></th>
+                </tr>
 
+                <tr>
+                    <td class="w-25 p-3 align-middle">
+                            <div class="input-group">
+                                <select id="unit_air_baku_2_1_<?= $index
+                                ?>" class="form-control select2 unit_air_baku" data-placeholder="Pilih Jenis">
+                                    <option value=""></option>
+                                </select>
+                            </div></td>
+                    <td class="p-3">
+                        <div class="input-group">
+                            <span class="input-group-addon">Rp</span>
+                            <input id="unit_air_baku_2_1_<?=$index?>A" type="number" value="" class="form-control"
+                                   placeholder="">
+                        </div>
+                        <hr>
+                        <div class="input-group">
+                            <input id="unit_air_baku_2_1_<?=$index?>B" type="number" value="" class="form-control"
+                                   placeholder="">
+                            <span class="input-group-addon">unit</span>
+                        </div>
+                    </td>
+                    <td>
+                        <ul id="unit_air_baku_2_1_<?=$index?>_verifikasi" class="parsley-errors-list filled">
+                            <li class="tx-success"></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul id="unit_air_baku_2_1_<?=$index?>_harga_satuan" class="parsley-errors-list filled">
+                            <li class="tx-success"></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul id="unit_air_baku_2_1_<?=$index?>_indikator" class="parsley-errors-list filled">
+                            <li class="tx-success"></li>
+                        </ul>
+                    </td>
+                </tr>
+                <?php } ?>
+
+<?php if(false) { ?>
                 <tr>
                     <th colspan="5">2.1.1</th>
                 </tr>
@@ -2028,7 +2076,7 @@ $description_page = $option["description_page"];
 
 
                 <tr>
-                    <th colspan="5">2.1.4</th>
+                    <th colspan="5">2.1.4 Bangunan Penunjang</th>
                 </tr>
 
                 <tr>
@@ -2063,7 +2111,7 @@ $description_page = $option["description_page"];
                         </ul>
                     </td>
                 </tr>
-
+<?php } ?>
 
                 </tbody>
             </table>
