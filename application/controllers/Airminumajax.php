@@ -419,6 +419,8 @@ class Airminumajax extends All_Controller {
         $data_input = $this->biaya_non_standar_2_5_3($data_input);
         $data_input = $this->biaya_non_standar_2_5_4($data_input);
         $data_input = $this->biaya_non_standar_2_5_5($data_input);
+        $data_input = $this->biaya_lain_lain_2_6_1($data_input);
+        $data_input = $this->biaya_lain_lain_2_6_2($data_input);
         
         $data_input = $this->set_rounding($data_input);
         
@@ -1020,6 +1022,15 @@ class Airminumajax extends All_Controller {
 
     private function biaya_non_standar_2_5_5($data_input) {
         return $this->non_standard($data_input, "biaya_non_standar_2_5_5", 5, 5);
+    }
+
+
+    private function biaya_lain_lain_2_6_1($data_input) {
+        return $this->non_standard($data_input, "biaya_lain_lain_2_6_1", 10, 10);
+    }
+
+    private function biaya_lain_lain_2_6_2($data_input) {
+        return $this->non_standard($data_input, "biaya_lain_lain_2_6_2", 10, 10);
     }
 
     private function non_standard($data_input, $key_input, $verifikasi_percent, $indikator_percent) {
