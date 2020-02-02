@@ -38,9 +38,9 @@ class Userajax extends All_Controller {
 	}
 
 	// Ini digunakan untuk insert admin
-	public function insert_admin() {
-		$this->update_user(1);
-	}
+//	public function insert_admin() {
+//		$this->update_user(1);
+//	}
 
 	// Ini digunakan untuk update user biasa
 	public function update() {
@@ -48,12 +48,12 @@ class Userajax extends All_Controller {
 	}
 
 	// Ini digunakan untuk update admin
-	public function update_admin() {
-		$this->update_user();
-	}
+//	public function update_admin() {
+//		$this->update_user();
+//	}
 
-	private function insert_user($user_type=0) {
-		$value = $this->validation($user_type);
+	private function insert_user() {
+		$value = $this->validation();
 		if($value) {
 			unset($value["id"]);
 			$data=$this->Users_model->set($value);
@@ -63,8 +63,8 @@ class Userajax extends All_Controller {
 		}
 	}
 
-	private function update_user($user_type=0) {
-		$value = $this->validation($user_type=0);
+	private function update_user() {
+		$value = $this->validation();
 		if(!$value["id"]) {
 			$this->json_badrequest("id not found");
 		}
@@ -102,7 +102,7 @@ class Userajax extends All_Controller {
                 'name' => $this->form_validation->set_value('name'),
                 'email' => $this->form_validation->set_value('email'),
                 'hp' => $this->form_validation->set_value('hp'),
-                'user_type' => $user_type,
+//                'user_type' => $user_type, // mod imam
                 'status' => $this->form_validation->set_value('status'),
                 'user_type' => $this->form_validation->set_value('user_type'),
                 'password' => $password

@@ -199,13 +199,13 @@
                                 <li><a href="<?= base_url("user/insert") ?>">Tambah user</a></li>
                             </ul>
                         </div><!-- col -->
-                        <div class="col-lg mg-t-30 mg-lg-t-0">
-                            <label class="section-label">Manajemen Admin</label>
-                            <ul>
-                                <li><a href="<?= base_url("user/list") ?>">List Admin</a></li>
-                                <li><a href="<?= base_url("user/insert") ?>">Tambah Admin</a></li>
-                            </ul>
-                        </div><!-- col -->
+<!--                        <div class="col-lg mg-t-30 mg-lg-t-0">-->
+<!--                            <label class="section-label">Manajemen Admin</label>-->
+<!--                            <ul>-->
+<!--                                <li><a href="--><?//= base_url("user/list") ?><!--">List Admin</a></li>-->
+<!--                                <li><a href="--><?//= base_url("user/insert") ?><!--">Tambah Admin</a></li>-->
+<!--                            </ul>-->
+<!--                        </div><!-- col -->-->
 
                     </div><!-- row -->
                 </div><!-- dropdown-menu -->

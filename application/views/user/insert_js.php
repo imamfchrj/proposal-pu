@@ -25,6 +25,7 @@
                 c_password: $('#c_password').val(),
                 hp: $('#hp').val(),
                 status: $('#status:checked').val(),
+                user_type: $('input[name=rdio]:checked').val(), // add imam
             }
         })
             .done(function(data) {
