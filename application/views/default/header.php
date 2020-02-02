@@ -19,8 +19,8 @@
             <div class="dropdown-menu dropdown-menu-right">
               <nav class="nav">
                 <a href="#" class="nav-link"><i class="icon ion-compose"></i> Edit Profile</a>
-                <a href="#" class="nav-link"><i class="icon ion-ios-bolt"></i> Activity Log</a>
-                <a href="#" class="nav-link"><i class="icon ion-ios-gear"></i> Account Settings</a>
+<!--                <a href="#" class="nav-link"><i class="icon ion-ios-bolt"></i> Activity Log</a>-->
+<!--                <a href="#" class="nav-link"><i class="icon ion-ios-gear"></i> Account Settings</a>-->
                 <a href="<?=base_url("login/logout")?>" class="nav-link"><i class="icon ion-forward"></i> Sign Out</a>
               </nav>
             </div><!-- dropdown-menu -->

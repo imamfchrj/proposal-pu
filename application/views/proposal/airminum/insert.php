@@ -1369,7 +1369,7 @@ $description_page = $option["description_page"];
                         </ul>
                     </td>
                     <td>
-                        <ul class="parsley-errors-list filled">
+                        <ul id="unit_produksi_1_4_2_indikator" class="parsley-errors-list filled">
                             <li class="tx-success"></li>
                         </ul>
                     </td>

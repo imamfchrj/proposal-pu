@@ -95,7 +95,7 @@ $description_page = $option["description_page"];
                     <span>Admin</span>
                   </label>
                   <label class="rdiobox">
-                    <input name="rdio" type="radio" value="1"  <?php if($user_type == 0) echo "checked=''";?>>
+                    <input name="rdio" type="radio" value="0"  <?php if($user_type == 0) echo "checked=''";?>>
                     <span>User</span>
                   </label>
                   </div>
