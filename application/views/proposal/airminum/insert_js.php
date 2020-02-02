@@ -207,49 +207,27 @@
                     <?php
                         }
                     ?>
-                    "unit_produksi_2_2_1A": $("#unit_produksi_2_2_1A").val(),
-                    "unit_produksi_2_2_1B": $("#unit_produksi_2_2_1B").val(),
-                    "unit_produksi_2_2_2A": $("#unit_produksi_2_2_2A").val(),
-                    "unit_produksi_2_2_2B": $("#unit_produksi_2_2_2B").val(),
-                    "unit_produksi_2_2_3A": $("#unit_produksi_2_2_3A").val(),
-                    "unit_produksi_2_2_3B": $("#unit_produksi_2_2_3B").val(),
-                    "unit_produksi_2_2_4A": $("#unit_produksi_2_2_4A").val(),
-                    "unit_produksi_2_2_4B": $("#unit_produksi_2_2_4B").val(),
-                    "unit_produksi_2_2_5A": $("#unit_produksi_2_2_5A").val(),
-                    "unit_produksi_2_2_5B": $("#unit_produksi_2_2_5B").val(),
-                    "unit_produksi_2_2_6A": $("#unit_produksi_2_2_6A").val(),
-                    "unit_produksi_2_2_6B": $("#unit_produksi_2_2_6B").val(),
-                    "unit_produksi_2_2_7A": $("#unit_produksi_2_2_7A").val(),
-                    "unit_produksi_2_2_7B": $("#unit_produksi_2_2_7B").val(),
 
-
-                    "unit_distribusi_2_3_1": $("#unit_distribusi_2_3_1").val(),
-                    "unit_distribusi_2_3_1A": $("#unit_distribusi_2_3_1A").val(),
-                    "unit_distribusi_2_3_1B": $("#unit_distribusi_2_3_1B").val(),
-                    "unit_distribusi_2_3_2A": $("#unit_distribusi_2_3_2A").val(),
-                    "unit_distribusi_2_3_2B": $("#unit_distribusi_2_3_2B").val(),
-                    "unit_distribusi_2_3_3A": $("#unit_distribusi_2_3_3A").val(),
-                    "unit_distribusi_2_3_3B": $("#unit_distribusi_2_3_3B").val(),
-                    "unit_distribusi_2_3_4A": $("#unit_distribusi_2_3_4A").val(),
-                    "unit_distribusi_2_3_4B": $("#unit_distribusi_2_3_4B").val(),
-                    "unit_distribusi_2_3_5A": $("#unit_distribusi_2_3_5A").val(),
-                    "unit_distribusi_2_3_5B": $("#unit_distribusi_2_3_5B").val(),
-                    "unit_distribusi_2_3_6A": $("#unit_distribusi_2_3_6A").val(),
-                    "unit_distribusi_2_3_6B": $("#unit_distribusi_2_3_6B").val(),
                     <?php
-                        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71; $index++) {
+                        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PRODUKSI_2_2; $index++) {
                     ?>
-                    "unit_distribusi_2_3_7<?=$index?>": $("#unit_distribusi_2_3_7<?=$index?>").val(),
-                    "unit_distribusi_2_3_7<?=$index?>A": $("#unit_distribusi_2_3_7<?=$index?>A").val(),
-                    "unit_distribusi_2_3_7<?=$index?>B": $("#unit_distribusi_2_3_7<?=$index?>B").val(),
+                    "unit_produksi_2_2_<?=$index?>": $("#unit_produksi_2_2_<?=$index?>").val(),
+                    "unit_produksi_2_2_<?=$index?>A": $("#unit_produksi_2_2_<?=$index?>A").val(),
+                    "unit_produksi_2_2_<?=$index?>B": $("#unit_produksi_2_2_<?=$index?>B").val(),
                     <?php
                         }
                     ?>
-                    "unit_distribusi_2_3_8A": $("#unit_distribusi_2_3_8A").val(),
-                    "unit_distribusi_2_3_8B": $("#unit_distribusi_2_3_8B").val(),
-
                     <?php
-                        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71; $index++) {
+                        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3; $index++) {
+                    ?>
+                    "unit_distribusi_2_3_<?=$index?>": $("#unit_distribusi_2_3_<?=$index?>").val(),
+                    "unit_distribusi_2_3_<?=$index?>A": $("#unit_distribusi_2_3_<?=$index?>A").val(),
+                    "unit_distribusi_2_3_<?=$index?>B": $("#unit_distribusi_2_3_<?=$index?>B").val(),
+                    <?php
+                        }
+                    ?>
+                    <?php
+                        for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4; $index++) {
                     ?>
                     "unit_pelayanan_2_4_<?=$index?>": $("#unit_pelayanan_2_4_<?=$index?>").val(),
                     "unit_pelayanan_2_4_<?=$index?>A": $("#unit_pelayanan_2_4_<?=$index?>A").val(),
@@ -352,10 +330,10 @@
 
         $( document ).ready(function() {
             get_ajax_jenis_sumber_air();
-            get_ajax_select("unit_distribusi");
-            get_ajax_select("unit_produksi");
+            get_ajax_select("unit_distribusi", 1);
             get_ajax_select("unit_pelayanan");
             get_ajax_select("unit_air_baku", 1);
+            get_ajax_select("unit_produksi", 1);
         });
 
         function get_ajax_jenis_sumber_air() {
