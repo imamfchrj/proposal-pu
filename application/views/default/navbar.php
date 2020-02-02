@@ -9,7 +9,9 @@
             </li>
 
 
-            <li class="nav-item with-sub mega-dropdown <?php if($menu=="pengajuan"){echo 'active';}?>">
+            <li class="nav-item with-sub mega-dropdown <?php if ($menu == "pengajuan") {
+                echo 'active';
+            } ?>">
                 <a class="nav-link" href="#">
                     <i class="icon ion-ios-filing-outline"></i>
                     <span>Pengajuan Proposal</span>
@@ -74,14 +76,17 @@
                             <ul>
                                 <li><a href="<?= base_url('airminum/insert') ?>">Evaluasi Infrastruktur Spam Durolis</a>
                                 </li>
-                                <li><a href="<?= base_url('airminum/list') ?>">List Evaluasi Infrastruktur Spam Durolis</a></li>
-                                
-            <?php if(is_admin()) { ?>
-                                <li><a href="<?= base_url('komponenkegiatan/list') ?>">Konfigurasi Komponen Kegiatan</a>
-                                </li>
-                                <li><a href="<?= base_url('komponenkegiatan/insert') ?>">Tambah Komponen Kegiatan</a>
-                                </li>
-            <?php } ?>
+                                <li><a href="<?= base_url('airminum/list') ?>">List Evaluasi Infrastruktur Spam
+                                        Durolis</a></li>
+
+                                <?php if (is_admin()) { ?>
+                                    <li><a href="<?= base_url('komponenkegiatan/list') ?>">Konfigurasi Komponen
+                                            Kegiatan</a>
+                                    </li>
+                                    <li><a href="<?= base_url('komponenkegiatan/insert') ?>">Tambah Komponen
+                                            Kegiatan</a>
+                                    </li>
+                                <?php } ?>
                             </ul>
 
 
@@ -162,99 +167,124 @@
                     </div><!-- row -->
                 </div><!-- dropdown-menu -->
             </li>
-            <li class="nav-item with-sub">
-                <a class="nav-link" href="#" data-toggle="dropdown">
-                    <i class="icon ion-ios-gear-outline"></i>
-                    <span>Approval</span>
-                </a>
-                <div class="sub-item">
-                    <ul>
-                        <li><a>Air Limbah</a></li>
-                        <li><a>Sampah</a></li>
-                        <li><a>Jalan Lingkungan</a></li>
-                        <li><a>Harga Satuan Air Minum</a></li>
-                        <li><a>Air Limbah</a></li>
-                        <li><a>Sampah</a></li>
-                        <li><a>Jalan Lingkungan</a></li>
-                        <li><a>Harga Satuan Air Minum</a></li>
-                        <li><a>Harga Satuan Sampah</a></li>
-                        <li><a>Harga Satuan Drainase Lingkungan</a></li>
-                        <li><a>Harga Satuan Jalan Lingkungan</a></li>
-                    </ul>
-                </div><!-- dropdown-menu -->
-            </li>
-            <?php if(is_admin()) { ?>
-            <li class="nav-item with-sub mega-dropdown <?php if($menu=="user"){echo 'active';}?>">
-                <a class="nav-link" href="#" data-toggle="dropdown">
-                    <i class="icon ion-ios-people"></i>
-                    <span>Man. User</span>
-                </a>
-                <div class="sub-item">
+            <?php if (is_admin()) { ?>
+                <li class="nav-item with-sub mega-dropdown<?php if ($menu == "approval") {
+                    echo 'active';
+                } ?>">
+                    <a class="nav-link" href="#" data-toggle="dropdown">
+                        <i class="icon ion-ios-gear-outline"></i>
+                        <span>Approval</span>
+                    </a>
+                    <div class="sub-item">
+                        <div class="row">
+                            <div class="col-lg mg-t-30 mg-lg-t-0">
+                                <label class="section-label">List Pengajuan</label>
+                                <ul>
+                                    <li><a href ="">Air Minum</a></li>
+                                    <li><a>Air Limbah</a></li>
+                                    <li><a>Sampah</a></li>
+                                    <li><a>Jalan Lingkungan</a></li>
+                                    <li><a>Harga Satuan Air Minum</a></li>
+                                    <li><a>Air Limbah</a></li>
+                                    <li><a>Sampah</a></li>
+                                    <li><a>Jalan Lingkungan</a></li>
+                                    <li><a>Harga Satuan Air Minum</a></li>
+                                    <li><a>Harga Satuan Sampah</a></li>
+                                    <li><a>Harga Satuan Drainase Lingkungan</a></li>
+                                    <li><a>Harga Satuan Jalan Lingkungan</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- dropdown-menu -->
+                </li>
+                <li class="nav-item with-sub mega-dropdown <?php if ($menu == "user") {
+                    echo 'active';
+                } ?>">
+                    <a class="nav-link" href="#" data-toggle="dropdown">
+                        <i class="icon ion-ios-people"></i>
+                        <span>Man. User</span>
+                    </a>
+                    <div class="sub-item">
 
-                    <div class="row">
-                        <div class="col-lg mg-t-30 mg-lg-t-0">
-                            <label class="section-label">Manajemen user</label>
-                            <ul>
-                                <li><a href="<?= base_url("user/list") ?>">List User</a></li>
-                                <li><a href="<?= base_url("user/insert") ?>">Tambah user</a></li>
-                            </ul>
-                        </div><!-- col -->
-<!--                        <div class="col-lg mg-t-30 mg-lg-t-0">-->
-<!--                            <label class="section-label">Manajemen Admin</label>-->
-<!--                            <ul>-->
-<!--                                <li><a href="--><?//= base_url("user/list") ?><!--">List Admin</a></li>-->
-<!--                                <li><a href="--><?//= base_url("user/insert") ?><!--">Tambah Admin</a></li>-->
-<!--                            </ul>-->
-<!--                        </div><!-- col -->-->
+                        <div class="row">
+                            <div class="col-lg mg-t-30 mg-lg-t-0">
+                                <label class="section-label">Manajemen user</label>
+                                <ul>
+                                    <li><a href="<?= base_url("user/list") ?>">List User</a></li>
+                                    <li><a href="<?= base_url("user/insert") ?>">Tambah user</a></li>
+                                </ul>
+                            </div><!-- col -->
+                            <!--                        <div class="col-lg mg-t-30 mg-lg-t-0">-->
+                            <!--                            <label class="section-label">Manajemen Admin</label>-->
+                            <!--                            <ul>-->
+                            <!--                                <li><a href="-->
+                            <? //= base_url("user/list") ?><!--">List Admin</a></li>-->
+                            <!--                                <li><a href="-->
+                            <? //= base_url("user/insert") ?><!--">Tambah Admin</a></li>-->
+                            <!--                            </ul>-->
+                            <!--                        </div><!-- col -->-->
 
-                    </div><!-- row -->
-                </div><!-- dropdown-menu -->
+                        </div><!-- row -->
+                    </div><!-- dropdown-menu -->
 
-            </li>
-<!--            <li class="nav-item with-sub">-->
-            <li class="nav-item with-sub mega-dropdown <?php if($menu=="ikk"){echo 'active';}?>">
-                <a class="nav-link" href="#" data-toggle="dropdown">
-                    <i class="icon ion-map"></i>
-                    <span>Man. wilayah</span>
-                </a>
-                <div class="sub-item">
-                    <div class="row">
-                        <div class="col-lg mg-t-30 mg-lg-t-0">
-                            <label class="section-label">Master Wilayah</label>
-                            <ul>
-                                <li class="active"><a href="<?= base_url("provinsi/list") ?>">List Provinsi</a></li>
-                                <li class="active"><a href="<?= base_url("provinsi/insert") ?>">Tambah Provinsi</a></li>
-                            </ul>
-                            <hr/>
-                            <ul>
-                                <li class="active"><a href="<?= base_url("kabupaten/list") ?>">List Kabupaten</a></li>
-                                <li class="active"><a href="<?= base_url("kabupaten/insert") ?>">Tambah Kabupaten</a></li>
-                            </ul>
-                        </div><!-- col -->
-                        <div class="col-lg mg-t-30 mg-lg-t-0">
-                            <label class="section-label">Master IKK</label>
-                            <ul>
-                                <li class="active"><a href="<?= base_url("ikk_provinsi/list") ?>">List IKK Provinsi</a></li>
-                                <li class="active"><a href="<?= base_url("ikk_provinsi/insert") ?>">Tambah IKK Provinsi</a></li>
-                            </ul>
-                            <hr/>
-                            <ul>
-                                <li class="active"><a href="<?= base_url("ikk_kabupaten/list") ?>">List IKK Kabupaten</a></li>
-                                <li class="active"><a href="<?= base_url("ikk_kabupaten/insert") ?>">Tambah IKK Kabupaten</a></li>
-                            </ul>
-                        </div><!-- col -->
+                </li>
+                <!--            <li class="nav-item with-sub">-->
+                <li class="nav-item with-sub mega-dropdown <?php if ($menu == "ikk") {
+                    echo 'active';
+                } ?>">
+                    <a class="nav-link" href="#" data-toggle="dropdown">
+                        <i class="icon ion-map"></i>
+                        <span>Man. wilayah</span>
+                    </a>
+                    <div class="sub-item">
+                        <div class="row">
+                            <div class="col-lg mg-t-30 mg-lg-t-0">
+                                <label class="section-label">Master Wilayah</label>
+                                <ul>
+                                    <li class="active"><a href="<?= base_url("provinsi/list") ?>">List Provinsi</a></li>
+                                    <li class="active"><a href="<?= base_url("provinsi/insert") ?>">Tambah Provinsi</a>
+                                    </li>
+                                </ul>
+                                <hr/>
+                                <ul>
+                                    <li class="active"><a href="<?= base_url("kabupaten/list") ?>">List Kabupaten</a>
+                                    </li>
+                                    <li class="active"><a href="<?= base_url("kabupaten/insert") ?>">Tambah
+                                            Kabupaten</a></li>
+                                </ul>
+                            </div><!-- col -->
+                            <div class="col-lg mg-t-30 mg-lg-t-0">
+                                <label class="section-label">Master IKK</label>
+                                <ul>
+                                    <li class="active"><a href="<?= base_url("ikk_provinsi/list") ?>">List IKK
+                                            Provinsi</a></li>
+                                    <li class="active"><a href="<?= base_url("ikk_provinsi/insert") ?>">Tambah IKK
+                                            Provinsi</a></li>
+                                </ul>
+                                <hr/>
+                                <ul>
+                                    <li class="active"><a href="<?= base_url("ikk_kabupaten/list") ?>">List IKK
+                                            Kabupaten</a></li>
+                                    <li class="active"><a href="<?= base_url("ikk_kabupaten/insert") ?>">Tambah IKK
+                                            Kabupaten</a></li>
+                                </ul>
+                            </div><!-- col -->
 
-                    </div><!-- row -->
-<!--                    <ul>-->
-<!--                        <li class="active"><a href="--><?//= base_url("provinsi/list") ?><!--">List Provinsi</a></li>-->
-<!--                        <li class="active"><a href="--><?//= base_url("provinsi/insert") ?><!--">Tambah Provinsi</a></li>-->
-<!--                        <hr/>-->
-<!--                        <li class="active"><a href="--><?//= base_url("kabupaten/list") ?><!--">List Kabupaten</a></li>-->
-<!--                        <li class="active"><a href="--><?//= base_url("kabupaten/insert") ?><!--">Tambah Kabupaten</a></li>-->
-<!---->
-<!--                    </ul>-->
-                </div><!-- dropdown-menu -->
-            </li>
+                        </div><!-- row -->
+                        <!--                    <ul>-->
+                        <!--                        <li class="active"><a href="-->
+                        <? //= base_url("provinsi/list") ?><!--">List Provinsi</a></li>-->
+                        <!--                        <li class="active"><a href="-->
+                        <? //= base_url("provinsi/insert") ?><!--">Tambah Provinsi</a></li>-->
+                        <!--                        <hr/>-->
+                        <!--                        <li class="active"><a href="-->
+                        <? //= base_url("kabupaten/list") ?><!--">List Kabupaten</a></li>-->
+                        <!--                        <li class="active"><a href="-->
+                        <? //= base_url("kabupaten/insert") ?><!--">Tambah Kabupaten</a></li>-->
+                        <!---->
+                        <!--                    </ul>-->
+                    </div><!-- dropdown-menu -->
+                </li>
             <?php } ?>
         </ul>
     </div><!-- container -->
