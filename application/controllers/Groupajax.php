@@ -8,11 +8,12 @@ class Groupajax extends All_Controller {
         $this->load->model("Komponenkegiatan_model");
 	}
 	
-	public function komponen_kegiatan($key, $sub_key, $year=false)
+	public function komponen_kegiatan($key, $sub_key, $bangunan_penunjang = 0, $year=false)
 	{
 		$data = $this->Komponenkegiatan_model->komponen_by_key(
 			$key, 
-            $sub_key,
+			$sub_key,
+			$bangunan_penunjang,
             $year
 		);
         $this->json_success($data);

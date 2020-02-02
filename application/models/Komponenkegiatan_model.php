@@ -24,13 +24,22 @@ class Komponenkegiatan_model extends CI_Model {
         return $data;
     }
 
-    function komponen_by_key($key, $sub_key, $year=false) {
+    function komponen_by_key($key, $sub_key, $bangunan_penunjang, $year=false) {
         $this->db->select("*");
         if($year) {
             $this->db->where("year",$year);
         }
         $this->db->where("key",$key);
         $this->db->where("sub_key",$sub_key);
+        if($bangunan_penunjang) {
+            $this->db->or_group_start()
+                ->or_like("sub_key", $sub_key)
+                ->or_like("sub_key", "bangunan_penunjang")
+            ->group_end();
+        }else {
+            $this->db->where("sub_key",$sub_key);
+        }
+        
         $this->db->where("aktif", 1);
         $this->db->order_by("id", "desc");
         return $this->db->get($this->table)->result();
