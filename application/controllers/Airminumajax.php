@@ -227,6 +227,64 @@ class Airminumajax extends All_Controller {
         $this->json_success($data_input);
     }
 
+    function get_chart($id_proposal) {
+		$data_input = $this->Proposalquestioner_model->get_proposal_id_selected($id_proposal);
+        $data_input = $this->initial($data_input);
+        $result = $this->set_chart($data_input);
+        $this->json_success($result);
+    }
+
+    function set_chart($data_input) {
+        $result["total_wajar"] = 0;
+        $result["total_justifikasi"] = 0;
+        $result["wajar"] = array();
+        $result["justifikasi"] = array();
+
+
+        $result = $this->bab2_format_chart($result, "unit_air_baku_2_1", $data_input, PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1);
+        $result = $this->bab2_format_chart($result, "unit_produksi_2_2", $data_input, PROPOSAL_AIR_MINUM_UNIT_PRODUKSI_2_2);
+        $result = $this->bab2_format_chart($result, "unit_distribusi_2_3", $data_input, PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3);
+        $result = $this->bab2_format_chart($result, "unit_pelayanan_2_4", $data_input, PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4);
+        
+        return $result;
+    }
+
+    private function bab2_format_chart($result, $key, $data_input, $count) {
+        for($index = 1; $index <= $count; $index++) {
+            if(!isset($data_input["verifikasi"][$key . "_" . $index]["text"])) {
+                continue;
+            }
+            if(!isset($data_input[$key . "_". $index])) {
+                continue;
+            }
+            $id = $data_input[$key . "_". $index];
+            if(!isset($data_input["initial"][$id]['kegiatan'])) {
+                continue;
+            }
+
+            $total_harga = $data_input[$key . "_". $index . "A"];
+            $text = $data_input["verifikasi"][$key . "_" . $index]["text"]; 
+            
+            $kegiatan = $data_input["initial"][$id]['kegiatan'];
+            $option = $data_input["verifikasi"][$key . "_" . $index]["option"];
+
+            $tmp_result = "";
+            if($option == $this->danger) {
+                $result["total_justifikasi"] += $total_harga;
+                $tmp_result = "justifikasi";
+            }else {
+                $result["total_wajar"] += $total_harga;
+                $tmp_result = "wajar";
+            }
+            $result[$tmp_result][] = array(
+                "kegiatan" => $kegiatan,
+                "harga" => $total_harga,
+                "verifikasi" => $text,
+            );
+        }
+        return $result;
+    }
+
     public function insert() {
         $data_input = $this->cek_input();
         $data_input = $this->calculate($data_input);
@@ -328,9 +386,7 @@ class Airminumajax extends All_Controller {
             if(in_array($key, $already_inserted)) {
                 continue;
             }
-            $already_inserted[] = $key;
-
-            
+            $already_inserted[] = $key;          
             $this->insert_data($data_input, $proposal_id, $key, $value);
         }
 
@@ -431,24 +487,36 @@ class Airminumajax extends All_Controller {
     private function initial($data_input) {
         $in_id = array();
         for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1; $index++) {
+            if(!isset($data_input["unit_air_baku_2_1_" . $index])) {
+                continue;
+            }
             if(!$data_input["unit_air_baku_2_1_".$index]){
                 continue;
             }
             $in_id[] = $data_input["unit_air_baku_2_1_".$index];
         }
         for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PRODUKSI_2_2; $index++) {
+            if(!isset($data_input["unit_produksi_2_2_" . $index])) {
+                continue;
+            }
             if(!$data_input["unit_produksi_2_2_".$index]){
                 continue;
             }
             $in_id[] = $data_input["unit_produksi_2_2_".$index];
         }
         for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3; $index++) {
+            if(!isset($data_input["unit_distribusi_2_3_" . $index])) {
+                continue;
+            }
             if(!$data_input["unit_distribusi_2_3_".$index]){
                 continue;
             }
             $in_id[] = $data_input["unit_distribusi_2_3_".$index];
         }
         for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4; $index++) {
+            if(!isset($data_input["unit_pelayanan_2_4_" . $index])) {
+                continue;
+            }
             if(!$data_input["unit_pelayanan_2_4_".$index]){
                 continue;
             }
@@ -456,6 +524,9 @@ class Airminumajax extends All_Controller {
         }
         $data_id = array("unit_distribusi_2_3_1");
         foreach($data_id as $value) {
+            if(!isset($data_input[$value])) {
+                continue;
+            }
             if(!$data_input[$value]){
                 continue;
             }
