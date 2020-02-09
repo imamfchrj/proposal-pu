@@ -690,7 +690,7 @@ class Airminumajax extends All_Controller {
     }
 
     private function unit_air_baku_1_3_12($data_input) {
-        $data_input["unit_air_baku_1_3_12"] =  $data_input["unit_air_baku_1_3_11"]+ $data_input["unit_air_baku_1_3_10"];
+        $data_input["unit_air_baku_1_3_12"] =  $data_input["unit_air_baku_1_3_11"] - $data_input["unit_air_baku_1_3_10"];
         return $data_input;
     }
 
