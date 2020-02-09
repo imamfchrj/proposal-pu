@@ -1231,7 +1231,7 @@ $description_page = $option["description_page"];
                 </tr>
 
                 <tr class = "hidden_1_3_10">
-                    <td class="w-3 p-3 align-middle">Head Pompa (Hp=H+RH)</td>
+                    <td class="w-3 p-3 align-middle">Head Pompa (Hp=H-RH)</td>
                     <td class="p-3">
                         <div class="input-group">
                             <input disabled id="unit_air_baku_1_3_12" type="number" value="" class="form-control"
