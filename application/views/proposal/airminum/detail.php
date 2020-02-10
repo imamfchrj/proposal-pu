@@ -112,16 +112,59 @@
                         <?php
                             // window.location='<?=base_url('airminum/edit/1')
                         ?>
-                        <button class="btn btn-info bd-0" onclick="window.location='<?=base_url('airminum/insert/'.$proposal_data->id)?>';">Detail Selengkapnya</button>
+                        <button class="btn detail btn-info bd-0" onclick="window.location='<?=base_url('airminum/insert/'.$proposal_data->id)?>';">Detail Selengkapnya</button>
                         <?php if(is_admin()) {?>
-                        <button class="btn btn-success bd-0" onclick="approv(1);">Setujui</button>
-                        <button class="btn btn-warning bd-0" onclick="approv(2);">Return</button>
+                        <button class="btn detail btn-success bd-0" onclick="approv(1);">Setujui</button>
+                        <button class="btn detail btn-warning bd-0" onclick="approv(2);">Return</button>
                         <?php } ?>
                     </div>
                     <!-- form-layout-footer -->
                 </div>
                 <!-- form-layout -->
             </div>
+        </div><!-- section-wrapper -->
+
+        
+        <div class="section-wrapper mg-t-20">
+          <label class="section-title">Kesimpulan</label>
+          <p class="mg-b-20 mg-sm-b-40">Kesimpulan kewajaran dari komponen biaya</p>
+
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="bd pd-20"><div id="flotPie1" class="ht-200 ht-sm-300"></div></div>
+            </div><!-- col-6 -->
+            <hr>
+            <div class="col-md-6 pd-20">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                    <thead class="thead-colored bg-danger">
+                        <tr>
+                        <th class="wd-35p">Item</th>
+                        <th class="wd-35p">Harga</th>
+                        <th class="wd-20p">Verifikasi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="justifikasi">
+                    </tbody>
+                    </table>
+                </div>
+            </div><!-- col-6 -->
+            <div class="col-md-6 pd-20">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                    <thead class="thead-colored bg-info">
+                        <tr>
+                        <th class="wd-35p">Item</th>
+                        <th class="wd-35p">Harga</th>
+                        <th class="wd-20p">Verifikasi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="wajar">
+                    </tbody>
+                    </table>
+                </div>
+            </div><!-- col-6 -->
+          </div><!-- row -->
         </div><!-- section-wrapper -->
 
       </div><!-- container -->
