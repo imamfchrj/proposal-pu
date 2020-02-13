@@ -8,7 +8,14 @@
 <link href="<?=base_url("assets")?>/lib/jquery.steps/css/jquery.steps.css" rel="stylesheet">
 
     <script>
-        
+
+        // $(function () {
+        //     $('[data-toggle="tooltip"]').tooltip()
+        // });
+
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
 
         function jenis_spam() {
             $val_jenis_spam = $("#jenis_spam").val();
@@ -297,12 +304,36 @@
             }
         }
         function set_indikator($data) {
+            $rumus = "";
             for (const [key, value] of Object.entries($data)) {
-                text_default(key, value['text'], value['option'], "indikator");
+                if (key == "unit_air_baku_1_3_1"){
+                    $rumus= "IF((1.1*Tambahan Kapasitas Produksi) <= Debit  Air Baku <= (1.5*Tambahan Kapasitas Produksi), Layak, Justifikasi)";
+                }else if (key == "unit_air_baku_1_3_3"){
+                    $rumus ="IF( Kekeruhan Maximum >= 600, Prasedimentasi, Non Prasedimentasi)";
+                }else if (key == "unit_air_baku_1_3_6"){
+                    $rumus = "IF( Beda Tinggi (▲H) > 0 , Gravitasi, Pompa)";
+                }else if (key == "unit_air_baku_1_3_8"){
+                    $rumus = "IF( 0.5 <= Kecepatan (V) <= 2.5 , Layak, Justifikasi)";
+                }else if (key == "unit_air_baku_1_3_9"){
+                    $rumus = "IF( (Kehilangan Tekanan (hf) / Panjang pipa Transmisi * 1000) < 10, Layak , Justifikasi)";
+                }else if (key == "unit_air_baku_1_3_10"){
+                    $rumus = "IF( Total Head > 0, Gravitasi, Pompa)";
+                }else if (key == "unit_produksi_1_4_1"){
+                    $rumus = "IF( Tambahan Kapasitas Produksi (Min) <= Prasedimentasi <= Tambahan Kapasitas Produksi (Max), Layak, Justifikasi)";
+                }else if (key == "unit_produksi_1_4_2"){
+                    $rumus = "IF( Tambahan Kapasitas Produksi (Min) <= IPA <= Tambahan Kapasitas Produksi (Max), Layak, Justifikasi)";
+                }else if (key == "unit_distribusi_1_5_5"){
+                    $rumus = "";
+                }else if (key == "harga_rata_rata_B"){
+                    $rumus = "IF( x <= 8.360 , Layak, Justifikasi)";
+                }else if (key == "harga_rata_rata_A"){
+                    $rumus = "IF( x <= 200.000.000 , Layak, Justifikasi)";
+                }
+                text_default(key, value['text'], value['option'], "indikator",$rumus);
             }
         }
-        function text_default($key, $text, $option, $default){
-            $default_text= '<li class="'+$option+'">'+$text+'</li>';
+        function text_default($key, $text, $option, $default, $rumus=""){
+            $default_text= '<li class="'+$option+'" data-toggle="tooltip" data-placement="top" title="'+$rumus+'">'+$text+'</li>';
             $("#"+$key+"_"+$default).html($default_text);
         }
 

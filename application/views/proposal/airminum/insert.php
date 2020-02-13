@@ -884,7 +884,7 @@ $description_page = $option["description_page"];
                 </tr>
 
                 <tr>
-                    <td class="w-3 p-3 align-middle">Debit Air Baku (Qab = 1,1 x Qmax)</td>
+                    <td class="w-3 p-3 align-middle">Debit Air Baku</td> <!-- (Qab = 1,1 x Qmax)-->
                     <td class="p-3">
                         <div class="input-group">
                             <input id="unit_air_baku_1_3_1" type="number" value="" class="form-control" placeholder="">
@@ -900,6 +900,7 @@ $description_page = $option["description_page"];
                     <td>
                         <ul class="parsley-errors-list filled" id="unit_air_baku_1_3_1_indikator">
                             <li class="tx-success"></li>
+
                         </ul>
                     </td>
 <!--                    <td>-->
@@ -960,7 +961,7 @@ $description_page = $option["description_page"];
                         </ul>
                     </td>
                     <td>
-                        <ul class="parsley-errors-list filled">
+                        <ul id="unit_air_baku_1_3_3_indikator" class="parsley-errors-list filled">
                             <li class="tx-success"></li>
                         </ul>
                     </td>
@@ -1051,7 +1052,7 @@ $description_page = $option["description_page"];
                         </ul>
                     </td>
                     <td>
-                        <ul class="parsley-errors-list filled">
+                        <ul id ="unit_air_baku_1_3_6_indikator" class="parsley-errors-list filled">
                             <li class="tx-success"></li>
                         </ul>
                     </td>
@@ -1112,7 +1113,7 @@ $description_page = $option["description_page"];
                         </ul>
                     </td>
                     <td>
-                        <ul class="parsley-errors-list filled">
+                        <ul class="parsley-errors-list filled" id="unit_air_baku_1_3_8_indikator">
                             <li class="tx-success"></li>
                         </ul>
                     </td>
@@ -1143,7 +1144,7 @@ $description_page = $option["description_page"];
                         </ul>
                     </td>
                     <td>
-                        <ul class="parsley-errors-list filled">
+                        <ul class="parsley-errors-list filled" id="unit_air_baku_1_3_9_indikator">
                             <li class="tx-success"></li>
                         </ul>
                     </td>
@@ -1174,7 +1175,7 @@ $description_page = $option["description_page"];
                         </ul>
                     </td>
                     <td>
-                        <ul class="parsley-errors-list filled">
+                        <ul class="parsley-errors-list filled" id="unit_air_baku_1_3_10_indikator">
                             <li class="tx-success"></li>
                         </ul>
                     </td>
@@ -1650,7 +1651,7 @@ $description_page = $option["description_page"];
                     </td>
                     <td>
                         <ul class="parsley-errors-list filled">
-                            <li class="tx-success"></li>
+                            <li id="unit_distribusi_1_5_5_indikator" class="tx-success"></li>
                         </ul>
                     </td>
 <!--                    <td>-->
