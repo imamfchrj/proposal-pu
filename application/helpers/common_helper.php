@@ -267,3 +267,23 @@ function get_text_komponen_mst($id=0){
     }
     return $data[$id];
 }
+
+function get_quetion_option($list, $index) {
+    $result["success"] = false;
+    $result["data"] = array();
+    if(!isset($list[$index])) {
+        return $result;
+    }
+    $result["success"] = true;
+    $result["data"] = $list[$index];
+    return $result;
+}
+
+function print_quetion_option($list, $index, $default="") {
+   $result =  get_quetion_option($list, $index);
+   if(!$result["success"]) {
+       echo $default;
+       return;
+   }
+   echo $result["data"][0] . $result["data"][1];
+}

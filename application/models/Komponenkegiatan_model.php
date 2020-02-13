@@ -45,6 +45,30 @@ class Komponenkegiatan_model extends CI_Model {
         return $this->db->get($this->table)->result();
     }
 
+    function komponen_by_sub_key($key, $sub_key, $sub_master_key, $year=false) {
+        $this->db->select("*");
+        if($year) {
+            $this->db->where("year",$year);
+        }
+        $this->db->where("key",$key);
+        $this->db->where("sub_key",$sub_key);
+        $this->db->where("sub_master_key",$sub_master_key);
+        $this->db->where("aktif", 1);
+        $this->db->order_by("id", "desc");
+        return $this->db->get($this->table)->result();
+    }
+
+    function komponen_by_id($id, $year=false) {
+        $this->db->select("*");
+        if($year) {
+            $this->db->where("year",$year);
+        }
+        $this->db->where("id",$id);
+        $this->db->where("aktif", 1);
+        return $this->db->get($this->table)->row();
+    }
+    
+
     function get_komponen_by_id($id) {
         $column = implode (", ", $this->column_order);
         $this->db->select($column);

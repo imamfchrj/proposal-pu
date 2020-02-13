@@ -7,7 +7,13 @@ class Login extends All_Controller {
 		$data = array(
 		);
 		$this->load->view('default/login',$data);
-	}
+    }
+    
+    public function test() {
+        $kambing = PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4_OPTION;
+
+        print_quetion_option(PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4_OPTION, 1);
+    }
 
 	public function ajax_login(){
         $this->form_validation->set_rules('g-recaptcha-response', "Captcha", 'required|trim|xss_clean|callback__check_recaptcha');

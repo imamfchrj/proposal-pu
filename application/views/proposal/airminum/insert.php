@@ -1928,8 +1928,7 @@ $description_page = $option["description_page"];
                 <tr>
                     <td class="w-3 p-3 align-middle">
                             <div class="input-group">
-                                <select id="unit_air_baku_2_1_<?= $index
-                                ?>" class="form-control select2 unit_air_baku" data-placeholder="Pilih Jenis">
+                                <select id="unit_air_baku_2_1_<?= $index?>" onchange="get_ajax_by_id('unit_air_baku_2_1_<?= $index?>_satuan_option', this.value)" class="form-control select2   <?php print_quetion_option(PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1_OPTION, $index, "unit_air_baku"); ?>" data-placeholder="Pilih Jenis">
                                     <option value=""></option>
                                 </select>
                             </div></td>
@@ -1943,7 +1942,7 @@ $description_page = $option["description_page"];
                         <div class="input-group">
                             <input id="unit_air_baku_2_1_<?=$index?>B" type="number" value="" class="form-control"
                                    placeholder="">
-                            <span class="input-group-addon">unit</span>
+                            <span class="input-group-addon unit_air_baku_2_1_<?= $index?>_satuan_option">unit</span>
                         </div>
                     </td>
                     <td>
@@ -2009,8 +2008,8 @@ $description_page = $option["description_page"];
                 <tr>
                     <td class="w-3 p-3 align-middle">
                             <div class="input-group">
-                                <select id="unit_produksi_2_2_<?= $index
-                                ?>" class="form-control select2 unit_produksi" data-placeholder="Pilih Jenis">
+                                <select onchange="get_ajax_by_id('unit_produksi_2_2_<?= $index?>_satuan_option', this.value)" id="unit_produksi_2_2_<?= $index
+                                ?>" class="form-control select2  <?php print_quetion_option(PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4_OPTION, $index, "unit_produksi"); ?>" data-placeholder="Pilih Jenis">
                                     <option value=""></option>
                                 </select>
                             </div></td>
@@ -2024,7 +2023,7 @@ $description_page = $option["description_page"];
                         <div class="input-group">
                             <input id="unit_produksi_2_2_<?=$index?>B" type="number" value="" class="form-control"
                                    placeholder="">
-                            <span class="input-group-addon">unit</span>
+                            <span class="input-group-addon unit_produksi_2_2_<?= $index?>_satuan_option">unit</span>
                         </div>
                     </td>
                     <td>
@@ -2088,8 +2087,8 @@ $description_page = $option["description_page"];
                         <td class="w-3 p-3 align-middle">
 
                             <div class="input-group">
-                                <select id="unit_distribusi_2_3_<?= $index
-                                ?>" class="form-control select2 unit_distribusi" data-placeholder="Pilih Jenis">
+                                <select onchange="get_ajax_by_id('unit_distribusi_2_3_<?= $index?>_satuan_option', this.value)" id="unit_distribusi_2_3_<?= $index
+                                ?>" class="form-control select2  <?php print_quetion_option(PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_OPTION, $index, "unit_distribusi"); ?>" data-placeholder="Pilih Jenis">
                                     <option value=""></option>
                                 </select>
                             </div>
@@ -2104,7 +2103,7 @@ $description_page = $option["description_page"];
                             <div class="input-group">
                                 <input id="unit_distribusi_2_3_<?= $index
                                 ?>B" type="number" value="" class="form-control" placeholder="">
-                                <span class="input-group-addon">unit</span>
+                                <span class="input-group-addon unit_distribusi_2_3_<?= $index?>_satuan_option">unit</span>
                             </div>
 
                         </td>
@@ -2172,7 +2171,7 @@ $description_page = $option["description_page"];
 
                 <tr>
                     <td class="w-3 p-3 align-middle">
-                        <select id="unit_pelayanan_2_4_<?= $index?>" class="form-control select2 unit_pelayanan" data-placeholder="Pilih Jenis">
+                        <select onchange="get_ajax_by_id('unit_pelayanan_2_4_<?= $index?>_satuan_option', this.value)" id="unit_pelayanan_2_4_<?= $index?>" class="form-control select2  <?php print_quetion_option(PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4_OPTION, $index, "unit_pelayanan"); ?>" data-placeholder="Pilih Jenis">
                             <option value=""></option>
                         </select>
                     </td>
@@ -2186,7 +2185,7 @@ $description_page = $option["description_page"];
                         <div class="input-group">
                             <input id="unit_pelayanan_2_4_<?=$index?>B" type="number" value="" class="form-control"
                                    placeholder="">
-                            <span class="input-group-addon">unit</span>
+                            <span class="input-group-addon unit_pelayanan_2_4_<?= $index?>_satuan_option">unit</span>
                         </div>
 
                     </td>

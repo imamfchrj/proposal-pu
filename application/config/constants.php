@@ -104,7 +104,40 @@ define('SUBKEY_AIR_MINUM_DISTRIBUSI', "unit_distribusi");
 define('SUBKEY_AIR_MINUM_PELAYANAN', "unit_pelayanan");
 define('SUBKEY_AIR_MINUM_BANGUNAN', "bangunan_penunjang");
 define('PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71', 12); // unused
-define('PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3', 20);
-define('PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4', 4);
 define('PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1', 5);
 define('PROPOSAL_AIR_MINUM_UNIT_PRODUKSI_2_2', 7);
+define('PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3', 20);
+define('PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4', 4);
+
+define('PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1_OPTION', array(
+    1 => array("unit_air_baku", "bangunan_pengambilan"),
+    2 => array("unit_air_baku", "mekanikal_dan_elektrikal"),
+    3 => array("unit_air_baku", "pipa_transmisi"),
+    4 => array("unit_air_baku", "bangunan_penunjang"),
+    5 => array("unit_air_baku", "pekerjaan_lain_lain"),
+));
+
+define('PROPOSAL_AIR_MINUM_UNIT_PRODUKSI_2_2_OPTION', array(
+    1 => array("unit_produksi", "pra_pengolahan"),
+    2 => array("unit_produksi", "instalasi_pengolahan"),
+    3 => array("unit_produksi", "keandalan_ipa"),
+    4 => array("unit_produksi", "pengolahan_lumpur"),
+    5 => array("unit_produksi", "reservoir"),
+    6 => array("unit_produksi", "mekanikal_dan_elektrikal"),
+    7 => array("unit_produksi", "bangunan_penunjang"),
+));
+
+define('PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_OPTION', array(
+    1 => array("unit_distribusi", "pipa_distribusi_utama"),
+    2 => array("unit_distribusi", "pipa_distribusi_sekunder"),
+    3 => array("unit_distribusi", "pipa_distribusi_tersier"),
+    4 => array("unit_distribusi", "crossing_jaringan"),
+    5 => array("unit_distribusi", "perlengkapan_jaringan"),
+    6 => array("unit_distribusi", "pekerjaan_lain_lain"),
+));
+
+define('PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4_OPTION', array(
+    1 => array("unit_pelayanan", "pipa_retikulasi"),
+    2 => array("unit_pelayanan", "sambungan_pelanggan"),
+));
+
