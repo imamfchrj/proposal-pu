@@ -25,8 +25,9 @@
                 "ajax": ROOT + "/komponenkegiatanajax/list",
                 "columns": [
                     { "data": "id" },
-                    { "data": "komponen_spam" },
                     { "data": "kegiatan" },
+                    { "data": "komponen_spam" },
+                    { "data": "sub_komponen_spam" },
                     { "data": "satuan" },
                     { "data": "estimasi" },
                     { "data": "pembagi" },

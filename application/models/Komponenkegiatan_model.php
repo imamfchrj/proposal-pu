@@ -7,8 +7,9 @@ class Komponenkegiatan_model extends CI_Model {
 
     private $table = "tb_komponen_kegiatan";
     private $table_prov = "tb_provinsi";
+    private $tb_master_sub_komponen = "tb_master_sub_komponen";
   
-    public $column_order = ["tb_komponen_kegiatan.id", "sub_key", "id_komponen" ,"komponen_spam", "kegiatan", "estimasi", "pembagi", "satuan", "created_at", "updated_at", "fix_key", "year", "sub_master_key"];
+    public $column_order = ["tb_komponen_kegiatan.id",  "tb_komponen_kegiatan.kegiatan",  "tb_komponen_kegiatan.komponen_spam", "tb_komponen_kegiatan.sub_master_key",  "tb_komponen_kegiatan.estimasi", "tb_komponen_kegiatan.pembagi", "tb_komponen_kegiatan.satuan", "tb_komponen_kegiatan.created_at", "tb_komponen_kegiatan.updated_at", "tb_komponen_kegiatan.fix_key", "tb_komponen_kegiatan.year", "tb_komponen_kegiatan.sub_master_key", "tb_komponen_kegiatan.id_komponen", "tb_komponen_kegiatan.sub_key" ];
    
     public function __construct() {
         parent::__construct();
@@ -78,6 +79,7 @@ class Komponenkegiatan_model extends CI_Model {
 
     function select_komponen($search, $limit, $offer, $order, $order_type) {
         $column = implode (", ", $this->column_order);
+        $column = $column . "," . $this->tb_master_sub_komponen.".komponen_spam as sub_komponen_spam";
         $this->db->select($column);
         if($search) {
             $this->db->or_group_start()
@@ -96,6 +98,7 @@ class Komponenkegiatan_model extends CI_Model {
             $order_type="asc";
         }
         $this->db->order_by($this->column_order[$order], $order_type);
+        $this->db->join($this->tb_master_sub_komponen,$this->tb_master_sub_komponen.".sub_key=".$this->table.".sub_master_key","left");
         $this->db->limit($limit, $offer);
         return $this->db->get($this->table)->result_array();
     }
