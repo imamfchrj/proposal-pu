@@ -3,6 +3,7 @@
         $this->load->view("default/form_js");
         $this->load->view("komponenkegiatan/check_komponen_js");
         $this->load->view("default/komponen_mst_ajax");
+        $this->load->view("default/komponen_sub_mst_ajax");
         $link = $option["link"];
     ?>
 
@@ -21,6 +22,7 @@
             data: {
                 id: $('#id').val(),
                 sub_key: $('#sub_key').val(),
+                sub_sub_key: $('#sub_sub_key').val(),
                 kegiatan: $('#kegiatan').val(),
                 satuan: $('#satuan').val(),
                 estimasi: $('#estimasi').val(),

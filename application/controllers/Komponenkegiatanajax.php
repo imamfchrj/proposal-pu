@@ -88,6 +88,7 @@ class Komponenkegiatanajax extends All_Controller {
 
         $this->form_validation->set_rules('id', 'Identity', 'xss_clean|htmlentities');
         $this->form_validation->set_rules('sub_key', 'Komponen', 'xss_clean|htmlentities');
+        $this->form_validation->set_rules('sub_sub_key', 'Komponen', 'xss_clean|htmlentities');
         $this->form_validation->set_rules('kegiatan', 'Kegiatan', 'xss_clean|htmlentities');
         $this->form_validation->set_rules('satuan', 'Satuan', 'xss_clean|htmlentities');
         $this->form_validation->set_rules('estimasi', 'Estimasi', 'xss_clean|htmlentities');
@@ -102,6 +103,7 @@ class Komponenkegiatanajax extends All_Controller {
                 'key' => $mst_komponen->key,
                 'sub_key' => $mst_komponen->sub_key,
                 'id_komponen' => $this->form_validation->set_value('sub_key'),
+                'sub_master_key' => $this->form_validation->set_value('sub_sub_key'),
                 'komponen_spam' => $mst_komponen->komponen_spam,
                 'kegiatan' => $this->form_validation->set_value('kegiatan'),
                 'satuan' => $this->form_validation->set_value('satuan'),

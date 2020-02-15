@@ -1,0 +1,1 @@
+ALTER TABLE `tb_komponen_kegiatan` ADD `sub_master_key` VARCHAR(100) NOT NULL AFTER `sub_key`;

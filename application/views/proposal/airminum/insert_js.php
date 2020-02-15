@@ -365,6 +365,20 @@
             get_ajax_select("unit_pelayanan");
             get_ajax_select("unit_air_baku", 1);
             get_ajax_select("unit_produksi", 1);
+            <?php 
+                foreach(PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1_OPTION as $list) {
+                    echo "get_ajax_sub_select('$list[0]', '$list[1]');";
+                }
+                foreach(PROPOSAL_AIR_MINUM_UNIT_PRODUKSI_2_2_OPTION as $list) {
+                    echo "get_ajax_sub_select('$list[0]', '$list[1]');";
+                }
+                foreach(PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_OPTION as $list) {
+                    echo "get_ajax_sub_select('$list[0]', '$list[1]');";
+                }
+                foreach(PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4_OPTION as $list) {
+                    echo "get_ajax_sub_select('$list[0]', '$list[1]');";
+                }
+            ?>
         });
 
         function get_ajax_jenis_sumber_air() {
@@ -440,6 +454,93 @@
                 alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
             });
         }
+
+
+
+        function get_ajax_sub_select($var, $url2) {
+            $.ajax({
+                url: ROOT+'/groupajax/komponen_kegiatan_sub_master/air_minum/' + $var + "/" + $url2,
+                dataType: 'json',
+                type: 'get',
+                data: {
+                }
+            })
+            .done(function(data) {
+                if(data.is_error){
+                    alert(data.error_message);
+                    return;
+                }
+                if(data.data === 'undefined'){
+                    return;
+                }
+                $tmp = true;
+                try { 
+                    data.data.forEach(function(value){
+                        if($tmp) {
+                            $tmp=false;
+                            $("." + $var +$url2).html("<option value='0'></option>");
+                        }
+                        $("." + $var + $url2).append('<option value="'+value.id+'">'+value.kegiatan+' ('+value.satuan+')</option>');
+                    });
+                } 
+                catch { 
+                    // object does not exist 
+                } 
+                
+            })
+            .complete(function(){
+            })
+            .fail(function(data){
+                if(data.responseJSON.error_messages !== 'undefined'){
+                    alert_failed("Error!", data.responseJSON.error_messages);
+                    return;
+                }
+                alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
+            });
+        }
+
+
+        function get_ajax_by_id($var, $id) {
+            if($var == 0) {
+                return;
+            }
+            $.ajax({
+                url: ROOT+'/groupajax/komponen_kegiatan_by_id/' + $id,
+                dataType: 'json',
+                type: 'get',
+                data: {
+                }
+            })
+            .done(function(data) {
+                if(data.is_error){
+                    alert(data.error_message);
+                    return;
+                }
+                if(data.data === 'undefined'){
+                    return;
+                }
+                try { 
+                    $("." + $var).html(data.data.satuan);
+                } 
+                catch { 
+                    $("." + $var).html("unit");
+                } 
+                
+            })
+            .complete(function(){
+            })
+            .fail(function(data){
+                if(data.responseJSON.error_messages !== 'undefined'){
+                    alert_failed("Error!", data.responseJSON.error_messages);
+                    return;
+                }
+                alert_failed("Error!", "Terjadi kesalahan. Periksa jaringan anda. atau hubungi admin.");
+            });
+        }
+
+        
+
+        
 
 
         

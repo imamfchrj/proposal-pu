@@ -18,5 +18,25 @@ class Groupajax extends All_Controller {
 		);
         $this->json_success($data);
 	}
+	
+	public function komponen_kegiatan_sub_master($key, $sub_key, $sub_master_key = 0, $year=false)
+	{
+		$data = $this->Komponenkegiatan_model->komponen_by_sub_key(
+			$key, 
+			$sub_key,
+			$sub_master_key,
+            $year
+		);
+        $this->json_success($data);
+	}
+	
+	public function komponen_kegiatan_by_id($id, $year=false)
+	{
+		$data = $this->Komponenkegiatan_model->komponen_by_id(
+			$id, 
+            $year
+		);
+        $this->json_success($data);
+	}
 
 }

@@ -267,3 +267,33 @@ function get_text_komponen_mst($id=0){
     }
     return $data[$id];
 }
+
+function get_text_sub_komponen_mst_by_field($id=0, $text_field){
+    $CI =& get_instance();
+    $CI->load->model('Komponen_sub_mst_model');
+    return $CI->Komponen_sub_mst_model->get_by_id_with_field($id, $text_field);
+}
+
+function get_text_sub_komponen_mst($id=0){
+    return get_text_sub_komponen_mst_by_field($id, "komponen_spam");
+}
+
+function get_quetion_option($list, $index) {
+    $result["success"] = false;
+    $result["data"] = array();
+    if(!isset($list[$index])) {
+        return $result;
+    }
+    $result["success"] = true;
+    $result["data"] = $list[$index];
+    return $result;
+}
+
+function print_quetion_option($list, $index, $default="") {
+   $result =  get_quetion_option($list, $index);
+   if(!$result["success"]) {
+       echo $default;
+       return;
+   }
+   echo $result["data"][0] . $result["data"][1];
+}

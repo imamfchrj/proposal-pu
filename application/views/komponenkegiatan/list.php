@@ -18,8 +18,9 @@
               <thead>
                 <tr>
                   <th class="wd-10p">No</th>
-                  <th class="wd-25p">Komponen SPAM</th>
                   <th class="wd-25p">Kegiatan</th>
+                  <th class="wd-25p">Komponen SPAM</th>
+                  <th class="wd-25p">Sub Komponen SPAM</th>
                   <th class="wd-10p">Satuan</th>
                   <th class="wd-10p">Estimasi</th>
                   <th class="wd-10p">Pembagi</th>

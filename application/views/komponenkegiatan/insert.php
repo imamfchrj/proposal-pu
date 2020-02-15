@@ -3,6 +3,7 @@
 $id = "";
 $sub_key = "";
 $id_komponen = "";
+$sub_id_komponen = "";
 $kegiatan = "";
 $satuan = "";
 $estimasi = "";
@@ -13,6 +14,7 @@ if (isset($option["form_value"])) {
     $id = $option["form_value"]->id;
     $sub_key = $option["form_value"]->sub_key;
     $id_komponen = $option["form_value"]->id_komponen;
+    $sub_id_komponen = $option["form_value"]->sub_master_key;
     $kegiatan = $option["form_value"]->kegiatan;
     $satuan = $option["form_value"]->satuan;
     $estimasi = $option["form_value"]->estimasi;
@@ -50,6 +52,17 @@ $description_page = $option["description_page"];
                                 } ?>><?php if ($id_komponen) { ?><?= get_text_komponen_mst($id_komponen) ?><?php } ?></option>
                             </select>
                             <span id="e_sub_key" class="tx-danger"></span>
+                        </div>
+                    </div><!-- col-4 -->
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="form-control-label">Sub Komponen: <span class="tx-danger">*</span></label>
+                            <select name="sub_sub_key" id="sub_sub_key" class="form-control select2 sub_komponen_mst" data-placeholder="Pilih">
+                                <option value=<?php if ($sub_id_komponen) {
+                                    echo $sub_id_komponen;
+                                } ?>><?php if ($sub_id_komponen) { ?><?= get_text_sub_komponen_mst($sub_id_komponen) ?><?php } ?></option>
+                            </select>
+                            <span id="e_sub_sub_key" class="tx-danger"></span>
                         </div>
                     </div><!-- col-4 -->
                     <div class="col-lg-4">
