@@ -8,7 +8,7 @@ class Komponenkegiatan_model extends CI_Model {
     private $table = "tb_komponen_kegiatan";
     private $table_prov = "tb_provinsi";
   
-    public $column_order = ["id", "sub_key", "id_komponen" ,"komponen_spam", "kegiatan", "estimasi", "pembagi", "satuan", "created_at", "updated_at", "fix_key", "year"];
+    public $column_order = ["tb_komponen_kegiatan.id", "sub_key", "id_komponen" ,"komponen_spam", "kegiatan", "estimasi", "pembagi", "satuan", "created_at", "updated_at", "fix_key", "year", "sub_master_key"];
    
     public function __construct() {
         parent::__construct();
