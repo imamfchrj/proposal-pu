@@ -308,8 +308,8 @@
             }
         }
         function set_indikator($data) {
-            $rumus = "";
             for (const [key, value] of Object.entries($data)) {
+                $rumus = "";
                 if (key == "unit_air_baku_1_3_1"){
                     $rumus= "IF((1.1*Tambahan Kapasitas Produksi) <= Debit  Air Baku <= (1.5*Tambahan Kapasitas Produksi), Layak, Justifikasi)";
                 }else if (key == "unit_air_baku_1_3_3"){
@@ -349,13 +349,19 @@
                 }
                 var data = $text.split("~");
                 $val_str = "";
+                $increment_split = 1;
                 if(data.length != 0) {
                     data.forEach(function(value){
                     
                         if(!isNaN(value)){
                             value = to_thousand(value);
                         }
+                        if($increment_split > 1) {
+                            $val_str += " ~ ";
+                        }
+                        
                         $val_str += value;
+                        $increment_split++;
                     });
                     return $val_str;
                 }
