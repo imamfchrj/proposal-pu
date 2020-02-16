@@ -326,6 +326,14 @@
                     $rumus = "IF( Tambahan Kapasitas Produksi (Min) <= Prasedimentasi <= Tambahan Kapasitas Produksi (Max), Layak, Justifikasi)";
                 }else if (key == "unit_produksi_1_4_2"){
                     $rumus = "IF( Tambahan Kapasitas Produksi (Min) <= IPA <= Tambahan Kapasitas Produksi (Max), Layak, Justifikasi)";
+                }else if (key == "unit_distribusi_1_5_1"){
+                    $rumus = "IF ((Tambahan Kapasitas Produksi (Min) * 86.4 * 20%) < Kapasitas Reservoir < (Tambahan Kapasitas Produksi (Max) * 86.4 * 20%), Layak, Justifikasi)";
+                }else if (key == "unit_distribusi_1_5_2A"){
+                    $rumus = "IF( Beda Tinggi (▲H) > 0 , Gravitasi, Pompa)";
+                }else if (key == "unit_distribusi_1_5_4"){
+                    $rumus = "IF( Kecepatan (V) < 2.5, Layak, Justifikasi)";
+                }else if (key == "unit_distribusi_1_5_6"){
+                    $rumus = "IF( Kebutuhan Puncak (Min) <= Pompa Distribusi <= Pompa Distribusi (Max), Layak, Justifikasi)";
                 }else if (key == "unit_distribusi_1_5_5"){
                     $rumus = "";
                 }else if (key == "harga_rata_rata_B"){
