@@ -68,7 +68,7 @@ class Proposal_model extends CI_Model {
         }
 
         if($search) {
-            $this->db->or_group_start()
+            $this->db->group_start()
                 ->or_like($this->table . ".nama_proposal", $search)
                 ->or_like($this->table_user_alias . ".name", $search)
                 ->or_like($this->table_approval_alias . ".name", $search)
@@ -156,7 +156,7 @@ class Proposal_model extends CI_Model {
         }
 
         if($search) {
-            $this->db->or_group_start()
+            $this->db->group_start()
                 ->or_like($this->table . ".nama_proposal", $search)
                 ->or_like($this->table_user_alias . ".name", $search)
                 ->or_like($this->table_approval_alias . ".name", $search)

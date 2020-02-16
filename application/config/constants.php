@@ -114,6 +114,7 @@ define('PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1_OPTION', array(
     2 => array("unit_air_baku", "mekanikal_dan_elektrikal", "Mekanikal dan Elektrikal"),
     3 => array("unit_air_baku", "pipa_transmisi", "Pipa Transmisi"),
     4 => array("unit_air_baku", "bangunan_penunjang", "Bangunan Penunjang"),
+    5 => array("unit_air_baku", "bangunan_pengambilan", "Bangunan Pengambilan"),
     // 5 => array("unit_air_baku", "pekerjaan_lain_lain"),
 ));
 
