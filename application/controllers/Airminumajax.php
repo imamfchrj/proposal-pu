@@ -17,8 +17,8 @@ class Airminumajax extends All_Controller {
     }
 
     public function approv() {
-        $this->form_validation->set_rules('status', "Status", 'numeric|trim|required|xss_clean');
-        $this->form_validation->set_rules('id', "Proposal", 'numeric|trim|required|xss_clean');
+        $this->form_validation->set_rules('status', "Status", 'trim|required|xss_clean');
+        $this->form_validation->set_rules('id', "Proposal", 'trim|required|xss_clean');
         if ($this->form_validation->run()) {
             $id = $this->form_validation->set_value('id');
             $status = $this->form_validation->set_value('status');
@@ -60,154 +60,154 @@ class Airminumajax extends All_Controller {
 	}
     
     private function cek_input() {
-        $this->form_validation->set_rules('prov_id', "provinsi", 'numeric|trim|required|xss_clean');
+        $this->form_validation->set_rules('prov_id', "provinsi", 'trim|required|xss_clean');
         $this->form_validation->set_rules('jenis_spam', "Jenis SPAM", 'trim|required|xss_clean');
 
         // ketentuan teknis
-        $this->form_validation->set_rules('jenis_spam_1_1_1', "Jenis SPAM 1.1.1", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('jenis_spam_1_1_2', "Jenis SPAM 1.1.2", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('jenis_spam_1_1_4A', "Jenis SPAM 1.1.4A", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('jenis_spam_1_1_5', "Jenis SPAM 1.1.5", 'numeric|trim|xss_clean');
+        $this->form_validation->set_rules('jenis_spam_1_1_1', "Jenis SPAM 1.1.1", 'trim|xss_clean');
+        $this->form_validation->set_rules('jenis_spam_1_1_2', "Jenis SPAM 1.1.2", 'trim|xss_clean');
+        $this->form_validation->set_rules('jenis_spam_1_1_4A', "Jenis SPAM 1.1.4A", 'trim|xss_clean');
+        $this->form_validation->set_rules('jenis_spam_1_1_5', "Jenis SPAM 1.1.5", 'trim|xss_clean');
         
         // pelayanan
-        $this->form_validation->set_rules('pelayanan_1_2_1A', "Pelayanan 1.2.1A", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('pelayanan_1_2_1B', "Pelayanan 1.2.1B", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('pelayanan_1_2_1D', "Pelayanan 1.2.1D", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('pelayanan_1_2_2C', "Pelayanan 1.2.2C", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('pelayanan_1_2_2E', "Pelayanan 1.2.2E", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('pelayanan_1_2_2H', "Pelayanan 1.2.2H", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('pelayanan_1_2_2I', "pelayanan_1_2_2I", 'numeric|trim|xss_clean');
+        $this->form_validation->set_rules('pelayanan_1_2_1A', "Pelayanan 1.2.1A", 'trim|xss_clean');
+        $this->form_validation->set_rules('pelayanan_1_2_1B', "Pelayanan 1.2.1B", 'trim|xss_clean');
+        $this->form_validation->set_rules('pelayanan_1_2_1D', "Pelayanan 1.2.1D", 'trim|xss_clean');
+        $this->form_validation->set_rules('pelayanan_1_2_2C', "Pelayanan 1.2.2C", 'trim|xss_clean');
+        $this->form_validation->set_rules('pelayanan_1_2_2E', "Pelayanan 1.2.2E", 'trim|xss_clean');
+        $this->form_validation->set_rules('pelayanan_1_2_2H', "Pelayanan 1.2.2H", 'trim|xss_clean');
+        $this->form_validation->set_rules('pelayanan_1_2_2I', "pelayanan_1_2_2I", 'trim|xss_clean');
 
-        $this->form_validation->set_rules('unit_air_baku_1_3_1', "unit_air_baku_1_3_1", 'numeric|trim|xss_clean');
+        $this->form_validation->set_rules('unit_air_baku_1_3_1', "unit_air_baku_1_3_1", 'trim|xss_clean');
         $this->form_validation->set_rules('unit_air_baku_1_3_2', "unit_air_baku_1_3_2", 'trim|xss_clean');
-        $this->form_validation->set_rules('unit_air_baku_1_3_3', "unit_air_baku_1_3_3", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_air_baku_1_3_4', "unit_air_baku_1_3_4", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_air_baku_1_3_5', "unit_air_baku_1_3_5", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_air_baku_1_3_7', "unit_air_baku_1_3_7", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_air_baku_1_3_8', "unit_air_baku_1_3_8", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_air_baku_1_3_11', "unit_air_baku_1_3_11", 'numeric|trim|xss_clean');
+        $this->form_validation->set_rules('unit_air_baku_1_3_3', "unit_air_baku_1_3_3", 'trim|xss_clean');
+        $this->form_validation->set_rules('unit_air_baku_1_3_4', "unit_air_baku_1_3_4", 'trim|xss_clean');
+        $this->form_validation->set_rules('unit_air_baku_1_3_5', "unit_air_baku_1_3_5", 'trim|xss_clean');
+        $this->form_validation->set_rules('unit_air_baku_1_3_7', "unit_air_baku_1_3_7", 'trim|xss_clean');
+        $this->form_validation->set_rules('unit_air_baku_1_3_8', "unit_air_baku_1_3_8", 'trim|xss_clean');
+        $this->form_validation->set_rules('unit_air_baku_1_3_11', "unit_air_baku_1_3_11", 'trim|xss_clean');
 
-        $this->form_validation->set_rules('unit_produksi_1_4_1', "unit_produksi_1_4_1", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_produksi_1_4_2', "unit_produksi_1_4_2", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_produksi_1_4_3', "unit_produksi_1_4_3", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_produksi_1_4_4', "unit_produksi_1_4_4", 'numeric|trim|xss_clean');
+        $this->form_validation->set_rules('unit_produksi_1_4_1', "unit_produksi_1_4_1", 'trim|xss_clean');
+        $this->form_validation->set_rules('unit_produksi_1_4_2', "unit_produksi_1_4_2", 'trim|xss_clean');
+        $this->form_validation->set_rules('unit_produksi_1_4_3', "unit_produksi_1_4_3", 'trim|xss_clean');
+        $this->form_validation->set_rules('unit_produksi_1_4_4', "unit_produksi_1_4_4", 'trim|xss_clean');
 
-        $this->form_validation->set_rules('unit_distribusi_1_5_1', "unit_distribusi_1_5_1", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_distribusi_1_5_2', "unit_distribusi_1_5_2", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_distribusi_1_5_3', "unit_distribusi_1_5_3", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_distribusi_1_5_6', "unit_distribusi_1_5_6", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_distribusi_1_5_7', "unit_distribusi_1_5_7", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_distribusi_1_5_8', "unit_distribusi_1_5_8", 'numeric|trim|xss_clean');
+        $this->form_validation->set_rules('unit_distribusi_1_5_1', "unit_distribusi_1_5_1", 'trim|xss_clean');
+        $this->form_validation->set_rules('unit_distribusi_1_5_2', "unit_distribusi_1_5_2", 'trim|xss_clean');
+        $this->form_validation->set_rules('unit_distribusi_1_5_3', "unit_distribusi_1_5_3", 'trim|xss_clean');
+        $this->form_validation->set_rules('unit_distribusi_1_5_6', "unit_distribusi_1_5_6", 'trim|xss_clean');
+        $this->form_validation->set_rules('unit_distribusi_1_5_7', "unit_distribusi_1_5_7", 'trim|xss_clean');
+        $this->form_validation->set_rules('unit_distribusi_1_5_8', "unit_distribusi_1_5_8", 'trim|xss_clean');
 
-        $this->form_validation->set_rules('unit_pelayanan_1_6_1', "unit_pelayanan_1_6_1", 'numeric|trim|xss_clean');
+        $this->form_validation->set_rules('unit_pelayanan_1_6_1', "unit_pelayanan_1_6_1", 'trim|xss_clean');
 
         for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1; $index++) {
-            $this->form_validation->set_rules('unit_air_baku_2_1_'.$index, "unit_air_baku_2_1_", 'numeric|trim|xss_clean');
-            $this->form_validation->set_rules('unit_air_baku_2_1_'.$index.'A', "unit_air_baku_2_1_'.$index.'A", 'numeric|trim|xss_clean');
-            $this->form_validation->set_rules('unit_air_baku_2_1_'.$index.'B', "unit_air_baku_2_1_'.$index.'B", 'numeric|trim|xss_clean');
+            $this->form_validation->set_rules('unit_air_baku_2_1_'.$index, "unit_air_baku_2_1_", 'trim|xss_clean');
+            $this->form_validation->set_rules('unit_air_baku_2_1_'.$index.'A', "unit_air_baku_2_1_'.$index.'A", 'trim|xss_clean');
+            $this->form_validation->set_rules('unit_air_baku_2_1_'.$index.'B', "unit_air_baku_2_1_'.$index.'B", 'trim|xss_clean');
         }
         for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PRODUKSI_2_2; $index++) {
-            $this->form_validation->set_rules('unit_produksi_2_2_'.$index, "unit_produksi_2_2_", 'numeric|trim|xss_clean');
-            $this->form_validation->set_rules('unit_produksi_2_2_'.$index.'A', "unit_produksi_2_2_'.$index.'A", 'numeric|trim|xss_clean');
-            $this->form_validation->set_rules('unit_produksi_2_2_'.$index.'B', "unit_produksi_2_2_'.$index.'B", 'numeric|trim|xss_clean');
+            $this->form_validation->set_rules('unit_produksi_2_2_'.$index, "unit_produksi_2_2_", 'trim|xss_clean');
+            $this->form_validation->set_rules('unit_produksi_2_2_'.$index.'A', "unit_produksi_2_2_'.$index.'A", 'trim|xss_clean');
+            $this->form_validation->set_rules('unit_produksi_2_2_'.$index.'B', "unit_produksi_2_2_'.$index.'B", 'trim|xss_clean');
         }
         
         for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3; $index++) {
-        $this->form_validation->set_rules('unit_distribusi_2_3_'.$index, "unit_distribusi_2_3_", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_distribusi_2_3_'.$index.'A', "unit_distribusi_2_3_'.$index.'A", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('unit_distribusi_2_3_'.$index.'B', "unit_distribusi_2_3_'.$index.'B", 'numeric|trim|xss_clean');
+        $this->form_validation->set_rules('unit_distribusi_2_3_'.$index, "unit_distribusi_2_3_", 'trim|xss_clean');
+        $this->form_validation->set_rules('unit_distribusi_2_3_'.$index.'A', "unit_distribusi_2_3_'.$index.'A", 'trim|xss_clean');
+        $this->form_validation->set_rules('unit_distribusi_2_3_'.$index.'B', "unit_distribusi_2_3_'.$index.'B", 'trim|xss_clean');
         }
         for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4; $index++) {
-            $this->form_validation->set_rules('unit_pelayanan_2_4_'.$index, "unit_pelayanan_2_4_".$index, 'numeric|trim|xss_clean');
-            $this->form_validation->set_rules('unit_pelayanan_2_4_'.$index.'A', "unit_pelayanan_2_4_'.$index.'A", 'numeric|trim|xss_clean');
-            $this->form_validation->set_rules('unit_pelayanan_2_4_'.$index.'B', "unit_pelayanan_2_4_'.$index.'B", 'numeric|trim|xss_clean');
+            $this->form_validation->set_rules('unit_pelayanan_2_4_'.$index, "unit_pelayanan_2_4_".$index, 'trim|xss_clean');
+            $this->form_validation->set_rules('unit_pelayanan_2_4_'.$index.'A', "unit_pelayanan_2_4_'.$index.'A", 'trim|xss_clean');
+            $this->form_validation->set_rules('unit_pelayanan_2_4_'.$index.'B', "unit_pelayanan_2_4_'.$index.'B", 'trim|xss_clean');
         }
 
-        $this->form_validation->set_rules('biaya_non_standar_2_5_1', "biaya_non_standar_2_5_1", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('biaya_non_standar_2_5_2', "biaya_non_standar_2_5_2", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('biaya_non_standar_2_5_3', "biaya_non_standar_2_5_3", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('biaya_non_standar_2_5_4', "biaya_non_standar_2_5_4", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('biaya_non_standar_2_5_5', "biaya_non_standar_2_5_5", 'numeric|trim|xss_clean');
+        $this->form_validation->set_rules('biaya_non_standar_2_5_1', "biaya_non_standar_2_5_1", 'trim|xss_clean');
+        $this->form_validation->set_rules('biaya_non_standar_2_5_2', "biaya_non_standar_2_5_2", 'trim|xss_clean');
+        $this->form_validation->set_rules('biaya_non_standar_2_5_3', "biaya_non_standar_2_5_3", 'trim|xss_clean');
+        $this->form_validation->set_rules('biaya_non_standar_2_5_4', "biaya_non_standar_2_5_4", 'trim|xss_clean');
+        $this->form_validation->set_rules('biaya_non_standar_2_5_5', "biaya_non_standar_2_5_5", 'trim|xss_clean');
 
-        $this->form_validation->set_rules('biaya_lain_lain_2_6_1', "biaya_lain_lain_2_6_1", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('biaya_lain_lain_2_6_2', "biaya_lain_lain_2_6_2", 'numeric|trim|xss_clean');
-        $this->form_validation->set_rules('biaya_lain_lain_2_6_3', "biaya_lain_lain_2_6_3", 'numeric|trim|xss_clean');
+        $this->form_validation->set_rules('biaya_lain_lain_2_6_1', "biaya_lain_lain_2_6_1", 'trim|xss_clean');
+        $this->form_validation->set_rules('biaya_lain_lain_2_6_2', "biaya_lain_lain_2_6_2", 'trim|xss_clean');
+        $this->form_validation->set_rules('biaya_lain_lain_2_6_3', "biaya_lain_lain_2_6_3", 'trim|xss_clean');
 
         if ($this->form_validation->run()) {
             $data["prov_id"] = $this->form_validation->set_value('prov_id');
             $data["jenis_spam"] = $this->form_validation->set_value('jenis_spam');
 
             // ketentuan teknis
-            $data["jenis_spam_1_1_1"] = (float)$this->form_validation->set_value('jenis_spam_1_1_1');
-            $data["jenis_spam_1_1_2"] = (float)$this->form_validation->set_value('jenis_spam_1_1_2');
-            $data["jenis_spam_1_1_4A"] = (float)$this->form_validation->set_value('jenis_spam_1_1_4A');
-            $data["jenis_spam_1_1_5"] = (float)$this->form_validation->set_value('jenis_spam_1_1_5');
+            $data["jenis_spam_1_1_1"] = to_float($this->form_validation->set_value('jenis_spam_1_1_1'));
+            $data["jenis_spam_1_1_2"] = to_float($this->form_validation->set_value('jenis_spam_1_1_2'));
+            $data["jenis_spam_1_1_4A"] = to_float($this->form_validation->set_value('jenis_spam_1_1_4A'));
+            $data["jenis_spam_1_1_5"] = to_float($this->form_validation->set_value('jenis_spam_1_1_5'));
 
             // pelayanan
-            $data["pelayanan_1_2_1A"] = (float)$this->form_validation->set_value('pelayanan_1_2_1A');
-            $data["pelayanan_1_2_1B"] = (float)$this->form_validation->set_value('pelayanan_1_2_1B');
-            $data["pelayanan_1_2_1D"] = (float)$this->form_validation->set_value('pelayanan_1_2_1D');
-            $data["pelayanan_1_2_2C"] = (float)$this->form_validation->set_value('pelayanan_1_2_2C');
-            $data["pelayanan_1_2_2E"] = (float)$this->form_validation->set_value('pelayanan_1_2_2E');
-            $data["pelayanan_1_2_2H"] = (float)$this->form_validation->set_value('pelayanan_1_2_2H');
-            $data["pelayanan_1_2_2I"] = (float)$this->form_validation->set_value('pelayanan_1_2_2I');
+            $data["pelayanan_1_2_1A"] = to_float($this->form_validation->set_value('pelayanan_1_2_1A'));
+            $data["pelayanan_1_2_1B"] = to_float($this->form_validation->set_value('pelayanan_1_2_1B'));
+            $data["pelayanan_1_2_1D"] = to_float($this->form_validation->set_value('pelayanan_1_2_1D'));
+            $data["pelayanan_1_2_2C"] = to_float($this->form_validation->set_value('pelayanan_1_2_2C'));
+            $data["pelayanan_1_2_2E"] = to_float($this->form_validation->set_value('pelayanan_1_2_2E'));
+            $data["pelayanan_1_2_2H"] = to_float($this->form_validation->set_value('pelayanan_1_2_2H'));
+            $data["pelayanan_1_2_2I"] = to_float($this->form_validation->set_value('pelayanan_1_2_2I'));
 
             // unit air baku
-            $data["unit_air_baku_1_3_1"] = (float)$this->form_validation->set_value('unit_air_baku_1_3_1');
+            $data["unit_air_baku_1_3_1"] = to_float($this->form_validation->set_value('unit_air_baku_1_3_1'));
             $data["unit_air_baku_1_3_2"] = $this->form_validation->set_value('unit_air_baku_1_3_2');
-            $data["unit_air_baku_1_3_3"] = (float)$this->form_validation->set_value('unit_air_baku_1_3_3');
-            $data["unit_air_baku_1_3_4"] = (float)$this->form_validation->set_value('unit_air_baku_1_3_4');
-            $data["unit_air_baku_1_3_5"] = (float)$this->form_validation->set_value('unit_air_baku_1_3_5');
-            $data["unit_air_baku_1_3_7"] = (float)$this->form_validation->set_value('unit_air_baku_1_3_7');
-            $data["unit_air_baku_1_3_8"] = (float)$this->form_validation->set_value('unit_air_baku_1_3_8');
-            $data["unit_air_baku_1_3_11"] = (float)$this->form_validation->set_value('unit_air_baku_1_3_11');
+            $data["unit_air_baku_1_3_3"] = to_float($this->form_validation->set_value('unit_air_baku_1_3_3'));
+            $data["unit_air_baku_1_3_4"] = to_float($this->form_validation->set_value('unit_air_baku_1_3_4'));
+            $data["unit_air_baku_1_3_5"] = to_float($this->form_validation->set_value('unit_air_baku_1_3_5'));
+            $data["unit_air_baku_1_3_7"] = to_float($this->form_validation->set_value('unit_air_baku_1_3_7'));
+            $data["unit_air_baku_1_3_8"] = to_float($this->form_validation->set_value('unit_air_baku_1_3_8'));
+            $data["unit_air_baku_1_3_11"] = to_float($this->form_validation->set_value('unit_air_baku_1_3_11'));
             
-            $data["unit_produksi_1_4_1"] = (float)$this->form_validation->set_value('unit_produksi_1_4_1');
-            $data["unit_produksi_1_4_2"] = (float)$this->form_validation->set_value('unit_produksi_1_4_2');
-            $data["unit_produksi_1_4_3"] = (float)$this->form_validation->set_value('unit_produksi_1_4_3');
-            $data["unit_produksi_1_4_4"] = (float)$this->form_validation->set_value('unit_produksi_1_4_4');
+            $data["unit_produksi_1_4_1"] = to_float($this->form_validation->set_value('unit_produksi_1_4_1'));
+            $data["unit_produksi_1_4_2"] = to_float($this->form_validation->set_value('unit_produksi_1_4_2'));
+            $data["unit_produksi_1_4_3"] = to_float($this->form_validation->set_value('unit_produksi_1_4_3'));
+            $data["unit_produksi_1_4_4"] = to_float($this->form_validation->set_value('unit_produksi_1_4_4'));
             
-            $data["unit_distribusi_1_5_1"] = (float)$this->form_validation->set_value('unit_distribusi_1_5_1');
-            $data["unit_distribusi_1_5_2"] = (float)$this->form_validation->set_value('unit_distribusi_1_5_2');
-            $data["unit_distribusi_1_5_3"] = (float)$this->form_validation->set_value('unit_distribusi_1_5_3');
-            $data["unit_distribusi_1_5_6"] = (float)$this->form_validation->set_value('unit_distribusi_1_5_6');
-            $data["unit_distribusi_1_5_7"] = (float)$this->form_validation->set_value('unit_distribusi_1_5_7');
-            $data["unit_distribusi_1_5_8"] = (float)$this->form_validation->set_value('unit_distribusi_1_5_8');
+            $data["unit_distribusi_1_5_1"] = to_float($this->form_validation->set_value('unit_distribusi_1_5_1'));
+            $data["unit_distribusi_1_5_2"] = to_float($this->form_validation->set_value('unit_distribusi_1_5_2'));
+            $data["unit_distribusi_1_5_3"] = to_float($this->form_validation->set_value('unit_distribusi_1_5_3'));
+            $data["unit_distribusi_1_5_6"] = to_float($this->form_validation->set_value('unit_distribusi_1_5_6'));
+            $data["unit_distribusi_1_5_7"] = to_float($this->form_validation->set_value('unit_distribusi_1_5_7'));
+            $data["unit_distribusi_1_5_8"] = to_float($this->form_validation->set_value('unit_distribusi_1_5_8'));
             
-            $data["unit_pelayanan_1_6_1"] = (float)$this->form_validation->set_value('unit_pelayanan_1_6_1');
+            $data["unit_pelayanan_1_6_1"] = to_float($this->form_validation->set_value('unit_pelayanan_1_6_1'));
             
             for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1; $index++) {
-                $data["unit_air_baku_2_1_".$index] = (float)$this->form_validation->set_value("unit_air_baku_2_1_".$index);
-                $data["unit_air_baku_2_1_".$index."A"] = (float)$this->form_validation->set_value("unit_air_baku_2_1_".$index."A");
-                $data["unit_air_baku_2_1_".$index."B"] = (float)$this->form_validation->set_value("unit_air_baku_2_1_".$index."B");
+                $data["unit_air_baku_2_1_".$index] = to_float($this->form_validation->set_value("unit_air_baku_2_1_".$index));
+                $data["unit_air_baku_2_1_".$index."A"] = to_float($this->form_validation->set_value("unit_air_baku_2_1_".$index."A"));
+                $data["unit_air_baku_2_1_".$index."B"] = to_float($this->form_validation->set_value("unit_air_baku_2_1_".$index."B"));
             }
             for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PRODUKSI_2_2; $index++) {
-                $data["unit_produksi_2_2_".$index] = (float)$this->form_validation->set_value("unit_produksi_2_2_".$index);
-                $data["unit_produksi_2_2_".$index."A"] = (float)$this->form_validation->set_value("unit_produksi_2_2_".$index."A");
-                $data["unit_produksi_2_2_".$index."B"] = (float)$this->form_validation->set_value("unit_produksi_2_2_".$index."B");
+                $data["unit_produksi_2_2_".$index] = to_float($this->form_validation->set_value("unit_produksi_2_2_".$index));
+                $data["unit_produksi_2_2_".$index."A"] = to_float($this->form_validation->set_value("unit_produksi_2_2_".$index."A"));
+                $data["unit_produksi_2_2_".$index."B"] = to_float($this->form_validation->set_value("unit_produksi_2_2_".$index."B"));
             }
 
             for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3; $index++) {
-            $data["unit_distribusi_2_3_".$index] = (float)$this->form_validation->set_value("unit_distribusi_2_3_".$index);
-            $data["unit_distribusi_2_3_".$index."A"] = (float)$this->form_validation->set_value("unit_distribusi_2_3_".$index."A");
-            $data["unit_distribusi_2_3_".$index."B"] = (float)$this->form_validation->set_value("unit_distribusi_2_3_".$index."B");
+            $data["unit_distribusi_2_3_".$index] = to_float($this->form_validation->set_value("unit_distribusi_2_3_".$index));
+            $data["unit_distribusi_2_3_".$index."A"] = to_float($this->form_validation->set_value("unit_distribusi_2_3_".$index."A"));
+            $data["unit_distribusi_2_3_".$index."B"] = to_float($this->form_validation->set_value("unit_distribusi_2_3_".$index."B"));
             }
 
             for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4; $index++) {
-                $data["unit_pelayanan_2_4_".$index] = (float)$this->form_validation->set_value("unit_pelayanan_2_4_".$index);
-                $data["unit_pelayanan_2_4_".$index."A"] = (float)$this->form_validation->set_value("unit_pelayanan_2_4_".$index."A");
-                $data["unit_pelayanan_2_4_".$index."B"] = (float)$this->form_validation->set_value("unit_pelayanan_2_4_".$index."B");
+                $data["unit_pelayanan_2_4_".$index] = to_float($this->form_validation->set_value("unit_pelayanan_2_4_".$index));
+                $data["unit_pelayanan_2_4_".$index."A"] = to_float($this->form_validation->set_value("unit_pelayanan_2_4_".$index."A"));
+                $data["unit_pelayanan_2_4_".$index."B"] = to_float($this->form_validation->set_value("unit_pelayanan_2_4_".$index."B"));
             }
 
-            $data["biaya_non_standar_2_5_1"] = (float)$this->form_validation->set_value('biaya_non_standar_2_5_1');
-            $data["biaya_non_standar_2_5_2"] = (float)$this->form_validation->set_value('biaya_non_standar_2_5_2');
-            $data["biaya_non_standar_2_5_3"] = (float)$this->form_validation->set_value('biaya_non_standar_2_5_3');
-            $data["biaya_non_standar_2_5_4"] = (float)$this->form_validation->set_value('biaya_non_standar_2_5_4');
-            $data["biaya_non_standar_2_5_5"] = (float)$this->form_validation->set_value('biaya_non_standar_2_5_5');
+            $data["biaya_non_standar_2_5_1"] = to_float($this->form_validation->set_value('biaya_non_standar_2_5_1'));
+            $data["biaya_non_standar_2_5_2"] = to_float($this->form_validation->set_value('biaya_non_standar_2_5_2'));
+            $data["biaya_non_standar_2_5_3"] = to_float($this->form_validation->set_value('biaya_non_standar_2_5_3'));
+            $data["biaya_non_standar_2_5_4"] = to_float($this->form_validation->set_value('biaya_non_standar_2_5_4'));
+            $data["biaya_non_standar_2_5_5"] = to_float($this->form_validation->set_value('biaya_non_standar_2_5_5'));
             
-            $data["biaya_lain_lain_2_6_1"] = (float)$this->form_validation->set_value('biaya_lain_lain_2_6_1');
-            $data["biaya_lain_lain_2_6_2"] = (float)$this->form_validation->set_value('biaya_lain_lain_2_6_2');
-            $data["biaya_lain_lain_2_6_3"] = (float)$this->form_validation->set_value('biaya_lain_lain_2_6_3');
+            $data["biaya_lain_lain_2_6_1"] = to_float($this->form_validation->set_value('biaya_lain_lain_2_6_1'));
+            $data["biaya_lain_lain_2_6_2"] = to_float($this->form_validation->set_value('biaya_lain_lain_2_6_2'));
+            $data["biaya_lain_lain_2_6_3"] = to_float($this->form_validation->set_value('biaya_lain_lain_2_6_3'));
             return $data;
         }
         $this->json_badrequest(validation_errors());	

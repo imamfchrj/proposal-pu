@@ -126,9 +126,6 @@
         }
 
         $( document ).ready(function() {
-            <?php if($id_proposal){ ?>
-                get_by_id("<?=$id_proposal?>");
-            <?php }?>
 
             $( ".form-control" ).focusout(function() {
                 kalkulasi();
@@ -285,11 +282,15 @@
                     if ( target.is( "select" ) ) {
                         $("#"+key+' option[value="'+value+'"]').attr('selected','selected');
                     } else {
-                        $("#"+key).val(value);
+                        $("#"+key).val(toLocalThousand(value));
                     }
                 }
 
             }
+        }
+
+        function toLocalThousand(x){
+            return new Intl.NumberFormat('id-ID').format(x);
         }
 
         function set_verifikasi($data) {
@@ -379,6 +380,10 @@
                     echo "get_ajax_sub_select('$list[0]', '$list[1]');";
                 }
             ?>
+
+            <?php if($id_proposal){ ?>
+                get_by_id("<?=$id_proposal?>");
+            <?php }?>
         });
 
         function get_ajax_jenis_sumber_air() {
