@@ -127,7 +127,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Kapasitas terpasang</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="jenis_spam_1_1_1" type="number" value="" class="form-control" placeholder="">
+                            <input id="jenis_spam_1_1_1" type="te" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">Lt/det</span>
                         </div>
 
@@ -158,7 +158,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Kapasitas produksi</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="jenis_spam_1_1_2" type="number" value="" class="form-control" placeholder="">
+                            <input id="jenis_spam_1_1_2" type="te" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">Lt/det</span>
                         </div>
 
@@ -189,7 +189,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Idle capacityi</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="jenis_spam_1_1_3" value="" type="number" value="" class="form-control"
+                            <input disabled id="jenis_spam_1_1_3" value="" type="text" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Lt/det</span>
                         </div>
@@ -221,7 +221,7 @@ $description_page = $option["description_page"];
                     <td class="w-25 p-3 align-middle" rowspan="2">NRW</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="jenis_spam_1_1_4A" type="number" value="" class="form-control" placeholder="">
+                            <input id="jenis_spam_1_1_4A" type="text " value="" class="form-control" placeholder="">
                             <span class="input-group-addon">%</span>
                         </div>
 
@@ -247,7 +247,7 @@ $description_page = $option["description_page"];
                 <tr>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="jenis_spam_1_1_4B" type="number" value="" class="form-control"
+                            <input disabled id="jenis_spam_1_1_4B" type="text" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Lt/det</span>
                         </div>
@@ -279,7 +279,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Sambungan Eksisting</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="jenis_spam_1_1_5" type="number" value="" class="form-control" placeholder="">
+                            <input id="jenis_spam_1_1_5" type="te" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">Unit</span>
                         </div>
 
@@ -309,7 +309,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Penduduk terlayani</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="jenis_spam_1_1_6" type="number" value="" class="form-control"
+                            <input disabled id="jenis_spam_1_1_6" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Jiwa</span>
                         </div>
@@ -370,7 +370,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Jumlah Penduduk Administrasi (Tahun proyeksi)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="pelayanan_1_2_1A" type="number" value="" class="form-control" placeholder="">
+                            <input id="pelayanan_1_2_1A" type="te" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">Jiwa</span>
                         </div>
 
@@ -396,7 +396,7 @@ $description_page = $option["description_page"];
                     <td class="w-25 p-3 align-middle" rowspan="2">Target Cakupan Pelayanan (%)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="pelayanan_1_2_1B" type="number" value="" class="form-control" placeholder="">
+                            <input id="pelayanan_1_2_1B" type="te" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">%</span>
                         </div>
                     </td>
@@ -421,7 +421,7 @@ $description_page = $option["description_page"];
                 <tr>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="pelayanan_1_2_1C" type="number" value="" class="form-control"
+                            <input disabled id="pelayanan_1_2_1C" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Jiwa</span>
                         </div>
@@ -448,7 +448,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Rata-rata anggota Keluarga</td>
                     <td class="p-3">
                         <div class="input-group">
-<!--                            <input id="pelayanan_1_2_1D" type="number" value="" class="form-control" placeholder="">-->
+<!--                            <input id="pelayanan_1_2_1D" type="te" value="" class="form-control" placeholder="">-->
 <!--                            <span class="input-group-addon">Jiwa/KK</span>-->
                             <select id="pelayanan_1_2_1D" class="form-control select2 keluarga"
                                     data-placeholder="" onchange="">
@@ -485,7 +485,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Target Sambungan</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="pelayanan_1_2_2A" type="number" value="" class="form-control"
+                            <input disabled id="pelayanan_1_2_2A" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Unit</span>
                         </div>
@@ -513,7 +513,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Tambahan Sambungan</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="pelayanan_1_2_2B" type="number" value="" class="form-control"
+                            <input disabled id="pelayanan_1_2_2B" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Unit</span>
                         </div>
@@ -540,7 +540,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Konsumsi Pemakaian Air</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="pelayanan_1_2_2C" type="number" value="" class="form-control" placeholder="">
+                            <input id="pelayanan_1_2_2C" type="te" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">Lt/Jiwa/Hari</span>
                         </div>
 
@@ -566,7 +566,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Konsumsi air domestik (Qd)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="pelayanan_1_2_2D" type="number" value="" class="form-control"
+                            <input disabled id="pelayanan_1_2_2D" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Lt/det</span>
                         </div>
@@ -593,7 +593,7 @@ $description_page = $option["description_page"];
                     <td class="w-25 p-3 align-middle" rowspan="2">Konsumsi air non domestik (Qd)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="pelayanan_1_2_2E" type="number" value="" class="form-control" placeholder="">
+                            <input id="pelayanan_1_2_2E" type="te" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">%</span>
                         </div>
 
@@ -617,7 +617,7 @@ $description_page = $option["description_page"];
                 <tr>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="pelayanan_1_2_2F" type="number" value="" class="form-control"
+                            <input disabled id="pelayanan_1_2_2F" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Lt/dt</span>
                         </div>
@@ -644,7 +644,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Kebutuhan air total (Q = Qd + Qnd)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="pelayanan_1_2_2G" type="number" value="" class="form-control"
+                            <input disabled id="pelayanan_1_2_2G" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Lt/dt</span>
                         </div>
@@ -671,7 +671,7 @@ $description_page = $option["description_page"];
                     <td class="w-25 p-3 align-middle" rowspan="2">Non Revenue Water (NRW)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="pelayanan_1_2_2H" type="number" value="" class="form-control" placeholder="">
+                            <input id="pelayanan_1_2_2H" type="te" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">%</span>
                         </div>
 
@@ -695,7 +695,7 @@ $description_page = $option["description_page"];
                 <tr>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="pelayanan_1_2_2I" type="number" value="" class="form-control"
+                            <input disabled id="pelayanan_1_2_2I" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Lt/dt</span>
                         </div>
@@ -726,7 +726,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Kebutuhan Rata-rata (Qr)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="pelayanan_1_2_3A" type="number" value="" class="form-control"
+                            <input disabled id="pelayanan_1_2_3A" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Liter/dt</span>
                         </div>
@@ -753,13 +753,13 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Kapasitas Produksi (Qmax.= 1,1 - 1,5Qr)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="pelayanan_1_2_3B" type="number" value="" class="form-control"
+                            <input disabled id="pelayanan_1_2_3B" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Liter/dt</span>
 
                             <p class="align-content-center">&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</p>
 
-                            <input disabled id="pelayanan_1_2_3B_2" type="number" value="" class="form-control"
+                            <input disabled id="pelayanan_1_2_3B_2" type="tex" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Liter/dt</span>
                         </div>
@@ -787,13 +787,13 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Tambahan Kapasitas Produksi (1,1 - 1,5)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="pelayanan_1_2_3C" type="number" value="" class="form-control"
+                            <input disabled id="pelayanan_1_2_3C" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Liter/dt</span>
 
                             <p class="align-content-center">&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</p>
 
-                            <input disabled id="pelayanan_1_2_3C_2" type="number" value="" class="form-control"
+                            <input disabled id="pelayanan_1_2_3C_2" type="tex" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Liter/dt</span>
                         </div>
@@ -820,13 +820,13 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Kebutuhan Puncak (Qp : 1,5 - 2 Qr )</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="pelayanan_1_2_3D" type="number" value="" class="form-control"
+                            <input disabled id="pelayanan_1_2_3D" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Liter/dt</span>
 
                             <p class="align-content-center">&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</p>
 
-                            <input disabled id="pelayanan_1_2_3D_2" type="number" value="" class="form-control"
+                            <input disabled id="pelayanan_1_2_3D_2" type="tex" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Liter/dt</span>
                         </div>
@@ -887,7 +887,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Debit Air Baku</td> <!-- (Qab = 1,1 x Qmax)-->
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_air_baku_1_3_1" type="number" value="" class="form-control" placeholder="">
+                            <input id="unit_air_baku_1_3_1" type="tex" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">Liter/dt</span>
                         </div>
 
@@ -950,7 +950,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Kekeruhan Maximum</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_air_baku_1_3_3" type="number" value="" class="form-control" placeholder="">
+                            <input id="unit_air_baku_1_3_3" type="tex" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">NTU</span>
                         </div>
 
@@ -980,7 +980,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Elevasi Sumber Air</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_air_baku_1_3_4" type="number" value="" class="form-control" placeholder="">
+                            <input id="unit_air_baku_1_3_4" type="tex" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">Meter</span>
                         </div>
 
@@ -1010,7 +1010,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Panjang pipa Transmisi</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_air_baku_1_3_5" type="number" value="" class="form-control" placeholder="">
+                            <input id="unit_air_baku_1_3_5" type="tex" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">Meter</span>
                         </div>
 
@@ -1040,7 +1040,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Beda Tinggi (▲H)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="unit_air_baku_1_3_6" type="number" value="" class="form-control"
+                            <input disabled id="unit_air_baku_1_3_6" type="te" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Meter</span>
                         </div>
@@ -1071,7 +1071,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Diameter (D)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_air_baku_1_3_7" type="number" value="" class="form-control" placeholder="">
+                            <input id="unit_air_baku_1_3_7" type="tex" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">MM</span>
                         </div>
 
@@ -1101,7 +1101,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Kecepatan (V) :</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="unit_air_baku_1_3_8" type="number" value="" class="form-control"
+                            <input disabled id="unit_air_baku_1_3_8" type="te" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">M/dt</span>
                         </div>
@@ -1132,7 +1132,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Kehilangan Tekanan (hf)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="unit_air_baku_1_3_9" type="number" value="" class="form-control"
+                            <input disabled id="unit_air_baku_1_3_9" type="te" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Meter</span>
                         </div>
@@ -1163,7 +1163,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Total Head (H=-▲H-hf)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_air_baku_1_3_10" disabled id="unit_air_baku_1_3_10" type="number" value=""
+                            <input id="unit_air_baku_1_3_10" disabled id="unit_air_baku_1_3_10" type="tex" value=""
                                    class="form-control" placeholder="">
                             <span class="input-group-addon">Meter</span>
                         </div>
@@ -1194,7 +1194,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Sisa tekanan (RH)</td>
                     <td class="p-3">
                         <div class="input-group">
-<!--                            <input id="unit_air_baku_1_3_11" type="number" value="" class="form-control"-->
+<!--                            <input id="unit_air_baku_1_3_11" type="te" value="" class="form-control"-->
 <!--                                   placeholder="">-->
 <!--                            <span class="input-group-addon">Meter</span>-->
                             <select id="unit_air_baku_1_3_11" class="form-control select2 tekanan"
@@ -1235,7 +1235,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Head Pompa (Hp=H-RH)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="unit_air_baku_1_3_12" type="number" value="" class="form-control"
+                            <input disabled id="unit_air_baku_1_3_12" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Meter</span>
                         </div>
@@ -1266,7 +1266,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Daya Pompa (Pp)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="unit_air_baku_1_3_13" type="number" value="" class="form-control"
+                            <input disabled id="unit_air_baku_1_3_13" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Kw</span>
                         </div>
@@ -1329,7 +1329,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Prasedimentasi</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_produksi_1_4_1" type="number" value="" class="form-control" placeholder="">
+                            <input id="unit_produksi_1_4_1" type="tex" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">Lt/dt</span>
                         </div>
 
@@ -1359,7 +1359,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Instalasi Pengolahan Air (IPA)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_produksi_1_4_2" type="number" value="" class="form-control" placeholder="">
+                            <input id="unit_produksi_1_4_2" type="tex" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">Lt/dt</span>
                         </div>
 
@@ -1389,7 +1389,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Elevasi IPA</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_produksi_1_4_3" type="number" value="" class="form-control" placeholder="">
+                            <input id="unit_produksi_1_4_3" type="tex" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">Meter</span>
                         </div>
 
@@ -1420,7 +1420,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">SCADA & PLC</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_produksi_1_4_4" type="number" value="" class="form-control" placeholder="">
+                            <input id="unit_produksi_1_4_4" type="tex" value="" class="form-control" placeholder="">
                             <span class="input-group-addon">Set</span>
                         </div>
 
@@ -1483,7 +1483,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Kapasitas Reservoir</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_distribusi_1_5_1" type="number" value="" class="form-control"
+                            <input id="unit_distribusi_1_5_1" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">M3</span>
                         </div>
@@ -1514,7 +1514,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Elevasi Reservoir</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_distribusi_1_5_2" type="number" value="" class="form-control"
+                            <input id="unit_distribusi_1_5_2" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Meter</span>
                         </div>
@@ -1545,7 +1545,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Beda Tinggi (▲H)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="unit_distribusi_1_5_2A" type="number" value="" class="form-control"
+                            <input disabled id="unit_distribusi_1_5_2A" type="tex" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Meter</span>
                         </div>
@@ -1576,7 +1576,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Diameter distribusi maksimum (D)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_distribusi_1_5_3" type="number" value="" class="form-control"
+                            <input id="unit_distribusi_1_5_3" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">MM</span>
                         </div>
@@ -1607,7 +1607,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Kecepatan (V) :</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="unit_distribusi_1_5_4" type="number" value="" class="form-control"
+                            <input disabled id="unit_distribusi_1_5_4" type="text" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">M/dt</span>
                         </div>
@@ -1638,7 +1638,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Kehilangan Tekanan (hf)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="unit_distribusi_1_5_5" type="number" value="" class="form-control"
+                            <input disabled id="unit_distribusi_1_5_5" type="text" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Meter</span>
                         </div>
@@ -1666,10 +1666,10 @@ $description_page = $option["description_page"];
                 </tr>
 
                 <tr>
-                    <td class="w-3 p-3 align-middle">Pompa Distribusi Centrifugal</td>
+                    <td class="w-3 p-3 align-middle">Pompa Distribusi</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_distribusi_1_5_6" type="number" value="" class="form-control"
+                            <input id="unit_distribusi_1_5_6" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Lt/dt</span>
                         </div>
@@ -1700,7 +1700,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Head Pompa</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_distribusi_1_5_7" type="number" value="" class="form-control"
+                            <input id="unit_distribusi_1_5_7" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Meter</span>
                         </div>
@@ -1731,7 +1731,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Daya Pompa (Pp)</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="unit_distribusi_1_5_8" type="number" value="" class="form-control"
+                            <input disabled id="unit_distribusi_1_5_8" type="text" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Kw</span>
                         </div>
@@ -1794,7 +1794,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Elevasi Daerah pelayanan</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input id="unit_pelayanan_1_6_1" type="number" value="" class="form-control"
+                            <input id="unit_pelayanan_1_6_1" type="te" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Meter</span>
                         </div>
@@ -1825,7 +1825,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Jumlah Sambungan Pelanggan</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="unit_pelayanan_1_6_2" type="number" value="" class="form-control"
+                            <input disabled id="unit_pelayanan_1_6_2" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Unit</span>
                         </div>
@@ -1856,7 +1856,7 @@ $description_page = $option["description_page"];
                     <td class="w-3 p-3 align-middle">Pipa Retikulasi Ø 50 mm</td>
                     <td class="p-3">
                         <div class="input-group">
-                            <input disabled id="unit_pelayanan_1_6_3" type="number" value="" class="form-control"
+                            <input disabled id="unit_pelayanan_1_6_3" type="text " value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon">Meter</span>
                         </div>
@@ -1920,9 +1920,8 @@ $description_page = $option["description_page"];
                 <?php
                 for ($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1; $index++) {
                     ?>
-                    <tr>
                 <tr>
-                    <th colspan="5">2.1.<?=$index?></th>
+                    <th colspan="5">2.1.<?=$index?> <?php print_quetion_option_text(PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1_OPTION, $index); ?></th>
                 </tr>
 
                 <tr>
@@ -1935,12 +1934,12 @@ $description_page = $option["description_page"];
                     <td class="p-3">
                         <div class="input-group">
                             <span class="input-group-addon">Rp</span>
-                            <input id="unit_air_baku_2_1_<?=$index?>A" type="number" value="" class="form-control"
+                            <input id="unit_air_baku_2_1_<?=$index?>A" type="text" value="" class="form-control"
                                    placeholder="">
                         </div>
                         <hr>
                         <div class="input-group">
-                            <input id="unit_air_baku_2_1_<?=$index?>B" type="number" value="" class="form-control"
+                            <input id="unit_air_baku_2_1_<?=$index?>B" type="text" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon unit_air_baku_2_1_<?= $index?>_satuan_option">unit</span>
                         </div>
@@ -2002,26 +2001,26 @@ $description_page = $option["description_page"];
                     ?>
                     <tr>
                 <tr>
-                    <th colspan="5">2.2.<?=$index?></th>
+                    <th colspan="5">2.2.<?=$index?> <?php print_quetion_option_text(PROPOSAL_AIR_MINUM_UNIT_PRODUKSI_2_2_OPTION, $index); ?></th>
                 </tr>
 
                 <tr>
                     <td class="w-3 p-3 align-middle">
                             <div class="input-group">
                                 <select onchange="get_ajax_by_id('unit_produksi_2_2_<?= $index?>_satuan_option', this.value)" id="unit_produksi_2_2_<?= $index
-                                ?>" class="form-control select2  <?php print_quetion_option(PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4_OPTION, $index, "unit_produksi"); ?>" data-placeholder="Pilih Jenis">
+                                ?>" class="form-control select2  <?php print_quetion_option(PROPOSAL_AIR_MINUM_UNIT_PRODUKSI_2_2_OPTION, $index, "unit_produksi"); ?>" data-placeholder="Pilih Jenis">
                                     <option value=""></option>
                                 </select>
                             </div></td>
                     <td class="p-3">
                         <div class="input-group">
                             <span class="input-group-addon">Rp</span>
-                            <input id="unit_produksi_2_2_<?=$index?>A" type="number" value="" class="form-control"
+                            <input id="unit_produksi_2_2_<?=$index?>A" type="text" value="" class="form-control"
                                    placeholder="">
                         </div>
                         <hr>
                         <div class="input-group">
-                            <input id="unit_produksi_2_2_<?=$index?>B" type="number" value="" class="form-control"
+                            <input id="unit_produksi_2_2_<?=$index?>B" type="text" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon unit_produksi_2_2_<?= $index?>_satuan_option">unit</span>
                         </div>
@@ -2079,8 +2078,7 @@ $description_page = $option["description_page"];
                 for ($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3; $index++) {
                     ?>
                     <tr>
-                        <th colspan="5">2.3.7.<?= $index
-                            ?></th>
+                        <th colspan="5">2.3.7.<?= $index ?> <?php print_quetion_option_text(PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_OPTION, $index); ?></th>
                     </tr>
 
                     <tr>
@@ -2097,12 +2095,12 @@ $description_page = $option["description_page"];
                             <div class="input-group">
                                 <span class="input-group-addon">Rp</span>
                                 <input id="unit_distribusi_2_3_<?= $index
-                                ?>A" type="number" value="" class="form-control" placeholder="">
+                                ?>A" type="te" value="" class="form-control" placeholder="">
                             </div>
                             <hr>
                             <div class="input-group">
                                 <input id="unit_distribusi_2_3_<?= $index
-                                ?>B" type="number" value="" class="form-control" placeholder="">
+                                ?>B" type="te" value="" class="form-control" placeholder="">
                                 <span class="input-group-addon unit_distribusi_2_3_<?= $index?>_satuan_option">unit</span>
                             </div>
 
@@ -2166,7 +2164,7 @@ $description_page = $option["description_page"];
                 for ($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4; $index++) {
                     ?>
                 <tr>
-                    <th colspan="5">2.4.<?=$index?></th>
+                    <th colspan="5">2.4.<?=$index?> <?php print_quetion_option_text(PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_OPTION, $index); ?></th>
                 </tr>
 
                 <tr>
@@ -2178,12 +2176,12 @@ $description_page = $option["description_page"];
                     <td class="p-3">
                         <div class="input-group">
                             <span class="input-group-addon">Rp</span>
-                            <input id="unit_pelayanan_2_4_<?=$index?>A" type="number" value="" class="form-control"
+                            <input id="unit_pelayanan_2_4_<?=$index?>A" type="tex" value="" class="form-control"
                                    placeholder="">
                         </div>
                         <hr>
                         <div class="input-group">
-                            <input id="unit_pelayanan_2_4_<?=$index?>B" type="number" value="" class="form-control"
+                            <input id="unit_pelayanan_2_4_<?=$index?>B" type="tex" value="" class="form-control"
                                    placeholder="">
                             <span class="input-group-addon unit_pelayanan_2_4_<?= $index?>_satuan_option">unit</span>
                         </div>
@@ -2247,7 +2245,7 @@ $description_page = $option["description_page"];
                     <td class="p-3">
                         <div class="input-group">
                             <span class="input-group-addon">Rp</span>
-                            <input id="biaya_non_standar_2_5_1" type="number" value="" class="form-control"
+                            <input id="biaya_non_standar_2_5_1" type="tex" value="" class="form-control"
                                    placeholder="">
                         </div>
 
@@ -2278,7 +2276,7 @@ $description_page = $option["description_page"];
                     <td class="p-3">
                         <div class="input-group">
                             <span class="input-group-addon">Rp</span>
-                            <input id="biaya_non_standar_2_5_2" type="number" value="" class="form-control"
+                            <input id="biaya_non_standar_2_5_2" type="tex" value="" class="form-control"
                                    placeholder="">
                         </div>
 
@@ -2309,7 +2307,7 @@ $description_page = $option["description_page"];
                     <td class="p-3">
                         <div class="input-group">
                             <span class="input-group-addon">Rp</span>
-                            <input id="biaya_non_standar_2_5_3" type="number" value="" class="form-control"
+                            <input id="biaya_non_standar_2_5_3" type="tex" value="" class="form-control"
                                    placeholder="">
                         </div>
 
@@ -2341,7 +2339,7 @@ $description_page = $option["description_page"];
                     <td class="p-3">
                         <div class="input-group">
                             <span class="input-group-addon">Rp</span>
-                            <input id="biaya_non_standar_2_5_4" type="number" value="" class="form-control"
+                            <input id="biaya_non_standar_2_5_4" type="tex" value="" class="form-control"
                                    placeholder="">
                         </div>
 
@@ -2373,7 +2371,7 @@ $description_page = $option["description_page"];
                     <td class="p-3">
                         <div class="input-group">
                             <span class="input-group-addon">Rp</span>
-                            <input id="biaya_non_standar_2_5_5" type="number" value="" class="form-control"
+                            <input id="biaya_non_standar_2_5_5" type="tex" value="" class="form-control"
                                    placeholder="">
                         </div>
 
@@ -2437,7 +2435,7 @@ $description_page = $option["description_page"];
                     <td class="p-3">
                         <div class="input-group">
                             <span class="input-group-addon">Rp</span>
-                            <input id="biaya_lain_lain_2_6_1" type="number" value="" class="form-control"
+                            <input id="biaya_lain_lain_2_6_1" type="text " value="" class="form-control"
                                    placeholder="">
                         </div>
 
@@ -2468,7 +2466,7 @@ $description_page = $option["description_page"];
                     <td class="p-3">
                         <div class="input-group">
                             <span class="input-group-addon">Rp</span>
-                            <input id="biaya_lain_lain_2_6_2" type="number" value="" class="form-control"
+                            <input id="biaya_lain_lain_2_6_2" type="text " value="" class="form-control"
                                    placeholder="">
                         </div>
 
@@ -2499,7 +2497,7 @@ $description_page = $option["description_page"];
                     <td class="p-3">
                         <div class="input-group">
                             <span class="input-group-addon">Rp</span>
-                            <input id="biaya_lain_lain_2_6_3" type="number" value="" class="form-control"
+                            <input id="biaya_lain_lain_2_6_3" type="text " value="" class="form-control"
                                    placeholder="">
                         </div>
 
@@ -2563,7 +2561,7 @@ $description_page = $option["description_page"];
                     <td class="p-3">
                         <div class="input-group">
                             <span class="input-group-addon">Rp</span>
-                            <input disabled id="total_investasi" type="number" value="" class="form-control"
+                            <input disabled id="total_investasi" type="te" value="" class="form-control"
                                    placeholder="">
                         </div>
 
@@ -2594,7 +2592,7 @@ $description_page = $option["description_page"];
                     <td class="p-3">
                         <div class="input-group">
                             <span class="input-group-addon">Rp/Lt/dt</span>
-                            <input disabled id="harga_rata_rata_A" type="number" value="" class="form-control"
+                            <input disabled id="harga_rata_rata_A" type="text" value="" class="form-control"
                                    placeholder="">
                         </div>
 
@@ -2619,7 +2617,7 @@ $description_page = $option["description_page"];
                     <td class="p-3">
                         <div class="input-group">
                             <span class="input-group-addon">Rp/SR</span>
-                            <input disabled id="harga_rata_rata_B" type="number" value="" class="form-control"
+                            <input disabled id="harga_rata_rata_B" type="text" value="" class="form-control"
                                    placeholder="">
                         </div>
 

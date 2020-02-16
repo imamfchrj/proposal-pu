@@ -10,9 +10,7 @@ class Login extends All_Controller {
     }
     
     public function test() {
-        $kambing = PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4_OPTION;
-
-        print_quetion_option(PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4_OPTION, 1);
+        echo to_float("1.222,2222");
     }
 
 	public function ajax_login(){

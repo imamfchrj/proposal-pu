@@ -126,9 +126,6 @@
         }
 
         $( document ).ready(function() {
-            <?php if($id_proposal){ ?>
-                get_by_id("<?=$id_proposal?>");
-            <?php }?>
 
             $( ".form-control" ).focusout(function() {
                 kalkulasi();
@@ -285,11 +282,15 @@
                     if ( target.is( "select" ) ) {
                         $("#"+key+' option[value="'+value+'"]').attr('selected','selected');
                     } else {
-                        $("#"+key).val(value);
+                        $("#"+key).val(to_thousand(value));
                     }
                 }
 
             }
+        }
+
+        function to_thousand(x){
+            return new Intl.NumberFormat('id-ID').format(x);
         }
 
         function set_verifikasi($data) {
@@ -333,10 +334,29 @@
             }
         }
         function text_default($key, $text, $option, $default, $rumus=""){
-            $default_text= '<li class="'+$option+'" data-toggle="tooltip" data-placement="top" title="'+$rumus+'">'+$text+'</li>';
+            $default_text= '<li class="'+$option+'" data-toggle="tooltip" data-placement="top" title="'+$rumus+'">'+to_float_array($text)+'</li>';
             $("#"+$key+"_"+$default).html($default_text);
         }
 
+        function to_float_array($text)
+        {
+            var data = $text.split("-");
+            // isNaN(-1.23)
+            $val_str = "";
+            $i = 1;
+            data.forEach(function(value){
+                
+                if(!isNaN(value)){
+                    value = to_thousand(value);
+                }
+                if($i > 1) {
+                    $val_str += "-";
+                }
+                $val_str += value;
+                $i++;
+            });
+            return $val_str;
+        }
         function hidden_by_key($key, $is_must_key, $value, $is_must, $hidden_key) {
             if($key != $is_must_key) {
                 return false;
@@ -379,6 +399,10 @@
                     echo "get_ajax_sub_select('$list[0]', '$list[1]');";
                 }
             ?>
+
+            <?php if($id_proposal){ ?>
+                get_by_id("<?=$id_proposal?>");
+            <?php }?>
         });
 
         function get_ajax_jenis_sumber_air() {

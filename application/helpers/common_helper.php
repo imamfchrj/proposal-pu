@@ -245,6 +245,12 @@ function upload_image($name="userfile"){
 
 }
 
+function to_float($value){
+    $result = str_replace(".","",$value);
+    $result = str_replace(",",".",$result);
+    return (float)$result;
+}
+
 
 function is_menu_active($menu, $now){
     if($menu == $now) {
@@ -296,4 +302,13 @@ function print_quetion_option($list, $index, $default="") {
        return;
    }
    echo $result["data"][0] . $result["data"][1];
+}
+
+function print_quetion_option_text($list, $index) {
+   $result =  get_quetion_option($list, $index);
+   if(!$result["success"]) {
+       echo "Lain-lain";
+       return;
+   }
+   echo $result["data"][2];
 }
