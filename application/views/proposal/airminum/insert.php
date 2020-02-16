@@ -1495,7 +1495,7 @@ $description_page = $option["description_page"];
                         </ul>
                     </td>
                     <td>
-                        <ul class="parsley-errors-list filled">
+                        <ul id="unit_distribusi_1_5_1_indikator" class="parsley-errors-list filled">
                             <li class="tx-success"></li>
                         </ul>
                     </td>
@@ -1557,7 +1557,7 @@ $description_page = $option["description_page"];
                         </ul>
                     </td>
                     <td>
-                        <ul class="parsley-errors-list filled">
+                        <ul id="unit_distribusi_1_5_2A_indikator" class="parsley-errors-list filled">
                             <li class="tx-success"></li>
                         </ul>
                     </td>
@@ -1619,7 +1619,7 @@ $description_page = $option["description_page"];
                         </ul>
                     </td>
                     <td>
-                        <ul class="parsley-errors-list filled">
+                        <ul id="unit_distribusi_1_5_4_indikator" class="parsley-errors-list filled">
                             <li class="tx-success"></li>
                         </ul>
                     </td>
@@ -1681,7 +1681,7 @@ $description_page = $option["description_page"];
                         </ul>
                     </td>
                     <td>
-                        <ul class="parsley-errors-list filled">
+                        <ul id="unit_distribusi_1_5_6_indikator" class="parsley-errors-list filled">
                             <li class="tx-success"></li>
                         </ul>
                     </td>
