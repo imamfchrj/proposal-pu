@@ -2164,7 +2164,7 @@ $description_page = $option["description_page"];
                 for ($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4; $index++) {
                     ?>
                 <tr>
-                    <th colspan="5">2.4.<?=$index?> <?php print_quetion_option_text(PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_OPTION, $index); ?></th>
+                    <th colspan="5">2.4.<?=$index?> <?php print_quetion_option_text(PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4_OPTION, $index); ?></th>
                 </tr>
 
                 <tr>

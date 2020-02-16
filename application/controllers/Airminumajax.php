@@ -669,8 +669,8 @@ class Airminumajax extends All_Controller {
     }
 
     private function unit_air_baku_1_3_1($data_input) {
-//        $data_input["indikator"]["unit_air_baku_1_3_1"]["text"] = round_custom($data_input["pelayanan_1_2_3C"] * to_percent(105),2)."  -  ".round_custom($data_input["pelayanan_1_2_3C_2"] * to_percent(105),2); // add imam
-        $data_input["indikator"]["unit_air_baku_1_3_1"]["text"] = ceil($data_input["pelayanan_1_2_3C"] * to_percent(105))."  -  ".ceil($data_input["pelayanan_1_2_3C_2"] * to_percent(105)); // add imam
+//        $data_input["indikator"]["unit_air_baku_1_3_1"]["text"] = round_custom($data_input["pelayanan_1_2_3C"] * to_percent(105),2)."  ~  ".round_custom($data_input["pelayanan_1_2_3C_2"] * to_percent(105),2); // add imam
+        $data_input["indikator"]["unit_air_baku_1_3_1"]["text"] = ceil($data_input["pelayanan_1_2_3C"] * to_percent(105))."  ~  ".ceil($data_input["pelayanan_1_2_3C_2"] * to_percent(105)); // add imam
         $data_input["indikator"]["unit_air_baku_1_3_1"]["option"] = $this->default; // add imam
         $text="Justifikasi";
         $option=$this->danger;
@@ -789,8 +789,8 @@ class Airminumajax extends All_Controller {
     }
 
     private function unit_produksi_1_4_1($data_input) {
-//        $data_input["indikator"]["unit_produksi_1_4_1"]["text"] = round_custom($data_input["pelayanan_1_2_3C"],2)."  -  ".round_custom($data_input["pelayanan_1_2_3C_2"],2); // add imam
-        $data_input["indikator"]["unit_produksi_1_4_1"]["text"] = ceil($data_input["pelayanan_1_2_3C"])."  -  ".ceil($data_input["pelayanan_1_2_3C_2"]); // add imam
+//        $data_input["indikator"]["unit_produksi_1_4_1"]["text"] = round_custom($data_input["pelayanan_1_2_3C"],2)."  ~  ".round_custom($data_input["pelayanan_1_2_3C_2"],2); // add imam
+        $data_input["indikator"]["unit_produksi_1_4_1"]["text"] = ceil($data_input["pelayanan_1_2_3C"])."  ~  ".ceil($data_input["pelayanan_1_2_3C_2"]); // add imam
         $data_input["indikator"]["unit_produksi_1_4_1"]["option"] = $this->default; // add imam
         $data_input["unit_produksi_1_4_1"] = ($data_input["unit_produksi_1_4_1"]);
         $text="Justifikasi";
@@ -805,8 +805,8 @@ class Airminumajax extends All_Controller {
     }
 
     private function unit_produksi_1_4_2($data_input) {
-//        $data_input["indikator"]["unit_produksi_1_4_2"]["text"] = round_custom($data_input["pelayanan_1_2_3C"],2)."  -  ".round_custom($data_input["pelayanan_1_2_3C_2"],2); // add imam
-        $data_input["indikator"]["unit_produksi_1_4_2"]["text"] = ceil($data_input["pelayanan_1_2_3C"])."  -  ".ceil($data_input["pelayanan_1_2_3C_2"]); // add imam
+//        $data_input["indikator"]["unit_produksi_1_4_2"]["text"] = round_custom($data_input["pelayanan_1_2_3C"],2)."  ~  ".round_custom($data_input["pelayanan_1_2_3C_2"],2); // add imam
+        $data_input["indikator"]["unit_produksi_1_4_2"]["text"] = ceil($data_input["pelayanan_1_2_3C"])."  ~  ".ceil($data_input["pelayanan_1_2_3C_2"]); // add imam
         $data_input["indikator"]["unit_produksi_1_4_2"]["option"] = $this->default; // add imam
         $data_input["unit_produksi_1_4_2"] = ($data_input["unit_produksi_1_4_2"]);
         $text="Justifikasi";
