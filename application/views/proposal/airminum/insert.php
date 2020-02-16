@@ -1941,7 +1941,7 @@ $description_page = $option["description_page"];
                         <div class="input-group">
                             <input id="unit_air_baku_2_1_<?=$index?>B" type="text" value="" class="form-control"
                                    placeholder="">
-                            <span class="input-group-addon unit_air_baku_2_1_<?= $index?>_satuan_option">unit</span>
+                            <span class="input-group-addon unit_air_baku_2_1_<?= $index?>_satuan_option">-</span>
                         </div>
                     </td>
                     <td>
@@ -2022,7 +2022,7 @@ $description_page = $option["description_page"];
                         <div class="input-group">
                             <input id="unit_produksi_2_2_<?=$index?>B" type="text" value="" class="form-control"
                                    placeholder="">
-                            <span class="input-group-addon unit_produksi_2_2_<?= $index?>_satuan_option">unit</span>
+                            <span class="input-group-addon unit_produksi_2_2_<?= $index?>_satuan_option">-</span>
                         </div>
                     </td>
                     <td>
@@ -2078,7 +2078,7 @@ $description_page = $option["description_page"];
                 for ($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3; $index++) {
                     ?>
                     <tr>
-                        <th colspan="5">2.3.7.<?= $index ?> <?php print_quetion_option_text(PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_OPTION, $index); ?></th>
+                        <th colspan="5">2.3.<?= $index ?> <?php print_quetion_option_text(PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_OPTION, $index); ?></th>
                     </tr>
 
                     <tr>
@@ -2101,7 +2101,7 @@ $description_page = $option["description_page"];
                             <div class="input-group">
                                 <input id="unit_distribusi_2_3_<?= $index
                                 ?>B" type="te" value="" class="form-control" placeholder="">
-                                <span class="input-group-addon unit_distribusi_2_3_<?= $index?>_satuan_option">unit</span>
+                                <span class="input-group-addon unit_distribusi_2_3_<?= $index?>_satuan_option">-</span>
                             </div>
 
                         </td>
@@ -2183,7 +2183,7 @@ $description_page = $option["description_page"];
                         <div class="input-group">
                             <input id="unit_pelayanan_2_4_<?=$index?>B" type="tex" value="" class="form-control"
                                    placeholder="">
-                            <span class="input-group-addon unit_pelayanan_2_4_<?= $index?>_satuan_option">unit</span>
+                            <span class="input-group-addon unit_pelayanan_2_4_<?= $index?>_satuan_option">-</span>
                         </div>
 
                     </td>

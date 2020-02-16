@@ -83,7 +83,7 @@
                             <td class="w-25 p-3 align-middle">Total Investasi</td>
                             <td class="p-3">
                                 <div class="input-group">
-                                    <?=$selected_data["total_investasi"]?>
+                                    Rp <?=number_format($selected_data["total_investasi"], 2, ',', '.');?>
                                 </div>
                             </td>
                         </tr>
@@ -95,7 +95,7 @@
                             <td class="w-25 p-3 align-middle">Harga rata-rata</td>
                             <td class="p-3">
                                 <div class="input-group">
-                                    <?=$selected_data["harga_rata_rata_A"]?>
+                                    Rp <?=number_format($selected_data["harga_rata_rata_A"], 2, ',', '.');?>
                                 </div>
                             </td>
                         </tr>
