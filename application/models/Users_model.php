@@ -36,7 +36,7 @@ class Users_model extends CI_Model {
                 "
             );
         if($search) {
-            $this->db->or_group_start()
+            $this->db->group_start()
                 ->or_like("name", $search)
                 ->or_like("email", $search)
                 ->or_like("hp", $search)
@@ -71,7 +71,7 @@ class Users_model extends CI_Model {
                 "
             );
         if($search) {
-            $this->db->or_group_start()
+            $this->db->group_start()
                 ->or_like("name", $search)
                 ->or_like("email", $search)
                 ->or_like("hp", $search)

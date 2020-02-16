@@ -33,7 +33,7 @@ class Komponenkegiatan_model extends CI_Model {
         $this->db->where("key",$key);
         $this->db->where("sub_key",$sub_key);
         if($bangunan_penunjang) {
-            $this->db->or_group_start()
+            $this->db->group_start()
                 ->or_like("sub_key", $sub_key)
                 ->or_like("sub_key", "bangunan_penunjang")
             ->group_end();
@@ -82,7 +82,7 @@ class Komponenkegiatan_model extends CI_Model {
         $column = $column . "," . $this->tb_master_sub_komponen.".komponen_spam as sub_komponen_spam";
         $this->db->select($column);
         if($search) {
-            $this->db->or_group_start()
+            $this->db->group_start()
                 ->or_like("komponen_spam", $search)
                 ->or_like("kegiatan", $search)
             ->group_end();
@@ -107,7 +107,7 @@ class Komponenkegiatan_model extends CI_Model {
         $column = implode (", ", $this->column_order);
         $this->db->select($column);
         if($search) {
-            $this->db->or_group_start()
+            $this->db->group_start()
                 ->or_like("komponen_spam", $search)
                 ->or_like("kegiatan", $search)
             ->group_end();

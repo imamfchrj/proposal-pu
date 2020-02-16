@@ -59,7 +59,7 @@ class Komponen_mst_model extends CI_Model {
                 "
             );
         if($search) {
-            $this->db->or_group_start()
+            $this->db->group_start()
                 ->or_like("id", $search)
                 ->or_like("key", $search)
                 ->or_like("sub_key", $search)
@@ -87,7 +87,7 @@ class Komponen_mst_model extends CI_Model {
                 "
             );
         if($search) {
-            $this->db->or_group_start()
+            $this->db->group_start()
             ->or_like("id", $search)
             ->or_like("key", $search)
             ->or_like("sub_key", $search)

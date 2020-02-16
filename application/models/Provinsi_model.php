@@ -65,7 +65,7 @@ class Provinsi_model extends CI_Model {
                 "
             );
         if($search) {
-            $this->db->or_group_start()
+            $this->db->group_start()
                 ->or_like("nama", $search)
                 ->or_like("id", $search)
             ->group_end();
@@ -91,7 +91,7 @@ class Provinsi_model extends CI_Model {
                 "
             );
         if($search) {
-            $this->db->or_group_start()
+            $this->db->group_start()
             ->or_like("nama", $search)
             ->or_like("id", $search)
             ->group_end();
