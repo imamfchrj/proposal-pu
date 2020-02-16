@@ -456,7 +456,7 @@
 
         function get_ajax_select($var, $url2=0) {
             $.ajax({
-                url: ROOT+'/groupajax/komponen_kegiatan/air_minum/' + $var + "/" + $url2,
+                url: ROOT+'groupajax/komponen_kegiatan/air_minum/' + $var + "/" + $url2,
                 dataType: 'json',
                 type: 'get',
                 data: {
@@ -488,7 +488,7 @@
 
         function get_ajax_sub_select($var, $url2) {
             $.ajax({
-                url: ROOT+'/groupajax/komponen_kegiatan_sub_master/air_minum/' + $var + "/" + $url2,
+                url: ROOT+'groupajax/komponen_kegiatan_sub_master/air_minum/' + $var + "/" + $url2,
                 dataType: 'json',
                 type: 'get',
                 data: {
@@ -534,7 +534,7 @@
                 return;
             }
             $.ajax({
-                url: ROOT+'/groupajax/komponen_kegiatan_by_id/' + $id,
+                url: ROOT+'groupajax/komponen_kegiatan_by_id/' + $id,
                 dataType: 'json',
                 type: 'get',
                 data: {
