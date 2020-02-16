@@ -822,7 +822,7 @@ class Airminumajax extends All_Controller {
 
     private function unit_distribusi_1_5_1($data_input) {
         $text="Justifikasi";
-        $data_input["indikator"]["unit_distribusi_1_5_1"]["text"] = ceil(($data_input["pelayanan_1_2_3C"]*86.4*to_percent(15))."  ~  ".ceil(($data_input["pelayanan_1_2_3C_2"]*86.4*to_percent(20))); // add imam
+        $data_input["indikator"]["unit_distribusi_1_5_1"]["text"] = ceil(($data_input["pelayanan_1_2_3C"]*86.4*to_percent(15)))."  ~  ".ceil(($data_input["pelayanan_1_2_3C_2"]*86.4*to_percent(20))); // add imam
         $data_input["indikator"]["unit_distribusi_1_5_1"]["option"] = $this->default; // add imam
         
         $option=$this->danger;
