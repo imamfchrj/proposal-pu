@@ -127,7 +127,7 @@
         
         <div class="section-wrapper mg-t-20">
           <label class="section-title">Kesimpulan</label>
-          <p class="mg-b-20 mg-sm-b-40">Kesimpulan kewajaran dari komponen biaya</p>
+          <p class="mg-b-20 mg-sm-b-40">Kesimpulan kewajaran dari komponen biaya ( Unit Air Baku, Unit Produksi, Unit Distribusi dan Unit Pelayanan )</p>
 
           <div class="row">
             <div class="col-xl-12">
