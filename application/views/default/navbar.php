@@ -83,9 +83,9 @@
                                     <li><a href="<?= base_url('komponenkegiatan/list') ?>">Konfigurasi Komponen
                                             Kegiatan</a>
                                     </li>
-                                    <li><a href="<?= base_url('komponenkegiatan/insert') ?>">Tambah Komponen
+                                    <!-- <li><a href="<?= base_url('komponenkegiatan/insert') ?>">Tambah Komponen
                                             Kegiatan</a>
-                                    </li>
+                                    </li> -->
                                 <?php } ?>
                             </ul>
 
