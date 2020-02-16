@@ -147,7 +147,10 @@
                     alert(data.error_message);
                     return;
                 }
-                set_value_proposal(data.data);
+                setTimeout(function() {
+                    set_value_proposal(data.data);
+                }, 1000);
+                
             })
             .complete(function(){
               $('.kalulator').attr('disabled', false);
@@ -301,7 +304,7 @@
         }
         function set_harga_satuan($data) {
             for (const [key, value] of Object.entries($data)) {
-                text_default(key, value['text'], value['option'], "harga_satuan");
+                text_default(key, to_float_array(value['text']), value['option'], "harga_satuan");
             }
         }
         function set_indikator($data) {
@@ -330,18 +333,20 @@
                 }else if (key == "harga_rata_rata_A"){
                     $rumus = "IF( x <= 200.000.000 , Layak, Justifikasi)";
                 }
-                text_default(key, value['text'], value['option'], "indikator",$rumus);
+                text_default(key, to_float_array(value['text']), value['option'], "indikator",$rumus);
             }
         }
         function text_default($key, $text, $option, $default, $rumus=""){
-            $default_text= '<li class="'+$option+'" data-toggle="tooltip" data-placement="top" title="'+$rumus+'">'+to_float_array($text)+'</li>';
+            $default_text= '<li class="'+$option+'" data-toggle="tooltip" data-placement="top" title="'+$rumus+'">'+$text+'</li>';
             $("#"+$key+"_"+$default).html($default_text);
         }
 
         function to_float_array($text)
         {
+            if($text) {
+                return "";
+            }
             var data = $text.split("-");
-            // isNaN(-1.23)
             $val_str = "";
             $i = 1;
             data.forEach(function(value){
