@@ -343,24 +343,28 @@
 
         function to_float_array($text)
         {
-            if($text) {
-                return "";
-            }
-            var data = $text.split("-");
-            $val_str = "";
-            $i = 1;
-            data.forEach(function(value){
+            // try { 
+                if(!isNaN($text)){
+                    return to_thousand($text);
+                }
+                var data = $text.split("~");
+                $val_str = "";
+                if(data.length != 0) {
+                    data.forEach(function(value){
+                    
+                        if(!isNaN(value)){
+                            value = to_thousand(value);
+                        }
+                        $val_str += value;
+                    });
+                    return $val_str;
+                }
                 
-                if(!isNaN(value)){
-                    value = to_thousand(value);
-                }
-                if($i > 1) {
-                    $val_str += "-";
-                }
-                $val_str += value;
-                $i++;
-            });
-            return $val_str;
+            // } 
+            // catch { 
+            //     // object does not exist 
+            // } 
+            return $text;
         }
         function hidden_by_key($key, $is_must_key, $value, $is_must, $hidden_key) {
             if($key != $is_must_key) {

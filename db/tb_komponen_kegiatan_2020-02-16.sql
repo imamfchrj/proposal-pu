@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tb_komponen_kegiatan` (
   `id` int(11) NOT NULL,
-  `keyq` varchar(100) NOT NULL,
+  `key` varchar(100) NOT NULL,
   `sub_key` varchar(100) NOT NULL,
   `sub_master_key` varchar(100) NOT NULL,
   `id_komponen` int(11) DEFAULT NULL,
@@ -44,13 +44,13 @@ CREATE TABLE `tb_komponen_kegiatan` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `aktif` tinyint(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_komponen_kegiatan`
 --
 
-INSERT INTO `tb_komponen_kegiatan` (`id`, `keyq`, `sub_key`, `sub_master_key`, `id_komponen`, `fix_key`, `komponen_spam`, `kegiatan`, `satuan`, `estimasi`, `pembagi`, `year`, `created_at`, `aktif`) VALUES
+INSERT INTO `tb_komponen_kegiatan` (`id`, `key`, `sub_key`, `sub_master_key`, `id_komponen`, `fix_key`, `komponen_spam`, `kegiatan`, `satuan`, `estimasi`, `pembagi`, `year`, `created_at`, `aktif`) VALUES
 (1, 'air_minum', 'unit_air_baku', '', 1, '', 'Unit Air Baku', 'Bangunan Intake Air Baku 50 lt/dt', '', 411600, 50, 2020, '2020-01-19 16:33:26', 0),
 (2, 'air_minum', 'unit_air_baku', '', 1, '', 'Unit Air Baku', 'Bangunan Intake Air Baku 100 lt/dt', '', 686000, 100, 2020, '2020-01-19 16:33:26', 0),
 (3, 'air_minum', 'unit_air_baku', '', 1, '', 'Unit Air Baku', 'Bangunan Intake Air Baku 200 lt/dt', '', 960400, 200, 2020, '2020-01-19 16:33:26', 0),
@@ -287,7 +287,7 @@ INSERT INTO `tb_komponen_kegiatan` (`id`, `keyq`, `sub_key`, `sub_master_key`, `
 --
 ALTER TABLE `tb_komponen_kegiatan`
   ADD PRIMARY KEY (`id`);
-ALTER TABLE `tb_komponen_kegiatan` ADD FULLTEXT KEY `key` (`keyq`);
+ALTER TABLE `tb_komponen_kegiatan` ADD FULLTEXT KEY `key` (`key`);
 ALTER TABLE `tb_komponen_kegiatan` ADD FULLTEXT KEY `sub_key` (`sub_key`);
 
 --
