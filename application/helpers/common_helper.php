@@ -303,3 +303,12 @@ function print_quetion_option($list, $index, $default="") {
    }
    echo $result["data"][0] . $result["data"][1];
 }
+
+function print_quetion_option_text($list, $index) {
+   $result =  get_quetion_option($list, $index);
+   if(!$result["success"]) {
+       echo "Lain-lain";
+       return;
+   }
+   echo $result["data"][2];
+}
