@@ -349,13 +349,19 @@
                 }
                 var data = $text.split("~");
                 $val_str = "";
+                $increment_split = 1;
                 if(data.length != 0) {
                     data.forEach(function(value){
                     
                         if(!isNaN(value)){
                             value = to_thousand(value);
                         }
+                        if($increment_split > 1) {
+                            $val_str += " ~ ";
+                        }
+                        
                         $val_str += value;
+                        $increment_split++;
                     });
                     return $val_str;
                 }
