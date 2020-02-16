@@ -822,11 +822,11 @@ class Airminumajax extends All_Controller {
 
     private function unit_distribusi_1_5_1($data_input) {
         $text="Justifikasi";
-        $data_input["indikator"]["unit_distribusi_1_5_1"]["text"] = ceil(($data_input["pelayanan_1_2_3C"]*86.4*to_percent(20)))."  ~  ".ceil(($data_input["pelayanan_1_2_3C_2"]*86.4*to_percent(20))); // add imam
+        $data_input["indikator"]["unit_distribusi_1_5_1"]["text"] = ceil(($data_input["pelayanan_1_2_3C"]*86.4*to_percent(15))."  ~  ".ceil(($data_input["pelayanan_1_2_3C_2"]*86.4*to_percent(20))); // add imam
         $data_input["indikator"]["unit_distribusi_1_5_1"]["option"] = $this->default; // add imam
         
         $option=$this->danger;
-        if($data_input["unit_distribusi_1_5_1"] > ($data_input["pelayanan_1_2_3C"]*86.4*to_percent(20)) && $data_input["unit_distribusi_1_5_1"] < ($data_input["pelayanan_1_2_3C_2"]*86.4*to_percent(20)) ) {
+        if($data_input["unit_distribusi_1_5_1"] > ($data_input["pelayanan_1_2_3C"]*86.4*to_percent(15)) && $data_input["unit_distribusi_1_5_1"] < ($data_input["pelayanan_1_2_3C_2"]*86.4*to_percent(20)) ) {
             $text="Layak";
             $option=$this->success;
         }
@@ -1205,13 +1205,13 @@ class Airminumajax extends All_Controller {
 
             $text="Justifikasi";
             $option=$this->danger;
-            if($data_input["harga_rata_rata_A"] <= 2000000) {
+            if($data_input["harga_rata_rata_A"] <= 2700000) {
                 $text="Wajar";
                 $option=$this->success;
             }
             $data_input["verifikasi"]["harga_rata_rata_A"]["text"] = $text;
             $data_input["verifikasi"]["harga_rata_rata_A"]["option"] = $option;
-            $data_input["indikator"]["harga_rata_rata_A"]["text"] = 200000000;
+            $data_input["indikator"]["harga_rata_rata_A"]["text"] = 2700000;
             $data_input["indikator"]["harga_rata_rata_A"]["option"] = $this->default;
         }
         if($data_input["pelayanan_1_2_2A"]) {
