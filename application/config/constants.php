@@ -106,7 +106,7 @@ define('SUBKEY_AIR_MINUM_BANGUNAN', "bangunan_penunjang");
 define('PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_71', 12); // unused
 define('PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1', 8);
 define('PROPOSAL_AIR_MINUM_UNIT_PRODUKSI_2_2', 14);
-define('PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3', 20);
+define('PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3', 30);
 define('PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4', 4);
 
 define('PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1_OPTION', array(
@@ -130,10 +130,30 @@ define('PROPOSAL_AIR_MINUM_UNIT_PRODUKSI_2_2_OPTION', array(
 
 define('PROPOSAL_AIR_MINUM_UNIT_DISTRIBUSI_2_3_OPTION', array(
     1 => array("unit_distribusi", "pipa_distribusi_utama", "Pipa Distribusi Utama"),
-    2 => array("unit_distribusi", "pipa_distribusi_sekunder", "Pipa Distribusi Sekunder"),
-    3 => array("unit_distribusi", "pipa_distribusi_tersier", "Pipa Distribusi Tersier"),
-    4 => array("unit_distribusi", "crossing_jaringan", "Crossing Jaringan"),
-    5 => array("unit_distribusi", "perlengkapan_jaringan", "Perlengkapan Jaringan"),
+    2 => array("unit_distribusi", "pipa_distribusi_utama", "Pipa Distribusi Utama"),
+    3 => array("unit_distribusi", "pipa_distribusi_utama", "Pipa Distribusi Utama"),
+    4 => array("unit_distribusi", "pipa_distribusi_utama", "Pipa Distribusi Utama"),
+    5 => array("unit_distribusi", "pipa_distribusi_utama", "Pipa Distribusi Utama"),
+    6 => array("unit_distribusi", "pipa_distribusi_sekunder", "Pipa Distribusi Sekunder"),
+    7 => array("unit_distribusi", "pipa_distribusi_sekunder", "Pipa Distribusi Sekunder"),
+    8 => array("unit_distribusi", "pipa_distribusi_sekunder", "Pipa Distribusi Sekunder"),
+    9 => array("unit_distribusi", "pipa_distribusi_sekunder", "Pipa Distribusi Sekunder"),
+    10 => array("unit_distribusi", "pipa_distribusi_sekunder", "Pipa Distribusi Sekunder"),
+    11 => array("unit_distribusi", "pipa_distribusi_tersier", "Pipa Distribusi Tersier"),
+    12 => array("unit_distribusi", "pipa_distribusi_tersier", "Pipa Distribusi Tersier"),
+    13 => array("unit_distribusi", "pipa_distribusi_tersier", "Pipa Distribusi Tersier"),
+    14 => array("unit_distribusi", "pipa_distribusi_tersier", "Pipa Distribusi Tersier"),
+    15 => array("unit_distribusi", "pipa_distribusi_tersier", "Pipa Distribusi Tersier"),
+    16 => array("unit_distribusi", "crossing_jaringan", "Crossing Jaringan"),
+    17 => array("unit_distribusi", "crossing_jaringan", "Crossing Jaringan"),
+    18 => array("unit_distribusi", "crossing_jaringan", "Crossing Jaringan"),
+    19 => array("unit_distribusi", "crossing_jaringan", "Crossing Jaringan"),
+    20 => array("unit_distribusi", "crossing_jaringan", "Crossing Jaringan"),
+    21 => array("unit_distribusi", "perlengkapan_jaringan", "Perlengkapan Jaringan"),
+    22 => array("unit_distribusi", "perlengkapan_jaringan", "Perlengkapan Jaringan"),
+    23 => array("unit_distribusi", "perlengkapan_jaringan", "Perlengkapan Jaringan"),
+    24 => array("unit_distribusi", "perlengkapan_jaringan", "Perlengkapan Jaringan"),
+    25 => array("unit_distribusi", "perlengkapan_jaringan", "Perlengkapan Jaringan"),
     // 6 => array("unit_distribusi", "pekerjaan_lain_lain"),
 ));
 
@@ -142,3 +162,45 @@ define('PROPOSAL_AIR_MINUM_UNIT_PELAYANAN_2_4_OPTION', array(
     2 => array("unit_pelayanan", "sambungan_pelanggan", "Sambungan pelanggan"),
 ));
 
+define('SETTER', array(
+    "unit_air_baku_2_1_2" => array(
+        "from" => "unit_air_baku_2_1_1B",
+        "to" => "unit_air_baku_2_1_2B",
+        "satuan" => "",
+    ), 
+    "unit_produksi_2_2_1" => array(
+        "from" => "unit_air_baku_2_1_2B",
+        "to" => "unit_produksi_2_2_1B",
+        "satuan" => "",
+    ), 
+    "unit_produksi_2_2_2" => array(
+        "from" => "unit_produksi_1_4_2",
+        "to" => "unit_produksi_2_2_2B",
+        "satuan" => "",
+    ), 
+    "unit_produksi_2_2_5" => array(
+        "from" => "unit_distribusi_1_5_1",
+        "to" => "unit_produksi_2_2_5B",
+        "satuan" => "m3",
+    ), 
+    "unit_produksi_2_2_4" => array(
+        "from" => "unit_produksi_2_2_3B",
+        "to" => "unit_produksi_2_2_4B",
+        "satuan" => "lt/dt",
+    ),
+    "unit_air_baku_2_1_1" => array(
+        "from" => "unit_air_baku_1_3_1",
+        "to" => "unit_air_baku_2_1_1B",
+        "satuan" => "",
+    ),
+    "unit_air_baku_2_1_3"=> array(
+        "from" => "unit_air_baku_1_3_5",
+        "to" => "unit_air_baku_2_1_3B",
+        "satuan" => "",
+    ),
+));
+
+
+define('MEMO' , array(
+    "unit_produksi_2_2_3B" => "1 sampai dengan 5",
+));

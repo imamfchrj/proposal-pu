@@ -931,6 +931,7 @@ class Airminumajax extends All_Controller {
         // PROPOSAL_AIR_MINUM_UNIT_AIR_BAKU_2_1
 
         for($index = 1; $index <= $count; $index++) {
+            $data_input[$key . "_". $index . "B"] = get_static_data($key . "_". $index, $data_input);
             if($data_input[$key . "_". $index . "B"] == 0) {
                 continue;
             }
@@ -1166,7 +1167,7 @@ class Airminumajax extends All_Controller {
             "biaya_non_standar_2_5_5",
             "biaya_lain_lain_2_6_1",
             "biaya_lain_lain_2_6_2",
-            "biaya_lain_lain_2_6_3"
+            // "biaya_lain_lain_2_6_3"
         );
         $sum = 0;
         foreach($key as $value) {
@@ -1187,8 +1188,9 @@ class Airminumajax extends All_Controller {
         for($index = 1; $index <= PROPOSAL_AIR_MINUM_UNIT_PRODUKSI_2_2; $index++) {
             $sum += $data_input["unit_produksi_2_2_". $index . "A"];
         }
-        
-        $data_input["total_investasi"] = $sum;
+        // pajak
+        $data_input["biaya_lain_lain_2_6_3"] = round_custom($sum * to_percent(10),2);
+        $data_input["total_investasi"] = $sum + $data_input["biaya_lain_lain_2_6_3"];
         if($data_input["unit_produksi_1_4_2"]) {
             $data_input["harga_rata_rata_A"] = round_custom($sum / $data_input["unit_produksi_1_4_2"],2);
 

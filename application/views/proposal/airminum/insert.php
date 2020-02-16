@@ -1940,8 +1940,8 @@ $description_page = $option["description_page"];
                         <hr>
                         <div class="input-group">
                             <input id="unit_air_baku_2_1_<?=$index?>B" type="text" value="" class="form-control"
-                                   placeholder="">
-                            <span class="input-group-addon unit_air_baku_2_1_<?= $index?>_satuan_option">-</span>
+                                   placeholder="" <?=get_static_and_disable("unit_air_baku_2_1_" .$index)?>>
+                            <span class="input-group-addon unit_air_baku_2_1_<?= $index?>_satuan_option" ><?=get_static_unit("unit_air_baku_2_1_" .$index)?></span>
                         </div>
                     </td>
                     <td>
@@ -2021,9 +2021,10 @@ $description_page = $option["description_page"];
                         <hr>
                         <div class="input-group">
                             <input id="unit_produksi_2_2_<?=$index?>B" type="text" value="" class="form-control"
-                                   placeholder="">
-                            <span class="input-group-addon unit_produksi_2_2_<?= $index?>_satuan_option">-</span>
+                                   placeholder="" <?=get_static_and_disable("unit_produksi_2_2_" .$index)?>>
+                            <span class="input-group-addon unit_produksi_2_2_<?= $index?>_satuan_option"><?=get_static_unit("unit_produksi_2_2_" .$index)?></span>
                         </div>
+                        <?=get_memo("unit_produksi_2_2_".$index."B")?>
                     </td>
                     <td>
                         <ul id="unit_produksi_2_2_<?=$index?>_verifikasi" class="parsley-errors-list filled">
@@ -2100,8 +2101,8 @@ $description_page = $option["description_page"];
                             <hr>
                             <div class="input-group">
                                 <input id="unit_distribusi_2_3_<?= $index
-                                ?>B" type="te" value="" class="form-control" placeholder="">
-                                <span class="input-group-addon unit_distribusi_2_3_<?= $index?>_satuan_option">-</span>
+                                ?>B" type="te" value="" class="form-control" placeholder="" <?=get_static_and_disable("unit_distribusi_2_3_" .$index)?>>
+                                <span class="input-group-addon unit_distribusi_2_3_<?= $index?>_satuan_option"><?=get_static_unit("unit_distribusi_2_3_" .$index)?></span>
                             </div>
 
                         </td>
@@ -2182,8 +2183,8 @@ $description_page = $option["description_page"];
                         <hr>
                         <div class="input-group">
                             <input id="unit_pelayanan_2_4_<?=$index?>B" type="tex" value="" class="form-control"
-                                   placeholder="">
-                            <span class="input-group-addon unit_pelayanan_2_4_<?= $index?>_satuan_option">-</span>
+                                   placeholder="" <?=get_static_and_disable("unit_pelayanan_2_4_" .$index)?>>
+                            <span class="input-group-addon unit_pelayanan_2_4_<?= $index?>_satuan_option"><?=get_static_unit("unit_pelayanan_2_4_" .$index)?></span>
                         </div>
 
                     </td>
@@ -2497,7 +2498,7 @@ $description_page = $option["description_page"];
                     <td class="p-3">
                         <div class="input-group">
                             <span class="input-group-addon">Rp</span>
-                            <input id="biaya_lain_lain_2_6_3" type="text " value="" class="form-control"
+                            <input id="biaya_lain_lain_2_6_3" disabled type="text " value="" class="form-control"
                                    placeholder="">
                         </div>
 

@@ -312,3 +312,51 @@ function print_quetion_option_text($list, $index) {
    }
    echo $result["data"][2];
 }
+
+function get_setter($key, $field) {
+    $data = SETTER;
+    if(!isset($data[$key][$field])) {
+        return "";
+    }
+    return $data[$key][$field];
+}
+
+function get_static_and_disable($key) {
+    $result = get_setter($key, "to");
+    if(!$result) {
+        return "";
+    }
+    return "disabled";
+}
+
+function get_static_data($key, $data_input) {
+    $from = get_setter($key, "from");
+    $default = 0;
+    if(isset($data_input[$key."B"])) {
+        $default = $data_input[$key."B"];
+    }else {
+        $default = $data_input[$key];
+    }
+    if(!$from) {
+        return $default;
+    }
+    if(!isset($data_input[$from])) {
+        return $default;
+    }
+    return $data_input[$from];
+}
+
+function get_static_unit($key) {
+    $result = get_setter($key, "satuan");
+    if(!$result) {
+        return "-";
+    }
+    return $result;
+}
+
+function get_memo($key) {
+    if(!isset(MEMO[$key])) {
+        return "";
+    }
+    return '<code>&nbsp;&nbsp;*<i>'.MEMO[$key].'</i></code>';
+}
