@@ -337,7 +337,10 @@
             }
         }
         function text_default($key, $text, $option, $default, $rumus=""){
-            $default_text= '<li class="'+$option+'" data-toggle="tooltip" data-placement="top" title="'+$rumus+'">'+$text+'</li>';
+            if($rumus != "") {
+                $rumus = '<i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="'+$rumus+'"></i>'
+            }
+            $default_text= '<li class="'+$option+'" >'+$text+' &nbsp' + $rumus + '</li>';
             $("#"+$key+"_"+$default).html($default_text);
         }
 

@@ -822,6 +822,9 @@ class Airminumajax extends All_Controller {
 
     private function unit_distribusi_1_5_1($data_input) {
         $text="Justifikasi";
+        $data_input["indikator"]["unit_distribusi_1_5_1"]["text"] = ceil(($data_input["pelayanan_1_2_3C"]*86.4*to_percent(15)))."  ~  ".ceil(($data_input["pelayanan_1_2_3C"]*86.4*to_percent(20))); // add imam
+        $data_input["indikator"]["unit_distribusi_1_5_1"]["option"] = $this->default; // add imam
+        
         $option=$this->danger;
         if($data_input["unit_distribusi_1_5_1"] > ($data_input["pelayanan_1_2_3C"]*86.4*to_percent(15)) && $data_input["unit_distribusi_1_5_1"] < ($data_input["pelayanan_1_2_3C"]*86.4*to_percent(20)) ) {
             $text="Layak";
@@ -833,6 +836,8 @@ class Airminumajax extends All_Controller {
     }
 
     private function unit_distribusi_1_5_2A($data_input) {
+        $data_input["indikator"]["unit_distribusi_1_5_2A"]["text"] = "0"; // add imam
+        $data_input["indikator"]["unit_distribusi_1_5_2A"]["option"] = $this->default; // add imam
         $data_input["unit_distribusi_1_5_2A"] = $data_input["unit_distribusi_1_5_2"] - $data_input["unit_pelayanan_1_6_1"] ;
         $text="Pompa";
         $option=$this->danger;
@@ -850,6 +855,8 @@ class Airminumajax extends All_Controller {
             $data_input["unit_distribusi_1_5_4"] = 0;
             return $data_input;
         }
+        $data_input["indikator"]["unit_distribusi_1_5_4"]["text"] = "2"; // add imam
+        $data_input["indikator"]["unit_distribusi_1_5_4"]["option"] = $this->default; // add imam
         $data_input["unit_distribusi_1_5_4"] = ($data_input["pelayanan_1_2_3D"]/1000) / 
         (0.25*3.14*(
             pow(
@@ -898,6 +905,8 @@ class Airminumajax extends All_Controller {
     private function unit_distribusi_1_5_6($data_input) {
         $text="Justifikasi";
         $option=$this->danger;
+        $data_input["indikator"]["unit_distribusi_1_5_6"]["text"] =  $data_input["pelayanan_1_2_3D"]; // add imam
+        $data_input["indikator"]["unit_distribusi_1_5_6"]["option"] = $this->default; // add imam
         if($data_input["unit_distribusi_1_5_6"] >= $data_input["pelayanan_1_2_3D"]) {
             $text="Layak";
             $option=$this->success;
