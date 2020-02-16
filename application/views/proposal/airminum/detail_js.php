@@ -90,13 +90,17 @@
                 }
             });
         }
+
+function to_thousand(x){
+    return new Intl.NumberFormat('id-ID').format(x);
+}
 function set_table($id, $data){
     var datahtml = "";
     $data.forEach(function(value){
         datahtml = datahtml + 
         "<tr>" + 
         "<td>" + value.kegiatan +"</td>" + 
-        "<td>" + value.harga +"</td>" + 
+        "<td>" + to_thousand(value.harga) +"</td>" + 
         "<td>" + value.verifikasi +"</td>" + 
         "</tr>"    
     });
