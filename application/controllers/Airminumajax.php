@@ -951,12 +951,12 @@ class Airminumajax extends All_Controller {
             $data_input["harga_satuan"][$key . "_" . $index]["text"] = round_custom($data_input[$key . "_". $index . "A"] / 1000 / $data_input[$key . "_". $index . "B"],2);
             $data_input["harga_satuan"][$key . "_" . $index]["option"] = $this->default;
             
-            $data_input["indikator"][$key . "_" . $index]["text"] = round_custom($data_input["initial"][$id]['harga_satuan'],2);
+            $data_input["indikator"][$key . "_" . $index]["text"] = round_custom($data_input["initial"][$id]['harga_satuan_min'],2)." ~ ". round_custom($data_input["initial"][$id]['harga_satuan'],2);
             $data_input["indikator"][$key . "_" . $index]["option"] = $this->default;
 
             $text="Justifikasi";
             $option=$this->danger;
-            if($data_input["harga_satuan"][$key . "_" . $index]["text"] <= $data_input["initial"][$id]['harga_satuan']) {
+            if($data_input["harga_satuan"][$key . "_" . $index]["text"] >= $data_input["initial"][$id]['harga_satuan_min'] && $data_input["harga_satuan"][$key . "_" . $index]["text"] <= $data_input["initial"][$id]['harga_satuan']) {
                 $text="Wajar";
                 $option=$this->success;
             }
