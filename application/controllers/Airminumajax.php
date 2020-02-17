@@ -822,11 +822,11 @@ class Airminumajax extends All_Controller {
 
     private function unit_distribusi_1_5_1($data_input) {
         $text="Justifikasi";
-        $data_input["indikator"]["unit_distribusi_1_5_1"]["text"] = ceil(($data_input["pelayanan_1_2_3C"]*86.4*to_percent(20)))."  ~  ".ceil(($data_input["pelayanan_1_2_3C_2"]*86.4*to_percent(20))); // add imam
+        $data_input["indikator"]["unit_distribusi_1_5_1"]["text"] = ceil(($data_input["pelayanan_1_2_3C"]*86.4*to_percent(15)))."  ~  ".ceil(($data_input["pelayanan_1_2_3C_2"]*86.4*to_percent(20))); // add imam
         $data_input["indikator"]["unit_distribusi_1_5_1"]["option"] = $this->default; // add imam
         
         $option=$this->danger;
-        if($data_input["unit_distribusi_1_5_1"] > ($data_input["pelayanan_1_2_3C"]*86.4*to_percent(20)) && $data_input["unit_distribusi_1_5_1"] < ($data_input["pelayanan_1_2_3C_2"]*86.4*to_percent(20)) ) {
+        if($data_input["unit_distribusi_1_5_1"] > ($data_input["pelayanan_1_2_3C"]*86.4*to_percent(15)) && $data_input["unit_distribusi_1_5_1"] < ($data_input["pelayanan_1_2_3C_2"]*86.4*to_percent(20)) ) {
             $text="Layak";
             $option=$this->success;
         }
@@ -1201,21 +1201,25 @@ class Airminumajax extends All_Controller {
         $data_input["biaya_lain_lain_2_6_3"] = round_custom($sum * to_percent(10),2);
         $data_input["total_investasi"] = $sum + $data_input["biaya_lain_lain_2_6_3"];
         if($data_input["unit_produksi_1_4_2"]) {
-            $data_input["harga_rata_rata_A"] = round_custom($sum / $data_input["unit_produksi_1_4_2"],2);
+            $data_input["harga_rata_rata_A"] = round_custom($sum / 1000 / $data_input["unit_produksi_1_4_2"],2);
 
             $text="Justifikasi";
             $option=$this->danger;
-            if($data_input["harga_rata_rata_A"] <= 2000000) {
+            if($data_input["harga_rata_rata_A"] <= 2700000) {
                 $text="Wajar";
                 $option=$this->success;
             }
             $data_input["verifikasi"]["harga_rata_rata_A"]["text"] = $text;
             $data_input["verifikasi"]["harga_rata_rata_A"]["option"] = $option;
-            $data_input["indikator"]["harga_rata_rata_A"]["text"] = 200000000;
+            $data_input["indikator"]["harga_rata_rata_A"]["text"] = 2700000;
             $data_input["indikator"]["harga_rata_rata_A"]["option"] = $this->default;
+            if($data_input["harga_rata_rata_A"] > 0){
+                $data_input["harga_satuan"]["harga_rata_rata_A"]["text"] = $data_input["harga_rata_rata_A"];
+                $data_input["harga_satuan"]["harga_rata_rata_A"]["option"] = $this->default;
+            }
         }
         if($data_input["pelayanan_1_2_2A"]) {
-            $data_input["harga_rata_rata_B"] = round_custom($sum / $data_input["pelayanan_1_2_2A"],2);
+            $data_input["harga_rata_rata_B"] = round_custom($sum / 1000 / $data_input["pelayanan_1_2_2A"],2);
             $text="Justifikasi";
             $option=$this->danger;
             if($data_input["harga_rata_rata_B"] <= 8360) {
@@ -1227,7 +1231,7 @@ class Airminumajax extends All_Controller {
             $data_input["indikator"]["harga_rata_rata_B"]["text"] = 8360;
             $data_input["indikator"]["harga_rata_rata_B"]["option"] = $this->default;
             if($data_input["pelayanan_1_2_2A"] > 0){
-                $data_input["harga_satuan"]["harga_rata_rata_B"]["text"] = round_custom($sum / 1000 / $data_input["pelayanan_1_2_2A"],2);
+                $data_input["harga_satuan"]["harga_rata_rata_B"]["text"] = $data_input["harga_rata_rata_B"];
                 $data_input["harga_satuan"]["harga_rata_rata_B"]["option"] = $this->default;
             }
         }

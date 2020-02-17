@@ -149,7 +149,7 @@
                 }
                 setTimeout(function() {
                     set_value_proposal(data.data);
-                }, 1000);
+                }, 2000);
                 
             })
             .complete(function(){
