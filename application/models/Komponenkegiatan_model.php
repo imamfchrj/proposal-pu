@@ -9,7 +9,7 @@ class Komponenkegiatan_model extends CI_Model {
     private $table_prov = "tb_provinsi";
     private $tb_master_sub_komponen = "tb_master_sub_komponen";
   
-    public $column_order = ["tb_komponen_kegiatan.id",  "tb_komponen_kegiatan.kegiatan",  "tb_komponen_kegiatan.komponen_spam", "tb_komponen_kegiatan.sub_master_key",  "tb_komponen_kegiatan.estimasi", "tb_komponen_kegiatan.pembagi", "tb_komponen_kegiatan.satuan", "tb_komponen_kegiatan.created_at", "tb_komponen_kegiatan.updated_at", "tb_komponen_kegiatan.fix_key", "tb_komponen_kegiatan.year", "tb_komponen_kegiatan.sub_master_key", "tb_komponen_kegiatan.id_komponen", "tb_komponen_kegiatan.sub_key" ];
+    public $column_order = ["tb_komponen_kegiatan.id",  "tb_komponen_kegiatan.kegiatan",  "tb_komponen_kegiatan.komponen_spam", "tb_komponen_kegiatan.sub_master_key",  "tb_komponen_kegiatan.estimasi", "tb_komponen_kegiatan.estimasi_min", "tb_komponen_kegiatan.pembagi", "tb_komponen_kegiatan.satuan", "tb_komponen_kegiatan.created_at", "tb_komponen_kegiatan.updated_at", "tb_komponen_kegiatan.fix_key", "tb_komponen_kegiatan.year", "tb_komponen_kegiatan.sub_master_key", "tb_komponen_kegiatan.id_komponen", "tb_komponen_kegiatan.sub_key" ];
    
     public function __construct() {
         parent::__construct();
@@ -175,9 +175,12 @@ class Komponenkegiatan_model extends CI_Model {
             }
             $harga_satuan_awal =  $value["estimasi"] / $value["pembagi"];
             $harga_satuan =  $harga_satuan_awal * $ikk;
+            $harga_satuan_awal_min =  $value["estimasi_min"] / $value["pembagi"];
+            $harga_satuan_min =  $harga_satuan_awal_min * $ikk;
 
             if($value["fix_key"]){
                 $data[$value["fix_key"]]["harga_satuan_awal"] = $harga_satuan_awal;
+                $data[$value["fix_key"]]["harga_satuan_min"] = $harga_satuan_min;
                 $data[$value["fix_key"]]["harga_satuan"] = $harga_satuan;
                 $data[$value["fix_key"]]["estimasi"] = $value["estimasi"];
                 $data[$value["fix_key"]]["pembagi"] = $value["pembagi"];
@@ -186,6 +189,7 @@ class Komponenkegiatan_model extends CI_Model {
                 $data[$value["fix_key"]]["komponen_spam"] = $value["komponen_spam"];
             }
             $data[$value["id"]]["harga_satuan_awal"] = $harga_satuan_awal;
+            $data[$value["id"]]["harga_satuan_min"] = $harga_satuan_min;
             $data[$value["id"]]["harga_satuan"] = $harga_satuan;
             $data[$value["id"]]["estimasi"] = $value["estimasi"];
             $data[$value["id"]]["pembagi"] = $value["pembagi"];
